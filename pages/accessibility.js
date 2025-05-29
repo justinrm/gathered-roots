@@ -152,7 +152,7 @@ export default function AccessibilityStatement() {
             <p className="text-text-dark mb-4">
               We welcome feedback about the accessibility of our website. If you encounter any 
               accessibility barriers, have suggestions for improvement, or need assistance accessing 
-              any content or features, please don't hesitate to contact us:
+              any content or features, please don&apos;t hesitate to contact us:
             </p>
             <div className="bg-card-background border border-card-border rounded-lg p-4">
               <p className="text-text-dark mb-2">

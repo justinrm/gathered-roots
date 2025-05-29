@@ -6,7 +6,7 @@ const TestimonialCard = ({ quote, author, authorTitle, rating, className = '' })
     `bg-card-background shadow-card hover:shadow-card-hover rounded-lg p-6 border border-card-border flex flex-col transition-all duration-300 hover:-translate-y-0.5 ${className}`.trim();
 
   return (
-    <article className={cardClass} role="article" aria-labelledby={`testimonial-${author?.replace(/\s+/g, '-').toLowerCase()}`}>
+    <article className={cardClass} aria-labelledby={`testimonial-${author?.replace(/\s+/g, '-').toLowerCase()}`}>
       {rating && (
         <div className="flex justify-center mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
           {[...Array(5)].map((_, i) => (

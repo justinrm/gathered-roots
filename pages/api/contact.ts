@@ -30,7 +30,7 @@ const contactFormSchema = z.object({
 // Ensure your SMTP environment variables are correctly set in .env.local
 let transporter: nodemailer.Transporter;
 try {
-  transporter = nodemailer.createTransporter({
+  transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: parseInt(process.env.SMTP_PORT || '587', 10),
     secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
@@ -88,7 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         errors: validationResult.error.flatten().fieldErrors,
       });
     }
-    const { name, email, message, phone, consent } = validationResult.data;
+    const { name, email, message, phone } = validationResult.data;
 
     // Note: Client contact information is now handled by Square
     // This endpoint only sends email notifications

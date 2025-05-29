@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+// import { CheckCircleIcon } from '@heroicons/react/24/solid'; // Removed unused import
 import Button from '../../components/Button';
 import Link from 'next/link';
 
