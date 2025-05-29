@@ -1,0 +1,93 @@
+{
+  "rules": {
+    "context_initialization": {
+      "description": "Defines the minimum required files and references for initializing any task for the 'Gathered Roots Cleaning' cleaning business website.",
+      "steps": [
+        "ALWAYS read `README.md` (if available) and any project brief/roadmap to understand goals, target audience, and scope for 'Gathered Roots Cleaning'.",
+        "Review `.notes/design_brief.md` or style guide for brand identity (colors, typography, imagery, tone of voice for 'Gathered Roots Cleaning').",
+        "Check content files for core pages like `/services/`, `/about-us/`, `/testimonials/`, and `/contact/` for consistency and brand messaging.",
+        "Reference any shared UI components (e.g., for service cards, testimonial displays, contact forms, call-to-action buttons).",
+        "Review relevant configuration files for the chosen tech stack (e.g., `package.json`, `tailwind.config.js`, `next.config.js` if using Next.js, React component structure, Node.js server/function files)."
+      ]
+    },
+    "design_guidelines": {
+      "description": "Codifies the essential design system and brand guidelines for the Gathered Roots Cleaning website, distilled from .notes/design_brief.md.",
+      "color_palette": {
+        "background": "#F4F1ED (Off-White)",
+        "primary_accent_teal": "#006978 (Deep Teal)",
+        "primary_accent_green": "#3D7B6B (Muted Teal/Green) or #4A7C59 (Sophisticated Green)",
+        "secondary_accent_hover": "#5FB09C (Lighter Teal/Green)",
+        "text_dark": "#333333 (Dark Grey)",
+        "text_light": "#757575 (Medium Grey)",
+        "borders": "#E0E0E0 (Light Grey)"
+      },
+      "typography": {
+        "headings": "Modern, clean sans-serif (e.g., Montserrat, Lato, Open Sans, Nunito Sans, Poppins, Manrope, Inter)",
+        "body": "Highly readable sans-serif, matching or complementing heading font; 16px base size recommended.",
+        "hierarchy": "Clear distinction via size, weight, and/or color. Use font weights: Regular for body, Medium/SemiBold for headings."
+      },
+      "imagery_iconography": {
+        "photography": "High-quality, professional, bright, and clean. Show real, happy clients or team, and sparkling spaces. Avoid generic or cheesy stock photos.",
+        "iconography": "Minimalist, modern line or subtly filled icons. Consistent style. Use reputable libraries (Heroicons, Feather, Material Icons)."
+      },
+      "ui_components": {
+        "buttons": "Clear, prominent CTAs. Obvious hover/active states. Rounded corners optional. Use lighter accent for hover.",
+        "forms": "Simple, user-friendly, minimal fields, clear labels, and validation.",
+        "navigation": "Intuitive, simple, consider sticky header. Mobile-friendly (hamburger menu).",
+        "cards": "Clean, well-structured, balanced text and imagery. Subtle padding, border-radius, and shadow if used.",
+        "animations": "Subtle, purposeful (e.g., smooth scroll, gentle hover). Avoid jarring or slow effects."
+      },
+      "tone_of_voice": "Professional, friendly, trustworthy, helpful, and reassuring. Clear, concise, customer-centric language. Avoid jargon.",
+      "accessibility": "Sufficient color contrast, keyboard navigability, alt text for images, semantic HTML, clear visual hierarchy. WCAG 2.1 AA minimum.",
+      "mobile_responsiveness": "Mobile-first or highly adaptive. Prioritize readability and usability on small screens."
+    },
+    "operational_protocol": {
+      "description": "Defines expected behavior when interpreting, executing, or delivering work on the 'Gathered Roots Cleaning' website.",
+      "before_action": [
+        "Confirm if the task relates to a Core Page (`Home`, `About Us`, `Services Offered`, `Service Areas`, `Testimonials`, `FAQ`, `Contact/Booking`) or a new feature (e.g., online quote tool).",
+        "Break down tasks like 'implementing a new service page' or 'integrating a booking calendar' into manageable subtasks.",
+        "Evaluate mobile responsiveness and accessibility (WCAG 2.1 AA minimum) at each stage, ensuring usability for all potential customers.",
+        "Ensure alignment with local SEO goals (e.g., correct NAP information, service area keywords, `schema.org` for `LocalBusiness` and `Service`).",
+        "Verify consistency of service descriptions, pricing (if displayed), and calls to action across all relevant pages."
+      ],
+      "action_expectations": [
+        "Prioritize clean, semantic, and accessible code (HTML, JSX, CSS with Tailwind CSS, JavaScript/TypeScript for React and Node.js) suitable for a professional business website.",
+        "Use animations subtly to enhance user experience without distracting from core content like service information or booking forms.",
+        "Minimize external scripts or plugins to maintain fast loading times; prefer lightweight solutions.",
+        "All service pages must clearly outline the service, its benefits, and a clear call to action (e.g., 'Request a Quote', 'Book Now').",
+        "Respect user privacy, especially with contact forms and any booking information collected. Ensure clear consent.",
+        "Aim for high Lighthouse scores, particularly in Performance, Accessibility, and SEO, to provide a good user experience and improve search visibility."
+      ]
+    },
+    "scope_limitations": {
+      "description": "Defines boundaries of acceptable task requests for the 'Gathered Roots Cleaning' website.",
+      "rules": [
+        "Do not introduce complex e-commerce systems unless specifically requested for direct online payment for services; prefer simpler booking/quote request forms.",
+        "Avoid adding intrusive pop-ups or aggressive marketing trackers that could deter potential customers.",
+        "Refrain from using overly technical jargon in website copy; language should be clear, friendly, and customer-focused.",
+        "The website design should be professional, trustworthy, and align with the 'Gathered Roots Cleaning' brand identity (clean, perhaps nature-inspired if the name implies). Avoid overly flashy or cluttered designs."
+      ]
+    },
+    "quality_standards": {
+      "description": "Quality expectations for content, design, and functionality of the 'Gathered Roots Cleaning' website.",
+      "expectations": [
+        "Adherence to standard formatting practices for HTML, JSX, CSS (Tailwind CSS best practices), and JavaScript/TypeScript for maintainability.",
+        "Tailwind CSS utility classes should be applied logically, consistently, and organized (e.g., using `@apply` for component classes if deemed appropriate for complex components, or consistent ordering of utilities).",
+        "Mandatory accessibility checks: clear visual hierarchy, keyboard navigability, sufficient color contrast, alt text for all informative images.",
+        "All website copy (service descriptions, 'About Us' text, FAQs) must be well-written, grammatically correct, and persuasive.",
+        "Images used (e.g., of clean homes, happy clients, team members) must be high-quality, professional, and optimized for fast web loading.",
+        "Key pages should have appropriate meta titles, descriptions, and OpenGraph tags for social sharing and SEO."
+      ]
+    },
+    "compliance_alignment": {
+      "description": "Ensures minimal viable alignment with privacy, security, and business best practices for 'Gathered Roots Cleaning'.",
+      "expectations": [
+        "Only collect necessary customer information through contact/booking forms, with clear consent (e.g., checkbox for privacy policy).",
+        "If a third-party booking system or payment gateway is used, ensure it is reputable and secure.",
+        "Ensure all business information (Name, Address, Phone number, Service Areas, Operating Hours) is accurate and consistent across the website.",
+        "Provide a clear privacy policy page, easily accessible to users.",
+        "If cookies are used (beyond essential ones), inform users and provide options if required by local regulations."
+      ]
+    }
+  }
+}

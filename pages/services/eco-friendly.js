@@ -1,0 +1,116 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import Button from '../../components/Button';
+
+const benefits = [
+  'Safe for sensitive individuals, children, and pets',
+  'No harsh chemicals or toxic residues',
+  'Effective cleaning without environmental harm',
+  'Reduced allergens and improved indoor air quality',
+  'Sustainable practices that minimize waste',
+  'Biodegradable products with eco-friendly packaging',
+];
+
+export default function EcoFriendly() {
+  return (
+    <>
+      <Head>
+        <title>Eco-Friendly Cleaning Options | Gathered Roots Cleaning</title>
+        <meta
+          name="description"
+          content="Our eco-friendly cleaning services use safe, natural products that are effective and better for your family and the environment."
+        />
+        <meta
+          property="og:title"
+          content="Eco-Friendly Cleaning Options | Gathered Roots Cleaning"
+        />
+        <meta
+          property="og:description"
+          content="Safe, non-toxic cleaning products and methods for your family and pets. Book eco-friendly cleaning today!"
+        />
+        <link rel="canonical" href="https://www.gatheredrootscleaning.com/services/eco-friendly" />
+        
+        {/* Service-specific structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              name: 'Eco-Friendly Cleaning',
+              description: 'Environmentally conscious cleaning using safe, non-toxic products. Perfect for families with children, pets, or sensitivities.',
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'Gathered Roots Cleaning',
+                '@id': 'https://www.gatheredrootscleaning.com'
+              },
+              areaServed: [
+                {
+                  '@type': 'Place',
+                  name: 'Lewiston, ID'
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Clarkston, WA'
+                }
+              ],
+              serviceType: 'Green House Cleaning',
+              category: 'Eco-Friendly Cleaning',
+              additionalProperty: [
+                {
+                  '@type': 'PropertyValue',
+                  name: 'Cleaning Method',
+                  value: 'Non-toxic, environmentally safe products'
+                }
+              ],
+              offers: {
+                '@type': 'Offer',
+                availability: 'https://schema.org/InStock',
+                priceCurrency: 'USD',
+                description: 'Safe, eco-friendly cleaning services'
+              }
+            })
+          }}
+        />
+      </Head>
+      <main className="bg-background min-h-screen">
+        <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="mb-8 flex justify-center">
+              <img
+                src="/images/eco-friendly.jpg"
+                alt="Natural cleaning products and supplies"
+                className="rounded-lg shadow-lg w-full mx-auto object-cover h-64"
+              />
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-primary-accent-cta mb-4">
+              Eco-Friendly Cleaning
+            </h1>
+            <p className="text-lg text-text-dark mb-8 max-w-2xl mx-auto">
+              At Gathered Roots, we&apos;re committed to offering eco-friendly cleaning options
+              that protect your family&apos;s health and the environment. Our green cleaning
+              services use plant-based, biodegradable products that are free from harsh chemicals
+              yet highly effective.
+            </p>
+            <h2 className="text-2xl font-semibold text-primary-accent-brand mb-4">Benefits</h2>
+            <ul className="text-left text-text-dark mb-8 max-w-xl mx-auto list-disc list-inside space-y-2">
+              {benefits.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+            <p className="text-lg text-text-dark mb-8 max-w-2xl mx-auto">
+              Our eco-friendly option can be applied to any of our cleaning services, from
+              standard recurring cleans to deep cleans and move-in/move-out services.
+            </p>
+            <div className="mt-12 text-center">
+              <Link href="/quote" passHref legacyBehavior>
+                <Button className="text-lg px-8 py-3">Get an Eco-Friendly Cleaning Quote</Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}

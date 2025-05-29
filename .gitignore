@@ -1,0 +1,340 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Next.js build outputs
+.next/
+out/
+build/
+dist/
+
+# Vercel deployment artifacts
+.vercel/
+.vercel
+
+# Production builds
+*.tgz
+*.tar.gz
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.jest-cache/
+jest-junit.xml
+
+# Environment variables
+.env*
+!*.template
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next/
+out/
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Contentlayer cache (if used)
+.contentlayer/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+._*
+.Spotlight-V100
+.Trashes
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# IDE / Editor specific
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.metadata
+.classpath
+.settings/
+.buildpath
+.cache
+.history
+.sublime-project
+.sublime-workspace
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Vim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Cursor IDE
+.cursor/
+
+# WebStorm
+.idea/
+
+# Optional SASS files
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Lock files (uncomment if using different package managers)
+# yarn.lock
+# pnpm-lock.yaml
+
+# Temporary folders
+tmp/
+temp/
+
+# Backup files
+*.bak
+*.tmp
+*.orig
+
+# Local configuration files
+local.json
+config/local.json
+
+# Documentation build
+docs/_build/
+site/
+
+# Deployment
+.deploy/
+.surge/
+
+# PM2
+.pm2/
+
+# Storybook build outputs
+storybook-static/
+
+# Chromatic
+chromatic-build/
+
+# TypeScript v1 declaration files
+typings/
+
+# ESLint cache
+.eslintcache
+
+# Prettier cache
+.prettiercache
+
+# Stylelint cache
+.stylelintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional yarn cache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Webpack bundles
+webpack-bundle-analyzer-report.html
+
+# Large Assets (Uncomment if you want to ignore these)
+# public/images/large/
+# public/videos/
+# *.mp4
+# *.avi
+# *.mov
+# *.wmv
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cloud deployment artifacts
+.aws-sam/
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Analytics and monitoring
+.sentryclirc
+
+# Debugging and profiling
+.cpu
+.memory
+profile.json
+speed-measure-plugin.json 
