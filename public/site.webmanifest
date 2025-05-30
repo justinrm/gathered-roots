@@ -1,0 +1,21 @@
+{
+  "name": "Gathered Roots Cleaning",
+  "short_name": "Gathered Roots",
+  "description": "Professional home and office cleaning services in Lewiston, Idaho, and surrounding areas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F1ED",
+  "theme_color": "#006978",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 

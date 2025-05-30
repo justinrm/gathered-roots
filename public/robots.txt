@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow API routes or other private areas if any. 
+# Example for Next.js API routes:
+# Disallow: /api/
+
+Sitemap: https://www.gatheredrootscleaning.com/sitemap.xml 
