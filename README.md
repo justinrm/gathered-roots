@@ -1,41 +1,55 @@
 # Gathered Roots Cleaning Website
 
-[![Next.js](https://img.shields.io/badge/Next.js-13.0-blue)](https://nextjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC)](https://tailwindcss.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-336791)](https://www.postgresql.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.3-blue)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1-blue)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1-38B2AC)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue)](https://www.typescriptlang.org/)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
 
-A modern, professional website for Gathered Roots Cleaning, a cleaning business focused on trust, quality, and customer experience. The site is designed to generate leads, showcase services, and facilitate easy bookings or quote requests.
+A modern, professional website for Gathered Roots Cleaning, a cleaning business focused on trust, quality, and customer experience. The site is designed to generate leads, showcase services, and facilitate easy bookings through Square integration.
 
 ## 📑 Table of Contents
 
 - [Project Overview](#project-overview)
   - [Key Features](#key-features)
+  - [Live Pages](#live-pages)
 - [Technology Stack](#technology-stack)
   - [Frontend](#frontend)
-  - [Backend](#backend)
+  - [Backend & Integrations](#backend--integrations)
   - [Development Tools](#development-tools)
   - [Infrastructure](#infrastructure)
 - [Design & Brand Guidelines](#design--brand-guidelines)
-- [Mobile-First & Responsive Design](#mobile-first--responsive-design-best-practices)
+  - [Color Palette](#color-palette)
+  - [Typography](#typography)
+  - [UI Components](#ui-components)
+- [Mobile-First & Responsive Design](#mobile-first--responsive-design)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Environment Setup](#environment-setup)
   - [Development](#development)
   - [Production Build](#production-build)
-- [Data Management](#data-management)
-  - [Database Setup and Validation](#database-setup-and-validation)
-  - [Contact Form Submissions](#contact-form-submissions)
-  - [Scheduled Data Purge](#scheduled-data-purge)
+- [Forms & Contact Management](#forms--contact-management)
+  - [Contact Form](#contact-form)
+  - [Booking Form](#booking-form)
+  - [Email Configuration](#email-configuration)
+- [Square Integration](#square-integration)
+  - [Setup](#setup)
+  - [Client Management](#client-management)
 - [Security & Privacy](#security--privacy)
-  - [Data Encryption](#data-encryption)
+  - [Form Security](#form-security)
   - [API Security](#api-security)
+  - [Rate Limiting](#rate-limiting)
 - [Code Quality & Standards](#code-quality--standards)
   - [Linting & Formatting](#linting--formatting)
   - [Accessibility](#accessibility)
   - [SEO Optimization](#seo-optimization)
+- [Deployment](#deployment)
+  - [Quick Deployment](#quick-deployment)
+  - [Production Setup](#production-setup)
+  - [Health Monitoring](#health-monitoring)
 - [Project Structure](#project-structure)
+- [Scripts & Tools](#scripts--tools)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -45,81 +59,127 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 
 ### Key Features
 
-- 📱 Mobile-first, responsive design
-- 🔒 Secure contact form submissions with encryption
-- 📅 Automated booking system integration
-- 📊 SEO-optimized for local search
-- ♿ WCAG 2.1 AA compliant
-- 🔄 Automated data cleanup for privacy compliance
+- 📱 Mobile-first, responsive design (WCAG 2.1 AA compliant)
+- 🔒 Secure contact and booking forms with rate limiting
+- 🏪 Square integration for client management and payments
+- 📧 Automated email notifications for inquiries and bookings
+- 📊 SEO-optimized for local search with schema markup
+- ⚡ Optimized performance (Next.js with static generation)
+- 🎨 Modern, professional design with consistent branding
+- 🛡️ Security headers and best practices implemented
+
+### Live Pages
+
+**Core Pages:**
+- 🏠 **Homepage** (`/`) - Hero, services overview, testimonials, CTAs
+- 📋 **Services** (`/services`) - Complete service offerings overview
+  - Standard Cleaning (`/services/standard-clean`)
+  - Deep Cleaning (`/services/deep-clean`)
+  - Move-in/Move-out (`/services/move-in-move-out`)
+  - Eco-Friendly Options (`/services/eco-friendly`)
+- 🏘️ **Service Areas** (`/service-areas`) - Geographic coverage with interactive map
+- 👥 **About Us** (`/about-us`) - Company story, mission, team
+- 💬 **Testimonials** (integrated throughout site)
+- ❓ **FAQ** (`/faq`) - Common questions and answers
+- 📞 **Contact** (`/contact`) - Contact form and business information
+- 📅 **Booking** (`/booking`) - Comprehensive booking form
+- 💰 **Quote** (`/quote`) - Quick quote request form
+
+**Legal & Utility:**
+- 🔒 **Privacy Policy** (`/privacy-policy`) - GDPR/privacy compliance
+- ♿ **Accessibility** (`/accessibility`) - Accessibility statement
+- 🔍 **Sitemap** (`/sitemap.xml`) - SEO sitemap
+- 🤖 **Robots.txt** (`/robots.txt`) - Search engine directives
 
 ## Technology Stack
 
 ### Frontend
-- **Framework:** [Next.js](https://nextjs.org/) (React)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **State Management:** React Context API
-- **Form Handling:** React Hook Form
-- **API Client:** Axios
-- **Animation:** Framer Motion (for subtle UI animations)
-- **Icons:** Heroicons, Feather Icons
+- **Framework:** [Next.js 15.3](https://nextjs.org/) (React 19.1)
+- **Styling:** [Tailwind CSS 4.1](https://tailwindcss.com/)
+- **Language:** JavaScript/TypeScript ready
+- **State Management:** React built-in state and context
+- **Form Handling:** Custom validation with React hooks
+- **Icons:** [Heroicons](https://heroicons.com/)
+- **Maps:** React Leaflet for service area visualization
 
-### Backend
-- **Database:** PostgreSQL
-- **API Routes:** Next.js API Routes
-- **Authentication:** JWT (if implemented)
-- **Payment Processing:** Square API (optional)
-- **Email Service:** SendGrid or Mailgun
+### Backend & Integrations
+- **API Routes:** Next.js API Routes (serverless)
+- **Client Management:** [Square API](https://developer.squareup.com/) integration
+- **Email Service:** SMTP with Nodemailer (Gmail, etc.)
+- **Payments:** Square (optional integration)
+- **Analytics:** Ready for Google Analytics, Facebook Pixel
 
 ### Development Tools
 - **Package Manager:** npm
-- **Linting:** ESLint with jsx-a11y
+- **Linting:** ESLint with React and accessibility plugins
 - **Formatting:** Prettier
-- **Version Control:** Git
-- **CI/CD:** GitHub Actions (recommended)
-- **Testing:** Jest, React Testing Library
+- **Version Control:** Git with comprehensive `.gitignore`
+- **Code Quality:** TypeScript definitions included
+- **Testing:** Jest and React Testing Library ready
+- **Deployment Scripts:** Automated deployment with `scripts/deploy.sh`
 
 ### Infrastructure
-- **Hosting:** Vercel (recommended) or similar
-- **Database Hosting:** Managed PostgreSQL service
-- **Monitoring:** Vercel Analytics (optional)
-- **Content Delivery:** Vercel Edge Network
+- **Hosting:** Vercel (recommended) or EC2 with provided scripts
+- **CDN:** Vercel Edge Network or CloudFront
+- **SSL:** Let's Encrypt with Certbot (automated)
+- **Process Management:** PM2 for production servers
+- **Web Server:** Nginx with optimized configuration
 
 ## Design & Brand Guidelines
 
-- **Color Palette:**
-  - Background: `#F4F1ED`
-  - Primary Accent: `#1E2B28` (CTAs, highlights, links, icons)
-  - Primary Accent: `#2F4F4F` (Brand, headings, logo)
-  - Alt Accent: `#D8C3A5` (Alternate accent, logo)
-  - Secondary Accent (Hover): `#D8C3A5` (Button hover, link hover)
-  - Text (Dark): `#1E2B28`, Text (Light): `#757575`, Borders: `#E0E0E0`
-- **Typography:**
-  - Headings: Modern sans-serif (e.g., Montserrat)
-  - Body: Open Sans, sans-serif (font-sans)
-- **Imagery:** High-quality, bright, authentic photos; minimalist icons (Heroicons, Feather, Material Icons)
-- **UI:** Clean cards, clear CTAs, subtle animations, mobile-first, accessible (WCAG 2.1 AA)
+### Color Palette
 
-## Mobile-First & Responsive Design Best Practices
+```css
+/* Primary Brand Colors */
+--background: #F4F1ED;           /* Off-white background */
+--primary-accent-teal: #006978;  /* Deep teal - CTAs, links */
+--primary-accent-green: #2D5A4F; /* Muted green - brand elements */
+--secondary-accent-hover: #5FB09C; /* Lighter teal - hover states */
 
-- All layouts and components are built mobile-first using Tailwind CSS utility classes and responsive breakpoints (`sm`, `md`, `lg`, `xl`).
-- Grids and flex layouts stack vertically on small screens and expand horizontally on larger screens.
-- Navigation, forms, buttons, and cards are touch-friendly and accessible on mobile devices.
-- Images and text scale appropriately; no horizontal scrolling or overflow on small screens.
-- **Testing Responsiveness:**
-  - Use Chrome DevTools or Firefox Responsive Design Mode to preview on various device sizes.
-  - Test all breakpoints and interactive elements for usability and accessibility.
-  - Confirm that navigation, forms, and CTAs are easy to use on touch devices.
-- For new components/pages, always start with a mobile layout and enhance for larger screens using Tailwind's responsive utilities.
+/* Text Colors */
+--text-dark: #333333;            /* Primary text */
+--text-light: #666666;           /* Secondary text */
+
+/* UI Elements */
+--borders: #E0E0E0;              /* Borders and dividers */
+--card-background: #FFFFFF;       /* Card backgrounds */
+--card-border: #E8E5E0;          /* Card borders */
+```
+
+### Typography
+
+- **Headings:** Montserrat (font-headings) - Modern, clean sans-serif
+- **Body Text:** Open Sans (font-sans) - Highly readable, 16px base
+- **Hierarchy:** Clear distinction via size, weight, and color
+- **Responsive:** Scales appropriately across all devices
+
+### UI Components
+
+- **Buttons:** Clear CTAs with hover states, consistent styling
+- **Cards:** Light backgrounds, subtle shadows, hover animations
+- **Forms:** Simple, accessible, with validation and error handling
+- **Navigation:** Sticky header, mobile hamburger menu
+- **Icons:** Minimalist Heroicons throughout
+
+## Mobile-First & Responsive Design
+
+All layouts and components are built mobile-first using Tailwind CSS:
+
+- **Breakpoints:** `sm` (640px), `md` (768px), `lg` (1024px), `xl` (1280px)
+- **Grid System:** Responsive grids that stack on mobile, expand on desktop
+- **Touch-Friendly:** All interactive elements optimized for touch
+- **Performance:** Images optimized with Next.js Image component
+- **Testing:** Chrome DevTools responsive design mode recommended
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16+)
-- npm (comes with Node.js)
-- PostgreSQL (v14+)
-- Python 3.8+ (for data purge script)
-- Git
+- **Node.js** (v16+) - [Download](https://nodejs.org/)
+- **npm** (comes with Node.js)
+- **Git** - [Download](https://git-scm.com/)
+- **Square Developer Account** - [Sign up](https://developer.squareup.com/)
+- **Email SMTP Access** (Gmail, etc.)
 
 ### Installation
 
@@ -131,33 +191,52 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 
 2. **Install dependencies:**
    ```bash
-   # Install Node.js dependencies
    npm install
-
-   # Install Python dependencies (for data purge script)
-   pip install -r requirements.txt
    ```
 
 3. **Set up environment variables:**
-   Create `.env.local` in the project root:
-   ```env
-   DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE_NAME"
-   CONTACT_ENCRYPTION_KEY=your_64_character_hex_key
-   SQUARE_ACCESS_TOKEN=your_square_access_token
-   NEXT_PUBLIC_SITE_URL=http://localhost:3000
-   ```
-
-4. **Initialize the database:**
    ```bash
-   # Create the database
-   createdb gathered_roots_db
-
-   # Check database setup and schema
-   npm run db:check
-
-   # Initialize database schema if needed
-   npm run db:init
+   cp template.env .env.local
    ```
+
+4. **Configure your environment** (see [Environment Setup](#environment-setup))
+
+### Environment Setup
+
+Edit `.env.local` with your actual values:
+
+```env
+# Site Configuration
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NODE_ENV=development
+
+# Email Configuration (Required)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+SMTP_SECURE=false
+MAILER_FROM_ADDRESS=noreply@yourdomain.com
+CONTACT_FORM_RECIPIENT_EMAIL=contact@yourdomain.com
+EMAIL_FROM_NAME=Gathered Roots Cleaning
+
+# Square Configuration (Optional for development)
+SQUARE_ACCESS_TOKEN=your-square-access-token
+SQUARE_ENVIRONMENT=sandbox
+SQUARE_APPLICATION_ID=your-square-application-id
+SQUARE_LOCATION_ID=your-square-location-id
+
+# Rate Limiting
+CONTACT_FORM_RATE_LIMIT=5
+CONTACT_FORM_RATE_WINDOW=60000
+BOOKING_FORM_RATE_LIMIT=3
+BOOKING_FORM_RATE_WINDOW=3600000
+```
+
+**For Gmail SMTP:**
+1. Enable 2-factor authentication
+2. Generate an "App Password" 
+3. Use the app password (not your regular password)
 
 ### Development
 
@@ -166,167 +245,374 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
    npm run dev
    ```
 
-2. **Access the development site:**
+2. **Access the application:**
    Open [http://localhost:3000](http://localhost:3000)
 
 3. **Run code quality checks:**
    ```bash
-   # Linting
-   npm run lint
+   npm run lint      # ESLint
+   npm run format    # Prettier
+   npm run a11y      # Accessibility
+   ```
 
-   # Formatting
-   npm run format
-
-   # Accessibility checks
-   npm run a11y
+4. **Verify forms functionality:**
+   ```bash
+   npm run verify-forms
    ```
 
 ### Production Build
 
-1. **Build the production version:**
+1. **Build the application:**
    ```bash
    npm run build
    ```
 
-2. **Start the production server:**
+2. **Start production server:**
    ```bash
    npm start
    ```
 
-3. **Deploy to Vercel (recommended):**
-   ```bash
-   # Install Vercel CLI if not already installed
-   npm install -g vercel
+3. **Test the production build:**
+   - Verify all pages load correctly
+   - Test form submissions
+   - Check responsive design
+   - Validate accessibility
 
-   # Deploy
-   vercel
+## Forms & Contact Management
+
+### Contact Form
+
+**Location:** `components/ContactForm.jsx`  
+**API Endpoint:** `/api/contact`  
+**Used On:** Contact page, homepage, quote page
+
+**Features:**
+- Input validation (name, email, phone, service type, message)
+- Privacy policy consent checkbox required
+- Rate limiting (5 submissions per hour)
+- Automatic email notifications to business and customer
+- Accessible error handling and user feedback
+
+### Booking Form
+
+**Location:** `pages/booking.js`  
+**API Endpoint:** `/api/submit-booking-request`
+
+**Features:**
+- Comprehensive booking details (service, date, time, address)
+- Service-specific options and customization
+- Rate limiting (3 submissions per hour)
+- Email notifications with booking confirmation
+- Integration with Square for client management
+
+### Email Configuration
+
+Both forms send automated emails:
+
+1. **Business Notification:** Complete submission details
+2. **Customer Confirmation:** Professional thank you with next steps
+
+**Required SMTP Configuration:**
+- Gmail, Outlook, or custom SMTP server
+- Valid credentials and app passwords
+- FROM address matching your domain (recommended)
+
+## Square Integration
+
+### Setup
+
+1. **Create Square Developer Account:**
+   - Visit [developer.squareup.com](https://developer.squareup.com/)
+   - Create application for Gathered Roots Cleaning
+
+2. **Configure Environment Variables:**
+   ```env
+   SQUARE_ACCESS_TOKEN=your-square-access-token
+   SQUARE_ENVIRONMENT=sandbox  # or 'production'
+   SQUARE_APPLICATION_ID=your-square-application-id
+   SQUARE_LOCATION_ID=your-square-location-id
    ```
 
-## Data Management
+3. **Test Integration:**
+   - Verify API connectivity
+   - Test client data management
+   - Confirm payment processing (if enabled)
 
-### Database Setup and Validation
+### Client Management
 
-The application includes robust database validation and auto-initialization:
-
-- **Automatic Validation**: The system checks database connections and schema before allowing operations
-- **Auto-Init Capability**: Can automatically create tables and indexes when missing
-- **Health Monitoring**: API endpoint (`/api/system/db-status`) for monitoring database health
-- **Error Handling**: Detailed error messages for development, user-friendly messages in production
-- **Initialization Scripts**:
-  - `npm run db:check` - Verifies database setup
-  - `npm run db:init` - Initializes schema if missing
-
-### Contact Form Submissions
-
-Sensitive contact information (name, email, phone) submitted through the website's contact forms is encrypted at the application level using AES-256-GCM before being stored in the PostgreSQL database.
-
-### Scheduled Data Purge
-
-To comply with privacy best practices, user contact submissions older than 90 days are automatically purged from the database. This is handled by the `purge_old_contacts.py` script in the project root.
+- **Contact Information:** Managed through Square Customer API
+- **Booking Data:** Stored in Square for business management
+- **No Local Database:** All client data handled by Square's secure infrastructure
+- **GDPR Compliant:** Square handles data protection requirements
 
 ## Security & Privacy
 
-### Data Encryption
+### Form Security
 
-This project handles sensitive data in two main ways:
-
-1. **Contact Form Submissions (via Next.js frontend to PostgreSQL):**
-   Sensitive contact information (name, email, phone) submitted through the website's contact forms is encrypted at the application level using AES-256-GCM before being stored in the PostgreSQL database.
-   - **Encryption Method:** Implemented in `lib/encryption.js`.
-   - **Environment Variable:** Requires `CONTACT_ENCRYPTION_KEY` in `.env.local`.
-   - **Scope:** Protects data collected directly through website forms and stored in your PostgreSQL database.
-
-2. **Booking Information (via Node.js backend to Square API):**
-   All communication with the Square API for creating bookings, managing customer data, and searching availability is handled over HTTPS by the Square SDK. Sensitive payment details are handled directly by Square's secure infrastructure if you choose to integrate Square Payments.
-   - **Security:** Relies on Square's robust security measures and PCI compliance for handling booking and payment-related data.
-   - **Environment Variable:** Requires `SQUARE_ACCESS_TOKEN` in `.env` for authenticating with the Square API.
-
-**Never commit your encryption keys (`CONTACT_ENCRYPTION_KEY`) or API tokens (`SQUARE_ACCESS_TOKEN`) to version control.** Ensure `.env` and `.env.local` are in your `.gitignore`.
+- **Rate Limiting:** Prevents spam and abuse
+- **Input Validation:** Server-side validation for all form data
+- **CSRF Protection:** Built-in with Next.js
+- **HTML Escaping:** Prevents XSS in email content
+- **Privacy Consent:** Required checkbox for data collection
 
 ### API Security
 
-The API routes and endpoints implement several security measures:
+- **HTTP Security Headers:** Implemented in `next.config.js`
+- **CORS Policies:** Properly configured for production
+- **Environment Variables:** Sensitive data never committed to git
+- **Error Handling:** Production-safe error messages
 
-- **Rate Limiting**: Prevents abuse through excessive requests
-- **CORS Policies**: Restricts which domains can access the API
-- **Input Validation**: Validates all input data before processing
-- **JWT Authentication**: For protected routes (if applicable)
-- **CSRF Protection**: Cross-Site Request Forgery prevention
-- **HTTP Headers**: Security headers like Content-Security-Policy
+### Rate Limiting
+
+```javascript
+// Contact Form: 5 submissions per hour per IP
+// Booking Form: 3 submissions per hour per IP
+// Configurable via environment variables
+```
 
 ## Code Quality & Standards
 
 ### Linting & Formatting
 
-- `npm run lint` – Run ESLint on all source files
-- `npm run format` – Format all files with Prettier
-- `npm run a11y` – Run accessibility checks (jsx-a11y)
+```bash
+npm run lint     # ESLint with React and accessibility rules
+npm run format   # Prettier formatting
+npm run a11y     # Accessibility-specific linting
+```
 
-Configuration: `.eslintrc.json`, `.eslintignore`, `.prettierrc`, `.prettierignore`
+**Configuration Files:**
+- `.eslintrc.json` - ESLint rules and plugins
+- `.prettierrc` - Code formatting preferences
+- `eslint.config.mjs` - Modern ESLint configuration
 
 ### Accessibility
 
-- Follows [WCAG 2.1 AA](https://www.w3.org/WAI/standards-guidelines/wcag/) guidelines
-- Semantic HTML, keyboard navigability, alt text for images
-- ARIA attributes where appropriate
-- Focus management for interactive elements
-- Sufficient color contrast ratios
-- Screen reader compatibility
+- **WCAG 2.1 AA Compliance:** All components tested
+- **Semantic HTML:** Proper heading hierarchy and landmarks
+- **Keyboard Navigation:** Full keyboard accessibility
+- **Screen Readers:** ARIA labels and descriptions
+- **Color Contrast:** Meets or exceeds accessibility standards
+- **Focus Management:** Clear focus indicators
 
 ### SEO Optimization
 
-- Semantic HTML structure
-- Custom metadata for each page via Next.js Head component
-- Local SEO: correct NAP, service area keywords, `schema.org` markup
-- Sitemap generation
-- Fast loading, high Lighthouse scores
-- Mobile-friendly design (Google's mobile-first indexing)
+- **Meta Tags:** Custom titles and descriptions for all pages
+- **Schema Markup:** LocalBusiness and Service structured data
+- **Sitemap:** Automatically generated (`public/sitemap.xml`)
+- **Robots.txt:** Search engine directives
+- **Performance:** Optimized for Core Web Vitals
+- **Local SEO:** NAP consistency, service area keywords
+
+## Deployment
+
+### Quick Deployment
+
+**Using the deployment script:**
+```bash
+chmod +x scripts/deploy.sh
+./scripts/deploy.sh
+```
+
+**Script options:**
+```bash
+./scripts/deploy.sh          # Full deployment
+./scripts/deploy.sh backup   # Create backup only
+./scripts/deploy.sh restart  # Restart services
+./scripts/deploy.sh health   # Health check
+./scripts/deploy.sh logs     # View logs
+```
+
+### Production Setup
+
+**For EC2/VPS deployment:**
+
+1. **Run server setup:**
+   ```bash
+   chmod +x scripts/server-setup.sh
+   ./scripts/server-setup.sh
+   ```
+
+2. **Configure environment:**
+   ```bash
+   cp template.env .env.local
+   # Edit with production values
+   ```
+
+3. **Build and deploy:**
+   ```bash
+   npm ci --production=false
+   npm run build
+   pm2 start ecosystem.config.js
+   ```
+
+4. **Set up SSL:**
+   ```bash
+   sudo certbot --nginx -d yourdomain.com
+   ```
+
+**For Vercel deployment:**
+```bash
+npm install -g vercel
+vercel
+```
+
+### Health Monitoring
+
+- **Application Status:** `pm2 status`
+- **Health Endpoint:** `/api/health` (if configured)
+- **Log Monitoring:** `pm2 logs gathered-roots`
+- **SSL Status:** `sudo certbot certificates`
 
 ## Project Structure
 
 ```
 gathered-roots-cleaning/
-├── components/         # Reusable React components
-│   ├── layout/         # Layout components (Header, Footer, etc.)
-│   ├── ui/             # UI components (Button, Card, etc.)
-│   ├── forms/          # Form components (ContactForm, BookingForm, etc.)
-│   └── sections/       # Page sections (Hero, Services, Testimonials, etc.)
-├── config/             # Configuration files
-├── controllers/        # API controllers
-├── lib/                # Utility functions
-│   └── encryption.js   # Encryption utilities
-├── pages/              # Next.js pages
-│   ├── api/            # API routes
-│   ├── services/       # Service pages
-│   └── about-us/       # About us page
-├── public/             # Static assets
-│   ├── images/         # Images
-│   └── favicon/        # Favicon files
-├── routes/             # Backend routes
-├── styles/             # CSS/Tailwind styles
-├── .env.local          # Environment variables (not in git)
-├── .gitignore          # Git ignore file
-├── .eslintrc.json      # ESLint configuration
-├── .prettierrc         # Prettier configuration
-├── next.config.js      # Next.js configuration
-├── package.json        # NPM package file
-├── purge_old_contacts.py # Data purge script
-├── README.md           # Project documentation
-├── server.js           # Express server (if applicable)
-└── tailwind.config.js  # Tailwind CSS configuration
+├── components/              # Reusable React components
+│   ├── Button.jsx          # Styled button component
+│   ├── Card.jsx            # Card layout component
+│   ├── ContactForm.jsx     # Main contact form
+│   ├── Footer.js           # Site footer
+│   ├── HeroSection.js      # Homepage hero
+│   ├── Input.jsx           # Form input component
+│   ├── Layout.jsx          # Page layout wrapper
+│   ├── Navbar.jsx          # Main navigation
+│   ├── Select.jsx          # Form select component
+│   ├── ServiceCard.jsx     # Service display card
+│   ├── ServicesSummary.js  # Services overview
+│   ├── StarRating.jsx      # Star rating display
+│   ├── TestimonialCard.jsx # Customer testimonial
+│   ├── TestimonialCarousel.jsx # Testimonials slider
+│   ├── Textarea.jsx        # Form textarea component
+│   ├── UspSection.js       # Unique selling propositions
+│   └── ValidationMessage.jsx # Form validation display
+│
+├── pages/                  # Next.js pages and routing
+│   ├── api/                # API routes (serverless functions)
+│   │   ├── contact.ts      # Contact form handler
+│   │   └── submit-booking-request.js # Booking form handler
+│   ├── services/           # Individual service pages
+│   │   ├── deep-clean.js
+│   │   ├── eco-friendly.js
+│   │   ├── move-in-move-out.js
+│   │   └── standard-clean.js
+│   ├── _app.js             # App wrapper and global styles
+│   ├── _document.js        # HTML document structure
+│   ├── about-us.js         # About page
+│   ├── accessibility.js    # Accessibility statement
+│   ├── booking.js          # Booking form page
+│   ├── contact.js          # Contact page
+│   ├── faq.js              # FAQ page
+│   ├── index.js            # Homepage
+│   ├── privacy-policy.js   # Privacy policy
+│   ├── quote.js            # Quick quote page
+│   ├── service-areas.js    # Service areas with map
+│   └── services.js         # Services overview
+│
+├── public/                 # Static assets
+│   ├── images/             # Optimized images
+│   ├── android-chrome-192x192.png
+│   ├── apple-touch-icon.png
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── robots.txt          # Search engine directives
+│   ├── site.webmanifest    # PWA manifest
+│   └── sitemap.xml         # SEO sitemap
+│
+├── scripts/                # Automation and deployment
+│   ├── deploy.sh           # Production deployment script
+│   ├── server-setup.sh     # Server initialization
+│   └── verify-forms.js     # Form functionality verification
+│
+├── styles/                 # Styling and CSS
+│   └── globals.css         # Global styles and Tailwind imports
+│
+├── lib/                    # Utility functions and configs
+│   ├── apiClient.js        # API client configuration
+│   └── rateLimit.ts        # Rate limiting implementation
+│
+├── .notes/                 # Project documentation
+│   ├── database_troubleshooting.md
+│   ├── project_overview.md
+│   └── security_features.md
+│
+├── dev-tools/              # Development utilities
+├── .cursorignore           # Cursor IDE ignore rules
+├── .cursorrules            # Cursor IDE project rules
+├── .env.local              # Environment variables (not in git)
+├── .gitignore              # Git ignore rules
+├── .prettierignore         # Prettier ignore rules
+├── .prettierrc             # Prettier configuration
+├── eslint.config.mjs       # ESLint configuration
+├── FORM_VERIFICATION_REPORT.md # Form testing report
+├── LICENSE                 # ISC license
+├── next.config.js          # Next.js configuration
+├── next-env.d.ts          # Next.js TypeScript definitions
+├── package.json           # Dependencies and scripts
+├── postcss.config.mjs     # PostCSS configuration
+├── QUICK_DEPLOYMENT_REFERENCE.md # Deployment guide
+├── README.md              # This file
+├── STYLEGUIDE.md          # Design system documentation
+├── tailwind.config.mjs    # Tailwind CSS configuration
+├── template.env           # Environment template
+└── tsconfig.json          # TypeScript configuration
 ```
+
+## Scripts & Tools
+
+### NPM Scripts
+
+```json
+{
+  "dev": "next dev",                    // Development server
+  "build": "next build",                // Production build
+  "start": "next start",                // Production server
+  "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",  // Linting
+  "format": "prettier --write .",       // Code formatting
+  "a11y": "eslint . --plugin jsx-a11y", // Accessibility checks
+  "test": "jest",                       // Run tests
+  "verify-forms": "node scripts/verify-forms.js"     // Form verification
+}
+```
+
+### Development Tools
+
+- **Form Verification:** `scripts/verify-forms.js` - Validates form functionality
+- **Deployment:** `scripts/deploy.sh` - Automated production deployment
+- **Server Setup:** `scripts/server-setup.sh` - Initial server configuration
+- **Style Guide:** `STYLEGUIDE.md` - Complete design system documentation
+- **Deployment Guide:** `QUICK_DEPLOYMENT_REFERENCE.md` - Step-by-step deployment
+
+### Configuration Files
+
+- **`next.config.js`** - Next.js settings, security headers, redirects
+- **`tailwind.config.mjs`** - Tailwind CSS customization and theme
+- **`eslint.config.mjs`** - Code quality and accessibility rules
+- **`template.env`** - Environment variable template with documentation
 
 ## Contributing
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. **Fork the repository**
+2. **Create a feature branch:** `git checkout -b feature/amazing-feature`
+3. **Follow code standards:** Run `npm run lint` and `npm run format`
+4. **Test accessibility:** Run `npm run a11y`
+5. **Verify forms:** Run `npm run verify-forms`
+6. **Commit changes:** `git commit -m 'Add amazing feature'`
+7. **Push to branch:** `git push origin feature/amazing-feature`
+8. **Open a Pull Request**
 
-Please ensure your code follows our coding standards and includes appropriate tests.
+**Code Standards:**
+- Mobile-first responsive design
+- WCAG 2.1 AA accessibility compliance
+- ESLint and Prettier formatting
+- Semantic HTML and proper ARIA labels
+- Performance optimization
 
 ## License
 
-[ISC](LICENSE)
-© Gathered Roots Cleaning All rights reserved.
+[ISC](LICENSE)  
+© 2024 Gathered Roots Cleaning. All rights reserved.
+
+---
+
+**Built with ❤️ for Gathered Roots Cleaning**  
+A professional, accessible, and performant website designed to grow your cleaning business.
