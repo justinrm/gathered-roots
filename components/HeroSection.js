@@ -12,22 +12,16 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] py-12 px-4 sm:px-6 lg:px-8">
           {/* Left column - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            {/* Logo - now displayed prominently above the heading on all screen sizes */}
-            <div className="mb-8 flex justify-center lg:justify-start">
+            {/* Logo - now displayed prominently and larger */}
+            <div className="mb-12 flex justify-center lg:justify-start">
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
                 width={800}
                 height={506}
-                className="h-72 sm:h-[22.5rem] lg:h-[27rem] w-auto object-contain max-w-full"
+                className="h-80 sm:h-96 lg:h-[30rem] w-auto object-contain max-w-full"
               />
             </div>
-            
-            {/* Main heading */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary-accent-cta mb-6 font-headings">
-              Rooted in clean.<br />
-              <span className="text-primary-accent-green">Driven by care.</span>
-            </h1>
             
             {/* Descriptive text */}
             <p className="text-lg sm:text-xl text-text-dark mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
