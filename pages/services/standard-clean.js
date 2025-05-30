@@ -85,17 +85,18 @@ export default function StandardClean() {
             <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6">
               What&apos;s Included
             </h2>
-            <div className="text-left text-text-dark mb-8 max-w-xl mx-auto space-y-6">
-              {checklistData.map((section, sectionIdx) => (
-                <div key={sectionIdx}>
-                  <h3 className="text-xl font-semibold text-primary-accent-green mb-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {checklistData.map((section, index) => (
+                <div
+                  key={index}
+                  className="p-6 bg-background rounded-lg shadow-md border border-borders"
+                >
+                  <h3 className="text-xl font-medium text-primary-accent-green mb-2">
                     {section.room}
                   </h3>
-                  <ul className="list-disc list-inside space-y-1.5 pl-4">
+                  <ul className="list-disc list-inside text-text-light space-y-1">
                     {section.items.map((item, itemIdx) => (
-                      <li key={itemIdx} className="text-text-light">
-                        {item}
-                      </li>
+                      <li key={itemIdx}>{item}</li>
                     ))}
                   </ul>
                 </div>

@@ -5,12 +5,22 @@ import Button from '../../components/Button';
 import Image from 'next/image';
 
 const benefits = [
-  'Safe for sensitive individuals, children, and pets',
-  'No harsh chemicals or toxic residues',
-  'Effective cleaning without environmental harm',
-  'Reduced allergens and improved indoor air quality',
-  'Sustainable practices that minimize waste',
-  'Biodegradable products with eco-friendly packaging',
+  {
+    category: 'Health & Safety',
+    items: [
+      'Safe for sensitive individuals, children, and pets',
+      'No harsh chemicals or toxic residues',
+      'Reduced allergens and improved indoor air quality',
+    ],
+  },
+  {
+    category: 'Environmental Impact',
+    items: [
+      'Effective cleaning without environmental harm',
+      'Sustainable practices that minimize waste',
+      'Biodegradable products with eco-friendly packaging',
+    ],
+  },
 ];
 
 export default function EcoFriendly() {
@@ -97,11 +107,23 @@ export default function EcoFriendly() {
               yet highly effective.
             </p>
             <h2 className="text-2xl font-semibold text-primary-accent-brand mb-4">Benefits</h2>
-            <ul className="text-left text-text-dark mb-8 max-w-xl mx-auto list-disc list-inside space-y-2">
-              {benefits.map((item, idx) => (
-                <li key={idx}>{item}</li>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {benefits.map((section, index) => (
+                <div
+                  key={index}
+                  className="p-6 bg-background rounded-lg shadow-md border border-borders"
+                >
+                  <h3 className="text-xl font-medium text-primary-accent-green mb-2">
+                    {section.category}
+                  </h3>
+                  <ul className="list-disc list-inside text-text-light space-y-1">
+                    {section.items.map((item, itemIdx) => (
+                      <li key={itemIdx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
             <p className="text-lg text-text-dark mb-8 max-w-2xl mx-auto">
               Our eco-friendly option can be applied to any of our cleaning services, from
               standard recurring cleans to deep cleans and move-in/move-out services.

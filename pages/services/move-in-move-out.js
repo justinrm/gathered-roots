@@ -5,12 +5,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const newChecklist = [
-  'Includes all Deep Cleaning tasks',
-  'Clean inside all cabinets and drawers',
-  'Clean inside oven and refrigerator',
-  'Wipe down all doors and door frames',
-  'Clean inside closets',
-  'Remove any remaining trash or debris',
+  {
+    category: 'Deep Cleaning Plus',
+    items: [
+      'Includes all Deep Cleaning tasks',
+      'Clean inside all cabinets and drawers',
+      'Clean inside oven and refrigerator',
+      'Wipe down all doors and door frames',
+      'Clean inside closets',
+      'Remove any remaining trash or debris',
+    ],
+  },
 ];
 
 export default function MoveInMoveOut() {
@@ -93,11 +98,23 @@ export default function MoveInMoveOut() {
             <h2 className="text-2xl font-semibold text-primary-accent-brand mb-4">
               What&apos;s Included
             </h2>
-            <ul className="text-left text-text-dark mb-8 max-w-xl mx-auto list-disc list-inside space-y-2">
-              {newChecklist.map((item, idx) => (
-                <li key={idx}>{item}</li>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {newChecklist.map((section, index) => (
+                <div
+                  key={index}
+                  className="p-6 bg-background rounded-lg shadow-md border border-borders"
+                >
+                  <h3 className="text-xl font-medium text-primary-accent-green mb-2">
+                    {section.category}
+                  </h3>
+                  <ul className="list-disc list-inside text-text-light space-y-1">
+                    {section.items.map((item, itemIdx) => (
+                      <li key={itemIdx}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
             <div className="mt-12 text-center">
               <Link href="/quote" passHref legacyBehavior>
                 <Button className="text-lg px-8 py-3">Get a Move-In/Move-Out Quote</Button>

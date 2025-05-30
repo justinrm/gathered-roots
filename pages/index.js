@@ -79,12 +79,19 @@ export default function Home() {
               description:
                 'Gathered Roots Cleaning offers premium cleaning services for homes and businesses in Lewiston, ID and Clarkston, WA. Veteran owned and family operated.',
               openingHoursSpecification: [
-                // TODO: Update with actual hours
+                // Monday - Friday: 9:30 AM - 5:00 PM
                 {
                   '@type': 'OpeningHoursSpecification',
                   dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                  opens: '09:00',
+                  opens: '09:30',
                   closes: '17:00',
+                },
+                // Saturday: 9:00 AM - 3:00 PM
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: 'Saturday',
+                  opens: '09:00',
+                  closes: '15:00',
                 },
               ],
               sameAs: [
