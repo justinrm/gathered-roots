@@ -80,7 +80,7 @@ export default function EcoFriendly() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-8 flex justify-center">
               <Image
-                src="/images/eco-friendly-cleaning.jpg"
+                src="/images/eco-friendly.jpg"
                 alt="Natural eco-friendly cleaning products"
                 width={800}
                 height={256}
