@@ -130,7 +130,7 @@ export default function Services() {
                   <p className="text-card-text-secondary mb-4 flex-grow">{service.description}</p>
                   <div className="mt-auto">
                     <Link href={service.ctaLink} passHref legacyBehavior>
-                      <Button className="inline-flex items-center">
+                      <Button className="inline-flex items-center w-full sm:w-auto justify-center">
                         {service.ctaText}
                         <ArrowRightIcon className="ml-1 w-4 h-4" />
                       </Button>
@@ -161,7 +161,7 @@ export default function Services() {
                     maintenance to keep your space pristine, our professional team is here to help.
                   </p>
                   <Link href="/quote" passHref legacyBehavior>
-                    <Button className="text-lg">Get a Free Quote</Button>
+                    <Button className="text-lg w-full sm:w-auto">Get a Free Quote</Button>
                   </Link>
                 </div>
                 <div className="md:w-1/2">

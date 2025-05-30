@@ -114,14 +114,16 @@ export default function FAQ() {
               If you can&apos;t find the answer you&apos;re looking for, please don&apos;t hesitate
               to contact us. We&apos;re happy to help!
             </p>
-            <Link href="/quote" passHref legacyBehavior>
-              <Button className="text-lg px-8 py-3">Request a Quote</Button>
-            </Link>
-            <a href="https://gathered-roots-cleaning.square.site/" target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" className="text-lg px-8 py-3 ml-0 sm:ml-4 mt-4 sm:mt-0">
-                Book Your Cleaning
-              </Button>
-            </a>
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link href="/quote" passHref legacyBehavior>
+                <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
+              </Link>
+              <a href="https://gathered-roots-cleaning.square.site/" target="_blank" rel="noopener noreferrer">
+                <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
+                  Book Your Cleaning
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -17,9 +17,9 @@ const HeroSection = () => {
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
-                width={400}
-                height={300}
-                className="h-48 sm:h-56 lg:h-64 w-auto object-contain max-w-full"
+                width={600}
+                height={450}
+                className="h-64 sm:h-80 lg:h-96 w-auto object-contain max-w-full"
               />
             </div>
             
@@ -43,7 +43,7 @@ const HeroSection = () => {
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center">
               <Link href="/quote">
                 <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
               </Link>

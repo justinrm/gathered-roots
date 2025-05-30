@@ -64,12 +64,12 @@ const UspSection = () => {
             </Card>
           ))}
         </div>
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/quote" passHref legacyBehavior>
-            <Button className="text-lg px-8 py-3">Request a Quote</Button>
+            <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
           </Link>
           <a href="https://gathered-roots-cleaning.square.site/" target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary" className="text-lg px-8 py-3">
+            <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
               Book Your Cleaning
             </Button>
           </a>

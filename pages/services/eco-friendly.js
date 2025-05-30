@@ -130,7 +130,7 @@ export default function EcoFriendly() {
             </p>
             <div className="mt-12 text-center">
               <Link href="/quote" passHref legacyBehavior>
-                <Button className="text-lg px-8 py-3">Get an Eco-Friendly Cleaning Quote</Button>
+                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">Get an Eco-Friendly Cleaning Quote</Button>
               </Link>
             </div>
           </div>

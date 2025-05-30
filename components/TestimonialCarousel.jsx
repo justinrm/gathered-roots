@@ -110,7 +110,7 @@ const TestimonialCarousel = () => {
           rel="noopener noreferrer"
           className="inline-block"
         >
-          <Button variant="secondary" className="text-base px-6 py-3">
+          <Button variant="secondary" className="text-base px-6 py-3 w-full sm:w-auto">
             Leave us a Google Review
           </Button>
         </a>
