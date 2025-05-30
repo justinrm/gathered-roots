@@ -6,6 +6,9 @@
  * and that email notifications are working correctly.
  */
 
+/* eslint-disable @typescript-eslint/no-require-imports */
+ 
+
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '../.env.local') });
@@ -301,6 +304,9 @@ async function main() {
   // Run API tests if server might be running
   const contactAPIWorking = await testContactAPI();
   const bookingAPIWorking = await testBookingAPI();
+  
+  // Log API test results for verification
+  console.log('API Test Results:', { contactAPIWorking, bookingAPIWorking });
   
   // Generate report
   const integrationPassed = true; // This would be more sophisticated in a real test

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import Card from '../components/Card';
 
 export default function AboutUs() {
@@ -149,9 +150,11 @@ export default function AboutUs() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <Card className="text-center flex flex-col items-center">
-                <img
+                <Image
                   src="/images/team-chelsea.jpg"
                   alt="Gathered Roots Cleaning team member Chelsea, Owner"
+                  width={128}
+                  height={128}
                   className="rounded-full w-32 h-32 object-cover border-4 border-primary-accent-teal mb-4"
                 />
                 <h3 className="text-lg font-semibold text-card-text-primary mb-1">Chelsea M.</h3>
@@ -163,9 +166,11 @@ export default function AboutUs() {
                 </p>
               </Card>
               <Card className="text-center flex flex-col items-center">
-                <img
+                <Image
                   src="/images/team-justin.jpg"
                   alt="Gathered Roots Cleaning team member Justin, Owner & Operator"
+                  width={128}
+                  height={128}
                   className="rounded-full w-32 h-32 object-cover border-4 border-primary-accent-teal mb-4"
                 />
                 <h3 className="text-lg font-semibold text-card-text-primary mb-1">Justin M.</h3>

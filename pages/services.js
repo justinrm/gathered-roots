@@ -118,9 +118,11 @@ export default function Services() {
               {services.map((service) => (
                 <Card key={service.title} className="flex flex-col h-full">
                   <div className="mb-6">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.altText}
+                      width={80}
+                      height={80}
                       className="w-20 h-20 mx-auto rounded-lg object-cover border-2 border-primary-accent-cta shadow-sm"
                     />
                   </div>

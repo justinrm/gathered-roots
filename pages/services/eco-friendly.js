@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Button from '../../components/Button';
+import Image from 'next/image';
 
 const benefits = [
   'Safe for sensitive individuals, children, and pets',
@@ -78,9 +79,11 @@ export default function EcoFriendly() {
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-8 flex justify-center">
-              <img
-                src="/images/eco-friendly.jpg"
-                alt="Natural cleaning products and supplies"
+              <Image
+                src="/images/eco-friendly-cleaning.jpg"
+                alt="Natural eco-friendly cleaning products"
+                width={800}
+                height={256}
                 className="rounded-lg shadow-lg w-full mx-auto object-cover h-64"
               />
             </div>

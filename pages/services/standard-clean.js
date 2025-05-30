@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import Button from '../../components/Button';
 import Link from 'next/link';
 
@@ -65,9 +65,11 @@ export default function StandardClean() {
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-8 flex justify-center">
-              <img
+              <Image
                 src="/images/standard-clean.jpg"
                 alt="Clean and tidy living room"
+                width={800}
+                height={256}
                 className="rounded-lg shadow-lg w-full mx-auto object-cover h-64"
               />
             </div>

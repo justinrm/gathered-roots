@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from './Button';
 import Link from 'next/link';
 import Card from './Card';
@@ -6,7 +7,7 @@ import { CheckCircleIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 // Placeholder for icons - in a real app, you'd import actual icons
 // const PlaceholderIcon = ({ className }) => (
-// <img src="/images/logo-complete.svg" alt="Gathered Roots Logo" className={className} />
+// <Image src="/images/logo-complete.svg" alt="Gathered Roots Logo" width={48} height={48} className={className} />
 // );
 
 const usps = [
@@ -15,7 +16,7 @@ const usps = [
     title: 'Veteran Owned',
     description:
       'Gathered Roots Cleaning is proudly owned and operated by a United States Army veteran. We carry the spirit of service into every home we care for and remain deeply thankful for those who serve and the families who stand beside them.',
-    icon: <img src="/images/rustic-flag.svg" alt="Veteran Owned Icon" className="w-full h-full" />,
+    icon: <Image src="/images/rustic-flag.svg" alt="Veteran Owned Icon" width={64} height={64} className="w-full h-full" />,
     color: 'bg-brand-accent text-white',
   },
   {

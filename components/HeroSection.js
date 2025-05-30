@@ -14,9 +14,11 @@ const HeroSection = () => {
           <div className="text-center lg:text-left order-2 lg:order-1">
             {/* Logo - smaller on mobile, hidden on large screens since we'll show it differently */}
             <div className="mb-6 flex justify-center lg:justify-start lg:hidden">
-              <img
+              <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
+                width={128}
+                height={96}
                 className="h-24 sm:h-32 w-auto object-contain"
               />
             </div>
@@ -58,9 +60,11 @@ const HeroSection = () => {
             <div className="relative">
               {/* Logo overlay for large screens */}
               <div className="hidden lg:block absolute top-4 left-4 z-20">
-                <img
+                <Image
                   src="/images/logo-complete.svg"
                   alt="Gathered Roots Cleaning Logo"
+                  width={64}
+                  height={48}
                   className="h-16 w-auto object-contain opacity-90"
                 />
               </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 // import { CheckCircleIcon } from '@heroicons/react/24/solid'; // Removed unused import
 import Button from '../../components/Button';
 import Link from 'next/link';
@@ -94,9 +95,11 @@ export default function DeepClean() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="mb-8 flex justify-center">
-                <img
+                <Image
                   src="/images/deep-clean.jpg"
-                  alt="Detailed cleaning of a kitchen surface"
+                  alt="Professional deep cleaning in progress"
+                  width={800}
+                  height={256}
                   className="rounded-lg shadow-lg w-full mx-auto object-cover h-64"
                 />
               </div>

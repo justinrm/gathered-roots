@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Card from './Card';
 // import Button from './Button'; // Removed unused import
 // import Link from 'next/link'; // Removed unused import
@@ -12,9 +13,11 @@ const services = [
     description:
       'A thoughtful clean for every room, with surfaces, floors, and high-touch areas cared for with intention.',
     icon: (
-      <img
+      <Image
         src="/images/service-standard-clean.svg"
         alt="Professional cleaner wiping kitchen counter"
+        width={48}
+        height={48}
         className="w-12 h-12 rounded-full object-cover mb-4 border-2 border-primary-accent-teal"
       />
     ),
@@ -25,9 +28,11 @@ const services = [
     description:
       'A deeper level of care for homes that need extra attention, with added focus on buildup, overlooked spaces, and detailed surface cleaning throughout.',
     icon: (
-      <img
+      <Image
         src="/images/service-deep-clean.svg"
         alt="Cleaner scrubbing bathroom tile with eco-friendly products"
+        width={48}
+        height={48}
         className="w-12 h-12 rounded-full object-cover mb-4 border-2 border-primary-accent-green"
       />
     ),
@@ -38,9 +43,11 @@ const services = [
     description:
       'A detailed clean designed to refresh empty spaces, reaching inside cabinets, appliances, and every corner to welcome the next chapter.',
     icon: (
-      <img
+      <Image
         src="/images/service-move-clean.svg"
         alt="Empty, sparkling clean living room ready for move-in"
+        width={48}
+        height={48}
         className="w-12 h-12 rounded-full object-cover mb-4 border-2 border-secondary-accent-hover"
       />
     ),
@@ -51,9 +58,11 @@ const services = [
     description:
       'A gentle and mindful clean using non toxic products, safe for children, pets, and the planet without compromising on freshness.',
     icon: (
-      <img
+      <Image
         src="/images/service-eco-clean.svg"
         alt="Eco-friendly cleaning products and supplies on countertop"
+        width={48}
+        height={48}
         className="w-12 h-12 rounded-full object-cover mb-4 border-2 border-primary-accent-teal opacity-75"
       />
     ),
