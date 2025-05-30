@@ -13,13 +13,13 @@ const HeroSection = () => {
           {/* Left column - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             {/* Logo - now displayed prominently and larger */}
-            <div className="mb-12 flex justify-center lg:justify-start">
+            <div className="mb-8 flex justify-center lg:justify-start">
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
                 width={800}
                 height={506}
-                className="h-80 sm:h-96 lg:h-[30rem] w-auto object-contain max-w-full"
+                className="h-96 sm:h-[28rem] lg:h-[36rem] w-auto object-contain max-w-full"
               />
             </div>
             
