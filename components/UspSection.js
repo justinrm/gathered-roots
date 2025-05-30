@@ -68,11 +68,11 @@ const UspSection = () => {
           <Link href="/quote" passHref legacyBehavior>
             <Button className="text-lg px-8 py-3">Request a Quote</Button>
           </Link>
-          <Link href="/booking" passHref legacyBehavior>
+          <a href="https://gathered-roots-cleaning.square.site/" target="_blank" rel="noopener noreferrer">
             <Button variant="secondary" className="text-lg px-8 py-3">
               Book Your Cleaning
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

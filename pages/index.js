@@ -3,7 +3,7 @@ import Head from 'next/head';
 import HeroSection from '../components/HeroSection';
 import ServicesSummary from '../components/ServicesSummary';
 import UspSection from '../components/UspSection';
-import TestimonialCarousel from '../components/TestimonialCarousel';
+// import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
@@ -66,7 +66,7 @@ export default function Home() {
               name: 'Gathered Roots Cleaning',
               image: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg', // Or a better PNG/JPG
               url: 'https://www.gatheredrootscleaning.com',
-              telephone: '+1-208-298-6965',
+              telephone: '+1-208-717-1192',
               email: 'hello@gatheredrootscleaning.com',
               address: {
                 '@type': 'PostalAddress',
@@ -109,7 +109,9 @@ export default function Home() {
           }}
         />
         
+        {/* TODO: Enable when real testimonials are available */}
         {/* Reviews/Testimonials Schema */}
+        {/*
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -169,6 +171,7 @@ export default function Home() {
             })
           }}
         />
+        */}
       </Head>
       <main id="main-content" className="bg-background min-h-screen flex flex-col">
         <HeroSection />
@@ -178,6 +181,8 @@ export default function Home() {
         <section aria-label="Why Choose Us">
           <UspSection />
         </section>
+        {/* TODO: Enable when real testimonials are available */}
+        {/*
         <section
           aria-label="Customer Testimonials"
           className="bg-background py-16 px-4 sm:px-6 lg:px-8"
@@ -189,6 +194,7 @@ export default function Home() {
             <TestimonialCarousel />
           </div>
         </section>
+        */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-semibold text-primary-accent-green mb-4">
@@ -218,11 +224,11 @@ export default function Home() {
                 <p className="text-lg text-text-light">
                   <span className="font-semibold text-brand-accent">Phone:</span>{' '}
                   <a
-                    href="tel:+12082986965"
+                    href="tel:+12087171192"
                     className="block text-lg text-primary-accent-cta hover:text-secondary-accent-hover font-medium transition-colors duration-200"
                     aria-label="Call Gathered Roots Cleaning"
                   >
-                    (208) 298-6965
+                    (208) 717-1192
                   </a>
                 </p>
                 <p className="text-lg text-text-light">

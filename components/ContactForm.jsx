@@ -157,7 +157,7 @@ const ContactForm = () => {
           type="tel"
           value={form.phone}
           onChange={handleChange}
-          placeholder="(208) 298-6965"
+          placeholder="(208) 717-1192"
           autoComplete="tel"
           required
           ariaLabel="Phone"

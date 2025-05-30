@@ -15,10 +15,10 @@ export default function Footer() {
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> | </span>
             <a
-              href="tel:+12082986965"
+              href="tel:+12087171192"
               className="hover:text-primary-accent-teal transition-colors duration-200"
             >
-              (208) 298-6965
+              (208) 717-1192
             </a>
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> | </span>

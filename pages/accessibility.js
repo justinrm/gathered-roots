@@ -138,7 +138,7 @@ export default function AccessibilityStatement() {
               to access our services:
             </p>
             <ul className="list-disc pl-6 text-text-dark space-y-1">
-              <li>Phone consultations and booking: <strong>(208) 298-6965</strong></li>
+              <li>Phone consultations and booking: <strong>(208) 717-1192</strong></li>
               <li>Email inquiries: <strong>hello@gatheredrootscleaning.com</strong></li>
               <li>In-person consultations upon request</li>
               <li>Large print materials available upon request</li>
@@ -168,7 +168,7 @@ export default function AccessibilityStatement() {
                     accessibility@gatheredrootscleaning.com
                   </a>
                 </li>
-                <li><strong>Phone:</strong> (208) 298-6965</li>
+                <li><strong>Phone:</strong> (208) 717-1192</li>
                 <li><strong>Response Time:</strong> We aim to respond to accessibility inquiries within 2 business days.</li>
               </ul>
             </div>

@@ -12,14 +12,14 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] py-12 px-4 sm:px-6 lg:px-8">
           {/* Left column - Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
-            {/* Logo - smaller on mobile, hidden on large screens since we'll show it differently */}
-            <div className="mb-6 flex justify-center lg:justify-start lg:hidden">
+            {/* Logo - now displayed prominently above the heading on all screen sizes */}
+            <div className="mb-8 flex justify-center lg:justify-start">
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
-                width={128}
-                height={96}
-                className="h-24 sm:h-32 w-auto object-contain"
+                width={200}
+                height={150}
+                className="h-32 sm:h-40 lg:h-48 w-auto object-contain"
               />
             </div>
             
@@ -47,29 +47,18 @@ const HeroSection = () => {
               <Link href="/quote">
                 <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
               </Link>
-              <Link href="/booking">
+              <a href="https://gathered-roots-cleaning.square.site/" target="_blank" rel="noopener noreferrer">
                 <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
                   Book Your Cleaning
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
           
           {/* Right column - Hero Image */}
           <div className="order-1 lg:order-2">
             <div className="relative">
-              {/* Logo overlay for large screens */}
-              <div className="hidden lg:block absolute top-4 left-4 z-20">
-                <Image
-                  src="/images/logo-complete.svg"
-                  alt="Gathered Roots Cleaning Logo"
-                  width={64}
-                  height={48}
-                  className="h-16 w-auto object-contain opacity-90"
-                />
-              </div>
-              
-              {/* Hero Image */}
+              {/* Hero Image - no logo overlay */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/hero-clean-home.jpg"

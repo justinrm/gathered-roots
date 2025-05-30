@@ -117,11 +117,11 @@ export default function FAQ() {
             <Link href="/quote" passHref legacyBehavior>
               <Button className="text-lg px-8 py-3">Request a Quote</Button>
             </Link>
-            <Link href="/booking" passHref legacyBehavior>
+            <a href="https://gathered-roots-cleaning.square.site/" target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" className="text-lg px-8 py-3 ml-0 sm:ml-4 mt-4 sm:mt-0">
                 Book Your Cleaning
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
