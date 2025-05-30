@@ -17,7 +17,7 @@ const HeroSection = () => {
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
-                width={675}
+                width={800}
                 height={506}
                 className="h-72 sm:h-[22.5rem] lg:h-[27rem] w-auto object-contain max-w-full"
               />
