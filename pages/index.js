@@ -63,30 +63,29 @@ export default function Home() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
+              '@id': 'https://www.gatheredrootscleaning.com',
               name: 'Gathered Roots Cleaning',
-              image: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg', // Or a better PNG/JPG
+              image: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
+              logo: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
               url: 'https://www.gatheredrootscleaning.com',
               telephone: '+1-208-717-1192',
               email: 'hello@gatheredrootscleaning.com',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: '212 5th Street', // TODO: Add physical address if applicable
+                streetAddress: '212 5th Street',
                 addressLocality: 'Lewiston',
                 addressRegion: 'ID',
-                postalCode: '83501', // TODO: Add postal code
+                postalCode: '83501',
                 addressCountry: 'US',
               },
-              description:
-                'Gathered Roots Cleaning offers premium cleaning services for homes and businesses in Lewiston, ID and Clarkston, WA. Veteran owned and family operated.',
+              description: 'Gathered Roots Cleaning offers premium cleaning services for homes and businesses in Lewiston, ID and Clarkston, WA. Veteran owned and family operated.',
               openingHoursSpecification: [
-                // Monday - Friday: 9:30 AM - 5:00 PM
                 {
                   '@type': 'OpeningHoursSpecification',
                   dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                   opens: '09:30',
                   closes: '17:00',
                 },
-                // Saturday: 9:00 AM - 3:00 PM
                 {
                   '@type': 'OpeningHoursSpecification',
                   dayOfWeek: 'Saturday',
@@ -95,23 +94,103 @@ export default function Home() {
                 },
               ],
               sameAs: [
-                // TODO: Add social media links
-                // "https://www.facebook.com/yourprofile",
-                // "https://www.twitter.com/yourprofile",
-                // "https://www.instagram.com/yourprofile"
+                // TODO: Add social media links when available
+                // "https://www.facebook.com/gatheredrootscleaning",
+                // "https://www.instagram.com/gatheredrootscleaning"
               ],
-              priceRange: '$$', // Optional: "$, $$, $$$"
+              priceRange: '$$',
               areaServed: [
                 {
-                  '@type': 'Place',
-                  name: 'Lewiston, ID',
+                  '@type': 'City',
+                  name: 'Lewiston',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho'
+                  }
                 },
                 {
-                  '@type': 'Place',
-                  name: 'Clarkston, WA',
+                  '@type': 'City',
+                  name: 'Clarkston',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Washington'
+                  }
                 },
+                {
+                  '@type': 'City',
+                  name: 'Asotin',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Washington'
+                  }
+                },
+                {
+                  '@type': 'City',
+                  name: 'Lapwai',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho'
+                  }
+                }
               ],
-              currenciesAccepted: 'USD'
+              currenciesAccepted: 'USD',
+              paymentAccepted: ['Cash', 'Credit Card', 'Check'],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Cleaning Services',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Standard Cleaning',
+                      description: 'Regular maintenance cleaning for homes and offices'
+                    }
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Deep Cleaning',
+                      description: 'Comprehensive top-to-bottom cleaning service'
+                    }
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Move-in/Move-out Cleaning',
+                      description: 'Thorough cleaning for moving transitions'
+                    }
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Eco-Friendly Cleaning',
+                      description: 'Environmentally safe cleaning using non-toxic products'
+                    }
+                  }
+                ]
+              },
+              knowsAbout: [
+                'House Cleaning',
+                'Office Cleaning',
+                'Deep Cleaning',
+                'Move-in Cleaning',
+                'Move-out Cleaning',
+                'Eco-friendly Cleaning',
+                'Post-construction Cleaning',
+                'Residential Cleaning',
+                'Commercial Cleaning'
+              ],
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5.0',
+                reviewCount: '1',
+                bestRating: '5',
+                worstRating: '5'
+              }
             }),
           }}
         />

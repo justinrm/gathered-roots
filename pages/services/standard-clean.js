@@ -60,6 +60,43 @@ export default function StandardClean() {
           property="og:description"
           content="A thorough, consistent clean for your space. Perfect for regular upkeep. Book now!"
         />
+        <link rel="canonical" href="https://www.gatheredrootscleaning.com/services/standard-clean" />
+        
+        {/* Service-specific structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              name: 'Standard Clean',
+              description: 'Regular maintenance cleaning service for homes and businesses. Perfect for consistent upkeep and maintaining a clean, healthy environment.',
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'Gathered Roots Cleaning',
+                '@id': 'https://www.gatheredrootscleaning.com'
+              },
+              areaServed: [
+                {
+                  '@type': 'Place',
+                  name: 'Lewiston, ID'
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Clarkston, WA'
+                }
+              ],
+              serviceType: 'Regular House Cleaning',
+              category: 'Maintenance Cleaning',
+              offers: {
+                '@type': 'Offer',
+                availability: 'https://schema.org/InStock',
+                priceCurrency: 'USD',
+                description: 'Recurring cleaning service available weekly, bi-weekly, or monthly'
+              }
+            })
+          }}
+        />
       </Head>
       <main className="bg-background min-h-screen">
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
