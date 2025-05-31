@@ -96,7 +96,7 @@ export default function AboutUs() {
               <h2 className="text-2xl font-semibold text-primary-accent-green mb-6 text-center">Mission Statement</h2>
               <div className="text-center max-w-3xl mx-auto">
                 <p className="text-card-text-secondary text-lg leading-relaxed">
-                  To provide exceptional, eco-friendly cleaning services that create peaceful and
+                  To provide exceptional cleaning services that create peaceful and
                   healthy homes, allowing our clients to reclaim their time and enjoy what matters
                   most.
                 </p>
@@ -160,9 +160,10 @@ export default function AboutUs() {
                 <h3 className="text-lg font-semibold text-card-text-primary mb-1">Chelsea M.</h3>
                 <p className="text-card-text-secondary text-sm mb-2">Owner, Operator </p>
                 <p className="text-card-text-secondary text-sm">
-                  Chelsea founded Gathered Roots Cleaning to bring reliable
-                  cleaning to Lewiston, Idaho. She loves helping clients feel at home in their
-                  space.
+                  Hi, I'm Chelsea, co-owner of Gathered Roots Cleaning and mom to our wonderful kids. My passion for cleaning started early, working alongside my grandmother and learning the tricks of the trade that still guide my work today. From her, I learned that cleaning isn't just about appearance—it's about care, pride, and creating a space that nurtures the people in it. (Thanks, Gramm! ❤️)
+                </p>
+                <p className="text-card-text-secondary text-sm mt-2">
+                  At Gathered Roots Cleaning, I handle day-to-day operations and work hands-on to ensure every home gets the thoughtful attention it deserves. Justin and I built this business around our family values—honesty, reliability, and kindness—and it's a joy to bring that spirit into the homes we serve.
                 </p>
               </Card>
               <Card className="text-center flex flex-col items-center">
@@ -176,8 +177,10 @@ export default function AboutUs() {
                 <h3 className="text-lg font-semibold text-card-text-primary mb-1">Justin M.</h3>
                 <p className="text-card-text-secondary text-sm mb-2">Co-owner, Operator</p>
                 <p className="text-card-text-secondary text-sm">
-                  Justin brings his military background to Gathered Roots Cleaning, providing a disciplined attention to detail. Clients
-                  appreciate Justin&apos;s thoroughness and positive energy.
+                  Hi, I'm Justin, co-owner of Gathered Roots Cleaning, U.S. Army veteran, and proud father of four. My experience as a Combat Engineer instilled in me a strong work ethic and a commitment to excellence, which I now bring to every home we care for. Chelsea and I started this business to help families like ours enjoy the comfort and peace of a well-cared-for space.
+                </p>
+                <p className="text-card-text-secondary text-sm mt-2">
+                  As a parent, I understand how fast life moves and how hard it can be to keep up with everything. That's why I approach every job with precision, respect, and heart—because every family deserves a clean and welcoming home they can truly relax in.
                 </p>
               </Card>
             </div>
