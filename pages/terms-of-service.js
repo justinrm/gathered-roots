@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Card from '../components/Card';
 
 export default function TermsOfService() {
@@ -275,12 +276,12 @@ export default function TermsOfService() {
               >
                 Email Us
               </a>
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-accent-teal text-primary-accent-teal font-medium rounded-lg hover:bg-primary-accent-teal hover:text-white transition-colors duration-300"
               >
                 Contact Form
-              </a>
+              </Link>
             </div>
           </Card>
         </div>
