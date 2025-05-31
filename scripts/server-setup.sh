@@ -106,18 +106,18 @@ NODE_ENV=production
 # Email Configuration
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
-EMAIL_USER=your-email@gmail.com
-EMAIL_PASS=your-app-password
+EMAIL_USER=contact@your-domain.com
+EMAIL_PASS=your-google-workspace-app-password
 EMAIL_FROM_NAME=Gathered Roots Cleaning
-EMAIL_FROM_ADDRESS=your-email@gmail.com
+EMAIL_FROM_ADDRESS=contact@your-domain.com
 ADMIN_NOTIFICATION_EMAIL=admin@your-domain.com
 CONTACT_FORM_RECIPIENT_EMAIL=contact@your-domain.com
 
 # SMTP Configuration (Alternative naming)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
+SMTP_USER=contact@your-domain.com
+SMTP_PASSWORD=your-google-workspace-app-password
 SMTP_SECURE=false
 MAILER_FROM_ADDRESS=noreply@your-domain.com
 

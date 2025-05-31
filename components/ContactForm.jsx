@@ -69,6 +69,7 @@ const ContactForm = () => {
           name: form.name,
           email: form.email,
           phone: form.phone,
+          service: form.service,
           message: form.message,
           consent: form.consent,
         };
@@ -81,9 +82,15 @@ const ContactForm = () => {
         if (res.ok) {
           setSubmitted(true);
         } else {
-          setApiError(data.message || 'Something went wrong. Please try again later.');
+          if (data.errors) {
+            setErrors(data.errors);
+            setApiError('Please fix the errors below and try again.');
+          } else {
+            setApiError(data.message || 'Something went wrong. Please try again later.');
+          }
         }
-      } catch {
+      } catch (error) {
+        console.error('Form submission error:', error);
         setApiError('Something went wrong. Please try again later.');
       } finally {
         setLoading(false);

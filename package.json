@@ -12,7 +12,8 @@
     "a11y": "eslint . --ext .js,.jsx,.ts,.tsx --plugin jsx-a11y",
     "test": "jest",
     "verify-forms": "node scripts/verify-forms.js",
-    "optimize-images": "node scripts/optimize-images.js"
+    "optimize-images": "node scripts/optimize-images.js",
+    "setup-google-workspace": "bash scripts/setup-google-workspace.sh"
   },
   "keywords": [],
   "author": "",

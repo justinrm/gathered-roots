@@ -21,6 +21,7 @@ const contactFormSchema = z.object({
   email: z.string().email({ message: 'Invalid email address' }).max(255),
   message: z.string().min(10, { message: 'Message should be at least 10 characters long' }),
   phone: z.string().max(50).optional().nullable(),
+  service: z.string().optional().nullable(),
   consent: z
     .boolean()
     .refine((val) => val === true, { message: 'You must consent to us contacting you.' }),
@@ -88,7 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         errors: validationResult.error.flatten().fieldErrors,
       });
     }
-    const { name, email, message, phone } = validationResult.data;
+    const { name, email, message, phone, service } = validationResult.data;
 
     // Note: Client contact information is now handled by Square
     // This endpoint only sends email notifications
@@ -117,6 +118,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <p><strong>Name:</strong> ${escapeHtml(name)}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           ${phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : ''}
+          ${service ? `<p><strong>Service Requested:</strong> ${escapeHtml(service)}</p>` : ''}
           <p><strong>Message:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
           <hr>
@@ -144,6 +146,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <h2>Thank you for your message!</h2>
           <p>Hi ${escapeHtml(name)},</p>
           <p>Thank you for reaching out to Gathered Roots Cleaning. We have received your message and will get back to you as soon as possible.</p>
+          ${service ? `<p><strong>Service Requested:</strong> ${escapeHtml(service)}</p>` : ''}
           <p><strong>Your message:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
           <hr>

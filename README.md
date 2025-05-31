@@ -213,11 +213,11 @@ NODE_ENV=development
 # Email Configuration (Required)
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
+SMTP_USER=contact@yourbusinessdomain.com
+SMTP_PASSWORD=your-google-workspace-app-password
 SMTP_SECURE=false
-MAILER_FROM_ADDRESS=noreply@yourdomain.com
-CONTACT_FORM_RECIPIENT_EMAIL=contact@yourdomain.com
+MAILER_FROM_ADDRESS=noreply@yourbusinessdomain.com
+CONTACT_FORM_RECIPIENT_EMAIL=contact@yourbusinessdomain.com
 EMAIL_FROM_NAME=Gathered Roots Cleaning
 
 # Square Configuration (Optional for development)
@@ -233,10 +233,13 @@ BOOKING_FORM_RATE_LIMIT=3
 BOOKING_FORM_RATE_WINDOW=3600000
 ```
 
-**For Gmail SMTP:**
-1. Enable 2-factor authentication
-2. Generate an "App Password" 
-3. Use the app password (not your regular password)
+**For Google Workspace SMTP:**
+1. Enable 2-factor authentication on your Google Workspace admin account
+2. Generate an "App Password" specifically for this application
+3. Use your business domain email address (e.g., contact@yourbusinessdomain.com)
+4. Use the app password (not your regular Google Workspace password)
+
+**Note:** Google Workspace uses the same SMTP settings as Gmail (smtp.gmail.com:587)
 
 ### Development
 
