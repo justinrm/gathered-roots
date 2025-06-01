@@ -26,7 +26,7 @@ export default function Document() {
         {/* Default meta description (can be overridden by pages) */}
         <meta
           name="description"
-          content="Gathered Roots Cleaning offers professional home cleaning services with a personal touch. We tend to your home like an old garden, bringing back stillness and comfort."
+          content="Gathered Roots Cleaning offers professional residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403 with a personal touch. We tend to your home like an old garden, bringing back stillness and comfort."
         />
         
         {/* Accessibility statement link */}

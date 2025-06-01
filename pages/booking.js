@@ -109,7 +109,7 @@ export default function BookingPage() {
         <title>Book Our Services - Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Schedule your preferred cleaning service with Gathered Roots Cleaning. Easy online booking for Lewiston, Clarkston, and surrounding areas."
+          content="Schedule your preferred residential cleaning service with Gathered Roots Cleaning. Easy online booking for Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
         <meta name="robots" content="noindex,nofollow" />{' '}
         {/* Generally, booking pages are not for SEO indexing */}

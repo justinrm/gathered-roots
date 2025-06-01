@@ -53,7 +53,7 @@ export default function StandardClean() {
         <title>Standard Clean | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Our Standard Clean keeps your home or business fresh and tidy. See what's included and book your clean today!"
+          content="Our Standard Clean keeps your home fresh and tidy. Residential cleaning services for Lewiston, ID 83501 and Clarkston, WA 99403. See what's included and book your clean today!"
         />
         <meta property="og:title" content="Standard Clean | Gathered Roots Cleaning" />
         <meta
@@ -70,7 +70,7 @@ export default function StandardClean() {
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: 'Standard Clean',
-              description: 'Regular maintenance cleaning service for homes and businesses. Perfect for consistent upkeep and maintaining a clean, healthy environment.',
+              description: 'Regular maintenance residential cleaning service for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for consistent upkeep and maintaining a clean, healthy environment.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
@@ -79,20 +79,20 @@ export default function StandardClean() {
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID'
+                  name: 'Lewiston, ID 83501'
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA'
+                  name: 'Clarkston, WA 99403'
                 }
               ],
-              serviceType: 'Regular House Cleaning',
+              serviceType: 'Regular Residential House Cleaning',
               category: 'Maintenance Cleaning',
               offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'Recurring cleaning service available weekly, bi-weekly, or monthly'
+                description: 'Recurring residential cleaning service available weekly, bi-weekly, or monthly'
               }
             })
           }}
@@ -117,7 +117,8 @@ export default function StandardClean() {
               Ideal for regular upkeep and maintenance, our Standard Clean is perfect for
               maintaining a consistently clean and healthy home. This recurring service (weekly,
               bi-weekly, or monthly) covers all the essentials to keep your space fresh and
-              comfortable.
+              comfortable.<br />
+              <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.</span>
             </p>
             <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6">
               What&apos;s Included

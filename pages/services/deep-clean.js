@@ -84,7 +84,7 @@ export default function DeepClean() {
         <title>Deep Clean | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Our Deep Clean service tackles every corner for a truly spotless space. See what's included and book your deep clean today!"
+          content="Our Deep Clean service tackles every corner for a truly spotless space. Residential cleaning services for Lewiston, ID 83501 and Clarkston, WA 99403. See what's included and book your deep clean today!"
         />
         <meta property="og:title" content="Deep Clean | Gathered Roots Cleaning" />
         <meta
@@ -101,7 +101,7 @@ export default function DeepClean() {
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: 'Deep Clean',
-              description: 'Comprehensive top-to-bottom cleaning service for homes and businesses. Perfect for first-time cleans, spring cleaning, or special occasions.',
+              description: 'Comprehensive top-to-bottom residential cleaning service for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for first-time cleans, spring cleaning, or special occasions.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
@@ -110,20 +110,20 @@ export default function DeepClean() {
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID'
+                  name: 'Lewiston, ID 83501'
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA'
+                  name: 'Clarkston, WA 99403'
                 }
               ],
-              serviceType: 'Deep House Cleaning',
+              serviceType: 'Deep Residential House Cleaning',
               category: 'Intensive Cleaning',
               offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'One-time comprehensive cleaning service'
+                description: 'One-time comprehensive residential cleaning service'
               }
             })
           }}
@@ -149,7 +149,8 @@ export default function DeepClean() {
                 Our Deep Clean service is a comprehensive top-to-bottom cleaning of your home. We
                 recommend a deep clean if you have not had your home professionally cleaned within
                 the past 3 months, or for special occasions. It includes all Standard Maintenance
-                Cleaning tasks, plus the detailed items listed below.
+                Cleaning tasks, plus the detailed items listed below.<br />
+                <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.</span>
               </p>
             </div>
 

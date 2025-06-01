@@ -19,6 +19,9 @@ export default function PrivacyPolicy() {
       <main className="bg-background min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto bg-background p-8 rounded-lg shadow-md">
           <h1 className="text-4xl font-semibold text-primary-accent-teal mb-6">Privacy Policy</h1>
+          <p className="text-text-light mb-4">
+            This privacy policy applies to all users of Gathered Roots Cleaning&apos;s residential cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403.
+          </p>
           <p className="text-text-light mb-6">
             This Privacy Policy explains how Gathered Roots Cleaning (&quot;we&quot;,
             &quot;us&quot;, or &quot;our&quot;) collects, uses, and protects your information when

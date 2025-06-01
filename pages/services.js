@@ -52,7 +52,7 @@ export default function Services() {
         <title>Our Cleaning Services | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Explore Gathered Roots Cleaning's full range of cleaning services: Standard, Deep, Move-In/Out, and Eco-Friendly. Find the perfect clean for your needs."
+          content="Explore our residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Standard, deep, move-in/move-out, and eco-friendly options."
         />
         <meta property="og:title" content="Our Cleaning Services | Gathered Roots Cleaning" />
         <meta
@@ -177,6 +177,12 @@ export default function Services() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-text-light mb-4">
+            We proudly provide <strong>residential cleaning services</strong> for homes in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+          </p>
         </section>
       </main>
     </>

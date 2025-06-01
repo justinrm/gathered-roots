@@ -68,7 +68,7 @@ export default function EcoFriendly() {
         <title>Eco-Friendly Cleaning Options | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Our eco-friendly cleaning services use safe, natural products that are effective and better for your family and the environment."
+          content="Our eco-friendly residential cleaning services use safe, natural products for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Effective and better for your family and the environment."
         />
         <meta
           property="og:title"
@@ -88,7 +88,7 @@ export default function EcoFriendly() {
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: 'Eco-Friendly Cleaning',
-              description: 'Environmentally conscious cleaning using safe, non-toxic products. Perfect for families with children, pets, or sensitivities.',
+              description: 'Environmentally conscious residential cleaning using safe, non-toxic products for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for families with children, pets, or sensitivities.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
@@ -97,14 +97,14 @@ export default function EcoFriendly() {
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID'
+                  name: 'Lewiston, ID 83501'
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA'
+                  name: 'Clarkston, WA 99403'
                 }
               ],
-              serviceType: 'Green House Cleaning',
+              serviceType: 'Green Residential House Cleaning',
               category: 'Eco-Friendly Cleaning',
               additionalProperty: [
                 {
@@ -117,7 +117,7 @@ export default function EcoFriendly() {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'Safe, eco-friendly cleaning services'
+                description: 'Safe, eco-friendly residential cleaning services'
               }
             })
           }}
@@ -143,7 +143,8 @@ export default function EcoFriendly() {
                 At Gathered Roots, we&apos;re committed to offering eco-friendly cleaning options
                 that protect your family&apos;s health and the environment. Our green cleaning
                 services use plant-based, biodegradable products that are free from harsh chemicals
-                yet highly effective. This option can be applied to any of our cleaning services.
+                yet highly effective. This option can be applied to any of our cleaning services.<br />
+                <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.</span>
               </p>
             </div>
 

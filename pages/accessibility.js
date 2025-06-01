@@ -21,7 +21,8 @@ export default function AccessibilityStatement() {
           <h1 className="text-4xl font-semibold text-primary-accent-teal mb-6">Accessibility Statement</h1>
           <p className="text-text-light mb-6">
             Gathered Roots Cleaning is committed to ensuring that our website is accessible to everyone, 
-            including people with disabilities. We strive to provide an inclusive digital experience that 
+            including people with disabilities. We serve Lewiston, ID 83501 and Clarkston, WA 99403.
+            We strive to provide an inclusive digital experience that 
             allows all users to access our services easily and effectively.
           </p>
 

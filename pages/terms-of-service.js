@@ -45,7 +45,7 @@ export default function TermsOfService() {
                 1. Scope of Services
               </h3>
               <p className="text-text-dark mb-4">
-                We will provide residential house cleaning services as discussed and agreed upon. This may include tasks such as dusting, vacuuming, mopping, bathroom and kitchen cleaning, and general surface tidying.
+                We will provide residential house cleaning services as discussed and agreed upon for homes in Lewiston, ID 83501 and Clarkston, WA 99403. This may include tasks such as dusting, vacuuming, mopping, bathroom and kitchen cleaning, and general surface tidying.
               </p>
               <p className="text-text-dark">
                 <strong>Specialty services</strong> (e.g., deep cleans, move-out services) must be scheduled in advance and may incur additional charges.

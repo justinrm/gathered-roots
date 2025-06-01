@@ -5,6 +5,8 @@ import ServicesSummary from '../components/ServicesSummary';
 import UspSection from '../components/UspSection';
 // import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
 import ContactForm from '../components/ContactForm';
+import Link from 'next/link';
+import { Button } from '../components/ui/button';
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
         <title>{`Gathered Roots Cleaning | Rooted in clean. Driven by care. | Veteran owned, family operated.`}</title>
         <meta
           name="description"
-          content="Gathered Roots Cleaning offers premium cleaning services for homes and businesses. Trusted professionals, flexible scheduling, and a spotless clean every time. Request a quote today!"
+          content="Gathered Roots Cleaning offers residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Trusted professionals, flexible scheduling, and a spotless clean every time. Request a quote today!"
         />
         <link rel="icon" href="/images/favicon.png" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
@@ -28,7 +30,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Gathered Roots Cleaning offers premium, eco-friendly cleaning services for homes and businesses in Lewiston, ID and Clarkston, WA. Veteran owned, family operated."
+          content="Gathered Roots Cleaning offers premium, eco-friendly residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Veteran owned, family operated."
         />
         <meta
           property="og:image"
@@ -70,15 +72,24 @@ export default function Home() {
               url: 'https://www.gatheredrootscleaning.com',
               telephone: '+1-208-717-1192',
               email: 'hello@gatheredrootscleaning.com',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '212 5th Street',
-                addressLocality: 'Lewiston',
-                addressRegion: 'ID',
-                postalCode: '83501',
-                addressCountry: 'US',
-              },
-              description: 'Gathered Roots Cleaning offers premium cleaning services for homes and businesses in Lewiston, ID and Clarkston, WA. Veteran owned and family operated.',
+              address: [
+                {
+                  '@type': 'PostalAddress',
+                  streetAddress: '212 5th Street',
+                  addressLocality: 'Lewiston',
+                  addressRegion: 'ID',
+                  postalCode: '83501',
+                  addressCountry: 'US',
+                },
+                {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Clarkston',
+                  addressRegion: 'WA',
+                  postalCode: '99403',
+                  addressCountry: 'US',
+                }
+              ],
+              description: 'Gathered Roots Cleaning offers premium residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Veteran owned and family operated.',
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
@@ -337,6 +348,19 @@ export default function Home() {
             <div>
               <ContactForm />
             </div>
+          </div>
+        </section>
+        <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-text-light mb-4">
+            We proudly provide <strong>residential cleaning services</strong> for homes in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+            <Link href="/service-areas">
+              <Button variant="outline" size="large">View All Service Areas</Button>
+            </Link>
+            <Link href="/clarkston-wa-cleaning-services">
+              <Button variant="outline" size="large">Clarkston, WA Services</Button>
+            </Link>
           </div>
         </section>
       </main>

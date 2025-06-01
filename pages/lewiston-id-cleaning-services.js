@@ -31,11 +31,11 @@ export default function LewistonCleaningServices() {
         <title>Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Top-rated house cleaning services in Lewiston, Idaho. Serving Normal Hill, Orchards, Downtown, and all Lewiston neighborhoods. Veteran-owned, fully insured. Free quotes!"
+          content="Top-rated residential cleaning services in Lewiston, Idaho (83501). Serving Normal Hill, Orchards, Downtown, and all Lewiston neighborhoods. Veteran-owned, fully insured. Free quotes!"
         />
         <meta
           name="keywords"
-          content="house cleaning Lewiston ID, maid service Lewiston Idaho, residential cleaning Lewiston, cleaning service near me, Lewiston house cleaners, Normal Hill cleaning service"
+          content="residential cleaning Lewiston ID 83501, house cleaning Lewiston ID, maid service Lewiston Idaho, cleaning service near me, Lewiston house cleaners, Normal Hill cleaning service, eco-friendly cleaning Lewiston"
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services" />
         
@@ -52,8 +52,8 @@ export default function LewistonCleaningServices() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'House Cleaning Services in Lewiston, ID',
-              description: 'Professional house cleaning services in Lewiston, Idaho and surrounding neighborhoods',
+              name: 'Residential Cleaning Services in Lewiston, ID 83501',
+              description: 'Professional residential cleaning services in Lewiston, Idaho (83501) and surrounding neighborhoods',
               url: 'https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services',
               provider: {
                 '@type': 'LocalBusiness',
@@ -71,13 +71,14 @@ export default function LewistonCleaningServices() {
                   '@type': 'PostalAddress',
                   addressLocality: 'Lewiston',
                   addressRegion: 'ID',
+                  postalCode: '83501',
                   addressCountry: 'US'
                 }
               },
               mainEntity: {
                 '@type': 'Service',
-                name: 'House Cleaning Services',
-                description: 'Professional residential cleaning services in Lewiston, Idaho',
+                name: 'Residential Cleaning Services',
+                description: 'Professional residential cleaning services in Lewiston, Idaho (83501)',
                 areaServed: {
                   '@type': 'City',
                   name: 'Lewiston',
@@ -101,7 +102,8 @@ export default function LewistonCleaningServices() {
             </h1>
             <p className="text-xl mb-8 opacity-90">
               Trusted by families across Normal Hill, Orchards, Downtown Lewiston, and surrounding neighborhoods. 
-              Veteran-owned, eco-friendly cleaning with a personal touch.
+              Veteran-owned, eco-friendly cleaning with a personal touch.<br />
+              <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong>. For Clarkston, WA <strong>99403</strong>, see our <Link href='/clarkston-wa-cleaning-services' className='underline text-white'>Clarkston page</Link>.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/quote">
@@ -122,7 +124,7 @@ export default function LewistonCleaningServices() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-teal text-center mb-12">
-              Serving All Lewiston, ID Neighborhoods
+              Serving All Lewiston, ID 83501 Neighborhoods
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-6">
@@ -136,6 +138,7 @@ export default function LewistonCleaningServices() {
                       {area}
                     </li>
                   ))}
+                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-accent-teal rounded-full mr-2"></span>Zip Code: 83501</li>
                 </ul>
               </Card>
               <Card className="p-6">
@@ -197,7 +200,7 @@ export default function LewistonCleaningServices() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-teal text-center mb-12">
-              Our Cleaning Services in Lewiston, ID
+              Our Residential Cleaning Services in Lewiston, ID 83501
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -247,12 +250,22 @@ export default function LewistonCleaningServices() {
               Ready for a Spotless Home in Lewiston?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of satisfied customers across Lewiston, ID. Get your free quote today!
+              Join hundreds of satisfied customers across Lewiston, ID 83501. Get your free quote today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/quote">
                 <Button variant="secondary" size="large">
                   Get Free Quote
+                </Button>
+              </Link>
+              <Link href="/service-areas">
+                <Button variant="outline" size="large" className="text-white border-white hover:bg-white hover:text-primary-accent-teal">
+                  View All Service Areas
+                </Button>
+              </Link>
+              <Link href="/clarkston-wa-cleaning-services">
+                <Button variant="outline" size="large" className="text-white border-white hover:bg-white hover:text-primary-accent-teal">
+                  Clarkston, WA Services
                 </Button>
               </Link>
               <Link href="tel:+12087171192">
@@ -262,6 +275,12 @@ export default function LewistonCleaningServices() {
               </Link>
             </div>
           </div>
+        </section>
+
+        <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-text-light mb-4">
+            We provide <strong>residential cleaning services</strong> for homes in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+          </p>
         </section>
       </main>
     </>
