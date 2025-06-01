@@ -1,5 +1,12 @@
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
 import rateLimit from '../../lib/rateLimit';
+
+// Initialize SendGrid
+if (process.env.SENDGRID_API_KEY) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+} else {
+  console.error('SENDGRID_API_KEY environment variable not set');
+}
 
 // Configure rate limiter with environment variables or defaults
 const bookingFormLimiter = rateLimit({
@@ -29,6 +36,13 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Apply rate limiting before processing the request
     await bookingFormLimiter(req, res);
+
+    if (!process.env.SENDGRID_API_KEY) {
+      console.error('SendGrid API key not configured.');
+      return res.status(500).json({ 
+        error: 'Server configuration error. Please try again later.',
+      });
+    }
     
     const {
       name,
@@ -109,26 +123,28 @@ export default async function handler(req, res) {
     }
 
     try {
-      // Note: Client booking information is now handled by Square
-      // This endpoint only sends email notifications
+      // Get email configuration
+      const recipientEmail = process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
+      const fromEmail = process.env.SENDGRID_FROM_EMAIL;
+      const fromName = process.env.EMAIL_FROM_NAME || 'Gathered Roots Cleaning';
+
+      if (!recipientEmail || !fromEmail) {
+        console.error('Email configuration missing (CONTACT_FORM_RECIPIENT_EMAIL or SENDGRID_FROM_EMAIL).');
+        return res.status(500).json({
+          error: 'Server configuration error. Please contact support.',
+        });
+      }
 
       console.log('Booking request received via email (Square handles booking data)');
 
-      // --- Send Email Notification ---
+      // Send Notification Email to Business
       try {
-        const transporter = nodemailer.createTransporter({
-          host: process.env.SMTP_HOST, // e.g., 'smtp.gmail.com'
-          port: parseInt(process.env.SMTP_PORT || '587', 10), // e.g., 587 for TLS, 465 for SSL
-          secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
-          auth: {
-            user: process.env.SMTP_USER, // Your email address
-            pass: process.env.SMTP_PASSWORD, // Your email password or App Password
+        const businessEmailMsg = {
+          to: recipientEmail,
+          from: {
+            email: fromEmail,
+            name: fromName,
           },
-        });
-
-        const mailOptionsToAdmin = {
-          from: `"${process.env.EMAIL_FROM_NAME || 'Gathered Roots Booking'}" <${process.env.MAILER_FROM_ADDRESS || process.env.SMTP_USER}>`,
-          to: process.env.CONTACT_FORM_RECIPIENT_EMAIL, // Your email address to receive notifications
           subject: 'New Booking Request Received!',
           html: `
             <h2>New Booking Request</h2>
@@ -149,13 +165,16 @@ export default async function handler(req, res) {
           `,
         };
         
-        await transporter.sendMail(mailOptionsToAdmin);
-        console.log('Admin notification email sent successfully.');
+        await sgMail.send(businessEmailMsg);
+        console.log('Business notification email sent successfully via SendGrid.');
 
-        // Optional: Send confirmation email to the customer
-        const mailOptionsToCustomer = {
-          from: `"${process.env.EMAIL_FROM_NAME || 'Gathered Roots Cleaning'}" <${process.env.MAILER_FROM_ADDRESS || process.env.SMTP_USER}>`,
-          to: email, // User's email
+        // Send Confirmation Email to Customer
+        const customerEmailMsg = {
+          to: email,
+          from: {
+            email: fromEmail,
+            name: fromName,
+          },
           subject: 'Your Booking Request with Gathered Roots Cleaning',
           html: `
             <h2>Thank you for your booking request!</h2>
@@ -175,11 +194,11 @@ export default async function handler(req, res) {
           `,
         };
         
-        await transporter.sendMail(mailOptionsToCustomer);
-        console.log('Customer confirmation email sent successfully.');
+        await sgMail.send(customerEmailMsg);
+        console.log('Customer confirmation email sent successfully via SendGrid.');
 
       } catch (emailError) {
-        console.error('Error sending booking notification emails:', emailError);
+        console.error('SendGrid email sending error:', emailError);
         return res.status(500).json({ 
           error: 'Failed to send booking notification emails. Please try again later.',
           details: process.env.NODE_ENV === 'development' ? emailError.message : undefined

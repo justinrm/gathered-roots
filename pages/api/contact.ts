@@ -1,18 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
+import sgMail from '@sendgrid/mail';
 import { z } from 'zod';
 
 // Import rate limiter
 import rateLimit from '../../lib/rateLimit';
 
-// Environment Variables (to be set in .env.local):
-// SMTP_HOST: SMTP server hostname
-// SMTP_PORT: SMTP server port (e.g., 587 or 465)
-// SMTP_USER: SMTP username
-// SMTP_PASSWORD: SMTP password
-// SMTP_SECURE: 'true' if using SSL/TLS (typically for port 465), 'false' otherwise
-// MAILER_FROM_ADDRESS: Email address to send emails from (e.g., 'noreply@yourdomain.com')
-// CONTACT_FORM_RECIPIENT_EMAIL: Email address for Gathered Roots Cleaning to receive submissions
+// Environment Variables (to be set in Vercel dashboard):
+// SENDGRID_API_KEY: Your SendGrid API key (starts with SG.)
+// SENDGRID_FROM_EMAIL: Your verified sender email (e.g., hello@gatheredrootscleaning.com)
+// CONTACT_FORM_RECIPIENT_EMAIL: Email address for business to receive submissions
 // CONTACT_FORM_RATE_LIMIT: Number of allowed submissions per IP in the time window (default: 5)
 // CONTACT_FORM_RATE_WINDOW: Time window in milliseconds for rate limiting (default: 60000 = 1 minute)
 
@@ -27,21 +23,11 @@ const contactFormSchema = z.object({
     .refine((val) => val === true, { message: 'You must consent to us contacting you.' }),
 });
 
-// Initialize Nodemailer transporter
-// Ensure your SMTP environment variables are correctly set in .env.local
-let transporter: nodemailer.Transporter;
-try {
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT || '587', 10),
-    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
-    },
-  });
-} catch (error) {
-  console.error('Failed to initialize Nodemailer transporter:', error);
+// Initialize SendGrid
+if (process.env.SENDGRID_API_KEY) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+} else {
+  console.error('SENDGRID_API_KEY environment variable not set');
 }
 
 // Helper function to escape HTML for email safety
@@ -75,8 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Apply rate limiting before processing the request
   await contactFormLimiter(req, res);
 
-  if (!transporter) {
-    console.error('Email transporter not initialized.');
+  if (!process.env.SENDGRID_API_KEY) {
+    console.error('SendGrid API key not configured.');
     return res.status(500).json({ message: 'Server configuration error. Please try again later.' });
   }
 
@@ -91,27 +77,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const { name, email, message, phone, service } = validationResult.data;
 
-    // Note: Client contact information is now handled by Square
-    // This endpoint only sends email notifications
+    // Get email configuration
+    const recipientEmail = process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
+    const fromEmail = process.env.SENDGRID_FROM_EMAIL;
+    const fromName = process.env.EMAIL_FROM_NAME || 'Gathered Roots Cleaning';
 
-    // Send Notification Email to Gathered Roots Cleaning
-    const recipientEmail = process.env.CONTACT_FORM_RECIPIENT_EMAIL;
-    const mailerFrom = process.env.MAILER_FROM_ADDRESS;
-
-    if (!recipientEmail || !mailerFrom) {
-      console.error(
-        'Email configuration (CONTACT_FORM_RECIPIENT_EMAIL or MAILER_FROM_ADDRESS) missing.'
-      );
+    if (!recipientEmail || !fromEmail) {
+      console.error('Email configuration missing (CONTACT_FORM_RECIPIENT_EMAIL or SENDGRID_FROM_EMAIL).');
       return res.status(500).json({
         message: 'Server configuration error. Please contact support.',
       });
     }
 
+    // Send Notification Email to Business
     try {
-      await transporter.sendMail({
-        from: `"${escapeHtml(name)}" <${escapeHtml(mailerFrom)}>`,
-        replyTo: email, // User's email
-        to: recipientEmail, // Business email
+      const businessEmailMsg = {
+        to: recipientEmail,
+        from: {
+          email: fromEmail,
+          name: fromName,
+        },
+        replyTo: email,
         subject: `New Contact Form Submission from ${escapeHtml(name)}`,
         html: `
           <h2>New Contact Form Submission</h2>
@@ -124,10 +110,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <hr>
           <p><em>Submitted on ${new Date().toLocaleString()}</em></p>
         `,
-      });
-      console.log('Contact form notification email sent successfully.');
+      };
+
+      await sgMail.send(businessEmailMsg);
+      console.log('Business notification email sent successfully via SendGrid.');
     } catch (emailError) {
-      console.error('Email sending error:', emailError);
+      console.error('SendGrid email sending error:', emailError);
       return res.status(500).json({
         message: 'Failed to send notification email. Please try again later.',
         error: process.env.NODE_ENV === 'development' ? 
@@ -136,11 +124,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
 
-    // Send confirmation email to the user
+    // Send Confirmation Email to Customer
     try {
-      await transporter.sendMail({
-        from: `"Gathered Roots Cleaning" <${escapeHtml(mailerFrom)}>`,
+      const customerEmailMsg = {
         to: email,
+        from: {
+          email: fromEmail,
+          name: fromName,
+        },
         subject: 'Thank you for contacting Gathered Roots Cleaning',
         html: `
           <h2>Thank you for your message!</h2>
@@ -152,10 +143,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <hr>
           <p>Best regards,<br>The Gathered Roots Cleaning Team</p>
         `,
-      });
-      console.log('Confirmation email sent to user successfully.');
+      };
+
+      await sgMail.send(customerEmailMsg);
+      console.log('Customer confirmation email sent successfully via SendGrid.');
     } catch (emailError) {
-      console.error('Confirmation email error:', emailError);
+      console.error('Customer confirmation email error:', emailError);
       // Don't fail the request if confirmation email fails
     }
 
@@ -175,10 +168,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 // Email configuration documentation:
-// - SMTP_HOST: SMTP server hostname
-// - SMTP_PORT: SMTP server port (e.g., 587 or 465)  
-// - SMTP_USER: SMTP username
-// - SMTP_PASSWORD: SMTP password
-// - SMTP_SECURE: 'true' if using SSL/TLS (typically for port 465), 'false' otherwise
-// - MAILER_FROM_ADDRESS: Email address to send emails from
+// - SENDGRID_API_KEY: Your SendGrid API key (starts with SG.)
+// - SENDGRID_FROM_EMAIL: Your verified sender email (e.g., hello@gatheredrootscleaning.com)
 // - CONTACT_FORM_RECIPIENT_EMAIL: Email address for business to receive submissions
