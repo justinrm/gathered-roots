@@ -5,7 +5,46 @@ import Image from 'next/image';
 import Button from '../../components/Button';
 import Link from 'next/link';
 
-const checklist = [
+// Standard cleaning tasks that are included in deep clean
+const standardCleaningTasks = [
+  {
+    category: 'All Rooms',
+    items: [
+      'Dust accessible surfaces (including furniture, shelves, and baseboards)',
+      'Vacuum carpets and rugs',
+      'Sweep and mop hard floors',
+      'Empty trash bins and replace liners',
+      'Tidy up and organize general areas',
+    ],
+  },
+  {
+    category: 'Kitchen',
+    items: [
+      'Clean countertops and backsplash',
+      'Wipe exterior of appliances (fridge, oven, microwave, dishwasher)',
+      'Clean sink and faucet',
+      'Spot clean cabinet exteriors',
+      'Sanitize high-touch areas (e.g., light switches, handles)',
+    ],
+  },
+  {
+    category: 'Bathrooms',
+    items: [
+      'Clean and disinfect sinks, countertops, and faucets',
+      'Scrub and disinfect toilets, tubs, and showers',
+      'Clean mirrors',
+      'Empty trash bins and replace liners',
+      'Sanitize high-touch areas (e.g., light switches, handles)',
+    ],
+  },
+  {
+    category: 'Bedrooms',
+    items: ['Dust furniture and fixtures', 'Make beds (change linens if provided)', 'Vacuum carpets or sweep and mop floors', 'Empty trash bins and replace liners'],
+  },
+];
+
+// Additional deep cleaning tasks
+const additionalDeepCleaningTasks = [
   {
     category: 'All Rooms',
     items: [
@@ -112,27 +151,56 @@ export default function DeepClean() {
                 the past 3 months, or for special occasions. It includes all Standard Maintenance
                 Cleaning tasks, plus the detailed items listed below.
               </p>
-              <h2 className="text-2xl font-semibold text-primary-accent-brand mb-4">
-                What&apos;s Included in a Deep Clean
+            </div>
+
+            {/* Standard Cleaning Tasks Section */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">
+                Standard Cleaning Tasks (Included)
               </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {standardCleaningTasks.map((section, index) => (
+                  <div
+                    key={index}
+                    className="p-6 bg-background rounded-lg shadow-md border border-borders"
+                  >
+                    <h3 className="text-xl font-medium text-primary-accent-green mb-2">
+                      {section.category}
+                    </h3>
+                    <ul className="list-disc list-inside text-text-light space-y-1">
+                      {section.items.map((item, itemIdx) => (
+                        <li key={itemIdx}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-              {checklist.map((section, index) => (
-                <div
-                  key={index}
-                  className="p-6 bg-background rounded-lg shadow-md border border-borders"
-                >
-                  <h3 className="text-xl font-medium text-primary-accent-green mb-2">
-                    {section.category}
-                  </h3>
-                  <ul className="list-disc list-inside text-text-light space-y-1">
-                    {section.items.map((item, itemIdx) => (
-                      <li key={itemIdx}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+
+            {/* Additional Deep Cleaning Tasks Section */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">
+                Additional Deep Cleaning Tasks
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {additionalDeepCleaningTasks.map((section, index) => (
+                  <div
+                    key={index}
+                    className="p-6 bg-background rounded-lg shadow-md border border-borders"
+                  >
+                    <h3 className="text-xl font-medium text-primary-accent-green mb-2">
+                      {section.category}
+                    </h3>
+                    <ul className="list-disc list-inside text-text-light space-y-1">
+                      {section.items.map((item, itemIdx) => (
+                        <li key={itemIdx}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
+
             <div className="mt-12 text-center">
               <Link href="/quote" passHref legacyBehavior>
                 <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">Get a Deep Cleaning Quote</Button>
