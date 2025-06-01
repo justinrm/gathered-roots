@@ -224,7 +224,7 @@ export default function BookingPage() {
               </select>
               <ErrorMessage field="preferredContactMethod" />
               <p className="mt-1 text-xs text-gray-500">
-                We'll reach out using your preferred method. If unavailable, we may use an alternative method.
+                We&apos;ll reach out using your preferred method. If unavailable, we may use an alternative method.
               </p>
             </div>
 

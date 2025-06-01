@@ -238,7 +238,7 @@ const ContactForm = () => {
         </Select>
         <ValidationMessage>{errors.preferredContactMethod}</ValidationMessage>
         <p className="mt-1 text-xs text-gray-500">
-          We'll reach out using your preferred method. If unavailable, we may use an alternative method.
+          We&apos;ll reach out using your preferred method. If unavailable, we may use an alternative method.
         </p>
       </div>
       <div>
