@@ -125,7 +125,7 @@ export default function EcoFriendly() {
       </Head>
       <main className="bg-background min-h-screen">
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="mb-8 flex justify-center">
                 <Image
@@ -152,7 +152,7 @@ export default function EcoFriendly() {
               <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">
                 Standard Cleaning Tasks (With Eco-Friendly Products)
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {standardCleaningTasks.map((section, index) => (
                   <div
                     key={index}
@@ -174,7 +174,7 @@ export default function EcoFriendly() {
             {/* Benefits Section */}
             <div className="mb-12">
               <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">Benefits of Eco-Friendly Cleaning</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {benefits.map((section, index) => (
                   <div
                     key={index}

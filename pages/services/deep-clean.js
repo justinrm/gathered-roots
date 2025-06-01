@@ -131,7 +131,7 @@ export default function DeepClean() {
       </Head>
       <main className="bg-background min-h-screen">
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="mb-8 flex justify-center">
                 <Image
@@ -158,7 +158,7 @@ export default function DeepClean() {
               <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">
                 Standard Cleaning Tasks (Included)
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {standardCleaningTasks.map((section, index) => (
                   <div
                     key={index}
@@ -182,7 +182,7 @@ export default function DeepClean() {
               <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">
                 Additional Deep Cleaning Tasks
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {additionalDeepCleaningTasks.map((section, index) => (
                   <div
                     key={index}

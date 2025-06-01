@@ -100,7 +100,7 @@ export default function StandardClean() {
       </Head>
       <main className="bg-background min-h-screen">
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <div className="mb-8 flex justify-center">
               <Image
                 src="/images/standard-clean.jpg"
@@ -122,7 +122,7 @@ export default function StandardClean() {
             <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6">
               What&apos;s Included
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-12">
               {checklistData.map((section, index) => (
                 <div
                   key={index}
