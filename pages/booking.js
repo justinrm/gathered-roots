@@ -9,6 +9,7 @@ export default function BookingPage() {
     phone: '',
     address: '',
     serviceType: 'standard',
+    preferredContactMethod: '',
     preferredDate: '',
     preferredTimeSlot: '',
     message: '',
@@ -51,6 +52,7 @@ export default function BookingPage() {
         phone: '',
         address: '',
         serviceType: 'standard',
+        preferredContactMethod: '',
         preferredDate: '',
         preferredTimeSlot: '',
         message: '',
@@ -82,6 +84,15 @@ export default function BookingPage() {
     '12:00 PM - 2:00 PM',
     '2:00 PM - 4:00 PM',
     '3:00 PM - 5:00 PM'
+  ];
+
+  // Contact method options
+  const contactMethods = [
+    { value: '', label: 'Select your preferred contact method' },
+    { value: 'phone', label: 'Phone Call' },
+    { value: 'email', label: 'Email' },
+    { value: 'text', label: 'Text Message' },
+    { value: 'any', label: 'Any method is fine' },
   ];
 
   // Helper for field error message display
@@ -184,6 +195,37 @@ export default function BookingPage() {
                 } rounded-md shadow-sm focus:outline-none focus:ring-brand-accent focus:border-brand-accent sm:text-sm`}
               />
               <ErrorMessage field="phone" />
+            </div>
+
+            <div>
+              <label htmlFor="preferredContactMethod" className="block text-sm font-medium text-text-dark">
+                Preferred Contact Method
+              </label>
+              <select
+                name="preferredContactMethod"
+                id="preferredContactMethod"
+                required
+                value={formData.preferredContactMethod}
+                onChange={handleChange}
+                className={`mt-1 block w-full px-3 py-2 border ${
+                  validationErrors.preferredContactMethod ? 'border-red-500' : 'border-borders'
+                } rounded-md shadow-sm focus:outline-none focus:ring-brand-accent focus:border-brand-accent sm:text-sm`}
+              >
+                {contactMethods.map((method) => (
+                  <option
+                    key={method.value}
+                    value={method.value}
+                    disabled={method.value === ''}
+                    className={method.value === '' ? 'text-gray-500' : 'text-gray-900'}
+                  >
+                    {method.label}
+                  </option>
+                ))}
+              </select>
+              <ErrorMessage field="preferredContactMethod" />
+              <p className="mt-1 text-xs text-gray-500">
+                We'll reach out using your preferred method. If unavailable, we may use an alternative method.
+              </p>
             </div>
 
             <div>

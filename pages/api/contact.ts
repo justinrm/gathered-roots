@@ -18,6 +18,7 @@ const contactFormSchema = z.object({
   message: z.string().min(10, { message: 'Message should be at least 10 characters long' }),
   phone: z.string().max(50).optional().nullable(),
   service: z.string().optional().nullable(),
+  preferredContactMethod: z.string().min(1, { message: 'Preferred contact method is required' }).optional().nullable(),
   consent: z
     .boolean()
     .refine((val) => val === true, { message: 'You must consent to us contacting you.' }),
@@ -44,6 +45,18 @@ function escapeHtml(str: string | undefined | null): string {
         '"': '&quot;',
       })[tag] || tag
   );
+}
+
+// Helper function to format preferred contact method for display
+function formatContactMethod(method: string | undefined | null): string {
+  if (!method) return '';
+  const methodMap: { [key: string]: string } = {
+    phone: 'Phone Call',
+    email: 'Email',
+    text: 'Text Message',
+    any: 'Any method is fine',
+  };
+  return methodMap[method] || method;
 }
 
 // Configure rate limiter with environment variables or defaults
@@ -75,7 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         errors: validationResult.error.flatten().fieldErrors,
       });
     }
-    const { name, email, message, phone, service } = validationResult.data;
+    const { name, email, message, phone, service, preferredContactMethod } = validationResult.data;
 
     // Get email configuration
     const recipientEmail = process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
@@ -105,6 +118,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
           ${phone ? `<p><strong>Phone:</strong> ${escapeHtml(phone)}</p>` : ''}
           ${service ? `<p><strong>Service Requested:</strong> ${escapeHtml(service)}</p>` : ''}
+          ${preferredContactMethod ? `<p><strong>Preferred Contact Method:</strong> ${escapeHtml(formatContactMethod(preferredContactMethod))}</p>` : ''}
           <p><strong>Message:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
           <hr>
@@ -136,8 +150,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         html: `
           <h2>Thank you for your message!</h2>
           <p>Hi ${escapeHtml(name)},</p>
-          <p>Thank you for reaching out to Gathered Roots Cleaning. We have received your message and will get back to you as soon as possible.</p>
+          <p>Thank you for reaching out to Gathered Roots Cleaning. We have received your message and will get back to you ${preferredContactMethod ? `via ${formatContactMethod(preferredContactMethod).toLowerCase()}` : ''} as soon as possible.</p>
           ${service ? `<p><strong>Service Requested:</strong> ${escapeHtml(service)}</p>` : ''}
+          ${preferredContactMethod ? `<p><strong>Your Preferred Contact Method:</strong> ${escapeHtml(formatContactMethod(preferredContactMethod))}</p>` : ''}
           <p><strong>Your message:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
           <hr>

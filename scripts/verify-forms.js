@@ -28,6 +28,8 @@ const testContactData = {
   name: 'Test User',
   email: 'test@example.com',
   phone: '(208) 123-4567',
+  service: 'standard',
+  preferredContactMethod: 'email',
   message: 'This is a test contact form submission.',
   consent: true
 };
@@ -38,6 +40,7 @@ const testBookingData = {
   phone: '(208) 123-4567',
   address: '123 Test Street, Lewiston, ID 83501',
   serviceType: 'standard',
+  preferredContactMethod: 'phone',
   preferredDate: '2024-12-31',
   preferredTimeSlot: '10:00 AM - 12:00 PM',
   message: 'This is a test booking request.'

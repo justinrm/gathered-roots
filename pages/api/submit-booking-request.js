@@ -32,6 +32,26 @@ const VALID_SERVICE_TYPES = [
   'custom'
 ];
 
+// Valid contact methods for validation
+const VALID_CONTACT_METHODS = [
+  'phone',
+  'email',
+  'text',
+  'any'
+];
+
+// Helper function to format preferred contact method for display
+function formatContactMethod(method) {
+  if (!method) return '';
+  const methodMap = {
+    phone: 'Phone Call',
+    email: 'Email',
+    text: 'Text Message',
+    any: 'Any method is fine',
+  };
+  return methodMap[method] || method;
+}
+
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Apply rate limiting before processing the request
@@ -50,6 +70,7 @@ export default async function handler(req, res) {
       phone,
       address,
       serviceType,
+      preferredContactMethod,
       preferredDate,
       preferredTimeSlot,
       message,
@@ -83,6 +104,13 @@ export default async function handler(req, res) {
       validationErrors.serviceType = 'Service type is required';
     } else if (!VALID_SERVICE_TYPES.includes(serviceType)) {
       validationErrors.serviceType = 'Please select a valid service type';
+    }
+    
+    // Preferred contact method validation
+    if (!preferredContactMethod || typeof preferredContactMethod !== 'string') {
+      validationErrors.preferredContactMethod = 'Preferred contact method is required';
+    } else if (!VALID_CONTACT_METHODS.includes(preferredContactMethod)) {
+      validationErrors.preferredContactMethod = 'Please select a valid contact method';
     }
     
     // Date validation
@@ -155,6 +183,7 @@ export default async function handler(req, res) {
               <li><strong>Phone:</strong> ${phone}</li>
               <li><strong>Address:</strong> ${address}</li>
               <li><strong>Service Type:</strong> ${serviceType}</li>
+              <li><strong>Preferred Contact Method:</strong> ${formatContactMethod(preferredContactMethod)}</li>
               <li><strong>Preferred Date:</strong> ${preferredDate}</li>
               <li><strong>Preferred Time:</strong> ${preferredTimeSlot}</li>
               <li><strong>Message:</strong> ${message || 'N/A'}</li>
@@ -182,12 +211,13 @@ export default async function handler(req, res) {
             <p>Thank you for your booking request with Gathered Roots Cleaning! We have received the following details:</p>
             <ul>
               <li><strong>Service Type:</strong> ${serviceType}</li>
+              <li><strong>Preferred Contact Method:</strong> ${formatContactMethod(preferredContactMethod)}</li>
               <li><strong>Preferred Date:</strong> ${preferredDate}</li>
               <li><strong>Preferred Time:</strong> ${preferredTimeSlot}</li>
               <li><strong>Service Address:</strong> ${address}</li>
               ${message ? `<li><strong>Additional Notes:</strong> ${message}</li>` : ''}
             </ul>
-            <p>We will review your request and get back to you within 24 hours to confirm availability and discuss the next steps.</p>
+            <p>We will review your request and get back to you via ${formatContactMethod(preferredContactMethod).toLowerCase()} within 24 hours to confirm availability and discuss the next steps.</p>
             <p>If you have any urgent questions, please feel free to contact us directly.</p>
             <hr>
             <p>Best regards,<br>The Gathered Roots Cleaning Team</p>
