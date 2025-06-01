@@ -11,15 +11,15 @@ const HeroSection = () => {
         {/* Top section with logo and hero image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] py-12 px-4 sm:px-6 lg:px-8">
           {/* Left column - Content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <div className="text-center lg:text-left order-1 lg:order-1">
             {/* Logo - now displayed prominently and larger */}
-            <div className="mb-8 flex justify-center lg:justify-start">
+            <div className="mb-4 flex justify-center lg:justify-start">
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
                 width={800}
                 height={506}
-                className="h-96 sm:h-[28rem] lg:h-[36rem] w-auto object-contain max-w-full"
+                className="h-[26rem] sm:h-[32rem] lg:h-[40rem] w-auto object-contain max-w-full"
               />
             </div>
             
@@ -50,7 +50,7 @@ const HeroSection = () => {
           </div>
           
           {/* Right column - Hero Image */}
-          <div className="order-1 lg:order-2">
+          <div className="order-2 lg:order-2">
             <div className="relative">
               {/* Hero Image - no logo overlay */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
