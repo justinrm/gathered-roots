@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Hero Content Container */}
       <div className="relative z-10">
         {/* Top section with logo and hero image */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh] py-6 px-4 sm:px-6 lg:px-8">
           {/* Left column - Content */}
           <div className="text-center lg:text-left order-1 lg:order-1">
             {/* Logo - now displayed prominently and larger */}
