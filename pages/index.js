@@ -6,7 +6,7 @@ import UspSection from '../components/UspSection';
 // import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
 import ContactForm from '../components/ContactForm';
 import Link from 'next/link';
-import { Button } from '../components/ui/button';
+import Button from '../components/Button.jsx';
 
 export default function Home() {
   return (
