@@ -100,7 +100,7 @@ export default function StandardClean() {
       </Head>
       <main className="bg-background min-h-screen">
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto text-center">
             <div className="mb-8 flex justify-center">
               <Image
                 src="/images/standard-clean.jpg"
