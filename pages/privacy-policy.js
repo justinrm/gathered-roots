@@ -87,9 +87,7 @@ export default function PrivacyPolicy() {
             </h2>
             <ul className="list-disc pl-6 text-text-dark">
               <li>
-                Contact and booking information is stored in our secure database for up to 90 days,
-                after which it is automatically deleted unless needed for ongoing bookings or
-                invoicing.
+                Contact and booking information is managed through secure third-party services (such as Square for client management) according to their data retention policies, typically for the duration necessary to provide our services and comply with business requirements.
               </li>
               <li>
                 Analytics data is retained according to Google Analytics policies and is not
@@ -126,20 +124,16 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 text-text-dark">
               <li>We use SSL encryption to protect data transmitted through our website.</li>
               <li>
-                Your information is stored in a secure PostgreSQL database with access limited to
-                authorized personnel only.
+                Your information is managed through secure, industry-standard third-party services such as Square for client management and SendGrid for email communications, with access limited to authorized personnel only.
               </li>
               <li>
-                <strong>Enhanced Protection:</strong> Sensitive contact details you submit (such as
-                your name, email, and phone number) are{' '}
+                <strong>Enhanced Protection:</strong> All third-party services we use employ{' '}
                 <span className="text-primary-accent-teal font-medium">
-                  encrypted using industry-standard AES-256 encryption
+                  industry-standard security measures including encryption, secure data centers, and compliance with relevant privacy regulations
                 </span>{' '}
-                before being stored in our database. This means your personal information is
-                protected both in transit and at rest, and cannot be read by anyone without special
-                authorization—even in the unlikely event of a data breach.
+                to protect your personal information both in transit and at rest.
               </li>
-              <li>We regularly review our data handling and security practices.</li>
+              <li>We regularly review our data handling and security practices and work only with reputable, secure service providers.</li>
             </ul>
           </section>
 
