@@ -30,7 +30,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Gathered Roots Cleaning offers premium, eco-friendly residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Veteran owned, family operated."
+          content="Gathered Roots Cleaning offers premium residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Veteran owned, family operated."
         />
         <meta
           property="og:image"

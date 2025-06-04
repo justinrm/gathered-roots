@@ -65,6 +65,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
     { href: '/about-us', label: 'About Us' },
     { href: '/services', label: 'Services' },
     { href: '/service-areas', label: 'Service Areas' },
+    { href: '/portfolio', label: 'Portfolio' },
     { href: '/contact', label: 'Contact' },
   ];
 
