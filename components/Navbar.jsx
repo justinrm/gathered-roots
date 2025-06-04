@@ -64,58 +64,63 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
     { href: '/', label: 'Home' },
     { href: '/about-us', label: 'About Us' },
     { href: '/services', label: 'Services' },
-    { href: '/service-areas', label: 'Service Areas' },
     { href: '/portfolio', label: 'Portfolio' },
+    { href: '/service-areas', label: 'Service Areas' },
     { href: '/contact', label: 'Contact' },
   ];
 
   const itemsToRender = navItems || defaultNavItems;
 
   return (
-    <nav
-      className="bg-[#F4F1ED] shadow-md border-b border-[#E0E0E0] sticky top-0 z-50"
-      role="navigation"
-      aria-label="Main navigation"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo/Brand Name */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-[#333333]" legacyBehavior>
-              {logoText}
-            </Link>
-          </div>
+    <div className="sticky top-4 z-50 w-full flex justify-center pointer-events-none">
+      <nav
+        className="pointer-events-auto bg-background/90 backdrop-blur-md shadow-card border border-borders rounded-full max-w-5xl w-[95%] mx-auto px-6 py-2 flex items-center justify-between transition-all duration-300"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        {/* Logo/Brand Name */}
+        <div className="flex-shrink-0">
+          <Link href="/" className="text-2xl font-bold text-[#333333]" legacyBehavior>
+            {logoText}
+          </Link>
+        </div>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {itemsToRender.map((item) => (
-                <NavLink key={item.label} href={item.href}>
-                  {item.label}
-                </NavLink>
-              ))}
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              type="button"
-              className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded={isOpen}
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:block">
+          <div className="ml-10 flex items-baseline space-x-4">
+            {itemsToRender.map((item) => (
+              <NavLink key={item.label} href={item.href}>
+                {item.label}
+              </NavLink>
+            ))}
           </div>
         </div>
-      </div>
+
+        {/* Mobile Menu Button */}
+        <div className="-mr-2 flex md:hidden">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            type="button"
+            className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded={isOpen}
+          >
+            <span className="sr-only">Open main menu</span>
+            {isOpen ? (
+              <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+        {/* Add skip link at the top of the nav */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only absolute left-2 top-2 bg-white text-gray-900 px-4 py-2 rounded z-50"
+        >
+          Skip to main content
+        </a>
+      </nav>
       {/* Mobile Menu Content */}
       {isOpen && (
         <div
@@ -151,14 +156,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
           </div>
         </div>
       )}
-      {/* Add skip link at the top of the nav */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only absolute left-2 top-2 bg-white text-gray-900 px-4 py-2 rounded z-50"
-      >
-        Skip to main content
-      </a>
-    </nav>
+    </div>
   );
 };
 
