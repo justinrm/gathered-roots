@@ -158,12 +158,18 @@ export default function TermsOfService() {
               <p className="text-text-dark mb-4">
                 We take great care in your home, using researched products and proper techniques for each surface. While we do our absolute best to prevent damage, accidents can happen.
               </p>
-              <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-                <p className="text-yellow-800 font-medium mb-2">Important Notice:</p>
-                <p className="text-yellow-700">
-                  Gathered Roots Cleaning is a licensed business in Idaho but is not currently insured. By receiving services, the client acknowledges this and agrees not to hold the business liable for accidental damage not caused by negligence.
+              <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
+                <p className="text-green-800 font-medium mb-2">Insurance Protection:</p>
+                <p className="text-green-700 mb-2">
+                  Gathered Roots Cleaning is a licensed business in Idaho and carries liability insurance coverage up to $1,000,000.
+                </p>
+                <p className="text-green-700">
+                  This coverage protects both our clients and our business in the unlikely event of accidental damage during service.
                 </p>
               </div>
+              <p className="text-text-dark mt-4">
+                Any damage claims will be handled professionally through our insurance provider. Please report any concerns immediately so we can address them promptly.
+              </p>
             </Card>
 
             {/* Termination of Services */}
@@ -211,7 +217,7 @@ export default function TermsOfService() {
                 <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-center">
                   <div className="text-3xl mb-2">🌡️</div>
                   <p className="font-medium text-blue-800">Temperature</p>
-                  <p className="text-blue-700">70°F or below</p>
+                  <p className="text-blue-700">75°F or below</p>
                 </div>
                 
                 <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-center">

@@ -7,7 +7,7 @@ const faqs = [
   {
     question: 'What cleaning products do you use?',
     answer:
-      'We use eco-friendly cleaning products that are safe for your family, pets, and the environment. If you have specific product preferences or sensitivities, please let us know.',
+      'We use friendly cleaning products that are safe for your family, pets, and the environment. If you have specific product preferences or sensitivities, please let us know.',
   },
   {
     question: 'How do I book a cleaning?',
