@@ -29,6 +29,9 @@ export default function Footer() {
               hello@gatheredrootscleaning.com
             </a>
           </p>
+          <p className="text-xs text-text-light mt-2">
+            Website &copy; Justin R. Merwin
+          </p>
         </div>
         <div className="pt-1 space-x-3">
           <Link
