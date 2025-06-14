@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  
+
   // Image configuration optimized for Vercel
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -19,11 +19,11 @@ const nextConfig = {
       },
     ],
   },
-  
+
   // SEO and Performance optimizations
   poweredByHeader: false,
   compress: true,
-  
+
   // Updated headers - fix cache conflicts for images
   async headers() {
     return [
@@ -68,7 +68,7 @@ const nextConfig = {
       },
     ];
   },
-  
+
   // SEO-friendly redirects
   async redirects() {
     return [
@@ -94,14 +94,14 @@ const nextConfig = {
       },
     ];
   },
-  
+
   // Generate static pages for better SEO
   trailingSlash: false,
-  
+
   // Vercel-specific optimizations
   experimental: {
     optimizePackageImports: ['@heroicons/react'],
   },
 };
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

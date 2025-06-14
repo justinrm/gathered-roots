@@ -98,7 +98,7 @@ const TestimonialCarousel = () => {
           />
         ))}
       </div>
-      
+
       {/* Google Reviews Call-to-Action */}
       <div className="mt-8 text-center">
         <p className="text-text-light mb-4">

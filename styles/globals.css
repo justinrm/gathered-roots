@@ -4,19 +4,19 @@
 
 @theme {
   /* Define all custom colors as CSS variables for Tailwind v4 */
-  --color-background: #F4F1ED;
+  --color-background: #f4f1ed;
   --color-primary-accent-teal: #006978;
-  --color-primary-accent-green: #3D7B6B;
-  --color-secondary-accent-hover: #5FB09C;
+  --color-primary-accent-green: #3d7b6b;
+  --color-secondary-accent-hover: #5fb09c;
   --color-text-dark: #333333;
   --color-text-light: #757575;
-  --color-borders: #E0E0E0;
+  --color-borders: #e0e0e0;
   --color-brand-primary: #006978;
-  --color-brand-secondary: #3D7B6B;
-  --color-brand-accent: #4A7C59; 
+  --color-brand-secondary: #3d7b6b;
+  --color-brand-accent: #4a7c59;
   --color-brand-cta: #006978;
   --color-primary-accent-cta: #006978;
-  
+
   /* Font families */
   --font-sans: 'Open Sans', sans-serif;
   --font-headings: 'Montserrat', sans-serif;

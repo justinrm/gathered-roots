@@ -100,7 +100,11 @@ const PortfolioCarousel = () => {
           <ChevronRightIcon className="w-6 h-6 text-primary-accent-cta" />
         </button>
       </div>
-      <div className="flex justify-center mt-6 gap-2" role="tablist" aria-label="Portfolio navigation dots">
+      <div
+        className="flex justify-center mt-6 gap-2"
+        role="tablist"
+        aria-label="Portfolio navigation dots"
+      >
         {portfolioItems.map((_, idx) => (
           <button
             key={idx}
@@ -117,4 +121,4 @@ const PortfolioCarousel = () => {
   );
 };
 
-export default PortfolioCarousel; 
+export default PortfolioCarousel;

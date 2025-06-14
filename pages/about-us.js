@@ -12,17 +12,14 @@ export default function AboutUs() {
           name="description"
           content="Learn about Gathered Roots Cleaning: our story, mission, and core values. Discover why we are Lewiston's trusted residential cleaning professionals serving Lewiston, ID 83501 and Clarkston, WA 99403."
         />
-        <meta
-          property="og:title"
-          content="About Us | Gathered Roots Cleaning Services"
-        />
+        <meta property="og:title" content="About Us | Gathered Roots Cleaning Services" />
         <meta
           property="og:description"
           content="Learn about Gathered Roots Cleaning - a veteran-owned, family-operated residential cleaning business serving Lewiston, ID 83501 and Clarkston, WA 99403."
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/about-us" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/about-us" />
-        
+
         {/* About Us / Organization schema */}
         <script
           type="application/ld+json"
@@ -31,29 +28,31 @@ export default function AboutUs() {
               '@context': 'https://schema.org',
               '@type': 'AboutPage',
               name: 'About Us',
-              description: 'Learn about Gathered Roots Cleaning - a veteran-owned, family-operated cleaning business serving the Lewiston-Clarkston area',
+              description:
+                'Learn about Gathered Roots Cleaning - a veteran-owned, family-operated cleaning business serving the Lewiston-Clarkston area',
               url: 'https://www.gatheredrootscleaning.com/about-us',
               about: {
                 '@type': 'LocalBusiness',
                 '@id': 'https://www.gatheredrootscleaning.com',
                 name: 'Gathered Roots Cleaning',
-                description: 'Veteran-owned, family-operated cleaning business providing professional cleaning services',
+                description:
+                  'Veteran-owned, family-operated cleaning business providing professional cleaning services',
                 foundingDate: '2024',
                 hasCredential: 'Veteran-owned business',
                 additionalProperty: [
                   {
                     '@type': 'PropertyValue',
                     name: 'Business Type',
-                    value: 'Family-operated'
+                    value: 'Family-operated',
                   },
                   {
                     '@type': 'PropertyValue',
                     name: 'Veteran Status',
-                    value: 'Veteran-owned'
-                  }
-                ]
-              }
-            })
+                    value: 'Veteran-owned',
+                  },
+                ],
+              },
+            }),
           }}
         />
       </Head>
@@ -61,25 +60,25 @@ export default function AboutUs() {
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto flex flex-col gap-8">
             <div>
-              <h1 className="text-3xl sm:text-4xl font-semibold text-primary-accent-green mb-8 text-center">Our Story</h1>
+              <h1 className="text-3xl sm:text-4xl font-semibold text-primary-accent-green mb-8 text-center">
+                Our Story
+              </h1>
               <div className="text-center max-w-3xl mx-auto prose prose-lg text-card-text-secondary">
+                <p className="mb-4">Family founded. Purpose driven. Rooted in care.</p>
                 <p className="mb-4">
-                  Family founded. Purpose driven. Rooted in care.
-                </p>
-                <p className="mb-4">
-                  Gathered Roots Cleaning began as a conversation. We talked
-                  about the kind of life we wanted to build, the example we hoped to set for our
-                  children, and the kind of service we believed our community deserved.
+                  Gathered Roots Cleaning began as a conversation. We talked about the kind of life
+                  we wanted to build, the example we hoped to set for our children, and the kind of
+                  service we believed our community deserved.
                 </p>
                 <p className="mb-4">
                   As a U.S. Army veteran, I bring a background of discipline, structure, and
-                  integrity. My wife, Chelsea, brings warmth, intuition, and a deep commitment to caring for
-                  others. Together, we saw an opportunity not just to clean homes, but to create calm,
-                  cared-for spaces where families can thrive.
+                  integrity. My wife, Chelsea, brings warmth, intuition, and a deep commitment to
+                  caring for others. Together, we saw an opportunity not just to clean homes, but to
+                  create calm, cared-for spaces where families can thrive.
                 </p>
                 <p className="mb-4">
-                  Our name, Gathered Roots Cleaning, reflects what matters most to us: family, home, and
-                  community.
+                  Our name, Gathered Roots Cleaning, reflects what matters most to us: family, home,
+                  and community.
                 </p>
                 <p className="mb-4">{`'Gathered' speaks to the way we bring people together — not just physically but emotionally. 'Roots' remind us of what grounds us — the values we live by and the home we are building with our children.`}</p>
                 <p className="mb-4">
@@ -91,17 +90,20 @@ export default function AboutUs() {
                   and attention to the little things that make a big difference.
                 </p>
                 <p className="mb-4">
-                  We proudly provide <strong>residential cleaning services</strong> for families in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+                  We proudly provide <strong>residential cleaning services</strong> for families in{' '}
+                  <strong>Lewiston, Idaho (83501)</strong> and{' '}
+                  <strong>Clarkston, Washington (99403)</strong>.
                 </p>
               </div>
             </div>
             <div>
-              <h2 className="text-2xl font-semibold text-primary-accent-green mb-6 text-center">Mission Statement</h2>
+              <h2 className="text-2xl font-semibold text-primary-accent-green mb-6 text-center">
+                Mission Statement
+              </h2>
               <div className="text-center max-w-3xl mx-auto">
                 <p className="text-card-text-secondary text-lg leading-relaxed">
-                  To provide exceptional cleaning services that create peaceful and
-                  healthy homes, allowing our clients to reclaim their time and enjoy what matters
-                  most.
+                  To provide exceptional cleaning services that create peaceful and healthy homes,
+                  allowing our clients to reclaim their time and enjoy what matters most.
                 </p>
               </div>
             </div>
@@ -114,9 +116,7 @@ export default function AboutUs() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="text-center flex flex-col items-center">
-                <h3 className="text-xl font-semibold text-card-text-primary mb-2">
-                  Reliability
-                </h3>
+                <h3 className="text-xl font-semibold text-card-text-primary mb-2">Reliability</h3>
                 <p className="text-card-text-secondary text-center">
                   You can count on us — not just to arrive, but to care. With every visit, we bring
                   consistency, follow-through, and a quiet dependability that lets you rest easy. In
@@ -149,7 +149,7 @@ export default function AboutUs() {
             <h2 className="text-2xl font-semibold text-primary-accent-green mb-4">Meet Our Team</h2>
             <p className="text-text_dark mb-8">
               Our dedicated team members are the heart of Gathered Roots Cleaning. We believe in
-              hiring friendly, trustworthy professionals who share our values.{" "}
+              hiring friendly, trustworthy professionals who share our values.{' '}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <Card className="text-center flex flex-col items-center">
@@ -163,10 +163,17 @@ export default function AboutUs() {
                 <h3 className="text-lg font-semibold text-card-text-primary mb-1">Chelsea M.</h3>
                 <p className="text-card-text-secondary text-sm mb-2">Owner, Operator </p>
                 <p className="text-card-text-secondary text-sm">
-                  Hi, I&apos;m Chelsea, co-owner of Gathered Roots Cleaning and mom to our wonderful kids. My passion for cleaning started early, working alongside my grandmother and learning the tricks of the trade that still guide my work today. From her, I learned that cleaning isn&apos;t just about appearance—it&apos;s about care, pride, and creating a space that nurtures the people in it. (Thanks, Gramm! ❤️)
+                  Hi, I&apos;m Chelsea, co-owner of Gathered Roots Cleaning and mom to our wonderful
+                  kids. My passion for cleaning started early, working alongside my grandmother and
+                  learning the tricks of the trade that still guide my work today. From her, I
+                  learned that cleaning isn&apos;t just about appearance—it&apos;s about care,
+                  pride, and creating a space that nurtures the people in it. (Thanks, Gramm! ❤️)
                 </p>
                 <p className="text-card-text-secondary text-sm mt-2">
-                  At Gathered Roots Cleaning, I handle day-to-day operations and work hands-on to ensure every home gets the thoughtful attention it deserves. Justin and I built this business around our family values—honesty, reliability, and kindness—and it&apos;s a joy to bring that spirit into the homes we serve.
+                  At Gathered Roots Cleaning, I handle day-to-day operations and work hands-on to
+                  ensure every home gets the thoughtful attention it deserves. Justin and I built
+                  this business around our family values—honesty, reliability, and kindness—and
+                  it&apos;s a joy to bring that spirit into the homes we serve.
                 </p>
               </Card>
               <Card className="text-center flex flex-col items-center">
@@ -180,10 +187,17 @@ export default function AboutUs() {
                 <h3 className="text-lg font-semibold text-card-text-primary mb-1">Justin M.</h3>
                 <p className="text-card-text-secondary text-sm mb-2">Co-owner, Operator</p>
                 <p className="text-card-text-secondary text-sm">
-                  Hi, I&apos;m Justin, co-owner of Gathered Roots Cleaning, U.S. Army veteran, and proud father of four. My experience as a Combat Engineer instilled in me a strong work ethic and a commitment to excellence, which I now bring to every home we care for. Chelsea and I started this business to help families like ours enjoy the comfort and peace of a well-cared-for space.
+                  Hi, I&apos;m Justin, co-owner of Gathered Roots Cleaning, U.S. Army veteran, and
+                  proud father of four. My experience as a Combat Engineer instilled in me a strong
+                  work ethic and a commitment to excellence, which I now bring to every home we care
+                  for. Chelsea and I started this business to help families like ours enjoy the
+                  comfort and peace of a well-cared-for space.
                 </p>
                 <p className="text-card-text-secondary text-sm mt-2">
-                  As a parent, I understand how fast life moves and how hard it can be to keep up with everything. That&apos;s why I approach every job with precision, respect, and heart—because every family deserves a clean and welcoming home they can truly relax in.
+                  As a parent, I understand how fast life moves and how hard it can be to keep up
+                  with everything. That&apos;s why I approach every job with precision, respect, and
+                  heart—because every family deserves a clean and welcoming home they can truly
+                  relax in.
                 </p>
               </Card>
             </div>

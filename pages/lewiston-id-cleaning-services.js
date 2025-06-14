@@ -12,7 +12,7 @@ const lewistonAreas = [
   'Tammany Creek',
   'Snake River Avenue',
   'Preston Avenue',
-  'Bryden Canyon'
+  'Bryden Canyon',
 ];
 
 const localLandmarks = [
@@ -21,14 +21,16 @@ const localLandmarks = [
   'Hells Gate State Park',
   'Lewiston Civic Theatre',
   'Swallows Park',
-  'Locomotive Park'
+  'Locomotive Park',
 ];
 
 export default function LewistonCleaningServices() {
   return (
     <>
       <Head>
-        <title>Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning</title>
+        <title>
+          Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning
+        </title>
         <meta
           name="description"
           content="Top-rated residential cleaning services in Lewiston, Idaho (83501). Serving Normal Hill, Orchards, Downtown, and all Lewiston neighborhoods. Veteran-owned, fully insured. Free quotes!"
@@ -37,14 +39,29 @@ export default function LewistonCleaningServices() {
           name="keywords"
           content="residential cleaning Lewiston ID 83501, house cleaning Lewiston ID, maid service Lewiston Idaho, cleaning service near me, Lewiston house cleaners, Normal Hill cleaning service, eco-friendly cleaning Lewiston"
         />
-        <link rel="canonical" href="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services" />
-        
+        <link
+          rel="canonical"
+          href="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services"
+        />
+
         {/* Open Graph */}
-        <meta property="og:title" content="Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning" />
-        <meta property="og:description" content="Trusted house cleaning services in Lewiston, Idaho. Serving all neighborhoods with eco-friendly, thorough cleaning. Book your free quote today!" />
-        <meta property="og:url" content="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services" />
-        <meta property="og:image" content="https://www.gatheredrootscleaning.com/images/lewiston-cleaning-service.jpg" />
-        
+        <meta
+          property="og:title"
+          content="Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning"
+        />
+        <meta
+          property="og:description"
+          content="Trusted house cleaning services in Lewiston, Idaho. Serving all neighborhoods with eco-friendly, thorough cleaning. Book your free quote today!"
+        />
+        <meta
+          property="og:url"
+          content="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services"
+        />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/lewiston-cleaning-service.jpg"
+        />
+
         {/* Local Business Schema for Lewiston */}
         <script
           type="application/ld+json"
@@ -53,7 +70,8 @@ export default function LewistonCleaningServices() {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
               name: 'Residential Cleaning Services in Lewiston, ID 83501',
-              description: 'Professional residential cleaning services in Lewiston, Idaho (83501) and surrounding neighborhoods',
+              description:
+                'Professional residential cleaning services in Lewiston, Idaho (83501) and surrounding neighborhoods',
               url: 'https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services',
               provider: {
                 '@type': 'LocalBusiness',
@@ -64,31 +82,32 @@ export default function LewistonCleaningServices() {
                   name: 'Lewiston',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Idaho'
-                  }
+                    name: 'Idaho',
+                  },
                 },
                 address: {
                   '@type': 'PostalAddress',
                   addressLocality: 'Lewiston',
                   addressRegion: 'ID',
                   postalCode: '83501',
-                  addressCountry: 'US'
-                }
+                  addressCountry: 'US',
+                },
               },
               mainEntity: {
                 '@type': 'Service',
                 name: 'Residential Cleaning Services',
-                description: 'Professional residential cleaning services in Lewiston, Idaho (83501)',
+                description:
+                  'Professional residential cleaning services in Lewiston, Idaho (83501)',
                 areaServed: {
                   '@type': 'City',
                   name: 'Lewiston',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Idaho'
-                  }
-                }
-              }
-            })
+                    name: 'Idaho',
+                  },
+                },
+              },
+            }),
           }}
         />
       </Head>
@@ -98,12 +117,21 @@ export default function LewistonCleaningServices() {
         <section className="bg-primary-accent-teal text-white py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-              Professional House Cleaning Services in <span className="text-secondary-accent-hover">Lewiston, ID</span>
+              Professional House Cleaning Services in{' '}
+              <span className="text-secondary-accent-hover">Lewiston, ID</span>
             </h1>
             <p className="text-xl mb-8 opacity-90">
-              Trusted by families across Normal Hill, Orchards, Downtown Lewiston, and surrounding neighborhoods. 
-              Veteran-owned, eco-friendly cleaning with a personal touch.<br />
-              <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong>. For Clarkston, WA <strong>99403</strong>, see our <Link href='/clarkston-wa-cleaning-services' className='underline text-white'>Clarkston page</Link>.</span>
+              Trusted by families across Normal Hill, Orchards, Downtown Lewiston, and surrounding
+              neighborhoods. Veteran-owned, eco-friendly cleaning with a personal touch.
+              <br />
+              <span className="block mt-2">
+                Serving Lewiston, ID <strong>83501</strong>. For Clarkston, WA{' '}
+                <strong>99403</strong>, see our{' '}
+                <Link href="/clarkston-wa-cleaning-services" className="underline text-white">
+                  Clarkston page
+                </Link>
+                .
+              </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/quote">
@@ -112,7 +140,11 @@ export default function LewistonCleaningServices() {
                 </Button>
               </Link>
               <Link href="/booking">
-                <Button variant="outline" size="large" className="text-white border-white hover:bg-white hover:text-primary-accent-teal">
+                <Button
+                  variant="outline"
+                  size="large"
+                  className="text-white border-white hover:bg-white hover:text-primary-accent-teal"
+                >
                   Book Now
                 </Button>
               </Link>
@@ -138,7 +170,10 @@ export default function LewistonCleaningServices() {
                       {area}
                     </li>
                   ))}
-                  <li className="flex items-center"><span className="w-2 h-2 bg-primary-accent-teal rounded-full mr-2"></span>Zip Code: 83501</li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-primary-accent-teal rounded-full mr-2"></span>Zip
+                    Code: 83501
+                  </li>
                 </ul>
               </Card>
               <Card className="p-6">
@@ -169,7 +204,9 @@ export default function LewistonCleaningServices() {
                 <div className="w-16 h-16 bg-primary-accent-teal rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🏠</span>
                 </div>
-                <h3 className="text-xl font-semibold text-primary-accent-green mb-3">Local Expertise</h3>
+                <h3 className="text-xl font-semibold text-primary-accent-green mb-3">
+                  Local Expertise
+                </h3>
                 <p className="text-text-dark">
                   We know Lewiston homes and understand the unique cleaning needs of Idaho families.
                 </p>
@@ -178,7 +215,9 @@ export default function LewistonCleaningServices() {
                 <div className="w-16 h-16 bg-primary-accent-teal rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🇺🇸</span>
                 </div>
-                <h3 className="text-xl font-semibold text-primary-accent-green mb-3">Veteran Owned</h3>
+                <h3 className="text-xl font-semibold text-primary-accent-green mb-3">
+                  Veteran Owned
+                </h3>
                 <p className="text-text-dark">
                   Reliable, disciplined service with military precision and attention to detail.
                 </p>
@@ -187,7 +226,9 @@ export default function LewistonCleaningServices() {
                 <div className="w-16 h-16 bg-primary-accent-teal rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-2xl">🌿</span>
                 </div>
-                <h3 className="text-xl font-semibold text-primary-accent-green mb-3">Eco-Friendly</h3>
+                <h3 className="text-xl font-semibold text-primary-accent-green mb-3">
+                  Eco-Friendly
+                </h3>
                 <p className="text-text-dark">
                   Safe for your family, pets, and the beautiful Lewiston environment.
                 </p>
@@ -204,39 +245,55 @@ export default function LewistonCleaningServices() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">Standard Cleaning</h3>
+                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">
+                  Standard Cleaning
+                </h3>
                 <p className="text-text-dark text-sm mb-4">
                   Regular maintenance cleaning for busy Lewiston families
                 </p>
                 <Link href="/services/standard-clean">
-                  <Button variant="outline" size="small">Learn More</Button>
+                  <Button variant="outline" size="small">
+                    Learn More
+                  </Button>
                 </Link>
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">Deep Cleaning</h3>
+                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">
+                  Deep Cleaning
+                </h3>
                 <p className="text-text-dark text-sm mb-4">
                   Thorough top-to-bottom cleaning for Lewiston homes
                 </p>
                 <Link href="/services/deep-clean">
-                  <Button variant="outline" size="small">Learn More</Button>
+                  <Button variant="outline" size="small">
+                    Learn More
+                  </Button>
                 </Link>
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">Move-In/Out</h3>
+                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">
+                  Move-In/Out
+                </h3>
                 <p className="text-text-dark text-sm mb-4">
                   Perfect for Lewiston relocations and transitions
                 </p>
                 <Link href="/services/move-in-move-out">
-                  <Button variant="outline" size="small">Learn More</Button>
+                  <Button variant="outline" size="small">
+                    Learn More
+                  </Button>
                 </Link>
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">Eco-Friendly</h3>
+                <h3 className="text-lg font-semibold text-primary-accent-green mb-3">
+                  Eco-Friendly
+                </h3>
                 <p className="text-text-dark text-sm mb-4">
                   Green cleaning for environmentally conscious Lewiston residents
                 </p>
                 <Link href="/services/eco-friendly">
-                  <Button variant="outline" size="small">Learn More</Button>
+                  <Button variant="outline" size="small">
+                    Learn More
+                  </Button>
                 </Link>
               </Card>
             </div>
@@ -250,7 +307,8 @@ export default function LewistonCleaningServices() {
               Ready for a Spotless Home in Lewiston?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of satisfied customers across Lewiston, ID 83501. Get your free quote today!
+              Join hundreds of satisfied customers across Lewiston, ID 83501. Get your free quote
+              today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/quote">
@@ -259,17 +317,29 @@ export default function LewistonCleaningServices() {
                 </Button>
               </Link>
               <Link href="/service-areas">
-                <Button variant="outline" size="large" className="text-white border-white hover:bg-white hover:text-primary-accent-teal">
+                <Button
+                  variant="outline"
+                  size="large"
+                  className="text-white border-white hover:bg-white hover:text-primary-accent-teal"
+                >
                   View All Service Areas
                 </Button>
               </Link>
               <Link href="/clarkston-wa-cleaning-services">
-                <Button variant="outline" size="large" className="text-white border-white hover:bg-white hover:text-primary-accent-teal">
+                <Button
+                  variant="outline"
+                  size="large"
+                  className="text-white border-white hover:bg-white hover:text-primary-accent-teal"
+                >
                   Clarkston, WA Services
                 </Button>
               </Link>
               <Link href="tel:+12087171192">
-                <Button variant="outline" size="large" className="text-white border-white hover:bg-white hover:text-primary-accent-teal">
+                <Button
+                  variant="outline"
+                  size="large"
+                  className="text-white border-white hover:bg-white hover:text-primary-accent-teal"
+                >
                   Call (208) 717-1192
                 </Button>
               </Link>
@@ -279,10 +349,12 @@ export default function LewistonCleaningServices() {
 
         <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-text-light mb-4">
-            We provide <strong>residential cleaning services</strong> for homes in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+            We provide <strong>residential cleaning services</strong> for homes in{' '}
+            <strong>Lewiston, Idaho (83501)</strong> and{' '}
+            <strong>Clarkston, Washington (99403)</strong>.
           </p>
         </section>
       </main>
     </>
   );
-} 
+}

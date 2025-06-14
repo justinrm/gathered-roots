@@ -71,6 +71,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 ### Live Pages
 
 **Core Pages:**
+
 - 🏠 **Homepage** (`/`) - Hero, services overview, testimonials, CTAs
 - 📋 **Services** (`/services`) - Complete service offerings overview
   - Standard Cleaning (`/services/standard-clean`)
@@ -86,6 +87,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 - 💰 **Quote** (`/quote`) - Quick quote request form
 
 **Legal & Utility:**
+
 - 🔒 **Privacy Policy** (`/privacy-policy`) - GDPR/privacy compliance
 - ♿ **Accessibility** (`/accessibility`) - Accessibility statement
 - 🔍 **Sitemap** (`/sitemap.xml`) - SEO sitemap
@@ -94,6 +96,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 ## Technology Stack
 
 ### Frontend
+
 - **Framework:** [Next.js 15.3](https://nextjs.org/) (React 19.1)
 - **Styling:** [Tailwind CSS 4.1](https://tailwindcss.com/)
 - **Language:** JavaScript/TypeScript ready
@@ -103,6 +106,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 - **Maps:** React Leaflet for service area visualization
 
 ### Backend & Integrations
+
 - **API Routes:** Next.js API Routes (serverless)
 - **Client Management:** [Square API](https://developer.squareup.com/) integration
 - **Email Service:** SMTP with Nodemailer (Gmail, etc.)
@@ -110,6 +114,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 - **Analytics:** Ready for Google Analytics, Facebook Pixel
 
 ### Development Tools
+
 - **Package Manager:** npm
 - **Linting:** ESLint with React and accessibility plugins
 - **Formatting:** Prettier
@@ -119,6 +124,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 - **Deployment Scripts:** Automated deployment with `scripts/deploy.sh`
 
 ### Infrastructure
+
 - **Hosting:** Vercel (recommended) or EC2 with provided scripts
 - **CDN:** Vercel Edge Network or CloudFront
 - **SSL:** Let's Encrypt with Certbot (automated)
@@ -131,19 +137,19 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 
 ```css
 /* Primary Brand Colors */
---background: #F4F1ED;           /* Off-white background */
---primary-accent-teal: #006978;  /* Deep teal - CTAs, links */
---primary-accent-green: #2D5A4F; /* Muted green - brand elements */
---secondary-accent-hover: #5FB09C; /* Lighter teal - hover states */
+--background: #f4f1ed; /* Off-white background */
+--primary-accent-teal: #006978; /* Deep teal - CTAs, links */
+--primary-accent-green: #2d5a4f; /* Muted green - brand elements */
+--secondary-accent-hover: #5fb09c; /* Lighter teal - hover states */
 
 /* Text Colors */
---text-dark: #333333;            /* Primary text */
---text-light: #666666;           /* Secondary text */
+--text-dark: #333333; /* Primary text */
+--text-light: #666666; /* Secondary text */
 
 /* UI Elements */
---borders: #E0E0E0;              /* Borders and dividers */
---card-background: #FFFFFF;       /* Card backgrounds */
---card-border: #E8E5E0;          /* Card borders */
+--borders: #e0e0e0; /* Borders and dividers */
+--card-background: #ffffff; /* Card backgrounds */
+--card-border: #e8e5e0; /* Card borders */
 ```
 
 ### Typography
@@ -184,17 +190,20 @@ All layouts and components are built mobile-first using Tailwind CSS:
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/your-username/gathered-roots-cleaning.git
    cd gathered-roots-cleaning
    ```
 
 2. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables:**
+
    ```bash
    cp template.env .env.local
    ```
@@ -234,6 +243,7 @@ BOOKING_FORM_RATE_WINDOW=3600000
 ```
 
 **For Google Workspace SMTP:**
+
 1. Enable 2-factor authentication on your Google Workspace admin account
 2. Generate an "App Password" specifically for this application
 3. Use your business domain email address (e.g., contact@yourbusinessdomain.com)
@@ -244,6 +254,7 @@ BOOKING_FORM_RATE_WINDOW=3600000
 ### Development
 
 1. **Start the development server:**
+
    ```bash
    npm run dev
    ```
@@ -252,6 +263,7 @@ BOOKING_FORM_RATE_WINDOW=3600000
    Open [http://localhost:3000](http://localhost:3000)
 
 3. **Run code quality checks:**
+
    ```bash
    npm run lint      # ESLint
    npm run format    # Prettier
@@ -266,11 +278,13 @@ BOOKING_FORM_RATE_WINDOW=3600000
 ### Production Build
 
 1. **Build the application:**
+
    ```bash
    npm run build
    ```
 
 2. **Start production server:**
+
    ```bash
    npm start
    ```
@@ -290,6 +304,7 @@ BOOKING_FORM_RATE_WINDOW=3600000
 **Used On:** Contact page, homepage, quote page
 
 **Features:**
+
 - Input validation (name, email, phone, service type, message)
 - Privacy policy consent checkbox required
 - Rate limiting (5 submissions per hour)
@@ -302,6 +317,7 @@ BOOKING_FORM_RATE_WINDOW=3600000
 **API Endpoint:** `/api/submit-booking-request`
 
 **Features:**
+
 - Comprehensive booking details (service, date, time, address)
 - Service-specific options and customization
 - Rate limiting (3 submissions per hour)
@@ -316,6 +332,7 @@ Both forms send automated emails:
 2. **Customer Confirmation:** Professional thank you with next steps
 
 **Required SMTP Configuration:**
+
 - Gmail, Outlook, or custom SMTP server
 - Valid credentials and app passwords
 - FROM address matching your domain (recommended)
@@ -325,10 +342,12 @@ Both forms send automated emails:
 ### Setup
 
 1. **Create Square Developer Account:**
+
    - Visit [developer.squareup.com](https://developer.squareup.com/)
    - Create application for Gathered Roots Cleaning
 
 2. **Configure Environment Variables:**
+
    ```env
    SQUARE_ACCESS_TOKEN=your-square-access-token
    SQUARE_ENVIRONMENT=sandbox  # or 'production'
@@ -384,6 +403,7 @@ npm run a11y     # Accessibility-specific linting
 ```
 
 **Configuration Files:**
+
 - `.eslintrc.json` - ESLint rules and plugins
 - `.prettierrc` - Code formatting preferences
 - `eslint.config.mjs` - Modern ESLint configuration
@@ -411,12 +431,14 @@ npm run a11y     # Accessibility-specific linting
 ### Quick Deployment
 
 **Using the deployment script:**
+
 ```bash
 chmod +x scripts/deploy.sh
 ./scripts/deploy.sh
 ```
 
 **Script options:**
+
 ```bash
 ./scripts/deploy.sh          # Full deployment
 ./scripts/deploy.sh backup   # Create backup only
@@ -430,18 +452,21 @@ chmod +x scripts/deploy.sh
 **For EC2/VPS deployment:**
 
 1. **Run server setup:**
+
    ```bash
    chmod +x scripts/server-setup.sh
    ./scripts/server-setup.sh
    ```
 
 2. **Configure environment:**
+
    ```bash
    cp template.env .env.local
    # Edit with production values
    ```
 
 3. **Build and deploy:**
+
    ```bash
    npm ci --production=false
    npm run build
@@ -454,6 +479,7 @@ chmod +x scripts/deploy.sh
    ```
 
 **For Vercel deployment:**
+
 ```bash
 npm install -g vercel
 vercel
@@ -566,14 +592,14 @@ gathered-roots-cleaning/
 
 ```json
 {
-  "dev": "next dev",                    // Development server
-  "build": "next build",                // Production build
-  "start": "next start",                // Production server
-  "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",  // Linting
-  "format": "prettier --write .",       // Code formatting
+  "dev": "next dev", // Development server
+  "build": "next build", // Production build
+  "start": "next start", // Production server
+  "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix", // Linting
+  "format": "prettier --write .", // Code formatting
   "a11y": "eslint . --plugin jsx-a11y", // Accessibility checks
-  "test": "jest",                       // Run tests
-  "verify-forms": "node scripts/verify-forms.js"     // Form verification
+  "test": "jest", // Run tests
+  "verify-forms": "node scripts/verify-forms.js" // Form verification
 }
 ```
 
@@ -604,6 +630,7 @@ gathered-roots-cleaning/
 8. **Open a Pull Request**
 
 **Code Standards:**
+
 - Mobile-first responsive design
 - WCAG 2.1 AA accessibility compliance
 - ESLint and Prettier formatting

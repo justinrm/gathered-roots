@@ -36,7 +36,10 @@ export default function Home() {
           property="og:image"
           content="https://www.gatheredrootscleaning.com/images/hero-clean-home.jpg"
         />
-        <meta property="og:image:alt" content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning" />
+        <meta
+          property="og:image:alt"
+          content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning"
+        />
         <meta property="og:site_name" content="Gathered Roots Cleaning" />
 
         {/* Twitter */}
@@ -56,7 +59,10 @@ export default function Home() {
           property="twitter:image"
           content="https://www.gatheredrootscleaning.com/images/hero-clean-home.jpg"
         />
-        <meta property="twitter:image:alt" content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning" />
+        <meta
+          property="twitter:image:alt"
+          content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning"
+        />
 
         {/* TODO: Implement JSON-LD structured data for LocalBusiness */}
         <script
@@ -87,9 +93,10 @@ export default function Home() {
                   addressRegion: 'WA',
                   postalCode: '99403',
                   addressCountry: 'US',
-                }
+                },
               ],
-              description: 'Gathered Roots Cleaning offers premium residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Veteran owned and family operated.',
+              description:
+                'Gathered Roots Cleaning offers premium residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Veteran owned and family operated.',
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
@@ -116,33 +123,33 @@ export default function Home() {
                   name: 'Lewiston',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Idaho'
-                  }
+                    name: 'Idaho',
+                  },
                 },
                 {
                   '@type': 'City',
                   name: 'Clarkston',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Washington'
-                  }
+                    name: 'Washington',
+                  },
                 },
                 {
                   '@type': 'City',
                   name: 'Asotin',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Washington'
-                  }
+                    name: 'Washington',
+                  },
                 },
                 {
                   '@type': 'City',
                   name: 'Lapwai',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Idaho'
-                  }
-                }
+                    name: 'Idaho',
+                  },
+                },
               ],
               currenciesAccepted: 'USD',
               paymentAccepted: ['Cash', 'Credit Card', 'Check'],
@@ -155,34 +162,34 @@ export default function Home() {
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Standard Cleaning',
-                      description: 'Regular maintenance cleaning for homes and offices'
-                    }
+                      description: 'Regular maintenance cleaning for homes and offices',
+                    },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Deep Cleaning',
-                      description: 'Comprehensive top-to-bottom cleaning service'
-                    }
+                      description: 'Comprehensive top-to-bottom cleaning service',
+                    },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Move-in/Move-out Cleaning',
-                      description: 'Thorough cleaning for moving transitions'
-                    }
+                      description: 'Thorough cleaning for moving transitions',
+                    },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
                       name: 'Eco-Friendly Cleaning',
-                      description: 'Environmentally safe cleaning using non-toxic products'
-                    }
-                  }
-                ]
+                      description: 'Environmentally safe cleaning using non-toxic products',
+                    },
+                  },
+                ],
               },
               knowsAbout: [
                 'House Cleaning',
@@ -193,19 +200,19 @@ export default function Home() {
                 'Eco-friendly Cleaning',
                 'Post-construction Cleaning',
                 'Residential Cleaning',
-                'Commercial Cleaning'
+                'Commercial Cleaning',
               ],
               aggregateRating: {
                 '@type': 'AggregateRating',
                 ratingValue: '5.0',
                 reviewCount: '1',
                 bestRating: '5',
-                worstRating: '5'
-              }
+                worstRating: '5',
+              },
             }),
           }}
         />
-        
+
         {/* TODO: Enable when real testimonials are available */}
         {/* Reviews/Testimonials Schema */}
         {/*
@@ -299,8 +306,8 @@ export default function Home() {
             </h2>
             <p className="text-lg text-text-dark mb-6">
               Reach out today to request a personalized quote or schedule your first cleaning. Let
-              Gathered Roots Cleaning bring a gentle touch to your space and a little more calm
-              to your everyday.
+              Gathered Roots Cleaning bring a gentle touch to your space and a little more calm to
+              your everyday.
             </p>
           </div>
         </section>
@@ -352,14 +359,20 @@ export default function Home() {
         </section>
         <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-text-light mb-4">
-            We proudly provide <strong>residential cleaning services</strong> for homes in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+            We proudly provide <strong>residential cleaning services</strong> for homes in{' '}
+            <strong>Lewiston, Idaho (83501)</strong> and{' '}
+            <strong>Clarkston, Washington (99403)</strong>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Link href="/service-areas">
-              <Button variant="outline" size="large">View All Service Areas</Button>
+              <Button variant="outline" size="large">
+                View All Service Areas
+              </Button>
             </Link>
             <Link href="/clarkston-wa-cleaning-services">
-              <Button variant="outline" size="large">Clarkston, WA Services</Button>
+              <Button variant="outline" size="large">
+                Clarkston, WA Services
+              </Button>
             </Link>
           </div>
         </section>

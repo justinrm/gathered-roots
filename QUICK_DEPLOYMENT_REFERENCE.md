@@ -1,6 +1,7 @@
 # Quick Deployment Reference - Gathered Roots Cleaning
 
 ## Prerequisites
+
 - EC2 instance running Ubuntu 22.04 LTS
 - Domain pointing to EC2 instance
 - SSH access to the server
@@ -17,6 +18,7 @@ chmod +x scripts/server-setup.sh
 ## Application Deployment
 
 ### 1. Clone and Setup
+
 ```bash
 # Clone repository
 git clone https://github.com/your-username/gathered_roots.git
@@ -28,7 +30,9 @@ nano .env.local
 ```
 
 ### 2. Configure Environment Variables
+
 Edit `.env.local` with your actual values:
+
 ```bash
 # Site Configuration
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
@@ -58,12 +62,14 @@ BOOKING_FORM_RATE_WINDOW=3600000
 ```
 
 ### 3. Install and Build
+
 ```bash
 npm install
 npm run build
 ```
 
 ### 4. Configure Nginx
+
 ```bash
 # Copy nginx configuration
 sudo cp /home/ubuntu/nginx-site.conf /etc/nginx/sites-available/gathered_roots
@@ -79,6 +85,7 @@ sudo systemctl reload nginx
 ```
 
 ### 5. Start Application
+
 ```bash
 # Start with PM2
 pm2 start /home/ubuntu/ecosystem.config.js
@@ -87,6 +94,7 @@ pm2 startup
 ```
 
 ### 6. SSL Certificate
+
 ```bash
 sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ```
@@ -94,6 +102,7 @@ sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 ## Common Commands
 
 ### Application Management
+
 ```bash
 pm2 status                    # Check status
 pm2 restart gathered-roots    # Restart app
@@ -102,6 +111,7 @@ pm2 stop gathered-roots       # Stop app
 ```
 
 ### Nginx Management
+
 ```bash
 sudo systemctl status nginx   # Check status
 sudo systemctl restart nginx  # Restart Nginx
@@ -109,6 +119,7 @@ sudo nginx -t                 # Test configuration
 ```
 
 ### SSL Certificate
+
 ```bash
 sudo certbot certificates     # Check certificates
 sudo certbot renew --dry-run  # Test renewal
@@ -117,6 +128,7 @@ sudo certbot renew --dry-run  # Test renewal
 ## Deployment Updates
 
 ### Using Deploy Script
+
 ```bash
 # Full deployment
 chmod +x scripts/deploy.sh
@@ -130,6 +142,7 @@ chmod +x scripts/deploy.sh
 ```
 
 ### Manual Deployment
+
 ```bash
 cd /home/ubuntu/gathered_roots
 
@@ -149,12 +162,14 @@ pm2 restart gathered-roots
 ## Health Checks
 
 ### Application Health
+
 ```bash
 curl http://localhost:3000     # Local check
 curl https://yourdomain.com    # External check
 ```
 
 ### Service Status
+
 ```bash
 pm2 status                     # Application status
 sudo systemctl status nginx   # Nginx status
@@ -165,17 +180,20 @@ sudo systemctl status nginx   # Nginx status
 ### Common Issues
 
 1. **Application won't start**
+
    ```bash
    pm2 logs gathered-roots
    ```
 
 2. **Nginx 502 Bad Gateway**
+
    ```bash
    sudo nginx -t
    pm2 status
    ```
 
 3. **SSL certificate issues**
+
    ```bash
    sudo certbot certificates
    sudo nginx -t
@@ -187,6 +205,7 @@ sudo systemctl status nginx   # Nginx status
    ```
 
 ### Log Locations
+
 - Application logs: `pm2 logs gathered-roots`
 - Nginx error logs: `/var/log/nginx/error.log`
 - Nginx access logs: `/var/log/nginx/access.log`
@@ -204,22 +223,26 @@ sudo systemctl status nginx   # Nginx status
 ## Environment Configuration
 
 ### Required Environment Variables
+
 - `EMAIL_*` - SMTP configuration for notifications
 - `SQUARE_*` - Square integration for client management
 - Rate limiting settings
 - Site URL and security settings
 
 ### Optional Environment Variables
+
 - Analytics tracking (Google Analytics, Facebook Pixel)
 - Additional monitoring and debugging settings
 
 ## Square Integration Setup
 
 1. **Create Square Developer Account**
+
    - Go to https://developer.squareup.com/
    - Create application for Gathered Roots Cleaning
 
 2. **Configure Environment Variables**
+
    - Set `SQUARE_ACCESS_TOKEN`
    - Set `SQUARE_APPLICATION_ID`
    - Set `SQUARE_LOCATION_ID`
@@ -238,4 +261,4 @@ sudo systemctl status nginx   # Nginx status
 - [ ] Square API credentials properly configured
 - [ ] Rate limiting configured for forms
 - [ ] Nginx security headers enabled
-- [ ] Regular security updates enabled 
+- [ ] Regular security updates enabled

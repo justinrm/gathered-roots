@@ -15,14 +15,14 @@
 
 ### Card-Specific Colors
 
-| Name                   | Hex     | Usage                          |
-| ---------------------- | ------- | ------------------------------ |
-| Card Background        | #FFFFFF | Primary card background        |
-| Card Background Soft   | #FEFEFE | Alternative card background    |
-| Card Border            | #E8E5E0 | Card borders and dividers      |
-| Card Text Primary      | #2D3748 | Primary text in cards          |
-| Card Text Secondary    | #4A5568 | Secondary text in cards        |
-| Card Accent Light      | #F8F6F3 | Light accent for card elements |
+| Name                 | Hex     | Usage                          |
+| -------------------- | ------- | ------------------------------ |
+| Card Background      | #FFFFFF | Primary card background        |
+| Card Background Soft | #FEFEFE | Alternative card background    |
+| Card Border          | #E8E5E0 | Card borders and dividers      |
+| Card Text Primary    | #2D3748 | Primary text in cards          |
+| Card Text Secondary  | #4A5568 | Secondary text in cards        |
+| Card Accent Light    | #F8F6F3 | Light accent for card elements |
 
 ## 2. Typography
 

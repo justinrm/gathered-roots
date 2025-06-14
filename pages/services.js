@@ -61,7 +61,7 @@ export default function Services() {
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/services" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/services" />
-        
+
         {/* Services page schema */}
         <script
           type="application/ld+json"
@@ -70,12 +70,13 @@ export default function Services() {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
               name: 'Our Cleaning Services',
-              description: 'Explore Gathered Roots Cleaning\'s full range of cleaning services: Standard, Deep, Move-In/Out, and Eco-Friendly cleaning.',
+              description:
+                "Explore Gathered Roots Cleaning's full range of cleaning services: Standard, Deep, Move-In/Out, and Eco-Friendly cleaning.",
               url: 'https://www.gatheredrootscleaning.com/services',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
-                '@id': 'https://www.gatheredrootscleaning.com'
+                '@id': 'https://www.gatheredrootscleaning.com',
               },
               breadcrumb: {
                 '@type': 'BreadcrumbList',
@@ -84,17 +85,17 @@ export default function Services() {
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Home',
-                    item: 'https://www.gatheredrootscleaning.com'
+                    item: 'https://www.gatheredrootscleaning.com',
                   },
                   {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'Services',
-                    item: 'https://www.gatheredrootscleaning.com/services'
-                  }
-                ]
-              }
-            })
+                    item: 'https://www.gatheredrootscleaning.com/services',
+                  },
+                ],
+              },
+            }),
           }}
         />
       </Head>
@@ -107,9 +108,9 @@ export default function Services() {
                 Our Cleaning Services
               </h1>
               <p className="text-lg text-text-dark max-w-3xl mx-auto">
-                Gathered Roots Cleaning offers a range of professional cleaning services to fit
-                your lifestyle and needs. Every service is delivered by our trusted, friendly team
-                using safe, effective products.
+                Gathered Roots Cleaning offers a range of professional cleaning services to fit your
+                lifestyle and needs. Every service is delivered by our trusted, friendly team using
+                safe, effective products.
               </p>
             </div>
 
@@ -126,7 +127,9 @@ export default function Services() {
                       className="w-20 h-20 mx-auto rounded-lg object-cover border-2 border-primary-accent-cta shadow-sm"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-card-text-primary">{service.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-card-text-primary">
+                    {service.title}
+                  </h3>
                   <p className="text-card-text-secondary mb-4 flex-grow">{service.description}</p>
                   <div className="mt-auto">
                     <Link href={service.ctaLink} passHref legacyBehavior>
@@ -181,7 +184,9 @@ export default function Services() {
 
         <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-text-light mb-4">
-            We proudly provide <strong>residential cleaning services</strong> for homes in <strong>Lewiston, Idaho (83501)</strong> and <strong>Clarkston, Washington (99403)</strong>.
+            We proudly provide <strong>residential cleaning services</strong> for homes in{' '}
+            <strong>Lewiston, Idaho (83501)</strong> and{' '}
+            <strong>Clarkston, Washington (99403)</strong>.
           </p>
         </section>
       </main>

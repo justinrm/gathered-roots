@@ -26,7 +26,7 @@ const ServiceCard = ({ icon, title, description, ctaText, ctaLink, className }) 
       <p className="text-card-text-secondary mb-4 text-base leading-relaxed">{description}</p>
       {ctaText &&
         (ctaLink || ctaText) && ( // Ensure ctaText exists before rendering button
-          (<div className="mt-auto">
+          <div className="mt-auto">
             <Button
               href={ctaLink || '#'}
               variant="primary"
@@ -35,7 +35,7 @@ const ServiceCard = ({ icon, title, description, ctaText, ctaLink, className }) 
             >
               {ctaText} <ArrowRightIcon className="inline-block w-4 h-4 ml-1" />
             </Button>
-          </div>)
+          </div>
         )}
     </Card>
   );

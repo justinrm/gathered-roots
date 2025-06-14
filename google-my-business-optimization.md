@@ -3,24 +3,27 @@
 ## Essential GMB Profile Elements
 
 ### Business Information
+
 - **Business Name**: Gathered Roots Cleaning
 - **Category**: House Cleaning Service
-- **Secondary Categories**: 
+- **Secondary Categories**:
   - Cleaning Service
   - Commercial Cleaning Service
   - Maid Service
 - **Address**: 212 5th Street, Lewiston, ID 83501
 - **Phone**: (208) 717-1192
 - **Website**: https://www.gatheredrootscleaning.com
-- **Hours**: 
+- **Hours**:
   - Monday-Friday: 9:30 AM - 5:00 PM
   - Saturday: 9:00 AM - 3:00 PM
   - Sunday: Closed
 
 ### Business Description (750 characters max)
+
 "Gathered Roots Cleaning provides professional house cleaning services in Lewiston, ID and Clarkston, WA. Veteran-owned and family-operated, we specialize in standard cleaning, deep cleaning, move-in/move-out services, and eco-friendly cleaning options. Serving Normal Hill, Orchards, Downtown Lewiston, and surrounding areas with reliable, thorough cleaning services."
 
 ### Services to Add
+
 - House Cleaning
 - Deep Cleaning
 - Move-in Cleaning
@@ -31,6 +34,7 @@
 - Recurring Cleaning Service
 
 ### Attributes to Enable
+
 - Veteran-owned
 - Family-owned
 - Women-owned (if applicable)
@@ -42,6 +46,7 @@
 ## Photo Strategy
 
 ### High-Priority Photos (Upload Weekly)
+
 1. **Before/After Photos**: Show dramatic cleaning transformations
 2. **Team Photos**: Professional shots of cleaners in uniform
 3. **Service Photos**: Action shots of cleaning in progress
@@ -49,6 +54,7 @@
 5. **Customer Homes**: Clean, beautiful spaces (with permission)
 
 ### Photo Categories
+
 - **Logo**: High-resolution company logo
 - **Cover Photo**: Team photo or beautiful clean space
 - **Interior Photos**: Clean kitchens, bathrooms, living rooms
@@ -58,17 +64,21 @@
 ## Post Strategy (2-3 times per week)
 
 ### Post Types
+
 1. **Service Highlights**
+
    - "Deep cleaning special this month!"
    - "Eco-friendly cleaning products we use"
    - "Move-in cleaning checklist"
 
 2. **Local Community**
+
    - "Serving Normal Hill families for X years"
    - "Supporting Lewis-Clark State College students"
    - "Clean homes near Hells Gate State Park"
 
 3. **Educational Content**
+
    - "Spring cleaning tips"
    - "How often should you deep clean?"
    - "Benefits of eco-friendly cleaning"
@@ -80,6 +90,7 @@
 ## Review Management
 
 ### Review Request Process
+
 1. **Timing**: Ask for reviews 24-48 hours after service completion
 2. **Method**: Text message with direct link to Google review
 3. **Incentive**: Small discount on next service for honest review
@@ -98,6 +109,7 @@
 ## Q&A Optimization
 
 ### Frequently Asked Questions to Post
+
 1. **Q**: "Do you serve Normal Hill area?"
    **A**: "Yes! We provide cleaning services throughout Lewiston, including Normal Hill, Orchards, Downtown, and all surrounding neighborhoods."
 
@@ -116,6 +128,7 @@
 ## Local SEO Keywords to Target in GMB
 
 ### Primary Keywords
+
 - house cleaning Lewiston ID
 - maid service Lewiston Idaho
 - cleaning service Clarkston WA
@@ -123,6 +136,7 @@
 - cleaning company near me
 
 ### Long-tail Keywords
+
 - eco-friendly cleaning Lewiston Idaho
 - move out cleaning Lewiston ID
 - deep cleaning service Normal Hill
@@ -132,10 +146,12 @@
 ## Booking Integration
 
 ### GMB Booking Button
+
 - Link directly to: https://www.gatheredrootscleaning.com/booking
 - Alternative: https://www.gatheredrootscleaning.com/quote
 
 ### Messaging Setup
+
 - Enable messaging feature
 - Set up auto-responses for common questions
 - Response time goal: Under 30 minutes during business hours
@@ -143,21 +159,24 @@
 ## Monitoring & Analytics
 
 ### Weekly Tasks
+
 - Check for new reviews and respond within 24 hours
 - Upload 2-3 new photos
 - Post 1-2 updates
 - Answer any new questions
 
 ### Monthly Tasks
+
 - Review insights and performance metrics
 - Update seasonal services or promotions
 - Check business information accuracy
 - Audit competitor profiles
 
 ### Key Metrics to Track
+
 - Profile views
 - Website clicks
 - Direction requests
 - Phone calls
 - Photo views
-- Review count and average rating 
+- Review count and average rating

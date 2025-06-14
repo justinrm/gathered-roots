@@ -7,6 +7,7 @@ This guide walks you through integrating Google Workspace with your Gathered Roo
 ## Prerequisites
 
 ✅ **Already Completed:**
+
 - Google Workspace account created
 - DNS TXT record configured for domain verification
 - Domain verification completed in Google Workspace Admin Console
@@ -18,10 +19,12 @@ This guide walks you through integrating Google Workspace with your Gathered Roo
 Since your forms use SMTP authentication, you'll need to create an App Password:
 
 1. **Sign in to your Google Workspace Admin Console:**
+
    - Go to [admin.google.com](https://admin.google.com)
    - Sign in with your admin account
 
 2. **Enable 2-Factor Authentication (if not already enabled):**
+
    - Go to Security → 2-step verification
    - Follow the setup process for your admin account
 
@@ -88,6 +91,7 @@ EMAIL_FROM_NAME=Gathered Roots Cleaning
 When someone submits the contact form:
 
 1. **Business Notification** sent to `contact@yourdomain.com`:
+
    - Contains all form details
    - Customer's reply-to address for easy response
    - Professional formatting with business branding
@@ -102,6 +106,7 @@ When someone submits the contact form:
 When someone submits a booking request:
 
 1. **Booking Notification** sent to `contact@yourdomain.com`:
+
    - Complete booking details (service, date, time, address)
    - Customer contact information
    - Service-specific requirements
@@ -137,6 +142,7 @@ npm run verify-forms
 ```
 
 This script will:
+
 - Check all required environment variables
 - Test SMTP connectivity
 - Verify form API endpoints
@@ -169,6 +175,7 @@ After deploying with updated environment variables:
 ### Rate Limiting
 
 The forms include built-in rate limiting:
+
 - Contact form: 5 submissions per hour per IP
 - Booking form: 3 submissions per hour per IP
 
@@ -177,16 +184,19 @@ The forms include built-in rate limiting:
 ### Common Issues
 
 **"Authentication failed" errors:**
+
 - Verify app password is correct
 - Ensure 2FA is enabled on admin account
 - Check that email address exists in Google Workspace
 
 **"Connection refused" errors:**
+
 - Verify SMTP settings (smtp.gmail.com:587)
 - Check network connectivity
 - Ensure port 587 is not blocked by firewall
 
 **Emails not being received:**
+
 - Check spam folders
 - Verify recipient email addresses exist
 - Test with a different recipient email
@@ -207,12 +217,14 @@ This will provide detailed logging for email operations.
 ### Email Templates
 
 Consider customizing the email templates in:
+
 - `pages/api/contact.ts` (contact form emails)
 - `pages/api/submit-booking-request.js` (booking form emails)
 
 ### Email Analytics
 
 Track email delivery and engagement:
+
 - Monitor bounce rates
 - Track open rates (if needed for business emails)
 - Set up alerts for failed deliveries
@@ -240,4 +252,4 @@ If you encounter issues:
 - [ ] Business notification emails received
 - [ ] Forms working on all pages (contact, booking, quote)
 - [ ] Rate limiting functioning properly
-- [ ] Production deployment updated and tested 
+- [ ] Production deployment updated and tested

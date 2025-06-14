@@ -62,7 +62,7 @@ export default function ServiceAreas() {
           content="Professional cleaning services in Lewiston, Idaho and Clarkston, Washington. Find out if we serve your area."
         />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/service-areas" />
-        
+
         {/* Service Areas schema for local SEO */}
         <script
           type="application/ld+json"
@@ -71,7 +71,8 @@ export default function ServiceAreas() {
               '@context': 'https://schema.org',
               '@type': 'WebPage',
               name: 'Service Areas',
-              description: 'Areas served by Gathered Roots Cleaning including Lewiston, ID 83501 and Clarkston, WA 99403',
+              description:
+                'Areas served by Gathered Roots Cleaning including Lewiston, ID 83501 and Clarkston, WA 99403',
               url: 'https://www.gatheredrootscleaning.com/service-areas',
               provider: {
                 '@type': 'LocalBusiness',
@@ -83,38 +84,38 @@ export default function ServiceAreas() {
                     name: 'Lewiston',
                     containedInPlace: {
                       '@type': 'State',
-                      name: 'Idaho'
+                      name: 'Idaho',
                     },
-                    postalCode: '83501'
+                    postalCode: '83501',
                   },
                   {
                     '@type': 'City',
                     name: 'Clarkston',
                     containedInPlace: {
                       '@type': 'State',
-                      name: 'Washington'
+                      name: 'Washington',
                     },
-                    postalCode: '99403'
+                    postalCode: '99403',
                   },
                   {
                     '@type': 'City',
                     name: 'Asotin',
                     containedInPlace: {
                       '@type': 'State',
-                      name: 'Washington'
-                    }
+                      name: 'Washington',
+                    },
                   },
                   {
                     '@type': 'City',
                     name: 'Lapwai',
                     containedInPlace: {
                       '@type': 'State',
-                      name: 'Idaho'
-                    }
-                  }
-                ]
-              }
-            })
+                      name: 'Idaho',
+                    },
+                  },
+                ],
+              },
+            }),
           }}
         />
       </Head>
@@ -127,9 +128,10 @@ export default function ServiceAreas() {
             <p className="text-lg text-text-light max-w-2xl mx-auto">
               Gathered Roots Cleaning is proud to serve residents and businesses in{' '}
               <strong className="text-primary-accent-green">Lewiston, Idaho (83501)</strong>,{' '}
-              <strong className="text-primary-accent-green">Clarkston, Washington (99403)</strong>, and{' '}
-              <strong className="text-primary-accent-green">Surrounding Areas</strong>. We are
-              dedicated to providing top-quality <strong>residential cleaning services</strong> to our local communities.
+              <strong className="text-primary-accent-green">Clarkston, Washington (99403)</strong>,
+              and <strong className="text-primary-accent-green">Surrounding Areas</strong>. We are
+              dedicated to providing top-quality <strong>residential cleaning services</strong> to
+              our local communities.
             </p>
           </header>
 
@@ -241,16 +243,23 @@ export default function ServiceAreas() {
           </div>
 
           <div className="mt-6 text-center">
-            <h3 className="text-xl font-semibold text-primary-accent-green mb-2">Service Area Zip Codes</h3>
+            <h3 className="text-xl font-semibold text-primary-accent-green mb-2">
+              Service Area Zip Codes
+            </h3>
             <ul className="inline-block text-text-dark">
-              <li>Lewiston, ID: <strong>83501</strong></li>
-              <li>Clarkston, WA: <strong>99403</strong></li>
+              <li>
+                Lewiston, ID: <strong>83501</strong>
+              </li>
+              <li>
+                Clarkston, WA: <strong>99403</strong>
+              </li>
             </ul>
           </div>
 
           <div className="mt-6 text-center">
             <p className="text-text-light">
-              We provide <strong>residential cleaning services</strong> for homes in Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.
+              We provide <strong>residential cleaning services</strong> for homes in Lewiston, ID{' '}
+              <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.
             </p>
           </div>
         </div>

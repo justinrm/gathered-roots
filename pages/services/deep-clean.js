@@ -39,7 +39,12 @@ const standardCleaningTasks = [
   },
   {
     category: 'Bedrooms',
-    items: ['Dust furniture and fixtures', 'Make beds (change linens if provided)', 'Vacuum carpets or sweep and mop floors', 'Empty trash bins and replace liners'],
+    items: [
+      'Dust furniture and fixtures',
+      'Make beds (change linens if provided)',
+      'Vacuum carpets or sweep and mop floors',
+      'Empty trash bins and replace liners',
+    ],
   },
 ];
 
@@ -92,7 +97,7 @@ export default function DeepClean() {
           content="An intensive, top-to-bottom clean for your home or business. Book your deep clean now!"
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/services/deep-clean" />
-        
+
         {/* Service-specific structured data */}
         <script
           type="application/ld+json"
@@ -101,21 +106,22 @@ export default function DeepClean() {
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: 'Deep Clean',
-              description: 'Comprehensive top-to-bottom residential cleaning service for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for first-time cleans, spring cleaning, or special occasions.',
+              description:
+                'Comprehensive top-to-bottom residential cleaning service for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for first-time cleans, spring cleaning, or special occasions.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
-                '@id': 'https://www.gatheredrootscleaning.com'
+                '@id': 'https://www.gatheredrootscleaning.com',
               },
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID 83501'
+                  name: 'Lewiston, ID 83501',
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA 99403'
-                }
+                  name: 'Clarkston, WA 99403',
+                },
               ],
               serviceType: 'Deep Residential House Cleaning',
               category: 'Intensive Cleaning',
@@ -123,9 +129,9 @@ export default function DeepClean() {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'One-time comprehensive residential cleaning service'
-              }
-            })
+                description: 'One-time comprehensive residential cleaning service',
+              },
+            }),
           }}
         />
       </Head>
@@ -149,8 +155,12 @@ export default function DeepClean() {
                 Our Deep Clean service is a comprehensive top-to-bottom cleaning of your home. We
                 recommend a deep clean if you have not had your home professionally cleaned within
                 the past 3 months, or for special occasions. It includes all Standard Maintenance
-                Cleaning tasks, plus the detailed items listed below.<br />
-                <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.</span>
+                Cleaning tasks, plus the detailed items listed below.
+                <br />
+                <span className="block mt-2">
+                  Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA{' '}
+                  <strong>99403</strong>.
+                </span>
               </p>
             </div>
 
@@ -204,7 +214,9 @@ export default function DeepClean() {
 
             <div className="mt-12 text-center">
               <Link href="/quote" passHref legacyBehavior>
-                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">Get a Deep Cleaning Quote</Button>
+                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">
+                  Get a Deep Cleaning Quote
+                </Button>
               </Link>
             </div>
           </div>

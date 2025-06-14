@@ -95,7 +95,9 @@ const ServicesSummary = () => {
             >
               <div className="w-12 h-12 text-primary-accent-teal mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold text-card-text-primary mb-2">{service.title}</h3>
-              <p className="text-card-text-secondary text-sm leading-relaxed">{service.description}</p>
+              <p className="text-card-text-secondary text-sm leading-relaxed">
+                {service.description}
+              </p>
             </Card>
           ))}
         </div>

@@ -25,7 +25,7 @@ export default function BookingPage() {
       ...prevState,
       [name]: value,
     }));
-    
+
     // Clear validation error for this field when user changes it
     if (validationErrors[name]) {
       setValidationErrors((prev) => {
@@ -44,8 +44,11 @@ export default function BookingPage() {
 
     try {
       const response = await apiClient.post('/submit-booking-request', formData);
-      
-      setSubmissionStatus({ type: 'success', message: response.data.message || 'Booking request submitted successfully!' });
+
+      setSubmissionStatus({
+        type: 'success',
+        message: response.data.message || 'Booking request submitted successfully!',
+      });
       setFormData({
         name: '',
         email: '',
@@ -59,18 +62,18 @@ export default function BookingPage() {
       });
     } catch (error) {
       console.error('Form submission error:', error.response || error);
-      
+
       // Handle validation errors if returned from API
       if (error.response?.data?.details) {
         setValidationErrors(error.response.data.details);
-        setSubmissionStatus({ 
+        setSubmissionStatus({
           type: 'error',
-          message: 'Please correct the errors in the form.'
+          message: 'Please correct the errors in the form.',
         });
       } else {
-        setSubmissionStatus({ 
+        setSubmissionStatus({
           type: 'error',
-          message: error.response?.data?.error || 'An error occurred. Please try again.' 
+          message: error.response?.data?.error || 'An error occurred. Please try again.',
         });
       }
     }
@@ -83,7 +86,7 @@ export default function BookingPage() {
     '10:00 AM - 12:00 PM',
     '12:00 PM - 2:00 PM',
     '2:00 PM - 4:00 PM',
-    '3:00 PM - 5:00 PM'
+    '3:00 PM - 5:00 PM',
   ];
 
   // Contact method options
@@ -98,9 +101,7 @@ export default function BookingPage() {
   // Helper for field error message display
   const ErrorMessage = ({ field }) => {
     if (!validationErrors[field]) return null;
-    return (
-      <p className="mt-1 text-sm text-red-600">{validationErrors[field]}</p>
-    );
+    return <p className="mt-1 text-sm text-red-600">{validationErrors[field]}</p>;
   };
 
   return (
@@ -198,7 +199,10 @@ export default function BookingPage() {
             </div>
 
             <div>
-              <label htmlFor="preferredContactMethod" className="block text-sm font-medium text-text-dark">
+              <label
+                htmlFor="preferredContactMethod"
+                className="block text-sm font-medium text-text-dark"
+              >
                 Preferred Contact Method
               </label>
               <select
@@ -224,7 +228,8 @@ export default function BookingPage() {
               </select>
               <ErrorMessage field="preferredContactMethod" />
               <p className="mt-1 text-xs text-gray-500">
-                We&apos;ll reach out using your preferred method. If unavailable, we may use an alternative method.
+                We&apos;ll reach out using your preferred method. If unavailable, we may use an
+                alternative method.
               </p>
             </div>
 
@@ -288,9 +293,12 @@ export default function BookingPage() {
                 />
                 <ErrorMessage field="preferredDate" />
               </div>
-              
+
               <div>
-                <label htmlFor="preferredTimeSlot" className="block text-sm font-medium text-text-dark">
+                <label
+                  htmlFor="preferredTimeSlot"
+                  className="block text-sm font-medium text-text-dark"
+                >
                   Preferred Time
                 </label>
                 <select

@@ -9,7 +9,7 @@ export default function Quote() {
         <title>Request a Cleaning Quote | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Request a personalized quote for our professional cleaning services. Tell us about your space and needs, and we&apos;ll provide a custom cleaning plan."
+          content="Request a personalized quote for our professional cleaning services. Tell us about your space and needs, and we'll provide a custom cleaning plan."
         />
         <meta property="og:title" content="Request a Cleaning Quote | Gathered Roots Cleaning" />
         <meta

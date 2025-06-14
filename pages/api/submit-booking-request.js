@@ -20,25 +20,14 @@ const VALID_TIME_SLOTS = [
   '10:00 AM - 12:00 PM',
   '12:00 PM - 2:00 PM',
   '2:00 PM - 4:00 PM',
-  '3:00 PM - 5:00 PM'
+  '3:00 PM - 5:00 PM',
 ];
 
 // Valid service types for validation
-const VALID_SERVICE_TYPES = [
-  'standard',
-  'deep',
-  'move-in-out',
-  'office',
-  'custom'
-];
+const VALID_SERVICE_TYPES = ['standard', 'deep', 'move-in-out', 'office', 'custom'];
 
 // Valid contact methods for validation
-const VALID_CONTACT_METHODS = [
-  'phone',
-  'email',
-  'text',
-  'any'
-];
+const VALID_CONTACT_METHODS = ['phone', 'email', 'text', 'any'];
 
 // Helper function to format preferred contact method for display
 function formatContactMethod(method) {
@@ -59,11 +48,11 @@ export default async function handler(req, res) {
 
     if (!process.env.SENDGRID_API_KEY) {
       console.error('SendGrid API key not configured.');
-      return res.status(500).json({ 
+      return res.status(500).json({
         error: 'Server configuration error. Please try again later.',
       });
     }
-    
+
     const {
       name,
       email,
@@ -78,41 +67,41 @@ export default async function handler(req, res) {
 
     // Enhanced validation
     const validationErrors = {};
-    
+
     // Required fields validation
     if (!name || typeof name !== 'string' || name.trim().length === 0) {
       validationErrors.name = 'Name is required';
     }
-    
+
     if (!email || typeof email !== 'string' || email.trim().length === 0) {
       validationErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       validationErrors.email = 'Please enter a valid email address';
     }
-    
+
     if (!phone || typeof phone !== 'string' || phone.trim().length === 0) {
       validationErrors.phone = 'Phone number is required';
     } else if (!/^\+?[0-9\s\-()]{7,}$/.test(phone)) {
       validationErrors.phone = 'Please enter a valid phone number';
     }
-    
+
     if (!address || typeof address !== 'string' || address.trim().length === 0) {
       validationErrors.address = 'Service address is required';
     }
-    
+
     if (!serviceType || typeof serviceType !== 'string') {
       validationErrors.serviceType = 'Service type is required';
     } else if (!VALID_SERVICE_TYPES.includes(serviceType)) {
       validationErrors.serviceType = 'Please select a valid service type';
     }
-    
+
     // Preferred contact method validation
     if (!preferredContactMethod || typeof preferredContactMethod !== 'string') {
       validationErrors.preferredContactMethod = 'Preferred contact method is required';
     } else if (!VALID_CONTACT_METHODS.includes(preferredContactMethod)) {
       validationErrors.preferredContactMethod = 'Please select a valid contact method';
     }
-    
+
     // Date validation
     if (!preferredDate || typeof preferredDate !== 'string') {
       validationErrors.preferredDate = 'Preferred date is required';
@@ -126,7 +115,7 @@ export default async function handler(req, res) {
         const selectedDate = new Date(preferredDate);
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        
+
         if (isNaN(selectedDate.getTime())) {
           validationErrors.preferredDate = 'Please select a valid date';
         } else if (selectedDate < today) {
@@ -134,30 +123,33 @@ export default async function handler(req, res) {
         }
       }
     }
-    
+
     // Time slot validation
     if (!preferredTimeSlot || typeof preferredTimeSlot !== 'string') {
       validationErrors.preferredTimeSlot = 'Preferred time slot is required';
     } else if (!VALID_TIME_SLOTS.includes(preferredTimeSlot)) {
       validationErrors.preferredTimeSlot = 'Please select a valid time slot';
     }
-    
+
     // Check if there are any validation errors
     if (Object.keys(validationErrors).length > 0) {
-      return res.status(400).json({ 
-        error: 'Validation failed', 
-        details: validationErrors 
+      return res.status(400).json({
+        error: 'Validation failed',
+        details: validationErrors,
       });
     }
 
     try {
       // Get email configuration
-      const recipientEmail = process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
+      const recipientEmail =
+        process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
       const fromEmail = process.env.SENDGRID_FROM_EMAIL;
       const fromName = process.env.EMAIL_FROM_NAME || 'Gathered Roots Cleaning';
 
       if (!recipientEmail || !fromEmail) {
-        console.error('Email configuration missing (CONTACT_FORM_RECIPIENT_EMAIL or SENDGRID_FROM_EMAIL).');
+        console.error(
+          'Email configuration missing (CONTACT_FORM_RECIPIENT_EMAIL or SENDGRID_FROM_EMAIL).'
+        );
         return res.status(500).json({
           error: 'Server configuration error. Please contact support.',
         });
@@ -193,7 +185,7 @@ export default async function handler(req, res) {
             <p><strong>Note:</strong> Booking data is managed through Square.</p>
           `,
         };
-        
+
         await sgMail.send(businessEmailMsg);
         console.log('Business notification email sent successfully via SendGrid.');
 
@@ -223,33 +215,32 @@ export default async function handler(req, res) {
             <p>Best regards,<br>The Gathered Roots Cleaning Team</p>
           `,
         };
-        
+
         await sgMail.send(customerEmailMsg);
         console.log('Customer confirmation email sent successfully via SendGrid.');
-
       } catch (emailError) {
         console.error('SendGrid email sending error:', emailError);
-        return res.status(500).json({ 
+        return res.status(500).json({
           error: 'Failed to send booking notification emails. Please try again later.',
-          details: process.env.NODE_ENV === 'development' ? emailError.message : undefined
+          details: process.env.NODE_ENV === 'development' ? emailError.message : undefined,
         });
       }
 
       // Return success response
-      res.status(200).json({ 
-        message: 'Booking request submitted successfully! We will contact you within 24 hours to confirm availability.',
-        success: true 
+      res.status(200).json({
+        message:
+          'Booking request submitted successfully! We will contact you within 24 hours to confirm availability.',
+        success: true,
       });
-
     } catch (error) {
       console.error('Error processing booking request:', error);
-      res.status(500).json({ 
+      res.status(500).json({
         error: 'Failed to process booking request. Please try again later.',
-        details: process.env.NODE_ENV === 'development' ? error.message : undefined
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined,
       });
     }
   } else {
     res.setHeader('Allow', ['POST']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-} 
+}

@@ -38,7 +38,12 @@ const standardCleaningTasks = [
   },
   {
     category: 'Bedrooms',
-    items: ['Dust furniture and fixtures', 'Make beds (change linens if provided)', 'Vacuum carpets or sweep and mop floors', 'Empty trash bins and replace liners'],
+    items: [
+      'Dust furniture and fixtures',
+      'Make beds (change linens if provided)',
+      'Vacuum carpets or sweep and mop floors',
+      'Empty trash bins and replace liners',
+    ],
   },
 ];
 
@@ -99,16 +104,16 @@ export default function MoveInMoveOut() {
           name="description"
           content="Make your move stress-free with our thorough Move-In/Move-Out residential cleaning services. Serving Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for landlords, tenants, and homeowners."
         />
-        <meta
-          property="og:title"
-          content="Move-In/Move-Out Cleaning | Gathered Roots Cleaning"
-        />
+        <meta property="og:title" content="Move-In/Move-Out Cleaning | Gathered Roots Cleaning" />
         <meta
           property="og:description"
           content="Professional move-in and move-out cleaning services. Book your appointment today!"
         />
-        <link rel="canonical" href="https://www.gatheredrootscleaning.com/services/move-in-move-out" />
-        
+        <link
+          rel="canonical"
+          href="https://www.gatheredrootscleaning.com/services/move-in-move-out"
+        />
+
         {/* Service-specific structured data */}
         <script
           type="application/ld+json"
@@ -117,21 +122,22 @@ export default function MoveInMoveOut() {
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: 'Move-In/Move-Out Cleaning',
-              description: 'Thorough move-in/move-out residential cleaning service for Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for landlords, tenants, and homeowners during transitions.',
+              description:
+                'Thorough move-in/move-out residential cleaning service for Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for landlords, tenants, and homeowners during transitions.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
-                '@id': 'https://www.gatheredrootscleaning.com'
+                '@id': 'https://www.gatheredrootscleaning.com',
               },
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID 83501'
+                  name: 'Lewiston, ID 83501',
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA 99403'
-                }
+                  name: 'Clarkston, WA 99403',
+                },
               ],
               serviceType: 'Move-in Move-out Residential Cleaning',
               category: 'Transition Cleaning',
@@ -139,9 +145,9 @@ export default function MoveInMoveOut() {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'Comprehensive residential cleaning for moving transitions'
-              }
-            })
+                description: 'Comprehensive residential cleaning for moving transitions',
+              },
+            }),
           }}
         />
       </Head>
@@ -166,8 +172,13 @@ export default function MoveInMoveOut() {
                 Our Move-In/Move-Out cleaning service is designed to make transitions smooth and
                 stress-free. Whether you&apos;re a tenant looking to get your deposit back, a
                 landlord preparing for new renters, or a homeowner settling into a new space, our
-                team will ensure everything is spotless. This service includes all Standard and Deep Cleaning tasks, plus additional move-in/move-out specific services.<br />
-                <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.</span>
+                team will ensure everything is spotless. This service includes all Standard and Deep
+                Cleaning tasks, plus additional move-in/move-out specific services.
+                <br />
+                <span className="block mt-2">
+                  Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA{' '}
+                  <strong>99403</strong>.
+                </span>
               </p>
             </div>
 
@@ -245,7 +256,9 @@ export default function MoveInMoveOut() {
 
             <div className="mt-12 text-center">
               <Link href="/quote" passHref legacyBehavior>
-                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">Get a Move-In/Move-Out Quote</Button>
+                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">
+                  Get a Move-In/Move-Out Quote
+                </Button>
               </Link>
             </div>
           </div>

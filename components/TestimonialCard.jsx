@@ -6,9 +6,16 @@ const TestimonialCard = ({ quote, author, authorTitle, rating, className = '' })
     `bg-card-background shadow-card hover:shadow-card-hover rounded-lg p-6 border border-card-border flex flex-col transition-all duration-300 hover:-translate-y-0.5 ${className}`.trim();
 
   return (
-    <article className={cardClass} aria-labelledby={`testimonial-${author?.replace(/\s+/g, '-').toLowerCase()}`}>
+    <article
+      className={cardClass}
+      aria-labelledby={`testimonial-${author?.replace(/\s+/g, '-').toLowerCase()}`}
+    >
       {rating && (
-        <div className="flex justify-center mb-4" role="img" aria-label={`${rating} out of 5 stars`}>
+        <div
+          className="flex justify-center mb-4"
+          role="img"
+          aria-label={`${rating} out of 5 stars`}
+        >
           {[...Array(5)].map((_, i) => (
             <StarIcon
               key={i}
@@ -23,7 +30,12 @@ const TestimonialCard = ({ quote, author, authorTitle, rating, className = '' })
       </blockquote>
       <footer className="mt-auto text-center">
         <cite className="not-italic">
-          <p id={`testimonial-${author?.replace(/\s+/g, '-').toLowerCase()}`} className="font-semibold text-card-text-primary text-lg">{author}</p>
+          <p
+            id={`testimonial-${author?.replace(/\s+/g, '-').toLowerCase()}`}
+            className="font-semibold text-card-text-primary text-lg"
+          >
+            {author}
+          </p>
           {authorTitle && <p className="text-sm text-card-text-secondary mt-1">{authorTitle}</p>}
         </cite>
       </footer>

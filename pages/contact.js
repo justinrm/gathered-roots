@@ -87,7 +87,10 @@ const ContactPage = () => {
                   We provide <strong>residential cleaning services</strong> for all these areas.
                 </p>
                 <p className="mt-4 text-text-light">
-                  <Link href="/service-areas" className="text-primary-accent-brand hover:text-secondary-accent-hover underline">
+                  <Link
+                    href="/service-areas"
+                    className="text-primary-accent-brand hover:text-secondary-accent-hover underline"
+                  >
                     View our complete service areas
                   </Link>
                 </p>

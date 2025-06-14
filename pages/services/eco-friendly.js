@@ -38,7 +38,12 @@ const standardCleaningTasks = [
   },
   {
     category: 'Bedrooms',
-    items: ['Dust furniture and fixtures', 'Make beds (change linens if provided)', 'Vacuum carpets or sweep and mop floors', 'Empty trash bins and replace liners'],
+    items: [
+      'Dust furniture and fixtures',
+      'Make beds (change linens if provided)',
+      'Vacuum carpets or sweep and mop floors',
+      'Empty trash bins and replace liners',
+    ],
   },
 ];
 
@@ -79,7 +84,7 @@ export default function EcoFriendly() {
           content="Safe, non-toxic cleaning products and methods for your family and pets. Book eco-friendly cleaning today!"
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/services/eco-friendly" />
-        
+
         {/* Service-specific structured data */}
         <script
           type="application/ld+json"
@@ -88,21 +93,22 @@ export default function EcoFriendly() {
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: 'Eco-Friendly Cleaning',
-              description: 'Environmentally conscious residential cleaning using safe, non-toxic products for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for families with children, pets, or sensitivities.',
+              description:
+                'Environmentally conscious residential cleaning using safe, non-toxic products for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for families with children, pets, or sensitivities.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
-                '@id': 'https://www.gatheredrootscleaning.com'
+                '@id': 'https://www.gatheredrootscleaning.com',
               },
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID 83501'
+                  name: 'Lewiston, ID 83501',
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA 99403'
-                }
+                  name: 'Clarkston, WA 99403',
+                },
               ],
               serviceType: 'Green Residential House Cleaning',
               category: 'Eco-Friendly Cleaning',
@@ -110,16 +116,16 @@ export default function EcoFriendly() {
                 {
                   '@type': 'PropertyValue',
                   name: 'Cleaning Method',
-                  value: 'Non-toxic, environmentally safe products'
-                }
+                  value: 'Non-toxic, environmentally safe products',
+                },
               ],
               offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'Safe, eco-friendly residential cleaning services'
-              }
-            })
+                description: 'Safe, eco-friendly residential cleaning services',
+              },
+            }),
           }}
         />
       </Head>
@@ -143,8 +149,12 @@ export default function EcoFriendly() {
                 At Gathered Roots, we&apos;re committed to offering eco-friendly cleaning options
                 that protect your family&apos;s health and the environment. Our green cleaning
                 services use plant-based, biodegradable products that are free from harsh chemicals
-                yet highly effective. This option can be applied to any of our cleaning services.<br />
-                <span className='block mt-2'>Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.</span>
+                yet highly effective. This option can be applied to any of our cleaning services.
+                <br />
+                <span className="block mt-2">
+                  Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA{' '}
+                  <strong>99403</strong>.
+                </span>
               </p>
             </div>
 
@@ -174,7 +184,9 @@ export default function EcoFriendly() {
 
             {/* Benefits Section */}
             <div className="mb-12">
-              <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">Benefits of Eco-Friendly Cleaning</h2>
+              <h2 className="text-2xl font-semibold text-primary-accent-brand mb-6 text-center">
+                Benefits of Eco-Friendly Cleaning
+              </h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {benefits.map((section, index) => (
                   <div
@@ -203,7 +215,9 @@ export default function EcoFriendly() {
 
             <div className="mt-12 text-center">
               <Link href="/quote" passHref legacyBehavior>
-                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">Get an Eco-Friendly Cleaning Quote</Button>
+                <Button className="text-lg px-8 py-3 w-full sm:w-auto max-w-xs mx-auto">
+                  Get an Eco-Friendly Cleaning Quote
+                </Button>
               </Link>
             </div>
           </div>

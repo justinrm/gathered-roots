@@ -20,7 +20,8 @@ export default function PrivacyPolicy() {
         <div className="max-w-3xl mx-auto bg-background p-8 rounded-lg shadow-md">
           <h1 className="text-4xl font-semibold text-primary-accent-teal mb-6">Privacy Policy</h1>
           <p className="text-text-light mb-4">
-            This privacy policy applies to all users of Gathered Roots Cleaning&apos;s residential cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403.
+            This privacy policy applies to all users of Gathered Roots Cleaning&apos;s residential
+            cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403.
           </p>
           <p className="text-text-light mb-6">
             This Privacy Policy explains how Gathered Roots Cleaning (&quot;we&quot;,
@@ -90,7 +91,10 @@ export default function PrivacyPolicy() {
             </h2>
             <ul className="list-disc pl-6 text-text-dark">
               <li>
-                Contact and booking information is managed through secure third-party services (such as Square for client management) according to their data retention policies, typically for the duration necessary to provide our services and comply with business requirements.
+                Contact and booking information is managed through secure third-party services (such
+                as Square for client management) according to their data retention policies,
+                typically for the duration necessary to provide our services and comply with
+                business requirements.
               </li>
               <li>
                 Analytics data is retained according to Google Analytics policies and is not
@@ -127,16 +131,22 @@ export default function PrivacyPolicy() {
             <ul className="list-disc pl-6 text-text-dark">
               <li>We use SSL encryption to protect data transmitted through our website.</li>
               <li>
-                Your information is managed through secure, industry-standard third-party services such as Square for client management and SendGrid for email communications, with access limited to authorized personnel only.
+                Your information is managed through secure, industry-standard third-party services
+                such as Square for client management and SendGrid for email communications, with
+                access limited to authorized personnel only.
               </li>
               <li>
                 <strong>Enhanced Protection:</strong> All third-party services we use employ{' '}
                 <span className="text-primary-accent-teal font-medium">
-                  industry-standard security measures including encryption, secure data centers, and compliance with relevant privacy regulations
+                  industry-standard security measures including encryption, secure data centers, and
+                  compliance with relevant privacy regulations
                 </span>{' '}
                 to protect your personal information both in transit and at rest.
               </li>
-              <li>We regularly review our data handling and security practices and work only with reputable, secure service providers.</li>
+              <li>
+                We regularly review our data handling and security practices and work only with
+                reputable, secure service providers.
+              </li>
             </ul>
           </section>
 

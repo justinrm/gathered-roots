@@ -16,7 +16,15 @@ const usps = [
     title: 'Veteran Owned',
     description:
       'Gathered Roots Cleaning is proudly owned and operated by a United States Army veteran. We carry the spirit of service into every home we care for and remain deeply thankful for those who serve and the families who stand beside them.',
-    icon: <Image src="/images/rustic-flag.svg" alt="Veteran Owned Icon" width={64} height={64} className="w-full h-full" />,
+    icon: (
+      <Image
+        src="/images/rustic-flag.svg"
+        alt="Veteran Owned Icon"
+        width={64}
+        height={64}
+        className="w-full h-full"
+      />
+    ),
     color: 'bg-brand-accent text-white',
   },
   {
@@ -49,11 +57,7 @@ const UspSection = () => {
           aria-label="Unique selling propositions"
         >
           {usps.map((usp) => (
-            <Card
-              key={usp.id}
-              className="flex flex-col items-center"
-              role="listitem"
-            >
+            <Card key={usp.id} className="flex flex-col items-center" role="listitem">
               <div
                 className={`w-16 h-16 rounded-full flex items-center justify-center ${usp.color || 'bg-opacity-0'} p-3 mb-4`}
               >

@@ -7,7 +7,6 @@
  */
 
 /* eslint-disable @typescript-eslint/no-require-imports */
- 
 
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +19,7 @@ const colors = {
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   reset: '\x1b[0m',
-  bold: '\x1b[1m'
+  bold: '\x1b[1m',
 };
 
 // Test data for forms
@@ -31,7 +30,7 @@ const testContactData = {
   service: 'standard',
   preferredContactMethod: 'email',
   message: 'This is a test contact form submission.',
-  consent: true
+  consent: true,
 };
 
 const testBookingData = {
@@ -43,7 +42,7 @@ const testBookingData = {
   preferredContactMethod: 'phone',
   preferredDate: '2024-12-31',
   preferredTimeSlot: '10:00 AM - 12:00 PM',
-  message: 'This is a test booking request.'
+  message: 'This is a test booking request.',
 };
 
 function log(message, color = colors.reset) {
@@ -52,23 +51,26 @@ function log(message, color = colors.reset) {
 
 function checkEnvironmentVariables() {
   log('\n📧 Checking Email Configuration...', colors.blue);
-  
+
   const requiredVars = [
     'SMTP_HOST',
-    'SMTP_PORT', 
+    'SMTP_PORT',
     'SMTP_USER',
     'SMTP_PASSWORD',
     'MAILER_FROM_ADDRESS',
-    'CONTACT_FORM_RECIPIENT_EMAIL'
+    'CONTACT_FORM_RECIPIENT_EMAIL',
   ];
 
   const missingVars = [];
   const presentVars = [];
 
-  requiredVars.forEach(varName => {
+  requiredVars.forEach((varName) => {
     if (process.env[varName]) {
       presentVars.push(varName);
-      log(`  ✅ ${varName}: ${varName.includes('PASSWORD') ? '***' : process.env[varName]}`, colors.green);
+      log(
+        `  ✅ ${varName}: ${varName.includes('PASSWORD') ? '***' : process.env[varName]}`,
+        colors.green
+      );
     } else {
       missingVars.push(varName);
       log(`  ❌ ${varName}: Missing`, colors.red);
@@ -77,7 +79,7 @@ function checkEnvironmentVariables() {
 
   // Check optional variables
   const optionalVars = ['EMAIL_FROM_NAME', 'SMTP_SECURE'];
-  optionalVars.forEach(varName => {
+  optionalVars.forEach((varName) => {
     if (process.env[varName]) {
       log(`  ℹ️  ${varName}: ${process.env[varName]}`, colors.yellow);
     }
@@ -88,19 +90,19 @@ function checkEnvironmentVariables() {
 
 function validateFormFiles() {
   log('\n📋 Checking Form Files...', colors.blue);
-  
+
   const formFiles = [
     'components/ContactForm.jsx',
     'pages/contact.js',
     'pages/booking.js',
     'pages/quote.js',
     'pages/api/contact.ts',
-    'pages/api/submit-booking-request.js'
+    'pages/api/submit-booking-request.js',
   ];
 
   const results = [];
 
-  formFiles.forEach(filePath => {
+  formFiles.forEach((filePath) => {
     const fullPath = path.join(__dirname, '..', filePath);
     if (fs.existsSync(fullPath)) {
       log(`  ✅ ${filePath}`, colors.green);
@@ -116,7 +118,7 @@ function validateFormFiles() {
 
 async function testContactAPI() {
   log('\n🧪 Testing Contact API...', colors.blue);
-  
+
   if (!process.env.SMTP_HOST) {
     log('  ⚠️  Skipping API test - Email not configured', colors.yellow);
     return false;
@@ -129,11 +131,11 @@ async function testContactAPI() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(testContactData)
+      body: JSON.stringify(testContactData),
     });
 
     const result = await response.json();
-    
+
     if (response.ok) {
       log('  ✅ Contact API test successful', colors.green);
       log(`    Response: ${result.message}`, colors.green);
@@ -152,7 +154,7 @@ async function testContactAPI() {
 
 async function testBookingAPI() {
   log('\n🧪 Testing Booking API...', colors.blue);
-  
+
   if (!process.env.SMTP_HOST) {
     log('  ⚠️  Skipping API test - Email not configured', colors.yellow);
     return false;
@@ -165,11 +167,11 @@ async function testBookingAPI() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(testBookingData)
+      body: JSON.stringify(testBookingData),
     });
 
     const result = await response.json();
-    
+
     if (response.ok) {
       log('  ✅ Booking API test successful', colors.green);
       log(`    Response: ${result.message}`, colors.green);
@@ -193,15 +195,11 @@ async function testBookingAPI() {
 
 function checkFormIntegration() {
   log('\n🔗 Checking Form Integration...', colors.blue);
-  
-  // Check if ContactForm is used in the right places
-  const contactFormUsage = [
-    'pages/contact.js',
-    'pages/index.js', 
-    'pages/quote.js'
-  ];
 
-  contactFormUsage.forEach(filePath => {
+  // Check if ContactForm is used in the right places
+  const contactFormUsage = ['pages/contact.js', 'pages/index.js', 'pages/quote.js'];
+
+  contactFormUsage.forEach((filePath) => {
     const fullPath = path.join(__dirname, '..', filePath);
     if (fs.existsSync(fullPath)) {
       const content = fs.readFileSync(fullPath, 'utf8');
@@ -222,7 +220,7 @@ function checkFormIntegration() {
     } else {
       log('  ❌ Contact form API endpoint not found', colors.red);
     }
-    
+
     if (content.includes('consent: form.consent')) {
       log('  ✅ Contact form includes consent in payload', colors.green);
     } else {
@@ -245,7 +243,7 @@ function checkFormIntegration() {
 function generateSummaryReport(envCheck, fileCheck, integrationPassed) {
   log('\n📊 VERIFICATION SUMMARY', colors.bold + colors.blue);
   log('====================', colors.blue);
-  
+
   // Environment Variables
   if (envCheck.missingVars.length === 0) {
     log('✅ Email Configuration: COMPLETE', colors.green);
@@ -255,12 +253,12 @@ function generateSummaryReport(envCheck, fileCheck, integrationPassed) {
   }
 
   // File Checks
-  const missingFiles = fileCheck.filter(f => !f.exists);
+  const missingFiles = fileCheck.filter((f) => !f.exists);
   if (missingFiles.length === 0) {
     log('✅ Form Files: ALL PRESENT', colors.green);
   } else {
     log('❌ Form Files: MISSING FILES', colors.red);
-    missingFiles.forEach(f => log(`   - ${f.file}`, colors.red));
+    missingFiles.forEach((f) => log(`   - ${f.file}`, colors.red));
   }
 
   // Integration
@@ -271,8 +269,9 @@ function generateSummaryReport(envCheck, fileCheck, integrationPassed) {
   }
 
   // Overall Status
-  const allGood = envCheck.missingVars.length === 0 && missingFiles.length === 0 && integrationPassed;
-  
+  const allGood =
+    envCheck.missingVars.length === 0 && missingFiles.length === 0 && integrationPassed;
+
   log('\n' + '='.repeat(40), colors.blue);
   if (allGood) {
     log('🎉 ALL FORMS ARE READY FOR PRODUCTION!', colors.bold + colors.green);
@@ -298,25 +297,25 @@ async function main() {
   console.clear();
   log('🧪 GATHERED ROOTS CLEANING - FORM VERIFICATION', colors.bold + colors.blue);
   log('===============================================', colors.blue);
-  
+
   // Run all checks
   const envCheck = checkEnvironmentVariables();
   const fileCheck = validateFormFiles();
   checkFormIntegration();
-  
+
   // Run API tests if server might be running
   const contactAPIWorking = await testContactAPI();
   const bookingAPIWorking = await testBookingAPI();
-  
+
   // Log API test results for verification
   console.log('API Test Results:', { contactAPIWorking, bookingAPIWorking });
-  
+
   // Generate report
   const integrationPassed = true; // This would be more sophisticated in a real test
   generateSummaryReport(envCheck, fileCheck, integrationPassed);
-  
+
   // Exit with appropriate code
-  const hasIssues = envCheck.missingVars.length > 0 || fileCheck.some(f => !f.exists);
+  const hasIssues = envCheck.missingVars.length > 0 || fileCheck.some((f) => !f.exists);
   process.exit(hasIssues ? 1 : 0);
 }
 
@@ -328,5 +327,5 @@ module.exports = {
   checkEnvironmentVariables,
   validateFormFiles,
   testContactAPI,
-  testBookingAPI
-}; 
+  testBookingAPI,
+};

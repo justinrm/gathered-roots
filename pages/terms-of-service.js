@@ -32,23 +32,27 @@ export default function TermsOfService() {
               Effective Date: {new Date().toLocaleDateString('en-US')}
             </p>
             <p className="text-text-dark mt-4 max-w-2xl mx-auto">
-              By scheduling and receiving services from Gathered Roots Cleaning, you agree to the following terms and conditions:
+              By scheduling and receiving services from Gathered Roots Cleaning, you agree to the
+              following terms and conditions:
             </p>
           </div>
 
           {/* Terms Cards Grid */}
           <div className="grid gap-8 lg:grid-cols-2">
-            
             {/* Scope of Services */}
             <Card className="lg:col-span-2">
               <h3 className="text-2xl font-semibold text-primary-accent-green mb-4 font-headings">
                 1. Scope of Services
               </h3>
               <p className="text-text-dark mb-4">
-                We will provide residential house cleaning services as discussed and agreed upon for homes in Lewiston, ID 83501 and Clarkston, WA 99403. This may include tasks such as dusting, vacuuming, mopping, bathroom and kitchen cleaning, and general surface tidying.
+                We will provide residential house cleaning services as discussed and agreed upon for
+                homes in Lewiston, ID 83501 and Clarkston, WA 99403. This may include tasks such as
+                dusting, vacuuming, mopping, bathroom and kitchen cleaning, and general surface
+                tidying.
               </p>
               <p className="text-text-dark">
-                <strong>Specialty services</strong> (e.g., deep cleans, move-out services) must be scheduled in advance and may incur additional charges.
+                <strong>Specialty services</strong> (e.g., deep cleans, move-out services) must be
+                scheduled in advance and may incur additional charges.
               </p>
             </Card>
 
@@ -58,10 +62,12 @@ export default function TermsOfService() {
                 2. Supplies and Equipment
               </h3>
               <p className="text-text-dark mb-4">
-                All necessary cleaning supplies and equipment will be provided by Gathered Roots Cleaning, unless otherwise agreed upon.
+                All necessary cleaning supplies and equipment will be provided by Gathered Roots
+                Cleaning, unless otherwise agreed upon.
               </p>
               <p className="text-text-dark">
-                If the client prefers specific products, they must be supplied by the client and discussed in advance.
+                If the client prefers specific products, they must be supplied by the client and
+                discussed in advance.
               </p>
             </Card>
 
@@ -71,10 +77,12 @@ export default function TermsOfService() {
                 3. Access to Property
               </h3>
               <p className="text-text-dark mb-4">
-                The client must ensure the cleaner has access to the property at the scheduled service time.
+                The client must ensure the cleaner has access to the property at the scheduled
+                service time.
               </p>
               <p className="text-text-dark">
-                If access is not available and service cannot be performed, a cancellation fee may apply.
+                If access is not available and service cannot be performed, a cancellation fee may
+                apply.
               </p>
             </Card>
 
@@ -84,15 +92,25 @@ export default function TermsOfService() {
                 4. Payment Terms
               </h3>
               <div className="space-y-4 text-text-dark">
-                <p>Payment is due upon completion of service unless otherwise agreed upon in writing.</p>
-                
+                <p>
+                  Payment is due upon completion of service unless otherwise agreed upon in writing.
+                </p>
+
                 <div className="bg-card-accent-light p-4 rounded-lg">
-                  <p className="font-medium text-primary-accent-teal mb-2">Deep Cleans & Move-Out Services:</p>
-                  <p>A non-refundable deposit of 25% is required at the time of booking to secure your appointment. The remaining balance is due upon completion.</p>
+                  <p className="font-medium text-primary-accent-teal mb-2">
+                    Deep Cleans & Move-Out Services:
+                  </p>
+                  <p>
+                    A non-refundable deposit of 25% is required at the time of booking to secure
+                    your appointment. The remaining balance is due upon completion.
+                  </p>
                 </div>
-                
-                <p>Invoices will be sent via Square and can be paid online or with other approved methods.</p>
-                
+
+                <p>
+                  Invoices will be sent via Square and can be paid online or with other approved
+                  methods.
+                </p>
+
                 <div className="bg-red-50 border border-red-200 p-4 rounded-lg">
                   <p className="font-medium text-red-800 mb-2">Late Payment Fees:</p>
                   <ul className="list-disc list-inside text-red-700 space-y-1">
@@ -109,30 +127,34 @@ export default function TermsOfService() {
                 5. Cancellations &amp; Rescheduling
               </h3>
               <div className="space-y-4 text-text-dark">
-                <p>If you need to cancel or reschedule your appointment, please provide at least 24 hours&apos; notice.</p>
-                
+                <p>
+                  If you need to cancel or reschedule your appointment, please provide at least 24
+                  hours&apos; notice.
+                </p>
+
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg text-center">
                     <p className="font-medium text-yellow-800 mb-2">&lt; 24 Hours Notice</p>
                     <p className="text-2xl font-bold text-yellow-700">$30</p>
                     <p className="text-sm text-yellow-600">Cancellation Fee</p>
                   </div>
-                  
+
                   <div className="bg-red-50 border border-red-200 p-4 rounded-lg text-center">
                     <p className="font-medium text-red-800 mb-2">Same Day (&lt; 6 Hours)</p>
                     <p className="text-2xl font-bold text-red-700">$50</p>
                     <p className="text-sm text-red-600">Cancellation Fee</p>
                   </div>
-                  
+
                   <div className="bg-gray-50 border border-gray-200 p-4 rounded-lg text-center">
                     <p className="font-medium text-gray-800 mb-2">No-Shows</p>
                     <p className="text-2xl font-bold text-gray-700">$50</p>
                     <p className="text-sm text-gray-600">Cancellation Fee</p>
                   </div>
                 </div>
-                
+
                 <p className="text-center text-text-light italic">
-                  More than 2 short-notice cancellations may result in termination of ongoing service.
+                  More than 2 short-notice cancellations may result in termination of ongoing
+                  service.
                 </p>
               </div>
             </Card>
@@ -146,7 +168,8 @@ export default function TermsOfService() {
                 Clients are expected to pick up personal items prior to service.
               </p>
               <p className="text-text-dark">
-                Please secure pets and notify the cleaner of any safety hazards, broken fixtures, or special instructions.
+                Please secure pets and notify the cleaner of any safety hazards, broken fixtures, or
+                special instructions.
               </p>
             </Card>
 
@@ -156,19 +179,23 @@ export default function TermsOfService() {
                 7. Damage and Liability
               </h3>
               <p className="text-text-dark mb-4">
-                We take great care in your home, using researched products and proper techniques for each surface. While we do our absolute best to prevent damage, accidents can happen.
+                We take great care in your home, using researched products and proper techniques for
+                each surface. While we do our absolute best to prevent damage, accidents can happen.
               </p>
               <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
                 <p className="text-green-800 font-medium mb-2">Insurance Protection:</p>
                 <p className="text-green-700 mb-2">
-                  Gathered Roots Cleaning is a licensed business in Idaho and carries liability insurance coverage up to $1,000,000.
+                  Gathered Roots Cleaning is a licensed business in Idaho and carries liability
+                  insurance coverage up to $1,000,000.
                 </p>
                 <p className="text-green-700">
-                  This coverage protects both our clients and our business in the unlikely event of accidental damage during service.
+                  This coverage protects both our clients and our business in the unlikely event of
+                  accidental damage during service.
                 </p>
               </div>
               <p className="text-text-dark mt-4">
-                Any damage claims will be handled professionally through our insurance provider. Please report any concerns immediately so we can address them promptly.
+                Any damage claims will be handled professionally through our insurance provider.
+                Please report any concerns immediately so we can address them promptly.
               </p>
             </Card>
 
@@ -178,7 +205,8 @@ export default function TermsOfService() {
                 8. Termination of Services
               </h3>
               <p className="text-text-dark">
-                Either party may cancel this agreement at any time with written notice. Any unpaid balances must be resolved before the final service.
+                Either party may cancel this agreement at any time with written notice. Any unpaid
+                balances must be resolved before the final service.
               </p>
             </Card>
 
@@ -188,19 +216,22 @@ export default function TermsOfService() {
                 9. Photo Permission
               </h3>
               <p className="text-text-dark mb-4">
-                Gathered Roots Cleaning may take before and after photos of cleaned areas for quality assurance, documentation, or marketing purposes.
+                Gathered Roots Cleaning may take before and after photos of cleaned areas for
+                quality assurance, documentation, or marketing purposes.
               </p>
               <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
                 <p className="text-green-800 font-medium mb-2">Privacy Protection:</p>
                 <p className="text-green-700 mb-2">
-                  Photos will never include identifying details such as faces, names, addresses, or personal belongings.
+                  Photos will never include identifying details such as faces, names, addresses, or
+                  personal belongings.
                 </p>
                 <p className="text-green-700">
                   All images will be used respectfully and stored securely.
                 </p>
               </div>
               <p className="text-text-dark mt-4">
-                Clients will be asked to indicate &quot;Yes&quot; or &quot;No&quot; to photo permission in the custom field provided at the time of signing.
+                Clients will be asked to indicate &quot;Yes&quot; or &quot;No&quot; to photo
+                permission in the custom field provided at the time of signing.
               </p>
             </Card>
 
@@ -210,31 +241,34 @@ export default function TermsOfService() {
                 10. Health &amp; Safety Conditions
               </h3>
               <p className="text-text-dark mb-4">
-                For the safety and comfort of both the cleaner and the client, Gathered Roots Cleaning requires the following conditions to be met:
+                For the safety and comfort of both the cleaner and the client, Gathered Roots
+                Cleaning requires the following conditions to be met:
               </p>
-              
+
               <div className="grid md:grid-cols-3 gap-4 mb-4">
                 <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-center">
                   <div className="text-3xl mb-2">🌡️</div>
                   <p className="font-medium text-blue-800">Temperature</p>
                   <p className="text-blue-700">75°F or below</p>
                 </div>
-                
+
                 <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-center">
                   <div className="text-3xl mb-2">💧</div>
                   <p className="font-medium text-blue-800">Running Water</p>
                   <p className="text-blue-700">Must be available</p>
                 </div>
-                
+
                 <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-center">
                   <div className="text-3xl mb-2">💡</div>
                   <p className="font-medium text-blue-800">Lighting</p>
                   <p className="text-blue-700">Working lights required</p>
                 </div>
               </div>
-              
+
               <div className="bg-red-50 border border-red-200 p-4 rounded-lg">
-                <p className="text-red-800 font-medium mb-2">Services will NOT be performed in homes with:</p>
+                <p className="text-red-800 font-medium mb-2">
+                  Services will NOT be performed in homes with:
+                </p>
                 <ul className="list-disc list-inside text-red-700 space-y-1">
                   <li>Excessive mold</li>
                   <li>Infestations</li>
@@ -242,9 +276,10 @@ export default function TermsOfService() {
                   <li>Other hazardous conditions</li>
                 </ul>
               </div>
-              
+
               <p className="text-text-dark mt-4">
-                Gathered Roots Cleaning reserves the right to refuse or discontinue service if these conditions are not met.
+                Gathered Roots Cleaning reserves the right to refuse or discontinue service if these
+                conditions are not met.
               </p>
             </Card>
 
@@ -254,9 +289,11 @@ export default function TermsOfService() {
                 11. Rescheduling Due to Weather or Emergency
               </h3>
               <p className="text-text-dark mb-4">
-                In the event of extreme weather, personal illness, or emergency, Gathered Roots Cleaning may need to reschedule your appointment. We will notify you as soon as possible and work to find a new time that fits your schedule.
+                In the event of extreme weather, personal illness, or emergency, Gathered Roots
+                Cleaning may need to reschedule your appointment. We will notify you as soon as
+                possible and work to find a new time that fits your schedule.
               </p>
-              
+
               <div className="bg-green-50 border border-green-200 p-4 rounded-lg text-center">
                 <p className="text-green-800 font-medium mb-2">Flexibility Appreciation</p>
                 <p className="text-3xl font-bold text-green-700 mb-2">25% OFF</p>
@@ -273,7 +310,8 @@ export default function TermsOfService() {
               Questions About Our Terms?
             </h3>
             <p className="text-text-dark mb-6">
-              If you have any questions or concerns about these terms of service, please don&apos;t hesitate to contact us.
+              If you have any questions or concerns about these terms of service, please don&apos;t
+              hesitate to contact us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -294,4 +332,4 @@ export default function TermsOfService() {
       </main>
     </>
   );
-} 
+}

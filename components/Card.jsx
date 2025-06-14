@@ -1,16 +1,15 @@
 import React from 'react';
 
 const Card = ({ children, className = '', hoverEffect = true }) => {
-  const baseStyles = 'bg-card-background border border-card-border rounded-lg p-6 transition-all duration-300';
-  const hoverStyles = hoverEffect ? 'shadow-card hover:shadow-card-hover hover:-translate-y-0.5' : 'shadow-card';
+  const baseStyles =
+    'bg-card-background border border-card-border rounded-lg p-6 transition-all duration-300';
+  const hoverStyles = hoverEffect
+    ? 'shadow-card hover:shadow-card-hover hover:-translate-y-0.5'
+    : 'shadow-card';
   const focusStyles = 'focus-within:shadow-card-focus focus-within:border-primary-accent-teal';
-  
+
   return (
-    <div
-      className={`${baseStyles} ${hoverStyles} ${focusStyles} ${className}`}
-    >
-      {children}
-    </div>
+    <div className={`${baseStyles} ${hoverStyles} ${focusStyles} ${className}`}>{children}</div>
   );
 };
 

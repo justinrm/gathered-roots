@@ -18,7 +18,11 @@ const contactFormSchema = z.object({
   message: z.string().min(10, { message: 'Message should be at least 10 characters long' }),
   phone: z.string().max(50).optional().nullable(),
   service: z.string().optional().nullable(),
-  preferredContactMethod: z.string().min(1, { message: 'Preferred contact method is required' }).optional().nullable(),
+  preferredContactMethod: z
+    .string()
+    .min(1, { message: 'Preferred contact method is required' })
+    .optional()
+    .nullable(),
   consent: z
     .boolean()
     .refine((val) => val === true, { message: 'You must consent to us contacting you.' }),
@@ -70,7 +74,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Allow', ['POST']);
     return res.status(405).end(`Method ${req.method} Not Allowed`);
   }
-  
+
   // Apply rate limiting before processing the request
   await contactFormLimiter(req, res);
 
@@ -91,12 +95,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { name, email, message, phone, service, preferredContactMethod } = validationResult.data;
 
     // Get email configuration
-    const recipientEmail = process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
+    const recipientEmail =
+      process.env.CONTACT_FORM_RECIPIENT_EMAIL || process.env.SENDGRID_FROM_EMAIL;
     const fromEmail = process.env.SENDGRID_FROM_EMAIL;
     const fromName = process.env.EMAIL_FROM_NAME || 'Gathered Roots Cleaning';
 
     if (!recipientEmail || !fromEmail) {
-      console.error('Email configuration missing (CONTACT_FORM_RECIPIENT_EMAIL or SENDGRID_FROM_EMAIL).');
+      console.error(
+        'Email configuration missing (CONTACT_FORM_RECIPIENT_EMAIL or SENDGRID_FROM_EMAIL).'
+      );
       return res.status(500).json({
         message: 'Server configuration error. Please contact support.',
       });
@@ -132,9 +139,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.error('SendGrid email sending error:', emailError);
       return res.status(500).json({
         message: 'Failed to send notification email. Please try again later.',
-        error: process.env.NODE_ENV === 'development' ? 
-          (emailError instanceof Error ? emailError.message : String(emailError)) : 
-          undefined
+        error:
+          process.env.NODE_ENV === 'development'
+            ? emailError instanceof Error
+              ? emailError.message
+              : String(emailError)
+            : undefined,
       });
     }
 
@@ -170,14 +180,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       message: 'Your message has been sent successfully! We will get back to you soon.',
     });
-
   } catch (error) {
     console.error('Contact form error:', error);
     return res.status(500).json({
       message: 'An unexpected error occurred. Please try again later.',
-      error: process.env.NODE_ENV === 'development' ? 
-        (error instanceof Error ? error.message : String(error)) : 
-        undefined
+      error:
+        process.env.NODE_ENV === 'development'
+          ? error instanceof Error
+            ? error.message
+            : String(error)
+          : undefined,
     });
   }
 }

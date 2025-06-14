@@ -53,7 +53,8 @@ const ContactForm = () => {
       errs.phone = 'Enter a valid phone number.';
     }
     if (!form.service) errs.service = 'Please select a service.';
-    if (!form.preferredContactMethod) errs.preferredContactMethod = 'Please select your preferred contact method.';
+    if (!form.preferredContactMethod)
+      errs.preferredContactMethod = 'Please select your preferred contact method.';
     if (!form.message.trim()) errs.message = 'Message is required.';
     if (!form.consent) errs.consent = 'You must agree to the privacy policy.';
     return errs;
@@ -112,7 +113,8 @@ const ContactForm = () => {
   if (submitted) {
     return (
       <div className="p-6 bg-green-50 border border-green-200 rounded-md text-green-800 text-center">
-        Thank you for reaching out! We have received your message and will contact you using your preferred method soon.
+        Thank you for reaching out! We have received your message and will contact you using your
+        preferred method soon.
       </div>
     );
   }
@@ -212,7 +214,10 @@ const ContactForm = () => {
         <ValidationMessage>{errors.service}</ValidationMessage>
       </div>
       <div>
-        <FormLabel htmlFor="preferredContactMethod" className="block text-sm font-medium text-gray-700 mb-1">
+        <FormLabel
+          htmlFor="preferredContactMethod"
+          className="block text-sm font-medium text-gray-700 mb-1"
+        >
           Preferred Contact Method
         </FormLabel>
         <Select
@@ -238,7 +243,8 @@ const ContactForm = () => {
         </Select>
         <ValidationMessage>{errors.preferredContactMethod}</ValidationMessage>
         <p className="mt-1 text-xs text-gray-500">
-          We&apos;ll reach out using your preferred method. If unavailable, we may use an alternative method.
+          We&apos;ll reach out using your preferred method. If unavailable, we may use an
+          alternative method.
         </p>
       </div>
       <div>

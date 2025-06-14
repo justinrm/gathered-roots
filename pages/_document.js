@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         {/* Accessibility meta tags */}
         <meta name="color-scheme" content="light" />
-        
+
         {/* Leaflet CSS */}
         <link
           rel="stylesheet"
@@ -14,7 +14,7 @@ export default function Document() {
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossOrigin=""
         />
-        
+
         {/* Favicon links */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -22,13 +22,13 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#006978" />
-        
+
         {/* Default meta description (can be overridden by pages) */}
         <meta
           name="description"
           content="Gathered Roots Cleaning offers professional residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403 with a personal touch. We tend to your home like an old garden, bringing back stillness and comfort."
         />
-        
+
         {/* Accessibility statement link */}
         <link rel="help" href="/accessibility-statement" title="Accessibility Statement" />
       </Head>
