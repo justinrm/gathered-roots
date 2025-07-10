@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // For hamburger and close icons
 
 const NavLink = ({ href, children }) => (
@@ -12,22 +13,31 @@ const NavLink = ({ href, children }) => (
 );
 
 const MobileNavLink = React.forwardRef(({ href, children, onClick }, ref) => {
+  const router = useRouter();
+  
   const handleClick = (e) => {
-    // Allow navigation to start, then close menu after a short delay
+    e.preventDefault();
+    e.stopPropagation();
+    
+    // Navigate first, then close menu
+    router.push(href);
+    
+    // Close menu after navigation starts
     if (onClick) {
-      setTimeout(() => onClick(e), 150);
+      setTimeout(() => onClick(e), 100);
     }
   };
 
   return (
-    <Link
-      href={href}
+    <button
       ref={ref}
       onClick={handleClick}
-      className="block text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+      className="block w-full text-left text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+      role="menuitem"
+      aria-label={`Navigate to ${children}`}
     >
       {children}
-    </Link>
+    </button>
   );
 });
 MobileNavLink.displayName = 'MobileNavLink';
@@ -46,7 +56,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
       if (e.key === 'Escape') setIsOpen(false);
       // Focus trap
       if (e.key === 'Tab' && mobileMenuRef.current) {
-        const focusableEls = mobileMenuRef.current.querySelectorAll('a, button');
+        const focusableEls = mobileMenuRef.current.querySelectorAll('button');
         if (focusableEls.length === 0) return;
         const first = focusableEls[0];
         const last = focusableEls[focusableEls.length - 1];
@@ -62,7 +72,11 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
 
     const handleClickOutside = (e) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
-        setIsOpen(false);
+        // Also check if we clicked on the hamburger button
+        const hamburgerButton = e.target.closest('button[aria-controls="mobile-menu"]');
+        if (!hamburgerButton) {
+          setIsOpen(false);
+        }
       }
     };
 
@@ -154,7 +168,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
           aria-modal="true"
           ref={mobileMenuRef}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col h-full">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col h-full" role="menu">
             {itemsToRender.map((item, idx) => (
               <MobileNavLink
                 key={item.label}
