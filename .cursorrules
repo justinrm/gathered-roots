@@ -13,7 +13,7 @@
     "design_guidelines": {
       "description": "Codifies the essential design system and brand guidelines for the Gathered Roots Cleaning website, distilled from .notes/design_brief.md.",
       "color_palette": {
-        "background": "#F4F1ED (Off-White)",
+        "background": "#F5F5DC (Beige)",
         "primary_accent_teal": "#006978 (Deep Teal)",
         "primary_accent_green": "#3D7B6B (Muted Teal/Green) or #4A7C59 (Sophisticated Green)",
         "secondary_accent_hover": "#5FB09C (Lighter Teal/Green)",

@@ -4,7 +4,7 @@
 
 @theme {
   /* Define all custom colors as CSS variables for Tailwind v4 */
-  --color-background: #f4f1ed;
+  --color-background: #f5f5dc;
   --color-primary-accent-teal: #006978;
   --color-primary-accent-green: #3d7b6b;
   --color-secondary-accent-hover: #5fb09c;

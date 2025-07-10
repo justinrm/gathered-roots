@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F4F1ED] text-text-dark py-10 px-4 text-center border-t border-borders">
+    <footer className="bg-[#F5F5DC] text-text-dark py-10 px-4 text-center border-t border-borders">
       <div className="container mx-auto space-y-3">
         <div>
           <p className="text-base">
@@ -29,9 +29,7 @@ export default function Footer() {
               hello@gatheredrootscleaning.com
             </a>
           </p>
-          <p className="text-xs text-text-light mt-2">
-            Website &copy; Justin R. Merwin
-          </p>
+          <p className="text-xs text-text-light mt-2">Website &copy; Justin R. Merwin</p>
         </div>
         <div className="pt-1 space-x-3">
           <Link

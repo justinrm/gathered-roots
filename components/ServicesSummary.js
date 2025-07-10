@@ -30,7 +30,7 @@ const services = [
     icon: (
       <Image
         src="/images/service-deep-clean.svg"
-        alt="Cleaner scrubbing bathroom tile with eco-friendly products"
+        alt="Professional cleaner performing thorough deep cleaning"
         width={48}
         height={48}
         className="w-12 h-12 rounded-full object-cover mb-4 border-2 border-primary-accent-green"
@@ -54,13 +54,13 @@ const services = [
   },
   {
     id: 4,
-    title: 'Eco-Friendly Options',
+    title: 'Property Management & Office Spaces',
     description:
-      'A gentle and mindful clean using non toxic products, safe for children, pets, and the planet without compromising on freshness.',
+      'Professional cleaning services for property management companies and office spaces. Licensed and insured in Idaho, providing reliable commercial cleaning solutions.',
     icon: (
       <Image
         src="/images/service-eco-clean.svg"
-        alt="Eco-friendly cleaning products and supplies on countertop"
+        alt="Professional office and property management cleaning services"
         width={48}
         height={48}
         className="w-12 h-12 rounded-full object-cover mb-4 border-2 border-primary-accent-teal opacity-75"

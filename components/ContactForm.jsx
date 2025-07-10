@@ -11,7 +11,7 @@ const SERVICE_OPTIONS = [
   { value: 'standard', label: 'Standard Clean' },
   { value: 'deep', label: 'Deep Clean' },
   { value: 'move', label: 'Move-In/Move-Out Clean' },
-  { value: 'eco', label: 'Eco-Friendly Options' },
+  { value: 'property-management', label: 'Property Management & Office Spaces' },
 ];
 
 const CONTACT_METHOD_OPTIONS = [

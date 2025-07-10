@@ -77,7 +77,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
   - Standard Cleaning (`/services/standard-clean`)
   - Deep Cleaning (`/services/deep-clean`)
   - Move-in/Move-out (`/services/move-in-move-out`)
-  - Eco-Friendly Options (`/services/eco-friendly`)
+  - Property Management & Office Spaces (`/services/property-management`)
 - 🏘️ **Service Areas** (`/service-areas`) - Geographic coverage with interactive map
 - 👥 **About Us** (`/about-us`) - Company story, mission, team
 - 💬 **Testimonials** (integrated throughout site)
@@ -137,7 +137,7 @@ Gathered Roots Cleaning's website serves as the primary digital storefront, targ
 
 ```css
 /* Primary Brand Colors */
---background: #f4f1ed; /* Off-white background */
+--background: #f5f5dc; /* Beige background */
 --primary-accent-teal: #006978; /* Deep teal - CTAs, links */
 --primary-accent-green: #2d5a4f; /* Muted green - brand elements */
 --secondary-accent-hover: #5fb09c; /* Lighter teal - hover states */
@@ -521,7 +521,7 @@ gathered-roots-cleaning/
 │   │   └── submit-booking-request.js # Booking form handler
 │   ├── services/           # Individual service pages
 │   │   ├── deep-clean.js
-│   │   ├── eco-friendly.js
+│   │   ├── property-management.js
 │   │   ├── move-in-move-out.js
 │   │   └── standard-clean.js
 │   ├── _app.js             # App wrapper and global styles

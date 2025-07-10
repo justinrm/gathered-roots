@@ -5,8 +5,6 @@ import ServicesSummary from '../components/ServicesSummary';
 import UspSection from '../components/UspSection';
 // import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
 import ContactForm from '../components/ContactForm';
-import Link from 'next/link';
-import Button from '../components/Button.jsx';
 
 export default function Home() {
   return (
@@ -53,7 +51,7 @@ export default function Home() {
         />
         <meta
           property="twitter:description"
-          content="Gathered Roots Cleaning offers premium, eco-friendly cleaning services for homes and businesses in Lewiston, ID and Clarkston, WA. Veteran owned, family operated."
+          content="Gathered Roots Cleaning offers premium cleaning services for homes, property management, and offices in Lewiston, ID and Clarkston, WA. Licensed, insured, veteran owned, family operated."
         />
         <meta
           property="twitter:image"
@@ -185,8 +183,9 @@ export default function Home() {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Eco-Friendly Cleaning',
-                      description: 'Environmentally safe cleaning using non-toxic products',
+                      name: 'Property Management & Office Cleaning',
+                      description:
+                        'Professional commercial cleaning services for property management and office spaces',
                     },
                   },
                 ],
@@ -197,7 +196,7 @@ export default function Home() {
                 'Deep Cleaning',
                 'Move-in Cleaning',
                 'Move-out Cleaning',
-                'Eco-friendly Cleaning',
+                'Property Management Cleaning',
                 'Post-construction Cleaning',
                 'Residential Cleaning',
                 'Commercial Cleaning',
@@ -249,7 +248,7 @@ export default function Home() {
                     '@type': 'Person',
                     name: 'Mark P.'
                   },
-                  reviewBody: 'The best cleaning service we\'ve ever used. Reliable, thorough, and they use eco-friendly products which is a huge plus for us.'
+                  reviewBody: 'The best cleaning service we\'ve ever used. Reliable, thorough, and they serve property management and office spaces with professional service.'
                 },
                 {
                   '@type': 'Review',
@@ -355,25 +354,6 @@ export default function Home() {
             <div>
               <ContactForm />
             </div>
-          </div>
-        </section>
-        <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg text-text-light mb-4">
-            We proudly provide <strong>residential cleaning services</strong> for homes in{' '}
-            <strong>Lewiston, Idaho (83501)</strong> and{' '}
-            <strong>Clarkston, Washington (99403)</strong>.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
-            <Link href="/service-areas">
-              <Button variant="outline" size="large">
-                View All Service Areas
-              </Button>
-            </Link>
-            <Link href="/clarkston-wa-cleaning-services">
-              <Button variant="outline" size="large">
-                Clarkston, WA Services
-              </Button>
-            </Link>
           </div>
         </section>
       </main>

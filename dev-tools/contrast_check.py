@@ -37,13 +37,13 @@ def contrast_ratio(hex1, hex2):
 # Test improved colors from the website
 colors_to_test = [
     ('#006978', '#FFFFFF', 'Primary Teal on White'),
-    ('#006978', '#F4F1ED', 'Primary Teal on Background'),
+    ('#006978', '#F5F5DC', 'Primary Teal on Background'),
     ('#2D5A4F', '#FFFFFF', 'Improved Primary Green on White'),
-    ('#2D5A4F', '#F4F1ED', 'Improved Primary Green on Background'),
+    ('#2D5A4F', '#F5F5DC', 'Improved Primary Green on Background'),
     ('#333333', '#FFFFFF', 'Dark Text on White'),
-    ('#333333', '#F4F1ED', 'Dark Text on Background'),
+    ('#333333', '#F5F5DC', 'Dark Text on Background'),
     ('#666666', '#FFFFFF', 'Improved Light Text on White'),
-    ('#666666', '#F4F1ED', 'Improved Light Text on Background'),
+    ('#666666', '#F5F5DC', 'Improved Light Text on Background'),
 ]
 
 print('WCAG Color Contrast Analysis for Gathered Roots Cleaning (Updated)')

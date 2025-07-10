@@ -11,7 +11,7 @@ export default {
       colors: {
         // These will be available in v4 as CSS variables
         // and can be accessed with utilities like bg-background, text-text-dark, etc.
-        background: '#F4F1ED',
+        background: '#F5F5DC',
         'primary-accent-teal': '#006978',
         'primary-accent-green': '#2D5A4F',
         'secondary-accent-hover': '#5FB09C',

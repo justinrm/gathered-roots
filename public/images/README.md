@@ -6,7 +6,7 @@
 - /images/service-standard-clean.svg (Standard Clean)
 - /images/service-deep-clean.svg (Deep Clean)
 - /images/service-move-clean.svg (Move-In/Out Clean)
-- /images/service-eco-clean.svg (Eco-Friendly Options)
+- /images/service-eco-clean.svg (Property Management & Office Spaces)
 - /images/team-placeholder.jpg (Team members)
 
 **Replace all above with authentic, professional photos as soon as available.**

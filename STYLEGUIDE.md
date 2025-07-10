@@ -4,7 +4,7 @@
 
 | Name                   | Hex     | Usage                          |
 | ---------------------- | ------- | ------------------------------ |
-| Background             | #F4F1ED | Page backgrounds               |
+| Background             | #F5F5DC | Page backgrounds               |
 | Primary Accent         | #1E2B28 | CTAs, highlights, links, icons |
 | Primary Accent         | #2F4F4F | Brand, headings, logo          |
 | Alt Accent             | #D8C3A5 | Alternate accent, logo         |

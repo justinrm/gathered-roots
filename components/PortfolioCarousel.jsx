@@ -1,122 +1,98 @@
-import React, { useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
+import React from 'react';
 import Image from 'next/image';
 
-// Example before/after image pairs (replace with your real images)
+// Portfolio images showcasing our cleaning work
 const portfolioItems = [
   {
-    before: '/portfolio/kitchen-before.jpg',
-    after: '/portfolio/kitchen-after.jpg',
-    description: 'Kitchen deep clean',
-    beforeAlt: 'Kitchen before cleaning',
-    afterAlt: 'Kitchen after cleaning',
+    src: '/portfolio/portfolio-1.jpg',
+    alt: 'Professional cleaning results - sparkling clean home interior',
   },
   {
-    before: '/portfolio/floors-before.jpg',
-    after: '/portfolio/floors-after.jpg',
-    description: 'Floors transformation',
-    beforeAlt: 'Floors before cleaning',
-    afterAlt: 'Floors after cleaning',
+    src: '/portfolio/portfolio-2.jpg',
+    alt: 'Professional cleaning results - pristine kitchen transformation',
   },
-  // Add more pairs as needed
+  {
+    src: '/portfolio/portfolio-3.jpg',
+    alt: 'Professional cleaning results - immaculate bathroom cleaning',
+  },
+  {
+    src: '/portfolio/portfolio-4.jpg',
+    alt: 'Professional cleaning results - fresh and clean bedroom',
+  },
+  {
+    src: '/portfolio/portfolio-5.jpg',
+    alt: 'Professional cleaning results - detailed floor cleaning',
+  },
+  {
+    src: '/portfolio/portfolio-6.jpg',
+    alt: 'Professional cleaning results - comprehensive home cleaning',
+  },
+  {
+    src: '/portfolio/portfolio-7.jpg',
+    alt: 'Professional cleaning results - meticulous attention to detail',
+  },
+  {
+    src: '/portfolio/portfolio-8.jpg',
+    alt: 'Professional cleaning results - fresh and organized space',
+  },
+  {
+    src: '/portfolio/portfolio-9.jpg',
+    alt: 'Professional cleaning results - spotless surface cleaning',
+  },
+  {
+    src: '/portfolio/portfolio-10.jpg',
+    alt: 'Professional cleaning results - thorough deep cleaning',
+  },
+  {
+    src: '/portfolio/portfolio-11.jpg',
+    alt: 'Professional cleaning results - pristine home interior',
+  },
+  {
+    src: '/portfolio/portfolio-12.jpg',
+    alt: 'Professional cleaning results - immaculate cleaning standards',
+  },
+  {
+    src: '/portfolio/portfolio-13.jpg',
+    alt: 'Professional cleaning results - comprehensive cleaning service',
+  },
+  {
+    src: '/portfolio/portfolio-14.jpg',
+    alt: 'Professional cleaning results - quality cleaning work',
+  },
+  {
+    src: '/portfolio/portfolio-15.jpg',
+    alt: 'Professional cleaning results - professional cleaning standards',
+  },
+  {
+    src: '/portfolio/portfolio-16.jpg',
+    alt: 'Professional cleaning results - exceptional cleaning service',
+  },
 ];
 
-const imageSizes = {
-  width: 480,
-  height: 320,
-};
-
 const PortfolioCarousel = () => {
-  const [current, setCurrent] = useState(0);
-  const total = portfolioItems.length;
-
-  const goTo = (idx) => setCurrent(idx);
-  const prev = () => setCurrent((c) => (c === 0 ? total - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === total - 1 ? 0 : c + 1));
-
-  // Keyboard navigation for left/right arrows
-  React.useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'ArrowLeft') prev();
-      if (e.key === 'ArrowRight') next();
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  });
-
-  const { before, after, description, beforeAlt, afterAlt } = portfolioItems[current];
-
   return (
     <section
-      className="w-full max-w-2xl mx-auto py-8 px-2 flex flex-col items-center"
-      aria-label="Portfolio Before and After Gallery"
-      aria-live="polite"
+      className="w-full max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8"
+      aria-label="Portfolio Gallery"
     >
-      <div className="relative w-full flex items-center justify-center gap-8">
-        <button
-          onClick={prev}
-          aria-label="Previous before and after set"
-          className="absolute left-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-borders focus:outline-none focus:ring-2 focus:ring-primary-accent-cta z-10"
-        >
-          <ChevronLeftIcon className="w-6 h-6 text-primary-accent-cta" />
-        </button>
-        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center">
-          <figure className="flex flex-col items-center w-full sm:w-1/2">
-            <div className="relative w-full h-56 sm:h-64 mb-2 border border-borders rounded-lg overflow-hidden shadow-md">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {portfolioItems.map((item, index) => (
+          <div
+            key={index}
+            className="group relative overflow-hidden rounded-xl border border-borders shadow-md hover:shadow-lg transition-all duration-300"
+          >
+            <div className="aspect-square relative">
               <Image
-                src={before}
-                alt={beforeAlt}
-                width={imageSizes.width}
-                height={imageSizes.height}
-                className="object-cover w-full h-full"
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                sizes="(max-width: 640px) 100vw, 50vw"
-                priority={current === 0}
+                src={item.src}
+                alt={item.alt}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
               />
             </div>
-            <figcaption className="text-xs text-text-light">Before</figcaption>
-          </figure>
-          <figure className="flex flex-col items-center w-full sm:w-1/2">
-            <div className="relative w-full h-56 sm:h-64 mb-2 border border-borders rounded-lg overflow-hidden shadow-md">
-              <Image
-                src={after}
-                alt={afterAlt}
-                width={imageSizes.width}
-                height={imageSizes.height}
-                className="object-cover w-full h-full"
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
-                sizes="(max-width: 640px) 100vw, 50vw"
-                priority={current === 0}
-              />
-            </div>
-            <figcaption className="text-xs text-text-light">After</figcaption>
-          </figure>
-        </div>
-        <button
-          onClick={next}
-          aria-label="Next before and after set"
-          className="absolute right-0 top-1/2 -translate-y-1/2 p-2 rounded-full bg-background/80 hover:bg-borders focus:outline-none focus:ring-2 focus:ring-primary-accent-cta z-10"
-        >
-          <ChevronRightIcon className="w-6 h-6 text-primary-accent-cta" />
-        </button>
-      </div>
-      <div
-        className="flex justify-center mt-6 gap-2"
-        role="tablist"
-        aria-label="Portfolio navigation dots"
-      >
-        {portfolioItems.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => goTo(idx)}
-            aria-label={`Go to portfolio item ${idx + 1}`}
-            className={`w-3 h-3 rounded-full border border-borders focus:outline-none focus:ring-2 focus:ring-primary-accent-cta transition-colors duration-200 ${
-              current === idx ? 'bg-primary-accent-cta' : 'bg-borders'
-            }`}
-          />
+          </div>
         ))}
       </div>
-      <p className="text-text-dark mt-4 text-center font-medium">{description}</p>
     </section>
   );
 };

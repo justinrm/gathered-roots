@@ -13,7 +13,7 @@ const testimonials = [
   },
   {
     quote:
-      "The best cleaning service we've ever used. Reliable, thorough, and they use eco-friendly products which is a huge plus for us.",
+      "The best cleaning service we've ever used. Reliable, thorough, and they offer professional commercial cleaning services which is a huge plus for us.",
     author: 'Mark P.',
     authorTitle: 'Small Business Owner',
     rating: 5,

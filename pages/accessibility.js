@@ -178,10 +178,10 @@ export default function AccessibilityStatement() {
                 <li>
                   <strong>Email:</strong>{' '}
                   <a
-                    href="mailto:accessibility@gatheredrootscleaning.com"
+                    href="mailto:hello@gatheredrootscleaning.com"
                     className="underline text-primary-accent-teal hover:text-secondary-accent-hover"
                   >
-                    accessibility@gatheredrootscleaning.com
+                    hello@gatheredrootscleaning.com
                   </a>
                 </li>
                 <li>

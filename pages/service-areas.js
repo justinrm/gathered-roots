@@ -53,13 +53,13 @@ export default function ServiceAreas() {
         <title>Service Areas | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Gathered Roots Cleaning provides residential cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403. Check if we clean in your area and schedule your service today."
+          content="Gathered Roots Cleaning provides residential and property management cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, Lapwai, ID 83540, Winchester, ID 83555, Culdesac, ID 83524, and Juliaetta, ID 83535. Check if we clean in your area and schedule your service today."
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/service-areas" />
         <meta property="og:title" content="Service Areas | Gathered Roots Cleaning" />
         <meta
           property="og:description"
-          content="Professional cleaning services in Lewiston, Idaho and Clarkston, Washington. Find out if we serve your area."
+          content="Professional residential and property management cleaning services in Lewiston, Idaho, Clarkston, Washington, and surrounding areas including Lapwai, Winchester, Culdesac, and Juliaetta."
         />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/service-areas" />
 
@@ -72,7 +72,7 @@ export default function ServiceAreas() {
               '@type': 'WebPage',
               name: 'Service Areas',
               description:
-                'Areas served by Gathered Roots Cleaning including Lewiston, ID 83501 and Clarkston, WA 99403',
+                'Areas served by Gathered Roots Cleaning including Lewiston, ID 83501, Clarkston, WA 99403, Lapwai, ID 83540, Winchester, ID 83555, Culdesac, ID 83524, and Juliaetta, ID 83535 for residential and property management cleaning services',
               url: 'https://www.gatheredrootscleaning.com/service-areas',
               provider: {
                 '@type': 'LocalBusiness',
@@ -112,6 +112,34 @@ export default function ServiceAreas() {
                       '@type': 'State',
                       name: 'Idaho',
                     },
+                    postalCode: '83540',
+                  },
+                  {
+                    '@type': 'City',
+                    name: 'Winchester',
+                    containedInPlace: {
+                      '@type': 'State',
+                      name: 'Idaho',
+                    },
+                    postalCode: '83555',
+                  },
+                  {
+                    '@type': 'City',
+                    name: 'Culdesac',
+                    containedInPlace: {
+                      '@type': 'State',
+                      name: 'Idaho',
+                    },
+                    postalCode: '83524',
+                  },
+                  {
+                    '@type': 'City',
+                    name: 'Juliaetta',
+                    containedInPlace: {
+                      '@type': 'State',
+                      name: 'Idaho',
+                    },
+                    postalCode: '83535',
                   },
                 ],
               },
@@ -197,11 +225,11 @@ export default function ServiceAreas() {
 
           <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {serviceAreas.map((area) => (
-              <div key={area.city} className="flex flex-col items-center">
+              <div key={area.city} className="flex flex-col items-center h-full">
                 <h2 className="text-2xl font-semibold text-primary-accent-teal mb-2 text-center">
                   {area.city}, {area.state}
                 </h2>
-                <Card className="text-center w-full">
+                <Card className="text-center w-full flex-1 flex flex-col justify-between min-h-[200px]">
                   <p className="text-card-text-secondary mb-2 text-base">{area.description}</p>
                   <p className="text-sm text-card-text-secondary">
                     Professional cleaning in {area.city}, {area.state}
@@ -253,13 +281,28 @@ export default function ServiceAreas() {
               <li>
                 Clarkston, WA: <strong>99403</strong>
               </li>
+              <li>
+                Lapwai, ID: <strong>83540</strong>
+              </li>
+              <li>
+                Winchester, ID: <strong>83555</strong>
+              </li>
+              <li>
+                Culdesac, ID: <strong>83524</strong>
+              </li>
+              <li>
+                Juliaetta, ID: <strong>83535</strong>
+              </li>
             </ul>
           </div>
 
           <div className="mt-6 text-center">
             <p className="text-text-light">
-              We provide <strong>residential cleaning services</strong> for homes in Lewiston, ID{' '}
-              <strong>83501</strong> and Clarkston, WA <strong>99403</strong>.
+              We provide <strong>residential cleaning services</strong> and{' '}
+              <strong>property management cleaning</strong> for homes and properties in Lewiston, ID{' '}
+              <strong>83501</strong>, Clarkston, WA <strong>99403</strong>, Lapwai, ID{' '}
+              <strong>83540</strong>, Winchester, ID <strong>83555</strong>, Culdesac, ID{' '}
+              <strong>83524</strong>, and Juliaetta, ID <strong>83535</strong>.
             </p>
           </div>
         </div>

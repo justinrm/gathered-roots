@@ -37,7 +37,7 @@ export default function LewistonCleaningServices() {
         />
         <meta
           name="keywords"
-          content="residential cleaning Lewiston ID 83501, house cleaning Lewiston ID, maid service Lewiston Idaho, cleaning service near me, Lewiston house cleaners, Normal Hill cleaning service, eco-friendly cleaning Lewiston"
+          content="residential cleaning Lewiston ID 83501, house cleaning Lewiston ID, maid service Lewiston Idaho, cleaning service near me, Lewiston house cleaners, Normal Hill cleaning service, property management cleaning Lewiston"
         />
         <link
           rel="canonical"
@@ -51,7 +51,7 @@ export default function LewistonCleaningServices() {
         />
         <meta
           property="og:description"
-          content="Trusted house cleaning services in Lewiston, Idaho. Serving all neighborhoods with eco-friendly, thorough cleaning. Book your free quote today!"
+          content="Trusted house cleaning services in Lewiston, Idaho. Serving all neighborhoods with thorough, professional cleaning. Licensed and insured. Book your free quote today!"
         />
         <meta
           property="og:url"
@@ -111,7 +111,6 @@ export default function LewistonCleaningServices() {
           }}
         />
       </Head>
-
       <main className="bg-background min-h-screen">
         {/* Hero Section */}
         <section className="bg-primary-accent-teal text-white py-16 px-4 sm:px-6 lg:px-8">
@@ -122,7 +121,7 @@ export default function LewistonCleaningServices() {
             </h1>
             <p className="text-xl mb-8 opacity-90">
               Trusted by families across Normal Hill, Orchards, Downtown Lewiston, and surrounding
-              neighborhoods. Veteran-owned, eco-friendly cleaning with a personal touch.
+              neighborhoods. Veteran-owned, licensed and insured with a personal touch.
               <br />
               <span className="block mt-2">
                 Serving Lewiston, ID <strong>83501</strong>. For Clarkston, WA{' '}
@@ -134,12 +133,12 @@ export default function LewistonCleaningServices() {
               </span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/quote">
+              <Link href="/quote" legacyBehavior>
                 <Button variant="secondary" size="large">
                   Get Free Quote
                 </Button>
               </Link>
-              <Link href="/booking">
+              <Link href="/booking" legacyBehavior>
                 <Button
                   variant="outline"
                   size="large"
@@ -224,13 +223,14 @@ export default function LewistonCleaningServices() {
               </Card>
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary-accent-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">🌿</span>
+                  <span className="text-white text-2xl">🏢</span>
                 </div>
                 <h3 className="text-xl font-semibold text-primary-accent-green mb-3">
-                  Eco-Friendly
+                  Licensed & Insured
                 </h3>
                 <p className="text-text-dark">
-                  Safe for your family, pets, and the beautiful Lewiston environment.
+                  Fully licensed and insured in Idaho, serving property management and office
+                  spaces.
                 </p>
               </Card>
             </div>
@@ -251,7 +251,7 @@ export default function LewistonCleaningServices() {
                 <p className="text-text-dark text-sm mb-4">
                   Regular maintenance cleaning for busy Lewiston families
                 </p>
-                <Link href="/services/standard-clean">
+                <Link href="/services/standard-clean" legacyBehavior>
                   <Button variant="outline" size="small">
                     Learn More
                   </Button>
@@ -264,7 +264,7 @@ export default function LewistonCleaningServices() {
                 <p className="text-text-dark text-sm mb-4">
                   Thorough top-to-bottom cleaning for Lewiston homes
                 </p>
-                <Link href="/services/deep-clean">
+                <Link href="/services/deep-clean" legacyBehavior>
                   <Button variant="outline" size="small">
                     Learn More
                   </Button>
@@ -277,7 +277,7 @@ export default function LewistonCleaningServices() {
                 <p className="text-text-dark text-sm mb-4">
                   Perfect for Lewiston relocations and transitions
                 </p>
-                <Link href="/services/move-in-move-out">
+                <Link href="/services/move-in-move-out" legacyBehavior>
                   <Button variant="outline" size="small">
                     Learn More
                   </Button>
@@ -285,12 +285,12 @@ export default function LewistonCleaningServices() {
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-primary-accent-green mb-3">
-                  Eco-Friendly
+                  Property Management & Office
                 </h3>
                 <p className="text-text-dark text-sm mb-4">
-                  Green cleaning for environmentally conscious Lewiston residents
+                  Professional commercial cleaning services for property managers and offices
                 </p>
-                <Link href="/services/eco-friendly">
+                <Link href="/services/property-management" legacyBehavior>
                   <Button variant="outline" size="small">
                     Learn More
                   </Button>
@@ -311,12 +311,12 @@ export default function LewistonCleaningServices() {
               today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/quote">
+              <Link href="/quote" legacyBehavior>
                 <Button variant="secondary" size="large">
                   Get Free Quote
                 </Button>
               </Link>
-              <Link href="/service-areas">
+              <Link href="/service-areas" legacyBehavior>
                 <Button
                   variant="outline"
                   size="large"
@@ -325,7 +325,7 @@ export default function LewistonCleaningServices() {
                   View All Service Areas
                 </Button>
               </Link>
-              <Link href="/clarkston-wa-cleaning-services">
+              <Link href="/clarkston-wa-cleaning-services" legacyBehavior>
                 <Button
                   variant="outline"
                   size="large"
@@ -334,7 +334,7 @@ export default function LewistonCleaningServices() {
                   Clarkston, WA Services
                 </Button>
               </Link>
-              <Link href="tel:+12087171192">
+              <Link href="tel:+12087171192" legacyBehavior>
                 <Button
                   variant="outline"
                   size="large"

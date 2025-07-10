@@ -3,23 +3,25 @@ import Link from 'next/link';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // For hamburger and close icons
 
 const NavLink = ({ href, children }) => (
-  <a
+  <Link
     href={href}
     className="text-[#333333] hover:text-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+    legacyBehavior
   >
     {children}
-  </a>
+  </Link>
 );
 
 const MobileNavLink = React.forwardRef(({ href, children, onClick }, ref) => (
-  <a
+  <Link
     href={href}
     ref={ref}
     onClick={onClick}
     className="block text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+    legacyBehavior
   >
     {children}
-  </a>
+  </Link>
 ));
 MobileNavLink.displayName = 'MobileNavLink';
 
@@ -29,9 +31,10 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
   const firstLinkRef = useRef(null);
   const lastLinkRef = useRef(null);
 
-  // Close menu on Escape key
+  // Close menu on Escape key and outside clicks
   useEffect(() => {
     if (!isOpen) return;
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') setIsOpen(false);
       // Focus trap
@@ -49,8 +52,22 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
         }
       }
     };
+
+    const handleClickOutside = (e) => {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
   }, [isOpen]);
 
   // Focus first link when menu opens
@@ -125,7 +142,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
       {/* Mobile Menu Content */}
       {isOpen && (
         <div
-          className="md:hidden fixed inset-0 z-40 bg-[#F4F1ED] bg-opacity-95 backdrop-blur-sm animate-fade-in"
+          className="md:hidden fixed inset-0 z-40 bg-[#F5F5DC] bg-opacity-95 backdrop-blur-sm animate-fade-in"
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
@@ -182,7 +199,7 @@ const App = () => (
 // theme: {
 //   extend: {
 //     colors: {
-//       background: '#F4F1ED',
+//       background: '#F5F5DC',
 //       primary-accent-cta: '#7A9A8D',
 //       brand-accent: '#2F4F4F',
 //       secondary-accent-hover: '#5FB09C',

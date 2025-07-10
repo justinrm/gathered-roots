@@ -37,9 +37,9 @@ const usps = [
   },
   {
     id: 3,
-    title: 'Trusted Professionals',
+    title: 'Licensed and Insured',
     description:
-      'Our team is made up of kind and capable hands — experienced, thoughtful, and devoted to their craft. With every visit, we bring care, consistency, and a quiet pride in a job well done.',
+      "Clean with confidence knowing we carry $1 million in liability insurance for your complete peace of mind. We're fully licensed and insured, so you can relax while we take care of your home.",
     icon: <CheckCircleIcon className="w-full h-full" />,
   },
 ];

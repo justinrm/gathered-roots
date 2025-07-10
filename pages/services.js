@@ -21,7 +21,7 @@ const services = [
     description:
       'An intensive, top-to-bottom clean that tackles built-up grime and hard-to-reach areas. Ideal for seasonal refreshes or special occasions.',
     image: '/images/service-deep-clean.svg',
-    altText: 'Cleaner scrubbing bathroom tile with eco-friendly products',
+    altText: 'Professional cleaner performing thorough deep cleaning',
     ctaText: 'Learn More',
     ctaLink: '/services/deep-clean',
   },
@@ -35,13 +35,13 @@ const services = [
     ctaLink: '/services/move-in-move-out',
   },
   {
-    title: 'Eco-Friendly Options',
+    title: 'Property Management & Office Spaces',
     description:
-      'Effective cleaning using environmentally conscious products and methods. Safe for your family, pets, and the planet.',
+      'Professional cleaning services for property management companies and office spaces. Licensed and insured in Idaho, providing reliable commercial cleaning solutions.',
     image: '/images/service-eco-clean.svg',
-    altText: 'Eco-friendly cleaning products and supplies on countertop',
+    altText: 'Professional office and property management cleaning services',
     ctaText: 'Learn More',
-    ctaLink: '/services/eco-friendly',
+    ctaLink: '/services/property-management',
   },
 ];
 
@@ -52,12 +52,12 @@ export default function Services() {
         <title>Our Cleaning Services | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Explore our residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Standard, deep, move-in/move-out, and eco-friendly options."
+          content="Explore our residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Standard, deep, move-in/move-out, and property management cleaning options."
         />
         <meta property="og:title" content="Our Cleaning Services | Gathered Roots Cleaning" />
         <meta
           property="og:description"
-          content="Discover our trusted, eco-friendly cleaning services. Book your clean or request a quote today!"
+          content="Discover our trusted, professional cleaning services including property management and office cleaning. Book your clean or request a quote today!"
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/services" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/services" />
@@ -71,7 +71,7 @@ export default function Services() {
               '@type': 'WebPage',
               name: 'Our Cleaning Services',
               description:
-                "Explore Gathered Roots Cleaning's full range of cleaning services: Standard, Deep, Move-In/Out, and Eco-Friendly cleaning.",
+                "Explore Gathered Roots Cleaning's full range of cleaning services: Standard, Deep, Move-In/Out, and Property Management cleaning.",
               url: 'https://www.gatheredrootscleaning.com/services',
               provider: {
                 '@type': 'LocalBusiness',
