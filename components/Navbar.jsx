@@ -6,22 +6,30 @@ const NavLink = ({ href, children }) => (
   <Link
     href={href}
     className="text-[#333333] hover:text-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
-    legacyBehavior
   >
     {children}
   </Link>
 );
 
-const MobileNavLink = React.forwardRef(({ href, children, onClick }, ref) => (
-  <Link
-    href={href}
-    ref={ref}
-    onClick={onClick}
-    className="block text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
-  >
-    {children}
-  </Link>
-));
+const MobileNavLink = React.forwardRef(({ href, children, onClick }, ref) => {
+  const handleClick = (e) => {
+    // Allow navigation to start, then close menu after a short delay
+    if (onClick) {
+      setTimeout(() => onClick(e), 150);
+    }
+  };
+
+  return (
+    <Link
+      href={href}
+      ref={ref}
+      onClick={handleClick}
+      className="block text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+    >
+      {children}
+    </Link>
+  );
+});
 MobileNavLink.displayName = 'MobileNavLink';
 
 const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
@@ -96,7 +104,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
       >
         {/* Logo/Brand Name */}
         <div className="flex-shrink-0">
-          <Link href="/" className="text-2xl font-bold text-[#333333]" legacyBehavior>
+          <Link href="/" className="text-2xl font-bold text-[#333333]">
             {logoText}
           </Link>
         </div>
