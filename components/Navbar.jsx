@@ -18,7 +18,6 @@ const MobileNavLink = React.forwardRef(({ href, children, onClick }, ref) => (
     ref={ref}
     onClick={onClick}
     className="block text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
-    legacyBehavior
   >
     {children}
   </Link>
@@ -61,12 +60,11 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
-
+    // Note: Removed touchstart to prevent interference with mobile link clicks
+    
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [isOpen]);
 
