@@ -12,32 +12,17 @@ const NavLink = ({ href, children }) => (
   </Link>
 );
 
-const MobileNavLink = React.forwardRef(({ href, children, onClick }, ref) => {
-  const router = useRouter();
-  
-  const handleClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    // Navigate first, then close menu
-    router.push(href);
-    
-    // Close menu after navigation starts
-    if (onClick) {
-      setTimeout(() => onClick(e), 100);
-    }
-  };
-
+const MobileNavLink = React.forwardRef(({ href, children }, ref) => {
   return (
-    <button
+    <Link
+      href={href}
       ref={ref}
-      onClick={handleClick}
-      className="block w-full text-left text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+      className="block w-full text-[#333333] hover:text-white hover:bg-[#006978] px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
       role="menuitem"
       aria-label={`Navigate to ${children}`}
     >
       {children}
-    </button>
+    </Link>
   );
 });
 MobileNavLink.displayName = 'MobileNavLink';
@@ -45,18 +30,35 @@ MobileNavLink.displayName = 'MobileNavLink';
 const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const mobileMenuRef = useRef(null);
+  const mobileMenuContentRef = useRef(null);
   const firstLinkRef = useRef(null);
   const lastLinkRef = useRef(null);
+  const router = useRouter();
+
+  // Close menu on route change
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsOpen(false);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
 
   // Close menu on Escape key and outside clicks
   useEffect(() => {
     if (!isOpen) return;
 
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+        return;
+      }
       // Focus trap
-      if (e.key === 'Tab' && mobileMenuRef.current) {
-        const focusableEls = mobileMenuRef.current.querySelectorAll('button');
+      if (e.key === 'Tab' && mobileMenuContentRef.current) {
+        const focusableEls = mobileMenuContentRef.current.querySelectorAll('a, button');
         if (focusableEls.length === 0) return;
         const first = focusableEls[0];
         const last = focusableEls[focusableEls.length - 1];
@@ -71,7 +73,22 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
     };
 
     const handleClickOutside = (e) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
+      // Check if click is on a navigation link - let it navigate first
+      const navLink = e.target.closest('a[href]');
+      if (navLink && mobileMenuContentRef.current && mobileMenuContentRef.current.contains(navLink)) {
+        // Don't close the menu immediately for navigation links
+        // The menu will close on route change via the router event listener
+        return;
+      }
+
+      // Check if click is on the overlay (outside menu content)
+      if (mobileMenuRef.current && e.target === mobileMenuRef.current) {
+        setIsOpen(false);
+        return;
+      }
+      
+      // Check if click is outside the menu content area
+      if (mobileMenuContentRef.current && !mobileMenuContentRef.current.contains(e.target)) {
         // Also check if we clicked on the hamburger button
         const hamburgerButton = e.target.closest('button[aria-controls="mobile-menu"]');
         if (!hamburgerButton) {
@@ -81,12 +98,11 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleClickOutside);
-    // Note: Removed touchstart to prevent interference with mobile link clicks
+    document.addEventListener('click', handleClickOutside);
     
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [isOpen]);
 
@@ -108,6 +124,12 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
   ];
 
   const itemsToRender = navItems || defaultNavItems;
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="sticky top-4 z-50 w-full flex justify-center pointer-events-none">
@@ -137,7 +159,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
         {/* Mobile Menu Button */}
         <div className="-mr-2 flex md:hidden">
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             type="button"
             className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
@@ -162,13 +184,17 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
       {/* Mobile Menu Content */}
       {isOpen && (
         <div
-          className="md:hidden fixed inset-0 z-40 bg-[#F5F5DC] bg-opacity-95 backdrop-blur-sm animate-fade-in"
+          className="md:hidden fixed inset-0 z-40 bg-[#F5F5DC] bg-opacity-95 backdrop-blur-sm animate-fade-in pointer-events-auto"
           id="mobile-menu"
           role="dialog"
           aria-modal="true"
           ref={mobileMenuRef}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col h-full" role="menu">
+          <div 
+            className="px-2 pt-16 pb-3 space-y-1 sm:px-3 flex flex-col h-full max-w-sm mx-auto" 
+            role="menu"
+            ref={mobileMenuContentRef}
+          >
             {itemsToRender.map((item, idx) => (
               <MobileNavLink
                 key={item.label}
@@ -180,7 +206,6 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
                       ? lastLinkRef
                       : undefined
                 }
-                onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </MobileNavLink>
