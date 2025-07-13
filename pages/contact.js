@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from '../components/ContactForm';
 import Head from 'next/head';
 import Link from 'next/link';
+import Button from '../components/Button';
 
 const ContactPage = () => {
   return (
@@ -32,17 +33,39 @@ const ContactPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-primary-accent-brand mb-4">Contact Us</h1>
-            <p className="text-lg text-text-dark max-w-2xl mx-auto">
-              Have questions about our services or ready to schedule a cleaning? Fill out the form
+            <p className="text-lg text-text-dark max-w-2xl mx-auto mb-6">
+              Have questions about our services or need general information? Fill out the form
               below, and one of our team members will get back to you as soon as possible.
             </p>
+            
+            {/* Quote Request CTA */}
+            <div className="bg-primary-accent-teal/10 border border-primary-accent-teal/20 rounded-lg p-6 max-w-2xl mx-auto mb-8">
+              <h2 className="text-xl font-semibold text-primary-accent-teal mb-3">
+                Looking for a Cleaning Quote?
+              </h2>
+              <p className="text-text-dark mb-4">
+                For personalized cleaning quotes and service requests, please use our dedicated quote form for the fastest response.
+              </p>
+              <Link href="/quote" legacyBehavior>
+                <Button className="inline-flex items-center">
+                  Get Your Quote
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-semibold text-primary-accent-brand mb-2">General Inquiries</h2>
+              <p className="text-text-light">Use this form for questions, feedback, or other non-quote related matters.</p>
+            </div>
             <ContactForm />
           </div>
 
-          <div className="mt-16 max-w-4xl mx-auto bg-background rounded-xl shadow-lg p-8">
+          <div className="mt-16 max-w-4xl mx-auto bg-card-background rounded-xl shadow-lg p-8 border border-card-border">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-2xl font-semibold text-primary-accent-brand mb-4">

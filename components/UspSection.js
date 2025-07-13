@@ -68,14 +68,9 @@ const UspSection = () => {
             </Card>
           ))}
         </div>
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="mt-12 flex justify-center">
           <Link href="/quote" passHref legacyBehavior>
             <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
-          </Link>
-          <Link href="/booking" passHref legacyBehavior>
-            <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
-              Book Your Cleaning
-            </Button>
           </Link>
         </div>
       </div>

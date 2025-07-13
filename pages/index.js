@@ -5,6 +5,8 @@ import ServicesSummary from '../components/ServicesSummary';
 import UspSection from '../components/UspSection';
 // import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
 import ContactForm from '../components/ContactForm';
+import Link from 'next/link';
+import Button from '../components/Button';
 
 export default function Home() {
   return (
@@ -571,24 +573,24 @@ export default function Home() {
               Ready for a peaceful home?
             </h2>
             <p className="text-lg text-text-dark mb-6">
-              Reach out today to request a personalized quote or schedule your first cleaning. Let
+              Reach out today to request a personalized quote for your cleaning needs. Let
               Gathered Roots Cleaning bring a gentle touch to your space and a little more calm to
               your everyday.
             </p>
           </div>
         </section>
-        {/* Contact/Booking Section */}
+        {/* Quote & Contact Section */}
         <section
-          aria-label="Contact or Booking"
+          aria-label="Get Quote or Contact Us"
           className="bg-white py-16 px-4 sm:px-6 lg:px-8 border-t border-borders"
         >
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="text-3xl font-semibold text-primary-accent-cta mb-4 text-left">
-                Contact Us
+                Get Your Quote
               </h2>
               <p className="text-text-light mb-6 text-left">
-                Have a question or ready to book? Fill out the form or reach us directly:
+                Ready for a personalized cleaning quote? Use our quick quote form or reach us directly:
               </p>
               <div className="space-y-2 text-left">
                 <p className="text-lg text-text-light">
@@ -619,7 +621,32 @@ export default function Home() {
               <p className="text-text-light text-sm">Click to call or email on mobile.</p>
             </div>
             <div>
-              <ContactForm />
+              <div className="bg-card-background border border-card-border rounded-lg p-8 shadow-card">
+                <h3 className="text-2xl font-semibold text-primary-accent-cta mb-4 text-center">
+                  What can we help you with?
+                </h3>
+                <div className="space-y-4">
+                  <Link href="/quote" legacyBehavior>
+                    <Button className="w-full text-lg py-4 px-6 flex items-center justify-center group">
+                      <svg className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      Get a Cleaning Quote
+                    </Button>
+                  </Link>
+                  <Link href="/contact" legacyBehavior>
+                    <Button variant="secondary" className="w-full text-lg py-4 px-6 flex items-center justify-center group">
+                      <svg className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.955 8.955 0 01-4.126-.98L3 20l1.98-5.874A8.955 8.955 0 013 12c0-4.418 3.582-8 8-8s8 3.582 8 8z" />
+                      </svg>
+                      General Questions
+                    </Button>
+                  </Link>
+                </div>
+                <p className="text-sm text-text-light text-center mt-6">
+                  For cleaning quotes, use our quick quote form. For other questions, use our contact form.
+                </p>
+              </div>
             </div>
           </div>
         </section>

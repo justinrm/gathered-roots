@@ -59,14 +59,9 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="flex justify-center items-center">
             <Link href="/quote" legacyBehavior>
               <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
-            </Link>
-            <Link href="/booking" legacyBehavior>
-              <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
-                Book Your Cleaning
-              </Button>
             </Link>
           </div>
         </div>
