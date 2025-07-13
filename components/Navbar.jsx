@@ -138,10 +138,21 @@ const Navbar = ({ navItems }) => {
   return (
     <div className="sticky top-2 z-50 w-full flex justify-center pointer-events-none">
       <nav
-        className="pointer-events-auto bg-background/90 backdrop-blur-md shadow-card border border-borders rounded-full max-w-5xl w-[95%] mx-auto px-6 py-2 flex items-center justify-center md:justify-center transition-all duration-300 relative"
+        className="pointer-events-auto bg-background/90 backdrop-blur-md shadow-card border border-borders rounded-full max-w-5xl w-[95%] mx-auto px-6 py-2 flex items-center justify-between md:justify-center transition-all duration-300 relative"
         role="navigation"
         aria-label="Main navigation"
       >
+        {/* Mobile Logo - Left side */}
+        <div className="flex md:hidden">
+          <Link href="/" className="flex items-center">
+            <img
+              src="/images/logo-complete.svg"
+              alt="Gathered Roots Cleaning"
+              className="h-8 w-auto"
+            />
+          </Link>
+        </div>
+
         {/* Desktop Navigation Links - Centered */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex items-baseline space-x-6">
@@ -153,12 +164,12 @@ const Navbar = ({ navItems }) => {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="absolute right-2 flex md:hidden">
+        {/* Mobile Menu Button - Right side */}
+        <div className="flex md:hidden">
           <button
             onClick={toggleMenu}
             type="button"
-            className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            className="bg-[#006978] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-[#3D7B6B] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
           >
@@ -170,6 +181,7 @@ const Navbar = ({ navItems }) => {
             )}
           </button>
         </div>
+
         {/* Add skip link at the top of the nav */}
         <a
           href="#main-content"
