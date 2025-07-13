@@ -8,7 +8,7 @@ const checklistData = [
   {
     room: 'All Rooms',
     items: [
-      'Dust accessible surfaces (including furniture and shelves)',
+      'Dust accessible surfaces (including furniture and shelves, excluding baseboards)',
       'Vacuum carpets and rugs',
       'Sweep and mop hard floors',
       'Empty trash bins and replace liners',

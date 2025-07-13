@@ -59,7 +59,7 @@ export default function TermsOfService() {
                 <strong>Standard cleaning tasks may include:</strong>
               </p>
               <ul className="list-disc list-inside text-text-dark space-y-1 mb-4 ml-4">
-                <li>Dusting furniture, surfaces, and light fixtures</li>
+                <li>Dusting furniture, surfaces, and light fixtures (excluding baseboards)</li>
                 <li>Vacuuming carpets, rugs, and upholstery</li>
                 <li>Sweeping and mopping hard floors</li>
                 <li>Bathroom cleaning (toilets, sinks, tubs, showers, mirrors, floors)</li>
