@@ -115,7 +115,7 @@ const ContactPage = () => {
                   <li>And surrounding areas within a 25km radius</li>
                 </ul>
                 <p className="mt-4 text-text-light">
-                  We provide <strong>residential cleaning services</strong> for all these areas.
+                  We provide <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning services</strong> for all these areas.
                 </p>
                 <p className="mt-4 text-text-light">
                   <Link
