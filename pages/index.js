@@ -4,7 +4,6 @@ import HeroSection from '../components/HeroSection';
 import ServicesSummary from '../components/ServicesSummary';
 import UspSection from '../components/UspSection';
 // import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
-import ContactForm from '../components/ContactForm';
 import Link from 'next/link';
 import Button from '../components/Button';
 
