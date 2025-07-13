@@ -143,17 +143,29 @@ const Navbar = ({ navItems }) => {
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* Mobile Logo - Left side */}
-        <div className="flex md:hidden">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo-complete.svg"
-              alt="Gathered Roots Cleaning"
-              width={200}
-              height={32}
-              className="h-8 w-auto"
-            />
-          </Link>
+        {/* Mobile Navigation - Text and Menu Button */}
+        <div className="flex md:hidden items-center justify-between w-full">
+          <div className="flex items-center space-x-3">
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="bg-[#006978] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-[#3D7B6B] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300"
+              aria-controls="mobile-menu"
+              aria-expanded={isOpen}
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+            <Link href="/" className="flex items-center">
+              <span className="text-[#333333] font-semibold text-lg">
+                Gathered Roots Cleaning
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Desktop Navigation Links - Centered */}
@@ -165,24 +177,6 @@ const Navbar = ({ navItems }) => {
               </NavLink>
             ))}
           </div>
-        </div>
-
-        {/* Mobile Menu Button - Right side */}
-        <div className="flex md:hidden">
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className="bg-[#006978] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 hover:bg-[#3D7B6B] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors duration-300"
-            aria-controls="mobile-menu"
-            aria-expanded={isOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            {isOpen ? (
-              <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
         </div>
 
         {/* Add skip link at the top of the nav */}
