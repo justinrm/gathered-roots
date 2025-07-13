@@ -49,34 +49,241 @@ export default function Services() {
   return (
     <>
       <Head>
-        <title>Our Cleaning Services | Gathered Roots Cleaning</title>
+        <title>Professional Cleaning Services Lewiston ID & Clarkston WA | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Explore our residential cleaning services for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Standard, deep, move-in/move-out, and property management cleaning options."
+          content="Professional residential & commercial cleaning services in Lewiston ID, Clarkston WA. Standard, deep, move-in/out cleaning + property management. Licensed, insured, locally owned."
         />
-        <meta property="og:title" content="Our Cleaning Services | Gathered Roots Cleaning" />
+        <meta
+          name="keywords"
+          content="professional cleaning services Lewiston ID, commercial cleaning Clarkston WA, residential cleaning Lewiston Idaho, property management cleaning, office cleaning Lewiston, house cleaning Clarkston Washington, deep cleaning services, move in move out cleaning"
+        />
+        
+        {/* Geographic Meta Tags */}
+        <meta name="geo.region" content="US-ID" />
+        <meta name="geo.placename" content="Lewiston, Idaho" />
+        <meta name="geo.position" content="46.4165;-117.0177" />
+        <meta name="ICBM" content="46.4165, -117.0177" />
+        
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Professional Cleaning Services Lewiston ID & Clarkston WA | Gathered Roots Cleaning" />
         <meta
           property="og:description"
-          content="Discover our trusted, professional cleaning services including property management and office cleaning. Book your clean or request a quote today!"
+          content="Professional residential & commercial cleaning services in Lewiston ID, Clarkston WA. Standard, deep, move-in/out cleaning + property management. Licensed, insured, locally owned."
         />
-        <link rel="canonical" href="https://www.gatheredrootscleaning.com/services" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/services" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Gathered Roots Cleaning" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Professional Cleaning Services Lewiston ID & Clarkston WA" />
+        <meta name="twitter:description" content="Professional residential & commercial cleaning services in Lewiston ID, Clarkston WA. Licensed, insured, locally owned." />
+        
+        <link rel="canonical" href="https://www.gatheredrootscleaning.com/services" />
 
-        {/* Services page schema */}
+        {/* Enhanced LocalBusiness Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              '@id': 'https://www.gatheredrootscleaning.com',
+              name: 'Gathered Roots Cleaning',
+              description: 'Professional residential and commercial cleaning services in Lewiston ID and Clarkston WA',
+              url: 'https://www.gatheredrootscleaning.com',
+              telephone: '(208) 743-1664',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Serving Lewiston & Clarkston',
+                addressLocality: 'Lewiston',
+                addressRegion: 'ID',
+                postalCode: '83501',
+                addressCountry: 'US'
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 46.4165,
+                longitude: -117.0177
+              },
+              areaServed: [
+                {
+                  '@type': 'City',
+                  name: 'Lewiston',
+                  addressRegion: 'ID',
+                  addressCountry: 'US'
+                },
+                {
+                  '@type': 'City',
+                  name: 'Clarkston',
+                  addressRegion: 'WA',
+                  addressCountry: 'US'
+                },
+                {
+                  '@type': 'City',
+                  name: 'Asotin',
+                  addressRegion: 'WA',
+                  addressCountry: 'US'
+                },
+                {
+                  '@type': 'City',
+                  name: 'Genesee',
+                  addressRegion: 'ID',
+                  addressCountry: 'US'
+                }
+              ],
+              serviceType: [
+                'Residential Cleaning',
+                'Commercial Cleaning',
+                'Property Management Cleaning',
+                'Office Cleaning',
+                'Deep Cleaning',
+                'Move-In/Move-Out Cleaning'
+              ],
+              priceRange: '$$',
+              openingHours: 'Mo-Fr 08:00-17:00',
+              image: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
+              logo: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
+              sameAs: [
+                'https://www.facebook.com/gatheredrootscleaning',
+                'https://www.instagram.com/gatheredrootscleaning'
+              ]
+            }),
+          }}
+        />
+
+        {/* Services Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              name: 'Cleaning Services',
+              description: 'Professional cleaning services offered in Lewiston ID and Clarkston WA',
+              itemListElement: [
+                {
+                  '@type': 'Service',
+                  name: 'Standard Cleaning Service',
+                  description: 'Regular residential and commercial cleaning services in Lewiston ID and Clarkston WA',
+                  provider: {
+                    '@type': 'LocalBusiness',
+                    name: 'Gathered Roots Cleaning',
+                    '@id': 'https://www.gatheredrootscleaning.com'
+                  },
+                  areaServed: [
+                    {
+                      '@type': 'City',
+                      name: 'Lewiston',
+                      addressRegion: 'ID'
+                    },
+                    {
+                      '@type': 'City',
+                      name: 'Clarkston',
+                      addressRegion: 'WA'
+                    }
+                  ],
+                  serviceType: 'Residential Cleaning',
+                  url: 'https://www.gatheredrootscleaning.com/services/standard-clean'
+                },
+                {
+                  '@type': 'Service',
+                  name: 'Deep Cleaning Service',
+                  description: 'Intensive deep cleaning services for homes and businesses in Lewiston ID and Clarkston WA',
+                  provider: {
+                    '@type': 'LocalBusiness',
+                    name: 'Gathered Roots Cleaning',
+                    '@id': 'https://www.gatheredrootscleaning.com'
+                  },
+                  areaServed: [
+                    {
+                      '@type': 'City',
+                      name: 'Lewiston',
+                      addressRegion: 'ID'
+                    },
+                    {
+                      '@type': 'City',
+                      name: 'Clarkston',
+                      addressRegion: 'WA'
+                    }
+                  ],
+                  serviceType: 'Deep Cleaning',
+                  url: 'https://www.gatheredrootscleaning.com/services/deep-clean'
+                },
+                {
+                  '@type': 'Service',
+                  name: 'Move-In/Move-Out Cleaning',
+                  description: 'Professional move-in and move-out cleaning services in Lewiston ID and Clarkston WA',
+                  provider: {
+                    '@type': 'LocalBusiness',
+                    name: 'Gathered Roots Cleaning',
+                    '@id': 'https://www.gatheredrootscleaning.com'
+                  },
+                  areaServed: [
+                    {
+                      '@type': 'City',
+                      name: 'Lewiston',
+                      addressRegion: 'ID'
+                    },
+                    {
+                      '@type': 'City',
+                      name: 'Clarkston',
+                      addressRegion: 'WA'
+                    }
+                  ],
+                  serviceType: 'Move-In/Move-Out Cleaning',
+                  url: 'https://www.gatheredrootscleaning.com/services/move-in-move-out'
+                },
+                {
+                  '@type': 'Service',
+                  name: 'Property Management & Office Cleaning',
+                  description: 'Professional property management and office cleaning services in Lewiston ID and Clarkston WA',
+                  provider: {
+                    '@type': 'LocalBusiness',
+                    name: 'Gathered Roots Cleaning',
+                    '@id': 'https://www.gatheredrootscleaning.com'
+                  },
+                  areaServed: [
+                    {
+                      '@type': 'City',
+                      name: 'Lewiston',
+                      addressRegion: 'ID'
+                    },
+                    {
+                      '@type': 'City',
+                      name: 'Clarkston',
+                      addressRegion: 'WA'
+                    }
+                  ],
+                  serviceType: 'Commercial Cleaning',
+                  url: 'https://www.gatheredrootscleaning.com/services/property-management'
+                }
+              ]
+            }),
+          }}
+        />
+
+        {/* WebPage Schema with Breadcrumbs */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'Our Cleaning Services',
-              description:
-                "Explore Gathered Roots Cleaning's full range of cleaning services: Standard, Deep, Move-In/Out, and Property Management cleaning.",
+              name: 'Professional Cleaning Services Lewiston ID & Clarkston WA',
+              description: 'Professional residential & commercial cleaning services in Lewiston ID, Clarkston WA. Standard, deep, move-in/out cleaning + property management.',
               url: 'https://www.gatheredrootscleaning.com/services',
-              provider: {
+              isPartOf: {
+                '@type': 'WebSite',
+                name: 'Gathered Roots Cleaning',
+                url: 'https://www.gatheredrootscleaning.com'
+              },
+              about: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
-                '@id': 'https://www.gatheredrootscleaning.com',
+                '@id': 'https://www.gatheredrootscleaning.com'
               },
               breadcrumb: {
                 '@type': 'BreadcrumbList',
@@ -85,16 +292,21 @@ export default function Services() {
                     '@type': 'ListItem',
                     position: 1,
                     name: 'Home',
-                    item: 'https://www.gatheredrootscleaning.com',
+                    item: 'https://www.gatheredrootscleaning.com'
                   },
                   {
                     '@type': 'ListItem',
                     position: 2,
                     name: 'Services',
-                    item: 'https://www.gatheredrootscleaning.com/services',
-                  },
-                ],
+                    item: 'https://www.gatheredrootscleaning.com/services'
+                  }
+                ]
               },
+              mainEntity: {
+                '@type': 'LocalBusiness',
+                name: 'Gathered Roots Cleaning',
+                '@id': 'https://www.gatheredrootscleaning.com'
+              }
             }),
           }}
         />

@@ -10,25 +10,32 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{`Gathered Roots Cleaning | Rooted in clean. Driven by care. | Veteran owned, family operated.`}</title>
+        <title>House Cleaning Services Lewiston ID & Clarkston WA | Lewis-Clark Valley | Gathered Roots</title>
         <meta
           name="description"
-          content="Gathered Roots Cleaning offers residential cleaning services for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Trusted professionals, flexible scheduling, and a spotless clean every time. Request a quote today!"
+          content="Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured. Free quotes for residential, move-in/out, and deep cleaning!"
         />
         <link rel="icon" href="/images/favicon.png" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com" />
 
+        {/* Geographic Microdata */}
+        <meta name="geo.region" content="US-ID;US-WA" />
+        <meta name="geo.placename" content="Lewiston, Idaho; Clarkston, Washington" />
+        <meta name="geo.position" content="46.4165;-117.0177" />
+        <meta name="ICBM" content="46.4165, -117.0177" />
+        <meta name="DC.title" content="House Cleaning Services Lewis-Clark Valley Idaho Washington" />
+
         {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="business.business" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com" />
         <meta
           property="og:title"
-          content="Gathered Roots Cleaning | Lewiston & Clarkston Cleaning Services"
+          content="House Cleaning Services Lewiston ID & Clarkston WA | Lewis-Clark Valley"
         />
         <meta
           property="og:description"
-          content="Gathered Roots Cleaning offers premium residential cleaning services for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Veteran owned, family operated."
+          content="Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured."
         />
         <meta
           property="og:image"
@@ -39,6 +46,9 @@ export default function Home() {
           content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning"
         />
         <meta property="og:site_name" content="Gathered Roots Cleaning" />
+        <meta property="og:locality" content="Lewiston" />
+        <meta property="og:region" content="ID" />
+        <meta property="og:country-name" content="USA" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -47,11 +57,11 @@ export default function Home() {
         {/* <meta property="twitter:site" content="@YourTwitterHandle" /> */}
         <meta
           property="twitter:title"
-          content="Gathered Roots Cleaning | Lewiston & Clarkston Cleaning Services"
+          content="House Cleaning Services Lewiston ID & Clarkston WA | Lewis-Clark Valley"
         />
         <meta
           property="twitter:description"
-          content="Gathered Roots Cleaning offers premium cleaning services for homes, property management, and offices in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Licensed, insured, veteran owned, family operated."
+          content="Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured."
         />
         <meta
           property="twitter:image"
@@ -62,39 +72,31 @@ export default function Home() {
           content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning"
         />
 
-        {/* TODO: Implement JSON-LD structured data for LocalBusiness */}
+        {/* Enhanced LocalBusiness Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
+              '@type': 'HomeAndConstructionBusiness',
               '@id': 'https://www.gatheredrootscleaning.com',
               name: 'Gathered Roots Cleaning',
+              alternateName: 'Lewis-Clark Valley Cleaning Services',
               image: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
               logo: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
               url: 'https://www.gatheredrootscleaning.com',
               telephone: '+1-208-717-1192',
               email: 'hello@gatheredrootscleaning.com',
-              address: [
-                {
-                  '@type': 'PostalAddress',
-                  streetAddress: '212 5th Street',
-                  addressLocality: 'Lewiston',
-                  addressRegion: 'ID',
-                  postalCode: '83501',
-                  addressCountry: 'US',
-                },
-                {
-                  '@type': 'PostalAddress',
-                  addressLocality: 'Clarkston',
-                  addressRegion: 'WA',
-                  postalCode: '99403',
-                  addressCountry: 'US',
-                },
-              ],
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '212 5th Street',
+                addressLocality: 'Lewiston',
+                addressRegion: 'ID',
+                postalCode: '83501',
+                addressCountry: 'US',
+              },
               description:
-                'Gathered Roots Cleaning offers premium residential cleaning services for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Veteran owned and family operated.',
+                'Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured.',
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
@@ -115,6 +117,20 @@ export default function Home() {
                 // "https://www.instagram.com/gatheredrootscleaning"
               ],
               priceRange: '$$',
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 46.4165,
+                longitude: -117.0177,
+              },
+              serviceArea: {
+                '@type': 'GeoCircle',
+                geoMidpoint: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 46.4165,
+                  longitude: -117.0177,
+                },
+                geoRadius: '25000',
+              },
               areaServed: [
                 {
                   '@type': 'City',
@@ -123,6 +139,7 @@ export default function Home() {
                     '@type': 'State',
                     name: 'Idaho',
                   },
+                  postalCode: '83501',
                 },
                 {
                   '@type': 'City',
@@ -131,6 +148,7 @@ export default function Home() {
                     '@type': 'State',
                     name: 'Washington',
                   },
+                  postalCode: '99403',
                 },
                 {
                   '@type': 'City',
@@ -147,27 +165,303 @@ export default function Home() {
                     '@type': 'State',
                     name: 'Idaho',
                   },
+                  postalCode: '83540',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Winchester',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho',
+                  },
+                  postalCode: '83555',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Culdesac',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho',
+                  },
+                  postalCode: '83524',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Juliaetta',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho',
+                  },
+                  postalCode: '83535',
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Normal Hill',
+                  containedInPlace: {
+                    '@type': 'City',
+                    name: 'Lewiston',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Orchards',
+                  containedInPlace: {
+                    '@type': 'City',
+                    name: 'Lewiston',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Downtown Lewiston',
+                  containedInPlace: {
+                    '@type': 'City',
+                    name: 'Lewiston',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'West Lewiston',
+                  containedInPlace: {
+                    '@type': 'City',
+                    name: 'Lewiston',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Lewis-Clark Valley',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho',
+                  },
                 },
               ],
               currenciesAccepted: 'USD',
               paymentAccepted: ['Cash', 'Credit Card', 'Check'],
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
-                name: 'Cleaning Services',
+                name: 'Lewis-Clark Valley Cleaning Services',
                 itemListElement: [
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Standard Cleaning',
-                      description: 'Regular maintenance cleaning for homes and offices',
+                      name: 'Residential House Cleaning',
+                      description: 'Professional house cleaning services for homes and apartments in Lewis-Clark Valley',
+                      areaServed: {
+                        '@type': 'GeoCircle',
+                        geoMidpoint: {
+                          '@type': 'GeoCoordinates',
+                          latitude: 46.4165,
+                          longitude: -117.0177,
+                        },
+                        geoRadius: '25000',
+                      },
                     },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Deep Cleaning',
+                      name: 'Deep Cleaning Services',
+                      description: 'Comprehensive top-to-bottom cleaning service for homes in Lewiston ID and Clarkston WA',
+                      areaServed: {
+                        '@type': 'GeoCircle',
+                        geoMidpoint: {
+                          '@type': 'GeoCoordinates',
+                          latitude: 46.4165,
+                          longitude: -117.0177,
+                        },
+                        geoRadius: '25000',
+                      },
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Move-in/Move-out Cleaning',
+                      description: 'Thorough cleaning for moving transitions in Lewis-Clark Valley',
+                      areaServed: {
+                        '@type': 'GeoCircle',
+                        geoMidpoint: {
+                          '@type': 'GeoCoordinates',
+                          latitude: 46.4165,
+                          longitude: -117.0177,
+                        },
+                        geoRadius: '25000',
+                      },
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Property Management Cleaning',
+                      description: 'Professional cleaning services for rental properties and property management companies',
+                      areaServed: {
+                        '@type': 'GeoCircle',
+                        geoMidpoint: {
+                          '@type': 'GeoCoordinates',
+                          latitude: 46.4165,
+                          longitude: -117.0177,
+                        },
+                        geoRadius: '25000',
+                      },
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Office Cleaning Services',
+                      description: 'Professional cleaning services for small offices and commercial spaces',
+                      areaServed: {
+                        '@type': 'GeoCircle',
+                        geoMidpoint: {
+                          '@type': 'GeoCoordinates',
+                          latitude: 46.4165,
+                          longitude: -117.0177,
+                        },
+                        geoRadius: '25000',
+                      },
+                    },
+                  },
+                ],
+              },
+              knowsAbout: [
+                'House Cleaning Lewiston ID',
+                'House Cleaning Clarkston WA',
+                'Lewis-Clark Valley Cleaning Services',
+                'Normal Hill Cleaning',
+                'Orchards Cleaning',
+                'Downtown Lewiston Cleaning',
+                'Snake River Cleaning Services',
+                'Clearwater River Cleaning',
+                'Property Management Cleaning',
+                'Rental Property Cleaning',
+                'Office Cleaning Lewis-Clark Valley',
+                'Deep Cleaning Services',
+                'Move-in Cleaning',
+                'Move-out Cleaning',
+                'Post-construction Cleaning',
+                'Veteran-owned Cleaning Service',
+                'Licensed Cleaning Idaho',
+                'Insured Cleaning Washington',
+                'Eco-friendly Cleaning',
+                'North Central Idaho Cleaning',
+              ],
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '5.0',
+                reviewCount: '1',
+                bestRating: '5',
+                worstRating: '5',
+              },
+            }),
+          }}
+        />
+
+        {/* FAQ Schema for Local Questions */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Do you serve Normal Hill neighborhood in Lewiston?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, we proudly serve Normal Hill and all neighborhoods in Lewiston, ID 83501 including Orchards, Downtown Lewiston, West Lewiston, and surrounding areas.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What areas around Lewiston do you clean?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'We serve the entire Lewis-Clark Valley region including Lewiston ID 83501, Clarkston WA 99403, and surrounding areas within a 25-mile radius including Lapwai, Winchester, Culdesac, Juliaetta, and Asotin.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do you clean for property management companies?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, we provide professional cleaning services for property management companies including rental property cleaning, move-in/move-out cleaning, and regular maintenance cleaning for rental units.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Are you licensed in both Idaho and Washington?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, we are fully licensed and insured to provide cleaning services in both Idaho and Washington, serving customers in Lewiston ID and Clarkston WA.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do you provide office cleaning services?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, we provide professional office cleaning services for small offices, commercial spaces, and medical offices throughout the Lewis-Clark Valley region.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Service-Specific Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfessionalService',
+              '@id': 'https://www.gatheredrootscleaning.com#service',
+              name: 'Lewis-Clark Valley House Cleaning Services',
+              description: 'Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403',
+              serviceType: 'House Cleaning Service',
+              provider: {
+                '@type': 'HomeAndConstructionBusiness',
+                '@id': 'https://www.gatheredrootscleaning.com',
+                name: 'Gathered Roots Cleaning',
+              },
+              areaServed: {
+                '@type': 'GeoCircle',
+                geoMidpoint: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 46.4165,
+                  longitude: -117.0177,
+                },
+                geoRadius: '25000',
+              },
+              availableChannel: {
+                '@type': 'ServiceChannel',
+                serviceUrl: 'https://www.gatheredrootscleaning.com',
+                servicePhone: '+1-208-717-1192',
+                availableLanguage: 'English',
+              },
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'House Cleaning Services',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Standard House Cleaning',
+                      description: 'Regular maintenance cleaning for homes',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Deep House Cleaning',
                       description: 'Comprehensive top-to-bottom cleaning service',
                     },
                   },
@@ -179,34 +473,7 @@ export default function Home() {
                       description: 'Thorough cleaning for moving transitions',
                     },
                   },
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Property Management & Office Cleaning',
-                      description:
-                        'Professional commercial cleaning services for property management and office spaces',
-                    },
-                  },
                 ],
-              },
-              knowsAbout: [
-                'House Cleaning',
-                'Office Cleaning',
-                'Deep Cleaning',
-                'Move-in Cleaning',
-                'Move-out Cleaning',
-                'Property Management Cleaning',
-                'Post-construction Cleaning',
-                'Residential Cleaning',
-                'Commercial Cleaning',
-              ],
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5.0',
-                reviewCount: '1',
-                bestRating: '5',
-                worstRating: '5',
               },
             }),
           }}

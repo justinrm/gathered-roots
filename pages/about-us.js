@@ -10,12 +10,12 @@ export default function AboutUs() {
         <title>{`About Us | Gathered Roots Cleaning Services`}</title>
         <meta
           name="description"
-          content="Learn about Gathered Roots Cleaning: our story, mission, and core values. Discover why we are Lewiston's trusted residential cleaning professionals serving Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
+          content="Learn about Gathered Roots Cleaning: our story, mission, and core values. Discover why we are Lewiston's trusted cleaning professionals serving residential, property management, and office cleaning needs in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
         <meta property="og:title" content="About Us | Gathered Roots Cleaning Services" />
         <meta
           property="og:description"
-          content="Learn about Gathered Roots Cleaning - a veteran-owned, family-operated residential cleaning business serving Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
+          content="Learn about Gathered Roots Cleaning - a veteran-owned, family-operated cleaning business serving residential, property management, and office cleaning needs in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/about-us" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/about-us" />
@@ -29,14 +29,14 @@ export default function AboutUs() {
               '@type': 'AboutPage',
               name: 'About Us',
               description:
-                'Learn about Gathered Roots Cleaning - a veteran-owned, family-operated cleaning business serving the Lewiston-Clarkston area',
+                'Learn about Gathered Roots Cleaning - a veteran-owned, family-operated cleaning business serving residential, property management, and office cleaning needs in the Lewiston-Clarkston area',
               url: 'https://www.gatheredrootscleaning.com/about-us',
               about: {
                 '@type': 'LocalBusiness',
                 '@id': 'https://www.gatheredrootscleaning.com',
                 name: 'Gathered Roots Cleaning',
                 description:
-                  'Veteran-owned, family-operated cleaning business providing professional cleaning services',
+                  'Veteran-owned, family-operated cleaning business providing professional residential, property management, and office cleaning services',
                 foundingDate: '2024',
                 hasCredential: 'Veteran-owned business',
                 additionalProperty: [
@@ -90,9 +90,9 @@ export default function AboutUs() {
                   and attention to the little things that make a big difference.
                 </p>
                 <p className="mb-4">
-                  We proudly provide <strong>residential cleaning services</strong> for families in{' '}
+                  We proudly provide <strong>professional cleaning services</strong> for families, property management companies, and office spaces in{' '}
                   <strong>Lewiston, ID 83501</strong>, <strong>Clarkston, WA 99403</strong>, and
-                  surrounding areas.
+                  surrounding areas. Whether it's your home, rental properties, or office space, we bring the same level of care and attention to every project.
                 </p>
               </div>
             </div>
@@ -102,7 +102,7 @@ export default function AboutUs() {
               </h2>
               <div className="text-center max-w-3xl mx-auto">
                 <p className="text-card-text-secondary text-lg leading-relaxed">
-                  To provide exceptional cleaning services that create peaceful and healthy homes,
+                  To provide exceptional cleaning services that create peaceful and healthy spaces,
                   allowing our clients to reclaim their time and enjoy what matters most.
                 </p>
               </div>
@@ -136,9 +136,9 @@ export default function AboutUs() {
                   Community-Driven
                 </h3>
                 <p className="text-card-text-secondary text-center">
-                  We believe a strong home begins with a strong community. Our work is a reflection
-                  of the care we feel for the families and neighborhoods around us. We are here to
-                  serve not just houses, but the people who make them home.
+                  We believe a strong community begins with well-maintained spaces. Our work is a reflection
+                  of the care we feel for the families, businesses, and neighborhoods around us. We are here to
+                  serve not just homes, but the people and places that make our community thrive.
                 </p>
               </Card>
             </div>

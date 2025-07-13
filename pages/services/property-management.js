@@ -61,64 +61,180 @@ export default function PropertyManagement() {
   return (
     <>
       <Head>
-        <title>Property Management & Office Cleaning Services | Gathered Roots Cleaning</title>
+        <title>Property Management Cleaning Services Lewiston ID 83501 | Rental Property Turnover Cleaning Clarkston WA 99403</title>
         <meta
           name="description"
-          content="Professional cleaning services for property management companies and office spaces in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Licensed and insured in Idaho."
+          content="Professional rental property turnover cleaning and office cleaning for property management companies in Lewiston ID 83501, Clarkston WA 99403. Tenant move-out cleaning, unit preparation, and commercial maintenance cleaning services. Licensed and insured in Idaho."
         />
         <meta
+          name="keywords"
+          content="property management cleaning Lewiston ID, rental property turnover cleaning, tenant move out cleaning 83501, office cleaning Clarkston WA 99403, commercial cleaning services Idaho, property management maintenance cleaning"
+        />
+        <meta name="geo.region" content="US-ID" />
+        <meta name="geo.region" content="US-WA" />
+        <meta name="geo.placename" content="Lewiston, Idaho" />
+        <meta name="geo.placename" content="Clarkston, Washington" />
+        <meta name="geo.position" content="46.4165;-117.0177" />
+        <meta name="ICBM" content="46.4165, -117.0177" />
+        <meta
           property="og:title"
-          content="Property Management & Office Cleaning Services | Gathered Roots Cleaning"
+          content="Property Management Cleaning Services Lewiston ID 83501 | Rental Property Turnover Cleaning"
         />
         <meta
           property="og:description"
-          content="Licensed and insured commercial cleaning services for property management and office spaces. Professional, reliable service in Idaho and Washington."
+          content="Professional rental property turnover cleaning and office cleaning for property management companies in Lewiston ID and Clarkston WA. Licensed and insured commercial cleaning services."
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Property Management Cleaning Services Lewiston ID 83501" />
+        <meta name="twitter:description" content="Professional rental property turnover cleaning and office cleaning for property management companies in Lewiston ID and Clarkston WA." />
         <link
           rel="canonical"
           href="https://www.gatheredrootscleaning.com/services/property-management"
         />
 
-        {/* Service-specific structured data */}
+        {/* Enhanced hyperlocal structured data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Service',
-              name: 'Property Management & Office Cleaning',
+              '@type': ['Service', 'LocalBusiness'],
+              name: 'Property Management Cleaning Services',
+              alternateName: 'Rental Property Turnover Cleaning',
               description:
-                'Professional commercial cleaning services for property management companies and office spaces in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Licensed and insured in Idaho.',
+                'Professional rental property turnover cleaning, tenant move-out cleaning, and office cleaning services for property management companies in Lewiston ID 83501, Clarkston WA 99403, and surrounding areas. Licensed and insured commercial cleaning services in Idaho.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
                 '@id': 'https://www.gatheredrootscleaning.com',
+                url: 'https://www.gatheredrootscleaning.com',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Lewiston',
+                  addressRegion: 'ID',
+                  postalCode: '83501',
+                  addressCountry: 'US',
+                },
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: '46.4165',
+                  longitude: '-117.0177',
+                },
+                telephone: '+1-208-555-0123',
               },
               areaServed: [
                 {
-                  '@type': 'Place',
-                  name: 'Lewiston, ID 83501',
+                  '@type': 'City',
+                  name: 'Lewiston',
+                  addressRegion: 'ID',
+                  postalCode: '83501',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Clarkston',
+                  addressRegion: 'WA',
+                  postalCode: '99403',
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA 99403',
+                  name: 'Nez Perce County, Idaho',
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Asotin County, Washington',
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Lewiston-Clarkston Valley',
                 },
               ],
-              serviceType: 'Commercial Property Management and Office Cleaning',
-              category: 'Property Management & Office Cleaning',
+              serviceType: [
+                'Rental Property Turnover Cleaning',
+                'Tenant Move-Out Cleaning',
+                'Property Management Maintenance Cleaning',
+                'Commercial Office Cleaning',
+                'Unit Preparation Cleaning',
+                'Property Showing Cleaning',
+              ],
+              category: [
+                'Property Management Cleaning',
+                'Rental Property Cleaning',
+                'Commercial Cleaning Services',
+                'Office Cleaning Services',
+              ],
               additionalProperty: [
                 {
                   '@type': 'PropertyValue',
-                  name: 'Insurance Status',
+                  name: 'License Status',
                   value: 'Licensed and insured in Idaho',
                 },
+                {
+                  '@type': 'PropertyValue',
+                  name: 'Business Type',
+                  value: 'Veteran-owned business',
+                },
+                {
+                  '@type': 'PropertyValue',
+                  name: 'Service Area',
+                  value: 'Lewiston ID 83501, Clarkston WA 99403',
+                },
+                {
+                  '@type': 'PropertyValue',
+                  name: 'Bonding Status',
+                  value: 'Bonded for protection',
+                },
               ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Property Management Cleaning Services',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Rental Property Turnover Cleaning',
+                      description: 'Thorough cleaning between tenants for rental properties',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Office Cleaning Services',
+                      description: 'Daily, weekly, or monthly office cleaning',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Property Management Maintenance',
+                      description: 'Regular maintenance cleaning for rental properties',
+                    },
+                  },
+                ],
+              },
               offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description:
-                  'Professional commercial cleaning services for property management and office spaces',
+                description: 'Professional property management and office cleaning services',
+                areaServed: [
+                  {
+                    '@type': 'City',
+                    name: 'Lewiston',
+                    addressRegion: 'ID',
+                    postalCode: '83501',
+                  },
+                  {
+                    '@type': 'City',
+                    name: 'Clarkston',
+                    addressRegion: 'WA',
+                    postalCode: '99403',
+                  },
+                ],
               },
             }),
           }}

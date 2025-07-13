@@ -27,14 +27,14 @@ const serviceAreas = [
     city: 'Lewiston',
     state: 'Idaho',
     description:
-      'Our cherished home base! Nestled between rolling hills and flowing rivers, Gathered Roots Cleaning transforms Lewiston homes into serene sanctuaries. We weave through every corner with care, leaving behind spaces that inspire tranquility and renewal.',
+      'Our cherished home base! Nestled between rolling hills and flowing rivers, Gathered Roots Cleaning transforms Lewiston homes, offices, and rental properties into serene sanctuaries. We weave through every corner with care, leaving behind spaces that inspire tranquility and renewal.',
     coordinates: [46.4165, -117.0177],
   },
   {
     city: 'Clarkston',
     state: 'Washington',
     description:
-      'Just across the river from Lewiston, we provide the same exceptional cleaning services to the Clarkston community with on-time service and attention to detail.',
+      'Just across the river from Lewiston, we provide the same exceptional cleaning services to the Clarkston community—whether residential homes, office spaces, or property management units—with on-time service and attention to detail.',
     coordinates: [46.4127, -117.0454],
   },
 ];
@@ -50,34 +50,67 @@ export default function ServiceAreas() {
   return (
     <>
       <Head>
-        <title>Service Areas | Gathered Roots Cleaning</title>
+        <title>Lewis-Clark Valley Cleaning Services | Lewiston ID & Clarkston WA | Gathered Roots</title>
         <meta
           name="description"
-          content="Gathered Roots Cleaning provides residential and property management cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, Lapwai, ID 83540, Winchester, ID 83555, Culdesac, ID 83524, and Juliaetta, ID 83535. Check if we clean in your area and schedule your service today."
+          content="Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region. Serving Lewiston ID 83501, Clarkston WA 99403, and surrounding North Central Idaho communities within a 25-mile radius. Snake River and Clearwater River area cleaning specialists."
         />
+        <meta name="geo.region" content="US-ID" />
+        <meta name="geo.placename" content="Lewiston, Idaho" />
+        <meta name="geo.position" content="46.4165;-117.0177" />
+        <meta name="ICBM" content="46.4165, -117.0177" />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/service-areas" />
-        <meta property="og:title" content="Service Areas | Gathered Roots Cleaning" />
+        <meta property="og:title" content="Lewis-Clark Valley Cleaning Services | Lewiston ID & Clarkston WA" />
         <meta
           property="og:description"
-          content="Professional residential and property management cleaning services in Lewiston, Idaho, Clarkston, Washington, and surrounding areas including Lapwai, Winchester, Culdesac, and Juliaetta."
+          content="Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region. Serving Lewiston ID, Clarkston WA, and surrounding North Central Idaho communities within a 25-mile radius."
         />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/service-areas" />
+        <meta property="og:type" content="business.business" />
+        <meta property="og:locality" content="Lewiston" />
+        <meta property="og:region" content="ID" />
+        <meta property="og:country-name" content="USA" />
 
-        {/* Service Areas schema for local SEO */}
+        {/* Enhanced Service Areas schema for local SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'Service Areas',
+              name: 'Lewis-Clark Valley Cleaning Services Coverage Area',
               description:
-                'Areas served by Gathered Roots Cleaning including Lewiston, ID 83501, Clarkston, WA 99403, Lapwai, ID 83540, Winchester, ID 83555, Culdesac, ID 83524, and Juliaetta, ID 83535 for residential and property management cleaning services',
+                'Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region including Lewiston ID 83501, Clarkston WA 99403, and surrounding North Central Idaho communities within a 25-mile radius',
               url: 'https://www.gatheredrootscleaning.com/service-areas',
               provider: {
-                '@type': 'LocalBusiness',
-                name: 'Gathered Roots Cleaning',
+                '@type': 'HomeAndConstructionBusiness',
                 '@id': 'https://www.gatheredrootscleaning.com',
+                name: 'Gathered Roots Cleaning',
+                alternateName: 'Lewis-Clark Valley Cleaning Services',
+                description: 'Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region',
+                url: 'https://www.gatheredrootscleaning.com',
+                priceRange: '$$',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Lewiston',
+                  addressRegion: 'ID',
+                  postalCode: '83501',
+                  addressCountry: 'US',
+                },
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 46.4165,
+                  longitude: -117.0177,
+                },
+                serviceArea: {
+                  '@type': 'GeoCircle',
+                  geoMidpoint: {
+                    '@type': 'GeoCoordinates',
+                    latitude: 46.4165,
+                    longitude: -117.0177,
+                  },
+                  geoRadius: '25000',
+                },
                 areaServed: [
                   {
                     '@type': 'City',
@@ -142,6 +175,63 @@ export default function ServiceAreas() {
                     postalCode: '83535',
                   },
                 ],
+                hasOfferCatalog: {
+                  '@type': 'OfferCatalog',
+                  name: 'Lewis-Clark Valley Cleaning Services',
+                  itemListElement: [
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'Residential Cleaning Services',
+                        description: 'Regular, deep, and one-time cleaning for homes and apartments in the Lewis-Clark Valley',
+                        areaServed: {
+                          '@type': 'GeoCircle',
+                          geoMidpoint: {
+                            '@type': 'GeoCoordinates',
+                            latitude: 46.4165,
+                            longitude: -117.0177,
+                          },
+                          geoRadius: '25000',
+                        },
+                      },
+                    },
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'Property Management Cleaning',
+                        description: 'Cleaning services for rental properties, move-in/move-out cleaning, and property management companies',
+                        areaServed: {
+                          '@type': 'GeoCircle',
+                          geoMidpoint: {
+                            '@type': 'GeoCoordinates',
+                            latitude: 46.4165,
+                            longitude: -117.0177,
+                          },
+                          geoRadius: '25000',
+                        },
+                      },
+                    },
+                    {
+                      '@type': 'Offer',
+                      itemOffered: {
+                        '@type': 'Service',
+                        name: 'Office Cleaning Services',
+                        description: 'Professional cleaning services for small offices, commercial spaces, and medical offices',
+                        areaServed: {
+                          '@type': 'GeoCircle',
+                          geoMidpoint: {
+                            '@type': 'GeoCoordinates',
+                            latitude: 46.4165,
+                            longitude: -117.0177,
+                          },
+                          geoRadius: '25000',
+                        },
+                      },
+                    },
+                  ],
+                },
               },
             }),
           }}
@@ -151,15 +241,14 @@ export default function ServiceAreas() {
         <div className="max-w-4xl mx-auto">
           <header className="mb-10 text-center">
             <h1 className="text-4xl sm:text-5xl font-semibold text-primary-accent-teal mb-4">
-              Our Service Areas
+              Lewis-Clark Valley Cleaning Services Coverage Area
             </h1>
             <p className="text-lg text-text-light max-w-2xl mx-auto">
-              Gathered Roots Cleaning is proud to serve residents and businesses in{' '}
-              <strong className="text-primary-accent-green">Lewiston, ID 83501</strong>,{' '}
-              <strong className="text-primary-accent-green">Clarkston, WA 99403</strong>, and{' '}
-              <strong className="text-primary-accent-green">surrounding areas</strong>. We are
-              dedicated to providing top-quality <strong>residential cleaning services</strong> to
-              our local communities.
+              Gathered Roots Cleaning is proud to serve residents and businesses throughout the{' '}
+              <strong className="text-primary-accent-green">Lewis-Clark Valley region</strong>,{' '}
+              <strong className="text-primary-accent-green">North Central Idaho</strong>, and{' '}
+              <strong className="text-primary-accent-green">Snake River communities</strong>. We are
+              dedicated to providing top-quality <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning</strong> within a 25-mile radius of Lewiston, ID 83501.
             </p>
           </header>
 
@@ -232,7 +321,7 @@ export default function ServiceAreas() {
                 <Card className="text-center w-full flex-1 flex flex-col justify-between min-h-[200px]">
                   <p className="text-card-text-secondary mb-2 text-base">{area.description}</p>
                   <p className="text-sm text-card-text-secondary">
-                    Professional cleaning in {area.city}, {area.state}
+                    Professional residential, property management, and office cleaning in {area.city}, {area.state}
                   </p>
                 </Card>
               </div>
@@ -241,11 +330,11 @@ export default function ServiceAreas() {
 
           <div className="mt-12 text-center">
             <h3 className="text-2xl font-semibold text-brand-accent mb-4">
-              Ready for a Cleaner Home?
+              Ready for Professional Cleaning Services?
             </h3>
             <p className="text-text-light mb-6 max-w-xl mx-auto">
-              If you&apos;re in Lewiston, ID 83501, Clarkston, WA 99403, or the surrounding areas
-              and looking for reliable, high-quality cleaning services, Gathered Roots Cleaning is
+              If you&apos;re in the Lewis-Clark Valley region, North Central Idaho, or anywhere within our 25-mile service radius
+              and looking for reliable, high-quality cleaning services for your home, office, or rental property, Gathered Roots Cleaning is
               here to help.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -273,7 +362,7 @@ export default function ServiceAreas() {
 
           <div className="mt-6 text-center">
             <h3 className="text-xl font-semibold text-primary-accent-green mb-2">
-              Service Area Zip Codes
+              Lewis-Clark Valley Service Area Zip Codes
             </h3>
             <ul className="inline-block text-text-dark">
               <li>
@@ -299,8 +388,7 @@ export default function ServiceAreas() {
 
           <div className="mt-6 text-center">
             <p className="text-text-light">
-              We provide <strong>residential cleaning services</strong> and{' '}
-              <strong>property management cleaning</strong> for homes and properties in Lewiston, ID{' '}
+              We provide <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning</strong> for homes, offices, and rental properties throughout the Lewis-Clark Valley region including Lewiston, ID{' '}
               <strong>83501</strong>, Clarkston, WA <strong>99403</strong>, Lapwai, ID{' '}
               <strong>83540</strong>, Winchester, ID <strong>83555</strong>, Culdesac, ID{' '}
               <strong>83524</strong>, and Juliaetta, ID <strong>83535</strong>.
