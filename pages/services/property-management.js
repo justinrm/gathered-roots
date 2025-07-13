@@ -64,7 +64,7 @@ export default function PropertyManagement() {
         <title>Property Management & Office Cleaning Services | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Professional cleaning services for property management companies and office spaces in Lewiston, ID 83501 and Clarkston, WA 99403. Licensed and insured in Idaho."
+          content="Professional cleaning services for property management companies and office spaces in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Licensed and insured in Idaho."
         />
         <meta
           property="og:title"
@@ -88,7 +88,7 @@ export default function PropertyManagement() {
               '@type': 'Service',
               name: 'Property Management & Office Cleaning',
               description:
-                'Professional commercial cleaning services for property management companies and office spaces in Lewiston, ID 83501 and Clarkston, WA 99403. Licensed and insured in Idaho.',
+                'Professional commercial cleaning services for property management companies and office spaces in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Licensed and insured in Idaho.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
@@ -147,8 +147,8 @@ export default function PropertyManagement() {
                 cleaning solutions that maintain your professional image.
                 <br />
                 <span className="block mt-2">
-                  Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA{' '}
-                  <strong>99403</strong>.
+                  Serving Lewiston, ID <strong>83501</strong>, Clarkston, WA <strong>99403</strong>,
+                  and surrounding areas.
                 </span>
               </p>
             </div>

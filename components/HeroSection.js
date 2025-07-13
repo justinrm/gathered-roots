@@ -9,58 +9,33 @@ const HeroSection = () => {
       {/* Hero Content Container */}
       <div className="relative z-10">
         {/* Top section with logo and hero image */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[40vh] py-3 px-4 sm:px-6 lg:px-8">
-          {/* Left column - Content */}
-          <div className="text-center lg:text-left order-1 lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[32vh] py-4 px-4 sm:px-6 lg:px-8">
+          {/* Left column - Logo */}
+          <div className="text-center lg:text-left order-1 lg:order-1 flex items-center justify-center lg:justify-start">
             {/* Logo - now displayed prominently and larger */}
-            <div className="mb-4 flex justify-center lg:justify-start">
+            <div className="flex justify-center lg:justify-start">
               <Image
                 src="/images/logo-complete.svg"
                 alt="Gathered Roots Cleaning Complete Logo"
                 width={800}
                 height={506}
-                className="h-[26rem] sm:h-[32rem] lg:h-[40rem] w-auto object-contain max-w-full"
+                className="w-full h-auto object-contain max-w-full"
               />
-            </div>
-
-            {/* Descriptive text */}
-            <p className="text-lg sm:text-xl text-text-dark mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              At Gathered Roots Cleaning, we tend to your home the way one might care for an old
-              garden or a well-loved heirloom. Our services are thoughtfully shaped to bring back
-              the stillness of early mornings, the comfort of sun-warmed floors, and the quiet pride
-              of a home kept with love.
-            </p>
-
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg text-text-light mb-8 font-medium">
-              Veteran owned, family operated. Serving Lewiston, ID & Clarkston, WA.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center">
-              <Link href="/quote" legacyBehavior>
-                <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
-              </Link>
-              <Link href="/booking" legacyBehavior>
-                <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
-                  Book Your Cleaning
-                </Button>
-              </Link>
             </div>
           </div>
 
           {/* Right column - Hero Image */}
-          <div className="order-2 lg:order-2">
+          <div className="order-2 lg:order-2 flex items-center justify-center">
             <div className="relative">
               {/* Hero Image - no logo overlay */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/hero-clean-home.jpg"
+                  src="/portfolio/portfolio-24.jpg"
                   alt="Beautiful, sparkling clean living room showcasing professional cleaning results"
                   width={800}
                   height={600}
                   priority
-                  className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover"
+                  className="w-full h-auto object-contain"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
                 />
 
@@ -68,6 +43,31 @@ const HeroSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-accent-teal/10 to-transparent"></div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Centered content below logo and image */}
+        <div className="text-center px-4 sm:px-6 lg:px-8 pt-4 pb-8">
+          {/* Descriptive text */}
+          <p className="text-lg sm:text-xl text-text-dark mb-10 max-w-4xl mx-auto leading-relaxed">
+            At Gathered Roots Cleaning, we bring peace of mind to your home with our comprehensive
+            cleaning services. From standard maintenance cleanings to deep cleans, move-in/move-out
+            services, and property management solutions, we serve Lewiston, ID, Clarkston, WA, and
+            surrounding areas with the care your home deserves. We are fully licensed in Idaho and
+            carry liability insurance, so you can trust us to protect both your space and your peace
+            of mind.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <Link href="/quote" legacyBehavior>
+              <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
+            </Link>
+            <Link href="/booking" legacyBehavior>
+              <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
+                Book Your Cleaning
+              </Button>
+            </Link>
           </div>
         </div>
 

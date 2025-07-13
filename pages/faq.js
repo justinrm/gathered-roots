@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'What areas do you serve?',
     answer:
-      'We serve Lewiston (ID), Clarkston (WA), and surrounding areas. See our Service Areas page for details.',
+      'We serve Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. See our Service Areas page for details.',
   },
   {
     question: 'How do I pay for my cleaning?',
@@ -52,7 +52,7 @@ const faqs = [
   {
     question: 'Do you serve my zip code?',
     answer:
-      'We provide residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403, as well as surrounding areas. If you are nearby, contact us to confirm service availability.',
+      'We provide residential cleaning services for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. If you are nearby, contact us to confirm service availability.',
   },
 ];
 
@@ -63,13 +63,13 @@ export default function FAQ() {
         <title>FAQ - Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Find answers to common questions about Gathered Roots Cleaning's residential cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403."
+          content="Find answers to common questions about Gathered Roots Cleaning's residential cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/faq" />
         <meta property="og:title" content="FAQ - Gathered Roots Cleaning" />
         <meta
           property="og:description"
-          content="Find answers to common questions about Gathered Roots Cleaning's residential cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403."
+          content="Find answers to common questions about Gathered Roots Cleaning's residential cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
 
         {/* FAQ Schema for rich snippets */}
@@ -98,8 +98,9 @@ export default function FAQ() {
           </h1>
           <p className="text-lg text-text-light mb-8">
             Find answers to common questions below about our{' '}
-            <strong>residential cleaning services</strong> in <strong>Lewiston, ID 83501</strong>{' '}
-            and <strong>Clarkston, WA 99403</strong>. If you don&apos;t see your question, please{' '}
+            <strong>residential cleaning services</strong> in <strong>Lewiston, ID 83501</strong>,{' '}
+            <strong>Clarkston, WA 99403</strong>, and surrounding areas. If you don&apos;t see your
+            question, please{' '}
             <Link
               href="/contact"
               className="text-primary-accent-cta underline hover:text-secondary-accent-hover"

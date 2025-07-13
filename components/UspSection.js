@@ -39,7 +39,7 @@ const usps = [
     id: 3,
     title: 'Licensed and Insured',
     description:
-      "Clean with confidence knowing we carry $1 million in liability insurance for your complete peace of mind. We're fully licensed and insured, so you can relax while we take care of your home.",
+      "Clean with confidence knowing we carry liability insurance for your complete peace of mind. We're fully licensed and insured, so you can relax while we take care of your home.",
     icon: <CheckCircleIcon className="w-full h-full" />,
   },
 ];

@@ -89,7 +89,7 @@ export default function DeepClean() {
         <title>Deep Clean | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Our Deep Clean service tackles every corner for a truly spotless space. Residential cleaning services for Lewiston, ID 83501 and Clarkston, WA 99403. See what's included and book your deep clean today!"
+          content="Our Deep Clean service tackles every corner for a truly spotless space. Residential cleaning services for Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. See what's included and book your deep clean today!"
         />
         <meta property="og:title" content="Deep Clean | Gathered Roots Cleaning" />
         <meta
@@ -107,7 +107,7 @@ export default function DeepClean() {
               '@type': 'Service',
               name: 'Deep Clean',
               description:
-                'Comprehensive top-to-bottom residential cleaning service for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for first-time cleans, spring cleaning, or special occasions.',
+                'Comprehensive top-to-bottom residential cleaning service for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Perfect for first-time cleans, spring cleaning, or special occasions.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
@@ -158,8 +158,8 @@ export default function DeepClean() {
                 Cleaning tasks, plus the detailed items listed below.
                 <br />
                 <span className="block mt-2">
-                  Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA{' '}
-                  <strong>99403</strong>.
+                  Serving Lewiston, ID <strong>83501</strong>, Clarkston, WA <strong>99403</strong>,
+                  and surrounding areas.
                 </span>
               </p>
             </div>

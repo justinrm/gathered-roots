@@ -122,7 +122,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-background p-8 rounded-xl shadow-2xl max-w-xl mx-auto space-y-6"
+      className="bg-background pb-8 px-8 rounded-xl shadow-2xl max-w-xl mx-auto space-y-6"
       noValidate
     >
       {apiError && (

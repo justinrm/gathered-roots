@@ -102,7 +102,7 @@ export default function MoveInMoveOut() {
         <title>Move-In/Move-Out Cleaning | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Make your move stress-free with our thorough Move-In/Move-Out residential cleaning services. Serving Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for landlords, tenants, and homeowners."
+          content="Make your move stress-free with our thorough Move-In/Move-Out residential cleaning services. Serving Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Perfect for landlords, tenants, and homeowners."
         />
         <meta property="og:title" content="Move-In/Move-Out Cleaning | Gathered Roots Cleaning" />
         <meta
@@ -123,7 +123,7 @@ export default function MoveInMoveOut() {
               '@type': 'Service',
               name: 'Move-In/Move-Out Cleaning',
               description:
-                'Thorough move-in/move-out residential cleaning service for Lewiston, ID 83501 and Clarkston, WA 99403. Perfect for landlords, tenants, and homeowners during transitions.',
+                'Thorough move-in/move-out residential cleaning service for Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Perfect for landlords, tenants, and homeowners during transitions.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
@@ -176,8 +176,8 @@ export default function MoveInMoveOut() {
                 Cleaning tasks, plus additional move-in/move-out specific services.
                 <br />
                 <span className="block mt-2">
-                  Serving Lewiston, ID <strong>83501</strong> and Clarkston, WA{' '}
-                  <strong>99403</strong>.
+                  Serving Lewiston, ID <strong>83501</strong>, Clarkston, WA <strong>99403</strong>,
+                  and surrounding areas.
                 </span>
               </p>
             </div>

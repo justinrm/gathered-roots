@@ -27,7 +27,7 @@ const MobileNavLink = React.forwardRef(({ href, children }, ref) => {
 });
 MobileNavLink.displayName = 'MobileNavLink';
 
-const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
+const Navbar = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const mobileMenuRef = useRef(null);
   const mobileMenuContentRef = useRef(null);
@@ -75,7 +75,11 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
     const handleClickOutside = (e) => {
       // Check if click is on a navigation link - let it navigate first
       const navLink = e.target.closest('a[href]');
-      if (navLink && mobileMenuContentRef.current && mobileMenuContentRef.current.contains(navLink)) {
+      if (
+        navLink &&
+        mobileMenuContentRef.current &&
+        mobileMenuContentRef.current.contains(navLink)
+      ) {
         // Don't close the menu immediately for navigation links
         // The menu will close on route change via the router event listener
         return;
@@ -86,7 +90,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
         setIsOpen(false);
         return;
       }
-      
+
       // Check if click is outside the menu content area
       if (mobileMenuContentRef.current && !mobileMenuContentRef.current.contains(e.target)) {
         // Also check if we clicked on the hamburger button
@@ -99,7 +103,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('click', handleClickOutside);
-    
+
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('click', handleClickOutside);
@@ -132,22 +136,15 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
   };
 
   return (
-    <div className="sticky top-4 z-50 w-full flex justify-center pointer-events-none">
+    <div className="sticky top-2 z-50 w-full flex justify-center pointer-events-none">
       <nav
-        className="pointer-events-auto bg-background/90 backdrop-blur-md shadow-card border border-borders rounded-full max-w-5xl w-[95%] mx-auto px-6 py-2 flex items-center justify-between transition-all duration-300"
+        className="pointer-events-auto bg-background/90 backdrop-blur-md shadow-card border border-borders rounded-full max-w-5xl w-[95%] mx-auto px-6 py-2 flex items-center justify-center md:justify-center transition-all duration-300 relative"
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* Logo/Brand Name */}
-        <div className="flex-shrink-0">
-          <Link href="/" className="text-2xl font-bold text-[#333333]">
-            {logoText}
-          </Link>
-        </div>
-
-        {/* Desktop Navigation Links */}
-        <div className="hidden md:block">
-          <div className="ml-10 flex items-baseline space-x-4">
+        {/* Desktop Navigation Links - Centered */}
+        <div className="hidden md:flex flex-1 justify-center">
+          <div className="flex items-baseline space-x-6">
             {itemsToRender.map((item) => (
               <NavLink key={item.label} href={item.href}>
                 {item.label}
@@ -157,7 +154,7 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="-mr-2 flex md:hidden">
+        <div className="absolute right-2 flex md:hidden">
           <button
             onClick={toggleMenu}
             type="button"
@@ -190,8 +187,8 @@ const Navbar = ({ logoText = 'Gathered Roots Cleaning', navItems }) => {
           aria-modal="true"
           ref={mobileMenuRef}
         >
-          <div 
-            className="px-2 pt-16 pb-3 space-y-1 sm:px-3 flex flex-col h-full max-w-sm mx-auto" 
+          <div
+            className="px-2 pt-16 pb-3 space-y-1 sm:px-3 flex flex-col h-full max-w-sm mx-auto"
             role="menu"
             ref={mobileMenuContentRef}
           >
@@ -234,7 +231,7 @@ const customNavItems = [
 ];
 
 const App = () => (
-  <Navbar logoText="My Site" navItems={customNavItems} />
+  <Navbar navItems={customNavItems} />
   // Or use default items:
   // <Navbar />
 );

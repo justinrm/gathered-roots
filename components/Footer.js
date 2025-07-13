@@ -11,7 +11,7 @@ export default function Footer() {
             {new Date().getFullYear()}
           </p>
           <p className="text-sm text-text-light mt-1">
-            Serving Lewiston, ID & Clarkston, WA
+            Serving Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> | </span>
             <a
@@ -29,7 +29,14 @@ export default function Footer() {
               hello@gatheredrootscleaning.com
             </a>
           </p>
-          <p className="text-xs text-text-light mt-2">Website &copy; Justin R. Merwin</p>
+          <p className="text-xs text-text-light mt-2">
+            <a
+              href="mailto:justin.r.merwin@outlook.com"
+              className="hover:text-primary-accent-teal transition-colors duration-200"
+            >
+              Website &copy; Justin R. Merwin
+            </a>
+          </p>
         </div>
         <div className="pt-1 space-x-3">
           <Link

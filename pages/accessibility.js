@@ -23,9 +23,9 @@ export default function AccessibilityStatement() {
           </h1>
           <p className="text-text-light mb-6">
             Gathered Roots Cleaning is committed to ensuring that our website is accessible to
-            everyone, including people with disabilities. We serve Lewiston, ID 83501 and Clarkston,
-            WA 99403. We strive to provide an inclusive digital experience that allows all users to
-            access our services easily and effectively.
+            everyone, including people with disabilities. We serve Lewiston, ID 83501, Clarkston, WA
+            99403, and surrounding areas. We strive to provide an inclusive digital experience that
+            allows all users to access our services easily and effectively.
           </p>
 
           <section className="mb-6">

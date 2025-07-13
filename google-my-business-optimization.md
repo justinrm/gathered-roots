@@ -20,7 +20,7 @@
 
 ### Business Description (750 characters max)
 
-"Gathered Roots Cleaning provides professional house cleaning services in Lewiston, ID and Clarkston, WA. Veteran-owned and family-operated, we specialize in standard cleaning, deep cleaning, move-in/move-out services, and eco-friendly cleaning options. Serving Normal Hill, Orchards, Downtown Lewiston, and surrounding areas with reliable, thorough cleaning services."
+"Gathered Roots Cleaning provides professional house cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Veteran-owned and family-operated, we specialize in standard cleaning, deep cleaning, move-in/move-out services, and eco-friendly cleaning options. Serving Normal Hill, Orchards, Downtown Lewiston, and surrounding areas with reliable, thorough cleaning services."
 
 ### Services to Add
 

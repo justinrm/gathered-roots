@@ -9,12 +9,12 @@ export default function Portfolio() {
         <title>Portfolio | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Browse our portfolio gallery showcasing real cleaning results from Gathered Roots Cleaning. See the quality of our work throughout Lewiston, ID and Clarkston, WA."
+          content="Browse our portfolio gallery showcasing real cleaning results from Gathered Roots Cleaning. See the quality of our work throughout Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
         <meta property="og:title" content="Portfolio | Gathered Roots Cleaning" />
         <meta
           property="og:description"
-          content="Browse our portfolio gallery showcasing real cleaning results from Gathered Roots Cleaning. See the quality of our work throughout Lewiston, ID and Clarkston, WA."
+          content="Browse our portfolio gallery showcasing real cleaning results from Gathered Roots Cleaning. See the quality of our work throughout Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
       </Head>
       <main id="main-content" className="bg-background min-h-screen py-12 px-4 sm:px-6 lg:px-8">

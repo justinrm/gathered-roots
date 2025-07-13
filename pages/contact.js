@@ -10,12 +10,12 @@ const ContactPage = () => {
         <title>Contact Us | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Contact Gathered Roots Cleaning for reliable, professional residential cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403. Request a quote or schedule a service today."
+          content="Contact Gathered Roots Cleaning for reliable, professional residential cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Request a quote or schedule a service today."
         />
         <meta property="og:title" content="Contact Us | Gathered Roots Cleaning" />
         <meta
           property="og:description"
-          content="Get in touch with Gathered Roots Cleaning - Lewiston and Clarkston's trusted cleaning service. Request a quote, ask questions, or schedule your service."
+          content="Get in touch with Gathered Roots Cleaning - Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas' trusted cleaning service. Request a quote, ask questions, or schedule your service."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gatheredrootscleaning.com/contact" />
@@ -76,10 +76,10 @@ const ContactPage = () => {
                 <p className="text-text-light mb-4">We provide cleaning services throughout:</p>
                 <ul className="list-disc pl-5 text-text-light space-y-1">
                   <li>
-                    <strong>Lewiston, Idaho (83501)</strong> - Our cherished home base!
+                    <strong>Lewiston, ID 83501</strong> - Our cherished home base!
                   </li>
                   <li>
-                    <strong>Clarkston, Washington (99403)</strong> - Just across the river
+                    <strong>Clarkston, WA 99403</strong> - Just across the river
                   </li>
                   <li>And surrounding areas within a 25km radius</li>
                 </ul>

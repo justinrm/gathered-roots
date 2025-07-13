@@ -52,7 +52,7 @@ export default function Services() {
         <title>Our Cleaning Services | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Explore our residential cleaning services for homes in Lewiston, ID 83501 and Clarkston, WA 99403. Standard, deep, move-in/move-out, and property management cleaning options."
+          content="Explore our residential cleaning services for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Standard, deep, move-in/move-out, and property management cleaning options."
         />
         <meta property="og:title" content="Our Cleaning Services | Gathered Roots Cleaning" />
         <meta
@@ -169,9 +169,9 @@ export default function Services() {
                 </div>
                 <div className="md:w-1/2">
                   <Image
-                    src="/images/clean-home.jpg"
+                    src="/portfolio/portfolio-18.jpg"
                     alt="Beautifully cleaned home interior"
-                    className="rounded-lg shadow-md w-full h-auto object-cover"
+                    className="rounded-lg shadow-md w-full h-auto object-contain"
                     width={600}
                     height={400}
                     quality={75}
@@ -184,9 +184,10 @@ export default function Services() {
 
         <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-text-light mb-4">
-            We proudly provide <strong>residential cleaning services</strong> for homes in{' '}
-            <strong>Lewiston, Idaho (83501)</strong> and{' '}
-            <strong>Clarkston, Washington (99403)</strong>.
+            We proudly provide <strong>residential cleaning services</strong> for homes, as well as{' '}
+            <strong>property management and office space cleaning</strong> in{' '}
+            <strong>Lewiston, ID 83501</strong>, <strong>Clarkston, WA 99403</strong>, and
+            surrounding areas.
           </p>
         </section>
       </main>

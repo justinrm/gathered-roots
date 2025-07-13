@@ -124,8 +124,8 @@ export default function LewistonCleaningServices() {
               neighborhoods. Veteran-owned, licensed and insured with a personal touch.
               <br />
               <span className="block mt-2">
-                Serving Lewiston, ID <strong>83501</strong>. For Clarkston, WA{' '}
-                <strong>99403</strong>, see our{' '}
+                Serving Lewiston, ID <strong>83501</strong>, Clarkston, WA <strong>99403</strong>,
+                and surrounding areas. For Clarkston-specific information, see our{' '}
                 <Link href="/clarkston-wa-cleaning-services" className="underline text-white">
                   Clarkston page
                 </Link>
@@ -350,8 +350,8 @@ export default function LewistonCleaningServices() {
         <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-text-light mb-4">
             We provide <strong>residential cleaning services</strong> for homes in{' '}
-            <strong>Lewiston, Idaho (83501)</strong> and{' '}
-            <strong>Clarkston, Washington (99403)</strong>.
+            <strong>Lewiston, ID 83501</strong>, <strong>Clarkston, WA 99403</strong>, and
+            surrounding areas.
           </p>
         </section>
       </main>

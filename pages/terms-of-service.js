@@ -28,9 +28,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-medium text-primary-accent-green mb-2 font-headings">
               Gathered Roots Cleaning
             </h2>
-            <p className="text-text-light text-lg">
-              Effective Date: {new Date().toLocaleDateString('en-US')}
-            </p>
+            <p className="text-text-light text-lg">Effective Date: 7/01/2025</p>
             <p className="text-text-dark mt-4 max-w-2xl mx-auto">
               By scheduling and receiving services from Gathered Roots Cleaning, you agree to the
               following terms and conditions:
@@ -45,11 +43,27 @@ export default function TermsOfService() {
                 1. Scope of Services
               </h3>
               <p className="text-text-dark mb-4">
-                We will provide residential house cleaning services as discussed and agreed upon for
-                homes in Lewiston, ID 83501 and Clarkston, WA 99403. This may include tasks such as
-                dusting, vacuuming, mopping, bathroom and kitchen cleaning, and general surface
-                tidying.
+                We will provide residential, property management, and office cleaning services as
+                discussed and agreed upon for homes, offices, and commercial properties in Lewiston,
+                ID 83501, Clarkston, WA 99403, and surrounding areas.
               </p>
+              <p className="text-text-dark mb-4">
+                <strong>Standard cleaning tasks may include:</strong>
+              </p>
+              <ul className="list-disc list-inside text-text-dark space-y-1 mb-4 ml-4">
+                <li>Dusting furniture, surfaces, baseboards, and light fixtures</li>
+                <li>Vacuuming carpets, rugs, and upholstery</li>
+                <li>Sweeping and mopping hard floors</li>
+                <li>Bathroom cleaning (toilets, sinks, tubs, showers, mirrors, floors)</li>
+                <li>Kitchen cleaning (countertops, sinks, stovetops, exteriors of appliances)</li>
+                <li>Trash removal and liner replacement</li>
+                <li>Window sill cleaning and interior window cleaning</li>
+                <li>General surface sanitization and tidying</li>
+                <li>
+                  Office-specific tasks (desk cleaning, conference room maintenance, break room
+                  cleaning)
+                </li>
+              </ul>
               <p className="text-text-dark">
                 <strong>Specialty services</strong> (e.g., deep cleans, move-out services) must be
                 scheduled in advance and may incur additional charges.
@@ -66,8 +80,8 @@ export default function TermsOfService() {
                 Cleaning, unless otherwise agreed upon.
               </p>
               <p className="text-text-dark">
-                If the client prefers specific products, they must be supplied by the client and
-                discussed in advance.
+                If the client prefers specific products, we can procure them if reasonable in cost,
+                or they must be supplied by the client and discussed in advance.
               </p>
             </Card>
 
@@ -165,11 +179,20 @@ export default function TermsOfService() {
                 6. Client Responsibilities
               </h3>
               <p className="text-text-dark mb-4">
-                Clients are expected to pick up personal items prior to service.
+                Clients are expected to pick up personal items and valuables prior to service.
+              </p>
+              <p className="text-text-dark mb-4">
+                Please secure pets or inform us of them. We love the furry friends, and
+                introductions go a long way!
+              </p>
+              <p className="text-text-dark mb-4">
+                Please notify the cleaner of any safety hazards, broken fixtures, or special
+                instructions.
               </p>
               <p className="text-text-dark">
-                Please secure pets and notify the cleaner of any safety hazards, broken fixtures, or
-                special instructions.
+                Ensure access to all cleaning areas and that the home temperature is below 75°F.
+                Maintain the home between cleanings to avoid excessive mess. Additional fees may
+                apply for extreme messes.
               </p>
             </Card>
 
@@ -186,7 +209,7 @@ export default function TermsOfService() {
                 <p className="text-green-800 font-medium mb-2">Insurance Protection:</p>
                 <p className="text-green-700 mb-2">
                   Gathered Roots Cleaning is a licensed business in Idaho and carries liability
-                  insurance coverage up to $1,000,000.
+                  insurance coverage.
                 </p>
                 <p className="text-green-700">
                   This coverage protects both our clients and our business in the unlikely event of
@@ -286,7 +309,70 @@ export default function TermsOfService() {
             {/* Rescheduling Due to Weather or Emergency */}
             <Card className="lg:col-span-2">
               <h3 className="text-2xl font-semibold text-primary-accent-green mb-4 font-headings">
-                11. Rescheduling Due to Weather or Emergency
+                11. Biohazard Fee
+              </h3>
+              <p className="text-text-dark mb-4">
+                At Gathered Roots Cleaning, the health and safety of our team is a priority. A $50
+                biohazard cleaning fee will be applied when cleaning involves small biohazard
+                situations, including but not limited to:
+              </p>
+              <ul className="list-disc list-inside text-text-dark space-y-2 mb-4">
+                <li>Bodily fluids (human or pet)</li>
+                <li>Feces or urine</li>
+                <li>Vomit</li>
+                <li>Blood</li>
+                <li>Rodent or pest droppings (e.g., mouse droppings)</li>
+                <li>Other hazardous materials requiring additional safety measures</li>
+              </ul>
+              <p className="text-text-dark mb-4">
+                This fee helps cover the cost of personal protective equipment, disinfectants, and
+                the extra time and care needed to clean and sanitize the affected area.
+              </p>
+              <p className="text-text-dark">
+                If the issue is larger in scope or requires professional remediation, we reserve the
+                right to decline service and refer you to a qualified specialty cleanup provider.
+              </p>
+            </Card>
+
+            {/* Excessive Trash or Debris */}
+            <Card className="lg:col-span-2">
+              <h3 className="text-2xl font-semibold text-primary-accent-green mb-4 font-headings">
+                12. Excessive Trash or Debris
+              </h3>
+              <p className="text-text-dark mb-4">
+                To ensure efficient cleaning service, clients are expected to maintain reasonable
+                tidiness between cleanings. An additional fee applies when excessive clutter or
+                debris requires removal before cleaning can begin.
+              </p>
+
+              <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg text-center mb-4">
+                <p className="text-yellow-800 font-medium mb-2">Excessive Cleanup Fee</p>
+                <p className="text-3xl font-bold text-yellow-700 mb-2">$50</p>
+                <p className="text-yellow-700">
+                  Applied when decluttering is required before cleaning
+                </p>
+              </div>
+
+              <p className="text-text-dark mb-4">
+                <strong>This fee may apply to situations including:</strong>
+              </p>
+              <ul className="list-disc list-inside text-text-dark space-y-1 mb-4 ml-4">
+                <li>Excessive personal items covering surfaces that need cleaning</li>
+                <li>Large amounts of trash or debris throughout the home</li>
+                <li>Clutter that prevents access to cleaning areas</li>
+                <li>Items that require significant time to move before cleaning can begin</li>
+              </ul>
+
+              <p className="text-text-dark">
+                This fee helps cover the additional time and effort required to prepare the space
+                for proper cleaning service.
+              </p>
+            </Card>
+
+            {/* Rescheduling Due to Weather or Emergency */}
+            <Card className="lg:col-span-2">
+              <h3 className="text-2xl font-semibold text-primary-accent-green mb-4 font-headings">
+                13. Rescheduling Due to Weather or Emergency
               </h3>
               <p className="text-text-dark mb-4">
                 In the event of extreme weather, personal illness, or emergency, Gathered Roots
@@ -301,6 +387,21 @@ export default function TermsOfService() {
                   Applied to rescheduled cleaning only as a thank-you for your flexibility
                 </p>
               </div>
+            </Card>
+
+            {/* Veteran Discount */}
+            <Card className="lg:col-span-2">
+              <h3 className="text-2xl font-semibold text-primary-accent-green mb-4 font-headings">
+                14. Veteran Discount
+              </h3>
+              <div className="bg-blue-50 border border-blue-200 p-4 rounded-lg text-center mb-4">
+                <p className="text-blue-800 font-medium mb-2">Thank You for Your Service</p>
+                <p className="text-3xl font-bold text-blue-700 mb-2">25% OFF</p>
+                <p className="text-blue-700">Available for all veterans</p>
+              </div>
+              <p className="text-text-dark">
+                We offer a 25% discount for veterans. Please mention your status when booking.
+              </p>
             </Card>
           </div>
 

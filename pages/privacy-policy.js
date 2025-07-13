@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
           <h1 className="text-4xl font-semibold text-primary-accent-teal mb-6">Privacy Policy</h1>
           <p className="text-text-light mb-4">
             This privacy policy applies to all users of Gathered Roots Cleaning&apos;s residential
-            cleaning services in Lewiston, ID 83501 and Clarkston, WA 99403.
+            cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas.
           </p>
           <p className="text-text-light mb-6">
             This Privacy Policy explains how Gathered Roots Cleaning (&quot;we&quot;,
