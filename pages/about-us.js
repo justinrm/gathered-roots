@@ -92,7 +92,7 @@ export default function AboutUs() {
                 <p className="mb-4">
                   We proudly provide <strong>professional cleaning services</strong> for families, property management companies, and office spaces in{' '}
                   <strong>Lewiston, ID 83501</strong>, <strong>Clarkston, WA 99403</strong>, and
-                  surrounding areas. Whether it's your home, rental properties, or office space, we bring the same level of care and attention to every project.
+                  surrounding areas. Whether it&apos;s your home, rental properties, or office space, we bring the same level of care and attention to every project.
                 </p>
               </div>
             </div>

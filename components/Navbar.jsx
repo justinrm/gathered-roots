@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'; // For hamburger and close icons
 
@@ -145,9 +146,11 @@ const Navbar = ({ navItems }) => {
         {/* Mobile Logo - Left side */}
         <div className="flex md:hidden">
           <Link href="/" className="flex items-center">
-            <img
+            <Image
               src="/images/logo-complete.svg"
               alt="Gathered Roots Cleaning"
+              width={200}
+              height={32}
               className="h-8 w-auto"
             />
           </Link>
