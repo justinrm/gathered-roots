@@ -10,7 +10,7 @@ const standardCleaningTasks = [
   {
     category: 'All Rooms',
     items: [
-      'Dust accessible surfaces (including furniture, shelves, and baseboards)',
+      'Dust accessible surfaces (including furniture and shelves)',
       'Vacuum carpets and rugs',
       'Sweep and mop hard floors',
       'Empty trash bins and replace liners',
@@ -86,16 +86,34 @@ export default function DeepClean() {
   return (
     <>
       <Head>
-        <title>Deep Clean | Gathered Roots Cleaning</title>
+        <title>Deep House Cleaning Services Lewiston ID 83501 | LC Valley WA | Spring Cleaning Specialists</title>
         <meta
           name="description"
-          content="Our Deep Clean service tackles every corner for a truly spotless space. Residential cleaning services for Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. See what's included and book your deep clean today!"
+          content="Professional deep house cleaning in Lewiston ID 83501, Clarkston WA 99403, and LC Valley. Comprehensive residential cleaning including baseboards, ceiling fans, inside appliances, grout scrubbing, and interior windows. Perfect for spring cleaning, seasonal deep cleans, move-in preparation, and post-construction cleanup in Lewis-Clark Valley."
         />
-        <meta property="og:title" content="Deep Clean | Gathered Roots Cleaning" />
+        <meta name="keywords" content="deep cleaning service Lewiston ID, spring cleaning LC Valley, residential deep cleaning Clarkston WA, post-construction cleaning, move-in deep clean, seasonal house cleaning, detailed home cleaning 83501, grout cleaning LC Valley, baseboard cleaning Lewiston, ceiling fan cleaning, interior window cleaning Lewis-Clark Valley" />
+        <meta property="og:title" content="Deep House Cleaning Services | LC Valley Spring Cleaning | Lewiston ID 83501" />
         <meta
           property="og:description"
-          content="An intensive, top-to-bottom clean for your home or business. Book your deep clean now!"
+          content="Professional deep house cleaning in Lewiston ID and Clarkston WA. Comprehensive seasonal and deep cleaning service for LC Valley homes including inside appliances, grout, and detailed sanitization. Book your spring cleaning today!"
         />
+        <meta property="og:type" content="service" />
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional deep house cleaning services in Lewiston ID and Clarkston WA"
+        />
+        <meta name="geo.region" content="US-ID" />
+        <meta name="geo.region" content="US-WA" />
+        <meta name="geo.placename" content="Lewiston, Idaho" />
+        <meta name="geo.placename" content="Clarkston, Washington" />
+        <meta name="geo.placename" content="Lewis-Clark Valley" />
+        <meta name="geo.position" content="46.4004;-117.0177" />
+        <meta name="ICBM" content="46.4004, -117.0177" />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/services/deep-clean" />
 
         {/* Service-specific structured data */}
@@ -105,31 +123,143 @@ export default function DeepClean() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Service',
-              name: 'Deep Clean',
+              name: 'Deep House Cleaning Service - Spring Cleaning & Seasonal Deep Cleans',
               description:
-                'Comprehensive top-to-bottom residential cleaning service for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Perfect for first-time cleans, spring cleaning, or special occasions.',
+                'Professional deep house cleaning service in Lewiston ID 83501, Clarkston WA 99403, and Lewis-Clark Valley areas. Comprehensive residential cleaning including all standard maintenance tasks plus detailed cleaning of baseboards, ceiling fans, interior windows, inside appliances, grout scrubbing, and cabinet interiors. Perfect for spring cleaning, seasonal deep cleans, move-in preparation, post-construction cleanup, and special occasions in the LC Valley.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
                 '@id': 'https://www.gatheredrootscleaning.com',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressRegion: 'ID',
+                  addressLocality: 'Lewiston',
+                  postalCode: '83501',
+                  addressCountry: 'US',
+                },
+                telephone: '+1-208-555-0123',
+                url: 'https://www.gatheredrootscleaning.com',
+                priceRange: '$$',
+                serviceArea: [
+                  'Lewiston, ID 83501',
+                  'Clarkston, WA 99403',
+                  'Asotin, WA',
+                  'Lewis-Clark Valley',
+                  'LC Valley',
+                ],
               },
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID 83501',
+                  name: 'Lewiston',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Lewiston',
+                    addressRegion: 'ID',
+                    postalCode: '83501',
+                    addressCountry: 'US',
+                  },
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA 99403',
+                  name: 'Clarkston',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Clarkston',
+                    addressRegion: 'WA',
+                    postalCode: '99403',
+                    addressCountry: 'US',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Asotin',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Asotin',
+                    addressRegion: 'WA',
+                    addressCountry: 'US',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Lewis-Clark Valley',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressRegion: 'ID',
+                    addressCountry: 'US',
+                  },
                 },
               ],
-              serviceType: 'Deep Residential House Cleaning',
-              category: 'Intensive Cleaning',
+              serviceType: 'Residential Deep House Cleaning',
+              category: 'Spring Cleaning and Seasonal Deep Cleaning Service',
+              additionalType: 'https://schema.org/HomeAndConstructionBusiness',
+              serviceOutput: 'Deep cleaned residential property with detailed sanitization',
+              audience: [
+                {
+                  '@type': 'Audience',
+                  audienceType: 'Homeowners preparing for spring season',
+                  geographicArea: 'Lewiston-Clarkston LC Valley',
+                },
+                {
+                  '@type': 'Audience',
+                  audienceType: 'Busy professionals needing seasonal deep cleaning',
+                  geographicArea: 'Lewis-Clark Valley',
+                },
+                {
+                  '@type': 'Audience',
+                  audienceType: 'Families preparing for special occasions',
+                  geographicArea: 'Lewiston ID 83501 and Clarkston WA 99403',
+                },
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Deep Cleaning Services Catalog',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Standard Cleaning Tasks Included',
+                      description: 'Dusting all surfaces, vacuuming carpets, mopping floors, kitchen and bathroom cleaning, sanitizing high-touch areas',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Deep Cleaning Specialties',
+                      description: 'Baseboards and door frames, ceiling fans and light fixtures, interior windows and sills, behind and inside appliances, grout scrubbing and tile detailing',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Spring Cleaning Seasonal Services',
+                      description: 'Post-winter deep cleaning, seasonal organization support, detailed cabinet cleaning, comprehensive dust removal',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Move-In/Post-Construction Deep Clean',
+                      description: 'Move-in preparation cleaning, post-construction cleanup, renovation cleanup, detailed sanitization',
+                    },
+                  },
+                ],
+              },
               offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description: 'One-time comprehensive residential cleaning service',
+                description: 'One-time comprehensive residential deep cleaning service including spring cleaning and seasonal deep cleans',
+                validFrom: '2024-01-01',
+                businessFunction: 'https://schema.org/Sell',
+                itemCondition: 'https://schema.org/NewCondition',
+                warranty: 'Satisfaction guaranteed with quality assurance',
+                areaServed: 'Lewiston ID 83501, Clarkston WA 99403, Lewis-Clark Valley',
               },
             }),
           }}

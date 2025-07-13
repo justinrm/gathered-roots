@@ -8,7 +8,7 @@ const checklistData = [
   {
     room: 'All Rooms',
     items: [
-      'Dust accessible surfaces (including furniture, shelves, and baseboards)',
+      'Dust accessible surfaces (including furniture and shelves)',
       'Vacuum carpets and rugs',
       'Sweep and mop hard floors',
       'Empty trash bins and replace liners',
@@ -50,16 +50,33 @@ export default function StandardClean() {
   return (
     <>
       <Head>
-        <title>Standard Clean | Gathered Roots Cleaning</title>
+        <title>Regular House Cleaning Services Lewiston ID 83501 | Clarkston WA 99403 | Gathered Roots Cleaning</title>
         <meta
           name="description"
-          content="Our Standard Clean keeps your home fresh and tidy. Residential cleaning services for Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. See what's included and book your clean today!"
+          content="Weekly, bi-weekly, and monthly house cleaning services in Lewiston ID 83501, Clarkston WA 99403, Asotin WA, and LC Valley areas. Professional residential maintenance cleaning including dusting, vacuuming, kitchen and bathroom sanitizing. Recurring home cleaning for consistent upkeep."
         />
-        <meta property="og:title" content="Standard Clean | Gathered Roots Cleaning" />
+        <meta name="keywords" content="regular house cleaning, weekly cleaning service, bi-weekly cleaning, monthly cleaning, maintenance cleaning Lewiston ID, residential cleaning Clarkston WA, recurring cleaning services, home cleaning 83501, house cleaners 99403, LC Valley cleaning" />
+        <meta property="og:title" content="Regular House Cleaning Services Lewiston ID 83501 | Clarkston WA 99403" />
         <meta
           property="og:description"
-          content="A thorough, consistent clean for your space. Perfect for regular upkeep. Book now!"
+          content="Weekly, bi-weekly & monthly house cleaning in Lewiston ID and Clarkston WA. Professional recurring residential cleaning services for LC Valley homes. Book your regular cleaning today!"
         />
+        <meta property="og:type" content="service" />
+        <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional regular house cleaning services in Lewiston ID and Clarkston WA"
+        />
+        <meta name="geo.region" content="US-ID" />
+        <meta name="geo.region" content="US-WA" />
+        <meta name="geo.placename" content="Lewiston, Idaho" />
+        <meta name="geo.placename" content="Clarkston, Washington" />
+        <meta name="geo.position" content="46.4004;-117.0177" />
+        <meta name="ICBM" content="46.4004, -117.0177" />
         <link
           rel="canonical"
           href="https://www.gatheredrootscleaning.com/services/standard-clean"
@@ -72,32 +89,129 @@ export default function StandardClean() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Service',
-              name: 'Standard Clean',
+              name: 'Regular House Cleaning Service',
               description:
-                'Regular maintenance residential cleaning service for homes in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas. Perfect for consistent upkeep and maintaining a clean, healthy environment.',
+                'Professional recurring house cleaning service in Lewiston ID 83501, Clarkston WA 99403, and LC Valley areas. Weekly, bi-weekly, and monthly residential maintenance cleaning including dusting, vacuuming, kitchen and bathroom sanitizing, and general upkeep. Consistent, reliable home cleaning service for busy families and professionals.',
               provider: {
                 '@type': 'LocalBusiness',
                 name: 'Gathered Roots Cleaning',
                 '@id': 'https://www.gatheredrootscleaning.com',
+                address: {
+                  '@type': 'PostalAddress',
+                  addressRegion: 'ID',
+                  addressLocality: 'Lewiston',
+                  postalCode: '83501',
+                  addressCountry: 'US',
+                },
+                telephone: '+1-208-555-0123',
+                url: 'https://www.gatheredrootscleaning.com',
+                priceRange: '$$',
+                serviceArea: [
+                  'Lewiston, ID 83501',
+                  'Clarkston, WA 99403',
+                  'Asotin, WA',
+                  'LC Valley',
+                ],
               },
               areaServed: [
                 {
                   '@type': 'Place',
-                  name: 'Lewiston, ID 83501',
+                  name: 'Lewiston',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Lewiston',
+                    addressRegion: 'ID',
+                    postalCode: '83501',
+                    addressCountry: 'US',
+                  },
                 },
                 {
                   '@type': 'Place',
-                  name: 'Clarkston, WA 99403',
+                  name: 'Clarkston',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Clarkston',
+                    addressRegion: 'WA',
+                    postalCode: '99403',
+                    addressCountry: 'US',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'Asotin',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Asotin',
+                    addressRegion: 'WA',
+                    addressCountry: 'US',
+                  },
+                },
+                {
+                  '@type': 'Place',
+                  name: 'LC Valley',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressRegion: 'ID',
+                    addressCountry: 'US',
+                  },
                 },
               ],
-              serviceType: 'Regular Residential House Cleaning',
-              category: 'Maintenance Cleaning',
+              serviceType: 'Recurring Residential House Cleaning',
+              category: 'House Cleaning Service',
+              additionalType: 'https://schema.org/HomeAndConstructionBusiness',
+              serviceOutput: 'Regularly maintained clean residential property',
+              audience: {
+                '@type': 'Audience',
+                audienceType: 'Homeowners, Renters, and Busy Professionals',
+                geographicArea: 'Lewiston-Clarkston LC Valley',
+              },
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Regular Cleaning Service Options',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    name: 'Weekly House Cleaning',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Weekly Residential Cleaning',
+                      description: 'Weekly recurring house cleaning service for consistent maintenance',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    name: 'Bi-Weekly House Cleaning',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Bi-Weekly Residential Cleaning',
+                      description: 'Every other week house cleaning service for regular upkeep',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    name: 'Monthly House Cleaning',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Monthly Residential Cleaning',
+                      description: 'Monthly house cleaning service for basic maintenance',
+                    },
+                  },
+                ],
+              },
               offers: {
                 '@type': 'Offer',
                 availability: 'https://schema.org/InStock',
                 priceCurrency: 'USD',
-                description:
-                  'Recurring residential cleaning service available weekly, bi-weekly, or monthly',
+                description: 'Recurring residential cleaning service available weekly, bi-weekly, or monthly',
+                validFrom: '2024-01-01',
+                businessFunction: 'https://schema.org/Sell',
+                itemCondition: 'https://schema.org/NewCondition',
+                warranty: 'Satisfaction guaranteed',
+                schedule: {
+                  '@type': 'Schedule',
+                  repeatFrequency: ['P1W', 'P2W', 'P1M'],
+                  description: 'Available weekly, bi-weekly, or monthly',
+                },
               },
             }),
           }}

@@ -70,6 +70,14 @@ export default function ServiceAreas() {
         <meta property="og:locality" content="Lewiston" />
         <meta property="og:region" content="ID" />
         <meta property="og:country-name" content="USA" />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewis-Clark Valley"
+        />
 
         {/* Enhanced Service Areas schema for local SEO */}
         <script

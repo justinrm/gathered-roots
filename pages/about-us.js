@@ -19,6 +19,14 @@ export default function AboutUs() {
         />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/about-us" />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/about-us" />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
 
         {/* About Us / Organization schema */}
         <script

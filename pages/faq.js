@@ -71,6 +71,14 @@ export default function FAQ() {
           property="og:description"
           content="Find answers to common questions about Gathered Roots Cleaning's residential cleaning services in Lewiston, ID 83501, Clarkston, WA 99403, and surrounding areas."
         />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
 
         {/* FAQ Schema for rich snippets */}
         <script

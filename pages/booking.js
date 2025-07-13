@@ -119,6 +119,14 @@ export default function BookingPage() {
           property="og:description"
           content="Get a free quote and book your next cleaning appointment with Gathered Roots Cleaning. Serving Lewiston and nearby communities."
         />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
         {/* Add other relevant meta tags, e.g., for specific service areas if applicable */}
       </Head>
       <main className="bg-background min-h-screen py-12 px-4 sm:px-6 lg:px-8">

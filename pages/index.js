@@ -39,11 +39,11 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.gatheredrootscleaning.com/images/hero-clean-home.jpg"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
         />
         <meta
           property="og:image:alt"
-          content="Beautiful, sparkling clean living room showcasing professional cleaning results by Gathered Roots Cleaning"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
         />
         <meta property="og:site_name" content="Gathered Roots Cleaning" />
         <meta property="og:locality" content="Lewiston" />

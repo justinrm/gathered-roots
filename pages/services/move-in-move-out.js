@@ -9,7 +9,7 @@ const standardCleaningTasks = [
   {
     category: 'All Rooms',
     items: [
-      'Dust accessible surfaces (including furniture, shelves, and baseboards)',
+      'Dust accessible surfaces (including furniture and shelves)',
       'Vacuum carpets and rugs',
       'Sweep and mop hard floors',
       'Empty trash bins and replace liners',
@@ -108,6 +108,14 @@ export default function MoveInMoveOut() {
         <meta
           property="og:description"
           content="Professional move-in and move-out cleaning services. Book your appointment today!"
+        />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional move-in and move-out cleaning services in Lewiston ID and Clarkston WA"
         />
         <link
           rel="canonical"

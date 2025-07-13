@@ -75,6 +75,14 @@ export default function Services() {
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/services" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Gathered Roots Cleaning" />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />

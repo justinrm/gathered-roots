@@ -15,6 +15,14 @@ export default function PrivacyPolicy() {
           property="og:description"
           content="How Gathered Roots Cleaning collects, uses, and protects your information."
         />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
       </Head>
       <main className="bg-background min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto bg-background p-8 rounded-lg shadow-md">

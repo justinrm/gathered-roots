@@ -17,6 +17,14 @@ export default function TermsOfService() {
           property="og:description"
           content="Terms and conditions for Gathered Roots Cleaning services including payment policies and service agreements."
         />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
       </Head>
       <main className="bg-background min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -51,7 +59,7 @@ export default function TermsOfService() {
                 <strong>Standard cleaning tasks may include:</strong>
               </p>
               <ul className="list-disc list-inside text-text-dark space-y-1 mb-4 ml-4">
-                <li>Dusting furniture, surfaces, baseboards, and light fixtures</li>
+                <li>Dusting furniture, surfaces, and light fixtures</li>
                 <li>Vacuuming carpets, rugs, and upholstery</li>
                 <li>Sweeping and mopping hard floors</li>
                 <li>Bathroom cleaning (toilets, sinks, tubs, showers, mirrors, floors)</li>
@@ -64,6 +72,12 @@ export default function TermsOfService() {
                   cleaning)
                 </li>
               </ul>
+              <p className="text-text-dark mb-4">
+                <strong>Baseboards</strong> are typically cleaned only during deep cleans, move-in/move-out services, or upon prior agreement. They are not included in standard cleaning services.
+              </p>
+              <p className="text-text-dark mb-4">
+                <strong>Floor polishing/refinishing</strong> is outside our scope of services and would require a specialized contractor.
+              </p>
               <p className="text-text-dark">
                 <strong>Specialty services</strong> (e.g., deep cleans, move-out services) must be
                 scheduled in advance and may incur additional charges.

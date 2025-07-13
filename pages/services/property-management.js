@@ -86,6 +86,14 @@ export default function PropertyManagement() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional property management cleaning services in Lewiston ID and Clarkston WA"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Property Management Cleaning Services Lewiston ID 83501" />
         <meta name="twitter:description" content="Professional rental property turnover cleaning and office cleaning for property management companies in Lewiston ID and Clarkston WA." />

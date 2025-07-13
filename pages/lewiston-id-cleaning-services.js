@@ -59,7 +59,11 @@ export default function LewistonCleaningServices() {
         />
         <meta
           property="og:image"
-          content="https://www.gatheredrootscleaning.com/images/lewiston-cleaning-service.jpg"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID"
         />
 
         {/* Local Business Schema for Lewiston */}

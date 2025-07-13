@@ -16,6 +16,14 @@ export default function Quote() {
           property="og:description"
           content="Get a personalized quote for your cleaning needs. Quick, easy, and no obligation."
         />
+        <meta
+          property="og:image"
+          content="https://www.gatheredrootscleaning.com/images/logo-complete.svg"
+        />
+        <meta
+          property="og:image:alt"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID and Clarkston WA"
+        />
       </Head>
       <main className="bg-background min-h-screen">
         <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
