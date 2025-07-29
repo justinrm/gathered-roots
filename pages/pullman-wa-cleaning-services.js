@@ -4,58 +4,64 @@ import Link from 'next/link';
 import Button from '../components/Button';
 import Card from '../components/Card';
 
-const lewistonAreas = [
-  'Downtown Lewiston',
-  'Normal Hill',
-  'Orchards',
-  'West Lewiston',
-  'Tammany Creek',
-  'Snake River Avenue',
-  'Preston Avenue',
-  'Bryden Canyon',
+const pullmanAreas = [
+  'Washington State University Campus',
+  'Downtown Pullman',
+  'College Hill',
+  'Sunnyside',
+  'Military Hill',
+  'Pullman Regional Hospital Area',
+  'Bishop Boulevard',
+  'Terre View Drive',
 ];
 
 const localLandmarks = [
-  'Lewis-Clark State College',
-  'Nez Perce County Historical Society Museum',
-  'Hells Gate State Park',
-  'Lewiston Civic Theatre',
-  'Swallows Park',
-  'Locomotive Park',
+  'Washington State University',
+  'Pullman Regional Hospital',
+  'Palouse Mall',
+  'Pullman-Moscow Regional Airport',
+  'Idaho State Line',
+  'Kamiak Butte County Park',
 ];
 
-export default function LewistonCleaningServices() {
+export default function PullmanCleaningServices() {
   return (
     <>
       <Head>
         <title>
-          Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning
+          Professional House Cleaning Services in Pullman, WA | Washington State University Area | Gathered Roots
         </title>
         <meta
           name="description"
-          content="Top-rated residential cleaning services in Lewiston, Idaho (83501). Serving Normal Hill, Orchards, Downtown, and all Lewiston neighborhoods. Veteran-owned, fully insured. Free quotes!"
+          content="Top-rated residential cleaning services in Pullman, Washington (99163). Serving Washington State University students, faculty, and families. Student housing, apartments, and homes. Veteran-owned, fully insured. Free quotes!"
         />
         <meta
           name="keywords"
-          content="residential cleaning Lewiston ID 83501, house cleaning Lewiston ID, maid service Lewiston Idaho, cleaning service near me, Lewiston house cleaners, Normal Hill cleaning service, property management cleaning Lewiston"
+          content="residential cleaning Pullman WA 99163, house cleaning Pullman WA, maid service Pullman Washington, Washington State University cleaning, student housing cleaning, apartment cleaning Pullman, cleaning service near me"
         />
         <link
           rel="canonical"
-          href="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services"
+          href="https://www.gatheredrootscleaning.com/pullman-wa-cleaning-services"
         />
+
+        {/* Geographic Microdata */}
+        <meta name="geo.region" content="US-WA" />
+        <meta name="geo.placename" content="Pullman, Washington" />
+        <meta name="geo.position" content="46.7298;-117.1817" />
+        <meta name="ICBM" content="46.7298, -117.1817" />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Professional House Cleaning Services in Lewiston, ID | Gathered Roots Cleaning"
+          content="Professional House Cleaning Services in Pullman, WA | Washington State University Area"
         />
         <meta
           property="og:description"
-          content="Trusted house cleaning services in Lewiston, Idaho. Serving all neighborhoods with thorough, professional cleaning. Licensed and insured. Book your free quote today!"
+          content="Trusted house cleaning services in Pullman, Washington. Serving Washington State University community with thorough, professional cleaning. Student housing, apartments, and homes. Licensed and insured."
         />
         <meta
           property="og:url"
-          content="https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services"
+          content="https://www.gatheredrootscleaning.com/pullman-wa-cleaning-services"
         />
         <meta
           property="og:image"
@@ -63,30 +69,30 @@ export default function LewistonCleaningServices() {
         />
         <meta
           property="og:image:alt"
-          content="Gathered Roots Cleaning - Professional house cleaning services in Lewiston ID"
+          content="Gathered Roots Cleaning - Professional house cleaning services in Pullman WA"
         />
 
-        {/* Local Business Schema for Lewiston */}
+        {/* Local Business Schema for Pullman */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'Residential Cleaning Services in Lewiston, ID 83501',
+              name: 'Residential Cleaning Services in Pullman, WA 99163',
               description:
-                'Professional residential cleaning services in Lewiston, Idaho (83501) and surrounding neighborhoods',
-              url: 'https://www.gatheredrootscleaning.com/lewiston-id-cleaning-services',
+                'Professional residential cleaning services in Pullman, Washington (99163) serving Washington State University community',
+              url: 'https://www.gatheredrootscleaning.com/pullman-wa-cleaning-services',
               provider: {
                 '@type': 'LocalBusiness',
                 '@id': 'https://www.gatheredrootscleaning.com',
                 name: 'Gathered Roots Cleaning',
                 areaServed: {
                   '@type': 'City',
-                  name: 'Lewiston',
+                  name: 'Pullman',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Idaho',
+                    name: 'Washington',
                   },
                 },
                 address: {
@@ -96,18 +102,23 @@ export default function LewistonCleaningServices() {
                   postalCode: '83501',
                   addressCountry: 'US',
                 },
+                geo: {
+                  '@type': 'GeoCoordinates',
+                  latitude: 46.7298,
+                  longitude: -117.1817,
+                },
               },
               mainEntity: {
                 '@type': 'Service',
                 name: 'Residential Cleaning Services',
                 description:
-                  'Professional residential cleaning services in Lewiston, Idaho (83501)',
+                  'Professional residential cleaning services in Pullman, Washington (99163) serving Washington State University students, faculty, and local residents',
                 areaServed: {
                   '@type': 'City',
-                  name: 'Lewiston',
+                  name: 'Pullman',
                   containedInPlace: {
                     '@type': 'State',
-                    name: 'Idaho',
+                    name: 'Washington',
                   },
                 },
               },
@@ -121,15 +132,14 @@ export default function LewistonCleaningServices() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-6xl font-bold mb-6">
               Professional House Cleaning Services in{' '}
-              <span className="text-secondary-accent-hover">Lewiston, ID</span>
+              <span className="text-secondary-accent-hover">Pullman, WA</span>
             </h1>
             <p className="text-xl mb-8 opacity-90">
-              Trusted by families across Normal Hill, Orchards, Downtown Lewiston, and surrounding
-              neighborhoods. Veteran-owned, licensed and insured with a personal touch.
+              Trusted by Washington State University students, faculty, and families throughout Pullman and surrounding areas. 
+              Veteran-owned, licensed and insured with a personal touch.
               <br />
               <span className="block mt-2">
-                Serving Lewiston, ID <strong>83501</strong>, plus Moscow, ID <strong>83843</strong>, Pullman, WA <strong>99163</strong>, Clarkston, WA <strong>99403</strong>,
-                and surrounding areas. See our{' '}
+                Serving Pullman, WA <strong>99163</strong> and the broader Palouse Region including Moscow, ID, Lewiston, ID, and Clarkston, WA. See our{' '}
                 <Link href="/service-areas" className="underline text-white">
                   complete service area map
                 </Link>
@@ -159,15 +169,15 @@ export default function LewistonCleaningServices() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-teal text-center mb-12">
-              Serving All Lewiston, ID 83501 Neighborhoods
+              Serving All Pullman, WA 99163 Areas
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="p-6">
                 <h3 className="text-xl font-semibold text-primary-accent-green mb-4">
-                  Residential Areas We Serve
+                  Areas We Serve in Pullman
                 </h3>
                 <ul className="grid grid-cols-2 gap-2 text-text-dark">
-                  {lewistonAreas.map((area, index) => (
+                  {pullmanAreas.map((area, index) => (
                     <li key={index} className="flex items-center">
                       <span className="w-2 h-2 bg-primary-accent-teal rounded-full mr-2"></span>
                       {area}
@@ -175,7 +185,7 @@ export default function LewistonCleaningServices() {
                   ))}
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-primary-accent-teal rounded-full mr-2"></span>Zip
-                    Code: 83501
+                    Code: 99163
                   </li>
                 </ul>
               </Card>
@@ -196,22 +206,22 @@ export default function LewistonCleaningServices() {
           </div>
         </section>
 
-        {/* Why Choose Us for Lewiston */}
+        {/* Why Choose Us for Pullman */}
         <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-teal text-center mb-12">
-              Why Lewiston Families Choose Gathered Roots Cleaning
+              Why Pullman & Washington State University Community Chooses Gathered Roots
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="p-6 text-center">
                 <div className="w-16 h-16 bg-primary-accent-teal rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">🏠</span>
+                  <span className="text-white text-2xl">🎓</span>
                 </div>
                 <h3 className="text-xl font-semibold text-primary-accent-green mb-3">
-                  Local Expertise
+                  University Expertise
                 </h3>
                 <p className="text-text-dark">
-                  We know Lewiston homes and understand the unique cleaning needs of Idaho families.
+                  We understand student housing, faculty homes, and university community cleaning needs.
                 </p>
               </Card>
               <Card className="p-6 text-center">
@@ -233,19 +243,18 @@ export default function LewistonCleaningServices() {
                   Licensed & Insured
                 </h3>
                 <p className="text-text-dark">
-                  Fully licensed and insured in Idaho, serving property management and office
-                  spaces.
+                  Fully licensed and insured in Washington, serving residential and commercial properties.
                 </p>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Services for Lewiston */}
+        {/* Services for Pullman */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-teal text-center mb-12">
-              Our Residential Cleaning Services in Lewiston, ID 83501
+              Our Residential Cleaning Services in Pullman, WA 99163
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -253,7 +262,7 @@ export default function LewistonCleaningServices() {
                   Standard Cleaning
                 </h3>
                 <p className="text-text-dark text-sm mb-4">
-                  Regular maintenance cleaning for busy Lewiston families
+                  Regular maintenance cleaning for busy Pullman families and students
                 </p>
                 <Link href="/services/standard-clean" legacyBehavior>
                   <Button variant="outline" size="small">
@@ -266,7 +275,7 @@ export default function LewistonCleaningServices() {
                   Deep Cleaning
                 </h3>
                 <p className="text-text-dark text-sm mb-4">
-                  Thorough top-to-bottom cleaning for Lewiston homes
+                  Thorough top-to-bottom cleaning for Pullman homes and apartments
                 </p>
                 <Link href="/services/deep-clean" legacyBehavior>
                   <Button variant="outline" size="small">
@@ -279,7 +288,7 @@ export default function LewistonCleaningServices() {
                   Move-In/Out
                 </h3>
                 <p className="text-text-dark text-sm mb-4">
-                  Perfect for Lewiston relocations and transitions
+                  Perfect for student housing transitions and family relocations
                 </p>
                 <Link href="/services/move-in-move-out" legacyBehavior>
                   <Button variant="outline" size="small">
@@ -289,10 +298,10 @@ export default function LewistonCleaningServices() {
               </Card>
               <Card className="p-6 text-center hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-primary-accent-green mb-3">
-                  Property Management & Office
+                  Student Housing
                 </h3>
                 <p className="text-text-dark text-sm mb-4">
-                  Professional commercial cleaning services for property managers and offices
+                  Specialized cleaning for apartments, dorms, and shared student housing
                 </p>
                 <Link href="/services/property-management" legacyBehavior>
                   <Button variant="outline" size="small">
@@ -308,10 +317,10 @@ export default function LewistonCleaningServices() {
         <section className="bg-primary-accent-teal text-white py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready for a Spotless Home in Lewiston?
+              Ready for a Spotless Home in Pullman?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of satisfied customers across Lewiston, ID 83501. Get your free quote
+              Join Washington State University students, faculty, and residents across Pullman, WA 99163. Get your free quote
               today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -329,13 +338,13 @@ export default function LewistonCleaningServices() {
                   View All Service Areas
                 </Button>
               </Link>
-              <Link href="/clarkston-wa-cleaning-services" legacyBehavior>
+              <Link href="/moscow-id-cleaning-services" legacyBehavior>
                 <Button
                   variant="outline"
                   size="large"
                   className="text-white border-white hover:bg-white hover:text-primary-accent-teal"
                 >
-                  Clarkston, WA Services
+                  Moscow, ID Services
                 </Button>
               </Link>
               <Link href="tel:+12087171192" legacyBehavior>
@@ -354,11 +363,11 @@ export default function LewistonCleaningServices() {
         <section className="py-8 px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-lg text-text-light mb-4">
             We provide <strong>residential cleaning services</strong> for homes in{' '}
-            <strong>Lewiston, ID 83501</strong> and expand to serve the Palouse Region including <strong>Moscow, ID 83843</strong>, <strong>Pullman, WA 99163</strong>, <strong>Clarkston, WA 99403</strong>, and
+            <strong>Pullman, WA 99163</strong> and serve the broader Palouse Region including <strong>Moscow, ID 83843</strong>, <strong>Lewiston, ID 83501</strong>, <strong>Clarkston, WA 99403</strong>, and
             surrounding areas.
           </p>
         </section>
       </main>
     </>
   );
-}
+} 

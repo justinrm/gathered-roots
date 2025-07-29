@@ -37,6 +37,20 @@ const serviceAreas = [
       'Just across the river from Lewiston, we provide the same exceptional cleaning services to the Clarkston community—whether residential homes, office spaces, or property management units—with on-time service and attention to detail.',
     coordinates: [46.4127, -117.0454],
   },
+  {
+    city: 'Moscow',
+    state: 'Idaho',
+    description:
+      'Home to the University of Idaho, we bring professional cleaning services to Moscow residents, students, faculty, and local businesses. From cozy apartments near campus to family homes in established neighborhoods, we maintain the high standards this vibrant college town deserves.',
+    coordinates: [46.7324, -117.0002],
+  },
+  {
+    city: 'Pullman',
+    state: 'Washington',
+    description:
+      'Serving the Washington State University community and Pullman residents with dependable cleaning services. Whether you need regular home maintenance cleaning, deep cleaning for rental properties, or office cleaning for local businesses, we deliver consistent quality with a personal touch.',
+    coordinates: [46.7298, -117.1817],
+  },
 ];
 
 export default function ServiceAreas() {
@@ -50,20 +64,20 @@ export default function ServiceAreas() {
   return (
     <>
       <Head>
-        <title>Lewis-Clark Valley Cleaning Services | Lewiston ID & Clarkston WA | Gathered Roots</title>
+        <title>Palouse Region Cleaning Services | Lewiston ID, Moscow ID & Pullman WA | Gathered Roots</title>
         <meta
           name="description"
-          content="Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region. Serving Lewiston ID 83501, Clarkston WA 99403, and surrounding North Central Idaho communities within a 25-mile radius. Snake River and Clearwater River area cleaning specialists."
+          content="Professional residential, property management, and office cleaning services across the Palouse Region and Lewis-Clark Valley. Serving Lewiston ID 83501, Moscow ID 83843, Pullman WA 99163, Clarkston WA 99403, and surrounding North Central Idaho/Eastern Washington communities within a 25-mile radius."
         />
         <meta name="geo.region" content="US-ID" />
-        <meta name="geo.placename" content="Lewiston, Idaho" />
+        <meta name="geo.placename" content="Lewiston, Idaho; Moscow, Idaho; Pullman, Washington" />
         <meta name="geo.position" content="46.4165;-117.0177" />
         <meta name="ICBM" content="46.4165, -117.0177" />
         <link rel="canonical" href="https://www.gatheredrootscleaning.com/service-areas" />
-        <meta property="og:title" content="Lewis-Clark Valley Cleaning Services | Lewiston ID & Clarkston WA" />
+        <meta property="og:title" content="Palouse Region Cleaning Services | Lewiston ID, Moscow ID & Pullman WA" />
         <meta
           property="og:description"
-          content="Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region. Serving Lewiston ID, Clarkston WA, and surrounding North Central Idaho communities within a 25-mile radius."
+          content="Professional residential, property management, and office cleaning services across the Palouse Region and Lewis-Clark Valley. Serving Lewiston ID, Moscow ID, Pullman WA, Clarkston WA, and surrounding North Central Idaho/Eastern Washington communities."
         />
         <meta property="og:url" content="https://www.gatheredrootscleaning.com/service-areas" />
         <meta property="og:type" content="business.business" />
@@ -86,16 +100,16 @@ export default function ServiceAreas() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'Lewis-Clark Valley Cleaning Services Coverage Area',
+              name: 'Palouse Region & Lewis-Clark Valley Cleaning Services Coverage Area',
               description:
-                'Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region including Lewiston ID 83501, Clarkston WA 99403, and surrounding North Central Idaho communities within a 25-mile radius',
+                'Professional residential, property management, and office cleaning services across the Palouse Region and Lewis-Clark Valley including Lewiston ID 83501, Moscow ID 83843, Pullman WA 99163, Clarkston WA 99403, and surrounding North Central Idaho and Eastern Washington communities within a 25-mile radius',
               url: 'https://www.gatheredrootscleaning.com/service-areas',
               provider: {
                 '@type': 'HomeAndConstructionBusiness',
                 '@id': 'https://www.gatheredrootscleaning.com',
                 name: 'Gathered Roots Cleaning',
-                alternateName: 'Lewis-Clark Valley Cleaning Services',
-                description: 'Professional residential, property management, and office cleaning services in the Lewis-Clark Valley region',
+                alternateName: 'Palouse Region & Lewis-Clark Valley Cleaning Services',
+                description: 'Professional residential, property management, and office cleaning services across the Palouse Region and Lewis-Clark Valley',
                 url: 'https://www.gatheredrootscleaning.com',
                 priceRange: '$$',
                 address: {
@@ -182,10 +196,28 @@ export default function ServiceAreas() {
                     },
                     postalCode: '83535',
                   },
+                  {
+                    '@type': 'City',
+                    name: 'Moscow',
+                    containedInPlace: {
+                      '@type': 'State',
+                      name: 'Idaho',
+                    },
+                    postalCode: '83843',
+                  },
+                  {
+                    '@type': 'City',
+                    name: 'Pullman',
+                    containedInPlace: {
+                      '@type': 'State',
+                      name: 'Washington',
+                    },
+                    postalCode: '99163',
+                  },
                 ],
                 hasOfferCatalog: {
                   '@type': 'OfferCatalog',
-                  name: 'Lewis-Clark Valley Cleaning Services',
+                  name: 'Palouse Region & Lewis-Clark Valley Cleaning Services',
                   itemListElement: [
                     {
                       '@type': 'Offer',
@@ -249,14 +281,15 @@ export default function ServiceAreas() {
         <div className="max-w-4xl mx-auto">
           <header className="mb-10 text-center">
             <h1 className="text-4xl sm:text-5xl font-semibold text-primary-accent-teal mb-4">
-              Lewis-Clark Valley Cleaning Services Coverage Area
+              Palouse Region & Lewis-Clark Valley Cleaning Services
             </h1>
             <p className="text-lg text-text-light max-w-2xl mx-auto">
               Gathered Roots Cleaning is proud to serve residents and businesses throughout the{' '}
-              <strong className="text-primary-accent-green">Lewis-Clark Valley region</strong>,{' '}
+              <strong className="text-primary-accent-green">Palouse Region</strong>,{' '}
+              <strong className="text-primary-accent-green">Lewis-Clark Valley</strong>,{' '}
               <strong className="text-primary-accent-green">North Central Idaho</strong>, and{' '}
-              <strong className="text-primary-accent-green">Snake River communities</strong>. We are
-              dedicated to providing top-quality <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning</strong> within a 25-mile radius of Lewiston, ID 83501.
+              <strong className="text-primary-accent-green">Eastern Washington communities</strong>. We are
+              dedicated to providing top-quality <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning</strong> including <strong>Moscow ID 83843</strong>, <strong>Pullman WA 99163</strong>, <strong>Lewiston ID 83501</strong>, and <strong>Clarkston WA 99403</strong>.
             </p>
           </header>
 
@@ -341,7 +374,7 @@ export default function ServiceAreas() {
               Ready for Professional Cleaning Services?
             </h3>
             <p className="text-text-light mb-6 max-w-xl mx-auto">
-              If you&apos;re in the Lewis-Clark Valley region, North Central Idaho, or anywhere within our 25-mile service radius
+              If you&apos;re in the Palouse Region, Lewis-Clark Valley, North Central Idaho, Eastern Washington, or anywhere within our service radius
               and looking for reliable, high-quality cleaning services for your home, office, or rental property, Gathered Roots Cleaning is
               here to help.
             </p>
@@ -363,40 +396,15 @@ export default function ServiceAreas() {
               please don&apos;t hesitate to reach out. We are continually evaluating opportunities
               to expand our reach to serve more clients.
             </p>
-            <h2 className="text-2xl font-semibold text-primary-accent-teal mb-2">
-              Contact Us for Confirmation
-            </h2>
+
           </div>
 
-          <div className="mt-6 text-center">
-            <h3 className="text-xl font-semibold text-primary-accent-green mb-2">
-              Lewis-Clark Valley Service Area Zip Codes
-            </h3>
-            <ul className="inline-block text-text-dark">
-              <li>
-                Lewiston, ID: <strong>83501</strong>
-              </li>
-              <li>
-                Clarkston, WA: <strong>99403</strong>
-              </li>
-              <li>
-                Lapwai, ID: <strong>83540</strong>
-              </li>
-              <li>
-                Winchester, ID: <strong>83555</strong>
-              </li>
-              <li>
-                Culdesac, ID: <strong>83524</strong>
-              </li>
-              <li>
-                Juliaetta, ID: <strong>83535</strong>
-              </li>
-            </ul>
-          </div>
+
 
           <div className="mt-6 text-center">
             <p className="text-text-light">
-              We provide <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning</strong> for homes, offices, and rental properties throughout the Lewis-Clark Valley region including Lewiston, ID{' '}
+              We provide <strong>residential cleaning services</strong>, <strong>property management cleaning</strong>, and <strong>office space cleaning</strong> for homes, offices, and rental properties throughout the Palouse Region and Lewis-Clark Valley including Moscow, ID{' '}
+              <strong>83843</strong>, Pullman, WA <strong>99163</strong>, Lewiston, ID{' '}
               <strong>83501</strong>, Clarkston, WA <strong>99403</strong>, Lapwai, ID{' '}
               <strong>83540</strong>, Winchester, ID <strong>83555</strong>, Culdesac, ID{' '}
               <strong>83524</strong>, and Juliaetta, ID <strong>83535</strong>.

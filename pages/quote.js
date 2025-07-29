@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Card from '../components/Card';
+import QuoteForm from '../components/QuoteForm';
 
 export default function Quote() {
   return (
@@ -33,8 +34,7 @@ export default function Quote() {
               Request a Cleaning Quote
             </h1>
             <p className="text-lg text-text-dark max-w-3xl mx-auto">
-              Tell us a bit about your space and cleaning needs, and we&apos;ll provide a
-              personalized quote. Our team is ready to create a custom cleaning plan just for you.
+              Provide detailed information about your property and cleaning needs to receive a personalized quote. Our comprehensive form helps us understand your specific requirements so we can create the perfect cleaning plan and accurate pricing for you.
               <br /><br />
               <strong>Property Management Companies:</strong> For consultation on ongoing cleaning services and custom property management solutions, please use our{' '}
               <Link 
@@ -71,21 +71,8 @@ export default function Quote() {
               </p>
             </Card>
 
-            <div className="bg-card-background shadow-lg rounded-lg p-8">
-              {/* ZenMaid Quote Form */}
-              <div className="w-full">
-                <iframe 
-                  sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation" 
-                  height="2200" 
-                  src="https://app.zenmaid.com/booking-forms/I1S2F/book" 
-                  frameBorder="0" 
-                  scrolling="no" 
-                  className="w-full border-0 rounded-lg"
-                  title="Request a Cleaning Quote"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            {/* In-House Quote Form */}
+            <QuoteForm />
           </div>
         </section>
       </main>

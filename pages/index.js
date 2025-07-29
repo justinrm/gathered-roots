@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>House Cleaning Services Lewiston ID & Clarkston WA | Lewis-Clark Valley | Gathered Roots</title>
+        <title>House Cleaning Services Lewiston ID, Moscow ID & Pullman WA | Palouse Region | Gathered Roots</title>
         <meta
           name="description"
-          content="Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured. Free quotes for residential, move-in/out, and deep cleaning!"
+          content="Professional house cleaning services in Lewiston ID 83501, Moscow ID 83843, Pullman WA 99163 & Clarkston WA 99403. Serving Palouse Region, Lewis-Clark Valley, university communities. Veteran-owned, licensed, insured. Free quotes for residential, move-in/out, and deep cleaning!"
         />
         <link rel="icon" href="/images/favicon.png" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
@@ -22,7 +22,7 @@ export default function Home() {
 
         {/* Geographic Microdata */}
         <meta name="geo.region" content="US-ID;US-WA" />
-        <meta name="geo.placename" content="Lewiston, Idaho; Clarkston, Washington" />
+        <meta name="geo.placename" content="Lewiston, Idaho; Moscow, Idaho; Pullman, Washington; Clarkston, Washington" />
         <meta name="geo.position" content="46.4165;-117.0177" />
         <meta name="ICBM" content="46.4165, -117.0177" />
         <meta name="DC.title" content="House Cleaning Services Lewis-Clark Valley Idaho Washington" />
@@ -32,11 +32,11 @@ export default function Home() {
         <meta property="og:url" content="https://www.gatheredrootscleaning.com" />
         <meta
           property="og:title"
-          content="House Cleaning Services Lewiston ID & Clarkston WA | Lewis-Clark Valley"
+          content="House Cleaning Services Lewiston ID, Moscow ID & Pullman WA | Palouse Region"
         />
         <meta
           property="og:description"
-          content="Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured."
+          content="Professional house cleaning services in Lewiston ID 83501, Moscow ID 83843, Pullman WA 99163 & Clarkston WA 99403. Serving Palouse Region, Lewis-Clark Valley, university communities. Veteran-owned, licensed, insured."
         />
         <meta
           property="og:image"
@@ -58,11 +58,11 @@ export default function Home() {
         {/* <meta property="twitter:site" content="@YourTwitterHandle" /> */}
         <meta
           property="twitter:title"
-          content="House Cleaning Services Lewiston ID & Clarkston WA | Lewis-Clark Valley"
+          content="House Cleaning Services Lewiston ID, Moscow ID & Pullman WA | Palouse Region"
         />
         <meta
           property="twitter:description"
-          content="Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured."
+          content="Professional house cleaning services in Lewiston ID 83501, Moscow ID 83843, Pullman WA 99163 & Clarkston WA 99403. Serving Palouse Region, Lewis-Clark Valley, university communities. Veteran-owned, licensed, insured."
         />
         <meta
           property="twitter:image"
@@ -82,7 +82,7 @@ export default function Home() {
               '@type': 'HomeAndConstructionBusiness',
               '@id': 'https://www.gatheredrootscleaning.com',
               name: 'Gathered Roots Cleaning',
-              alternateName: 'Lewis-Clark Valley Cleaning Services',
+              alternateName: 'Palouse Region & Lewis-Clark Valley Cleaning Services',
               image: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
               logo: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
               url: 'https://www.gatheredrootscleaning.com',
@@ -97,7 +97,7 @@ export default function Home() {
                 addressCountry: 'US',
               },
               description:
-                'Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403. Serving Normal Hill, Orchards, downtown Lewiston, and Lewis-Clark Valley. Veteran-owned, licensed, insured.',
+                'Professional house cleaning services in Lewiston ID 83501, Moscow ID 83843, Pullman WA 99163 & Clarkston WA 99403. Serving Palouse Region, Lewis-Clark Valley, university communities. Veteran-owned, licensed, insured.',
               openingHoursSpecification: [
                 {
                   '@type': 'OpeningHoursSpecification',
@@ -196,6 +196,24 @@ export default function Home() {
                   postalCode: '83535',
                 },
                 {
+                  '@type': 'City',
+                  name: 'Moscow',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Idaho',
+                  },
+                  postalCode: '83843',
+                },
+                {
+                  '@type': 'City',
+                  name: 'Pullman',
+                  containedInPlace: {
+                    '@type': 'State',
+                    name: 'Washington',
+                  },
+                  postalCode: '99163',
+                },
+                {
                   '@type': 'Place',
                   name: 'Normal Hill',
                   containedInPlace: {
@@ -240,7 +258,7 @@ export default function Home() {
               paymentAccepted: ['Cash', 'Credit Card', 'Check'],
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
-                name: 'Lewis-Clark Valley Cleaning Services',
+                name: 'Palouse Region & Lewis-Clark Valley Cleaning Services',
                 itemListElement: [
                   {
                     '@type': 'Offer',
@@ -331,8 +349,15 @@ export default function Home() {
               },
               knowsAbout: [
                 'House Cleaning Lewiston ID',
+                'House Cleaning Moscow ID',
+                'House Cleaning Pullman WA',
                 'House Cleaning Clarkston WA',
                 'Lewis-Clark Valley Cleaning Services',
+                'Palouse Region Cleaning Services',
+                'University of Idaho Cleaning',
+                'Washington State University Cleaning',
+                'Student Housing Cleaning',
+                'Faculty Home Cleaning',
                 'Normal Hill Cleaning',
                 'Orchards Cleaning',
                 'Downtown Lewiston Cleaning',
@@ -341,6 +366,7 @@ export default function Home() {
                 'Property Management Cleaning',
                 'Rental Property Cleaning',
                 'Office Cleaning Lewis-Clark Valley',
+                'Office Cleaning Palouse Region',
                 'Deep Cleaning Services',
                 'Move-in Cleaning',
                 'Move-out Cleaning',
@@ -350,6 +376,7 @@ export default function Home() {
                 'Insured Cleaning Washington',
                 'Eco-friendly Cleaning',
                 'North Central Idaho Cleaning',
+                'Eastern Washington Cleaning',
               ],
               aggregateRating: {
                 '@type': 'AggregateRating',
@@ -380,10 +407,10 @@ export default function Home() {
                 },
                 {
                   '@type': 'Question',
-                  name: 'What areas around Lewiston do you clean?',
+                  name: 'What areas do you serve for cleaning services?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'We serve the entire Lewis-Clark Valley region including Lewiston ID 83501, Clarkston WA 99403, and surrounding areas within a 25-mile radius including Lapwai, Winchester, Culdesac, Juliaetta, and Asotin.',
+                    text: 'We serve the Palouse Region and Lewis-Clark Valley including Moscow ID 83843, Pullman WA 99163, Lewiston ID 83501, Clarkston WA 99403, and surrounding areas including Lapwai, Winchester, Culdesac, Juliaetta, and Asotin.',
                   },
                 },
                 {
@@ -399,7 +426,7 @@ export default function Home() {
                   name: 'Are you licensed in both Idaho and Washington?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Yes, we are fully licensed and insured to provide cleaning services in both Idaho and Washington, serving customers in Lewiston ID and Clarkston WA.',
+                    text: 'Yes, we are fully licensed and insured to provide cleaning services in both Idaho and Washington, serving customers in Moscow ID, Lewiston ID, Pullman WA, and Clarkston WA.',
                   },
                 },
                 {
@@ -407,7 +434,7 @@ export default function Home() {
                   name: 'Do you provide office cleaning services?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Yes, we provide professional office cleaning services for small offices, commercial spaces, and medical offices throughout the Lewis-Clark Valley region.',
+                    text: 'Yes, we provide professional office cleaning services for small offices, commercial spaces, and medical offices throughout the Palouse Region and Lewis-Clark Valley including Moscow, Pullman, Lewiston, and Clarkston.',
                   },
                 },
               ],
@@ -423,8 +450,8 @@ export default function Home() {
               '@context': 'https://schema.org',
               '@type': 'ProfessionalService',
               '@id': 'https://www.gatheredrootscleaning.com#service',
-              name: 'Lewis-Clark Valley House Cleaning Services',
-              description: 'Professional house cleaning services in Lewiston ID 83501 & Clarkston WA 99403',
+              name: 'Palouse Region & Lewis-Clark Valley House Cleaning Services',
+              description: 'Professional house cleaning services in Moscow ID 83843, Pullman WA 99163, Lewiston ID 83501 & Clarkston WA 99403',
               serviceType: 'House Cleaning Service',
               provider: {
                 '@type': 'HomeAndConstructionBusiness',
@@ -613,8 +640,7 @@ export default function Home() {
                   </a>
                 </p>
                 <p className="text-lg text-text-light">
-                  <span className="font-semibold text-brand-accent">Service Area:</span> Lewiston,
-                  ID 83501, Clarkston, WA 99403, and surrounding areas
+                  <span className="font-semibold text-brand-accent">Service Area:</span> Moscow ID 83843, Pullman WA 99163, Lewiston ID 83501, Clarkston WA 99403, and surrounding areas
                 </p>
               </div>
               <p className="text-text-light text-sm">Click to call or email on mobile.</p>
