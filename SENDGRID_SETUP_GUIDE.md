@@ -28,7 +28,7 @@
 
 1. Go to **Settings** → **Sender Authentication**
 2. Click **"Verify a Single Sender"**
-3. Enter: `hello@gatheredrootscleaning.com`
+3. Enter: `gatheredrootscleaning@gmail.com`
 4. Check your email and click the verification link
 
 ### 4. Update Vercel Environment Variables
@@ -46,8 +46,8 @@
 
 ```env
 SENDGRID_API_KEY=SG.your-sendgrid-api-key-here
-SENDGRID_FROM_EMAIL=hello@gatheredrootscleaning.com
-CONTACT_FORM_RECIPIENT_EMAIL=hello@gatheredrootscleaning.com
+SENDGRID_FROM_EMAIL=gatheredrootscleaning@gmail.com
+CONTACT_FORM_RECIPIENT_EMAIL=gatheredrootscleaning@gmail.com
 EMAIL_FROM_NAME=Gathered Roots Cleaning
 NODE_ENV=production
 ```
@@ -113,7 +113,7 @@ NODE_ENV=production
 
 **"Sender Identity" Error:**
 
-- Verify `hello@gatheredrootscleaning.com` in SendGrid
+- Verify `gatheredrootscleaning@gmail.com` in SendGrid
 - Check verification email and click link
 
 **Still Getting Timeouts:**
@@ -140,6 +140,6 @@ npm run dev
 1. **Add all environment variables to Vercel dashboard**
 2. **Deploy your project** (Vercel auto-redeploys when env vars change)
 3. **Test contact forms on live site**
-4. **Check emails at** `hello@gatheredrootscleaning.com`
+4. **Check emails at** `gatheredrootscleaning@gmail.com`
 
 Your email forms should now work perfectly on Vercel! 🎉

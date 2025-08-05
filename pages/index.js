@@ -87,7 +87,7 @@ export default function Home() {
               logo: 'https://www.gatheredrootscleaning.com/images/logo-complete.svg',
               url: 'https://www.gatheredrootscleaning.com',
               telephone: '+1-208-717-1192',
-              email: 'hello@gatheredrootscleaning.com',
+              email: 'gatheredrootscleaning@gmail.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '212 5th Street',
@@ -632,11 +632,11 @@ export default function Home() {
                 <p className="text-lg text-text-light">
                   <span className="font-semibold text-brand-accent">Email:</span>{' '}
                   <a
-                    href="mailto:hello@gatheredrootscleaning.com"
+                    href="mailto:gatheredrootscleaning@gmail.com"
                     className="block text-lg text-primary-accent-cta hover:text-secondary-accent-hover font-medium transition-colors duration-200"
                     aria-label="Email Gathered Roots Cleaning"
                   >
-                    hello@gatheredrootscleaning.com
+                    gatheredrootscleaning@gmail.com
                   </a>
                 </p>
                 <p className="text-lg text-text-light">

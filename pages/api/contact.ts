@@ -7,7 +7,7 @@ import rateLimit from '../../lib/rateLimit';
 
 // Environment Variables (to be set in Vercel dashboard):
 // SENDGRID_API_KEY: Your SendGrid API key (starts with SG.)
-// SENDGRID_FROM_EMAIL: Your verified sender email (e.g., hello@gatheredrootscleaning.com)
+// SENDGRID_FROM_EMAIL: Your verified sender email (e.g., gatheredrootscleaning@gmail.com)
 // CONTACT_FORM_RECIPIENT_EMAIL: Email address for business to receive submissions
 // CONTACT_FORM_RATE_LIMIT: Number of allowed submissions per IP in the time window (default: 5)
 // CONTACT_FORM_RATE_WINDOW: Time window in milliseconds for rate limiting (default: 60000 = 1 minute)
@@ -196,5 +196,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 // Email configuration documentation:
 // - SENDGRID_API_KEY: Your SendGrid API key (starts with SG.)
-// - SENDGRID_FROM_EMAIL: Your verified sender email (e.g., hello@gatheredrootscleaning.com)
+// - SENDGRID_FROM_EMAIL: Your verified sender email (e.g., gatheredrootscleaning@gmail.com)
 // - CONTACT_FORM_RECIPIENT_EMAIL: Email address for business to receive submissions

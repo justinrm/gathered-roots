@@ -162,7 +162,7 @@ export default function AccessibilityStatement() {
                 Phone consultations and booking: <strong>(208) 717-1192</strong>
               </li>
               <li>
-                Email inquiries: <strong>hello@gatheredrootscleaning.com</strong>
+                Email inquiries: <strong>gatheredrootscleaning@gmail.com</strong>
               </li>
               <li>In-person consultations upon request</li>
               <li>Large print materials available upon request</li>
@@ -186,10 +186,10 @@ export default function AccessibilityStatement() {
                 <li>
                   <strong>Email:</strong>{' '}
                   <a
-                    href="mailto:hello@gatheredrootscleaning.com"
+                    href="mailto:gatheredrootscleaning@gmail.com"
                     className="underline text-primary-accent-teal hover:text-secondary-accent-hover"
                   >
-                    hello@gatheredrootscleaning.com
+                    gatheredrootscleaning@gmail.com
                   </a>
                 </li>
                 <li>

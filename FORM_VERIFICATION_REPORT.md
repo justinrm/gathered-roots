@@ -70,8 +70,8 @@ Both forms are configured to send:
 ```env
 # Required for email functionality
 SENDGRID_API_KEY=SG.your-sendgrid-api-key-here
-SENDGRID_FROM_EMAIL=hello@gatheredrootscleaning.com
-CONTACT_FORM_RECIPIENT_EMAIL=hello@gatheredrootscleaning.com
+SENDGRID_FROM_EMAIL=gatheredrootscleaning@gmail.com
+CONTACT_FORM_RECIPIENT_EMAIL=gatheredrootscleaning@gmail.com
 EMAIL_FROM_NAME=Gathered Roots Cleaning
 ```
 
@@ -214,7 +214,7 @@ The preferred contact method feature is now fully integrated and ready for use o
    SMTP_PASSWORD=your-app-password
    SMTP_SECURE=false
    MAILER_FROM_ADDRESS=noreply@gatheredrootscleaning.com
-   CONTACT_FORM_RECIPIENT_EMAIL=hello@gatheredrootscleaning.com
+   CONTACT_FORM_RECIPIENT_EMAIL=gatheredrootscleaning@gmail.com
    EMAIL_FROM_NAME=Gathered Roots Cleaning
    ```
 

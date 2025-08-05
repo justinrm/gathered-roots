@@ -120,10 +120,10 @@ export default function PrivacyPolicy() {
                 You may request access to, correction of, or deletion of your personal information
                 at any time by contacting us at{' '}
                 <a
-                  href="mailto:hello@gatheredrootscleaning.com"
+                  href="mailto:gatheredrootscleaning@gmail.com"
                   className="underline text-primary-accent-teal hover:text-secondary-accent-hover"
                 >
-                  hello@gatheredrootscleaning.com
+                  gatheredrootscleaning@gmail.com
                 </a>
                 .
               </li>
@@ -186,10 +186,10 @@ export default function PrivacyPolicy() {
               If you have any questions or concerns about this Privacy Policy or your data, please
               contact us at{' '}
               <a
-                href="mailto:hello@gatheredrootscleaning.com"
+                href="mailto:gatheredrootscleaning@gmail.com"
                 className="underline text-primary-accent-teal hover:text-secondary-accent-hover"
               >
-                hello@gatheredrootscleaning.com
+                gatheredrootscleaning@gmail.com
               </a>
               .
             </p>

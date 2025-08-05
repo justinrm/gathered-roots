@@ -84,10 +84,10 @@ const ContactPage = () => {
                     <h3 className="font-medium text-primary-accent-brand">Email</h3>
                     <p className="text-text-light">
                       <a
-                        href="mailto:hello@gatheredrootscleaning.com"
+                        href="mailto:gatheredrootscleaning@gmail.com"
                         className="hover:text-secondary-accent-hover"
                       >
-                        hello@gatheredrootscleaning.com
+                        gatheredrootscleaning@gmail.com
                       </a>
                     </p>
                   </div>

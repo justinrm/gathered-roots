@@ -23,10 +23,10 @@ export default function Footer() {
             <br className="sm:hidden" />
             <span className="hidden sm:inline"> | </span>
             <a
-              href="mailto:hello@gatheredrootscleaning.com"
+              href="mailto:gatheredrootscleaning@gmail.com"
               className="hover:text-primary-accent-teal transition-colors duration-200"
             >
-              hello@gatheredrootscleaning.com
+              gatheredrootscleaning@gmail.com
             </a>
           </p>
           <p className="text-xs text-text-light mt-2">
