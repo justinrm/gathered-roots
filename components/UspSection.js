@@ -46,7 +46,7 @@ const usps = [
 
 const UspSection = () => {
   return (
-    <section className="bg-background py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white/80 backdrop-blur-sm border-t border-borders py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-cta mb-12 text-center">
           Why Choose Gathered Roots Cleaning?

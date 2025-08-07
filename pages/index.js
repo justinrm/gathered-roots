@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import HeroSection from '../components/HeroSection';
 import ServicesSummary from '../components/ServicesSummary';
-import UspSection from '../components/UspSection';
 // import TestimonialCarousel from '../components/TestimonialCarousel'; // TODO: Enable when real testimonials are available
 import Link from 'next/link';
 import Button from '../components/Button';
@@ -575,9 +574,6 @@ export default function Home() {
         <HeroSection />
         <section aria-label="Summary of Services">
           <ServicesSummary />
-        </section>
-        <section aria-label="Why Choose Us">
-          <UspSection />
         </section>
         {/* TODO: Enable when real testimonials are available */}
         {/*

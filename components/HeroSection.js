@@ -2,6 +2,42 @@ import React from 'react';
 import Button from './Button';
 import Link from 'next/link';
 import Image from 'next/image';
+import Card from './Card';
+import { CheckCircleIcon, SparklesIcon } from '@heroicons/react/24/outline';
+
+const usps = [
+  {
+    id: 1,
+    title: 'Veteran Owned',
+    description:
+      'Gathered Roots Cleaning is proudly owned and operated by a United States Army veteran. We carry the spirit of service into every home we care for and remain deeply thankful for those who serve and the families who stand beside them.',
+    icon: (
+      <Image
+        src="/images/rustic-flag.svg"
+        alt="Veteran Owned Icon"
+        width={64}
+        height={64}
+        className="w-full h-full"
+      />
+    ),
+    color: 'bg-brand-accent text-white',
+  },
+  {
+    id: 2,
+    title: 'Flexible Scheduling',
+    description:
+      'We understand the rhythms of a busy life. That is why we offer gentle, flexible scheduling that works around your world, making it easy to welcome cleanliness and calm into your home whenever it suits you best.',
+    icon: <SparklesIcon className="w-full h-full" />,
+    color: 'bg-primary-accent-cta text-white',
+  },
+  {
+    id: 3,
+    title: 'Licensed and Insured',
+    description:
+      "Clean with confidence knowing we carry liability insurance for your complete peace of mind. We're fully licensed and insured, so you can relax while we take care of your home.",
+    icon: <CheckCircleIcon className="w-full h-full" />,
+  },
+];
 
 const HeroSection = () => {
   return (
@@ -30,7 +66,7 @@ const HeroSection = () => {
               {/* Hero Image - no logo overlay */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/portfolio/portfolio-24.jpg"
+                  src="/portfolio/portfolio-27.jpg"
                   alt="Beautiful, sparkling clean living room showcasing professional cleaning results"
                   width={800}
                   height={600}
@@ -66,72 +102,37 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Trust indicators/features strip */}
-        <div className="bg-white/80 backdrop-blur-sm border-t border-borders py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-primary-accent-green/10 rounded-full flex items-center justify-center mb-3">
-                  <svg
-                    className="w-6 h-6 text-primary-accent-green"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+        {/* Why Choose Gathered Roots Cleaning Section */}
+        <div className="bg-white/80 backdrop-blur-sm border-t border-borders py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-primary-accent-cta mb-12 text-center">
+              Why Choose Gathered Roots Cleaning?
+            </h2>
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+              role="list"
+              aria-label="Unique selling propositions"
+            >
+              {usps.map((usp) => (
+                <Card key={usp.id} className="flex flex-col items-center" role="listitem">
+                  <div
+                    className={`w-16 h-16 rounded-full flex items-center justify-center ${usp.color || 'bg-opacity-0'} p-3 mb-4`}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-primary-accent-cta mb-1">Veteran Owned</h3>
-                <p className="text-sm text-text-light">Trusted service with military precision</p>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-primary-accent-green/10 rounded-full flex items-center justify-center mb-3">
-                  <svg
-                    className="w-6 h-6 text-primary-accent-green"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-primary-accent-cta mb-1">Family Operated</h3>
-                <p className="text-sm text-text-light">Personal care for your home</p>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 bg-primary-accent-green/10 rounded-full flex items-center justify-center mb-3">
-                  <svg
-                    className="w-6 h-6 text-primary-accent-green"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="font-semibold text-primary-accent-cta mb-1">Made with Love</h3>
-                <p className="text-sm text-text-light">Every detail matters to us</p>
-              </div>
+                    {usp.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-card-text-primary mb-2">{usp.title}</h3>
+                  <p className="text-card-text-secondary leading-relaxed">{usp.description}</p>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-12 flex justify-center">
+              <Link href="/quote" passHref legacyBehavior>
+                <Button className="text-lg px-8 py-3 w-full sm:w-auto">Request a Quote</Button>
+              </Link>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
